@@ -1,0 +1,13 @@
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include segoe(bold);
+  padding: 10px 12px 8px;
+  border-radius:2px;
+  letter-spacing:.09em;
+  &_primary{
+    background-color: $green;
+    color: $dark;
+  }
+}

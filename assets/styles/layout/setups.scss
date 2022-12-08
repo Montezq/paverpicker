@@ -61,6 +61,43 @@ h1, h2, h3, h4, h5, h6, strong{
   min-height: 100%;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
-  
+  flex-direction: column; 
+}
+a{
+  color: $white; 
+  text-decoration: none;
+}
+.d{
+  &_flex{
+    display: flex;
+  }
+  &_block{
+    display: block;
+  }
+  &_none{
+    display: none;
+  }
+}
+.text{
+  &_uppercase{
+    text-transform: uppercase;
+  }
+}
+.align-items{
+  &_center{
+    align-items: center;
+  }
+}
+.justify-content{
+  &_center{
+    justify-content: center;
+  }
+}
+.fw{
+  &_bold{
+    @include segoe(bold);
+  }
+  &_semibold{
+    @include segoe(semibold);
+  }
 }

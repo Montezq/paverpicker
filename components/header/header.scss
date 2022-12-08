@@ -1,1 +1,23 @@
 @import '~/assets/styles/helpers.scss';
+
+.header{
+  padding: 20px 0;
+  background-color: $black;
+}
+.header__logo{
+  margin-right: 30px;
+  width: 212px;
+}
+.header__menu{
+  margin-right: 26px;
+}
+.header__menu-list{
+  margin-left: -20px;
+}
+.header__menu-list-item{
+  margin-left: 20px;
+  a{
+    letter-spacing:1px;
+    letter-spacing:.09em;
+  }
+}

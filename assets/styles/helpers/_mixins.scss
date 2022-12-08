@@ -8,6 +8,9 @@
   @if $style == semibold  {
     font-family: 'Segoe UI SemiBold', Arial, Helvetica, sans-serif;
   }
+  @if $style == bold  {
+    font-family: 'Segoe UI Bold', Arial, Helvetica, sans-serif;
+  }
 }
 
 
