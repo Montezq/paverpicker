@@ -1,0 +1,83 @@
+@mixin segoe($style: regular){
+  @if $style == regular  {
+    font-family: 'Segoe UI Regular', Arial, Helvetica, sans-serif;
+  }
+  @if $style == light  {
+    font-family: 'Segoe UI Light', Arial, Helvetica, sans-serif;
+  }
+  @if $style == semibold  {
+    font-family: 'Segoe UI SemiBold', Arial, Helvetica, sans-serif;
+  }
+}
+
+
+@mixin centered($axes : both){
+  @if $axes == both {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%)
+  }
+  @if $axes == y {
+      top: 50%;
+      transform: translateY(-50%);
+  }
+  @if $axes == x {
+      left: 50%;
+      transform: translateX(-50%);
+  }
+}
+
+
+@mixin desktopxxlg{
+  @media screen and (max-width: 2000px){
+      @content;
+  }
+}
+@mixin desktopxlg{
+  @media screen and (max-width: 1900px){
+      @content;
+  }
+}
+@mixin desktoplg{
+  @media screen and (max-width: 1700px){
+      @content;
+  }
+}
+@mixin desktopminlg{
+  @media screen and (max-width: 1399px){
+      @content;
+  }
+}
+@mixin desktopxminlg{
+  @media screen and (max-width: 1299px){
+      @content;
+  }
+}
+@mixin desktop{
+  @media screen and (max-width: 1200px){
+      @content;
+  }
+}
+//laptop
+@mixin laptop{
+  @media screen and (max-width: 1140px){
+      @content;
+  }
+}
+//tablets
+@mixin tabletxl{
+  @media screen and (max-width: 900px){
+      @content;
+  }
+}
+@mixin tablet{
+  @media screen and (max-width: 767px){
+      @content;
+  }
+}
+//phones
+@mixin phone{
+  @media screen and (max-width: 575px){
+      @content;
+  }
+}
