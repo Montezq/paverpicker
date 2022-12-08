@@ -31,5 +31,5 @@
   @import 'header';
 </style>
 <script setup>
-  import logo  from '~/assets/svg/logo/logo.svg?raw';
+  import logo  from '/assets/svg/logo/logo.svg?raw';
 </script>
