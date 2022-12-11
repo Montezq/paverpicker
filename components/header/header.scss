@@ -3,6 +3,7 @@
 .header{
   padding: 20px 0;
   background-color: $black;
+  backdrop-filter: opacity(20%) saturate(180%) blur(15px);
 }
 .header__logo{
   margin-right: 40px;

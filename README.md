@@ -34,4 +34,4 @@ Locally preview production build:
 npm run preview
 ```
 
-[Live preview](https://66909f49.paverpicker.pages.dev/)
+[Live preview](https://paverpicker.pages.dev/)
