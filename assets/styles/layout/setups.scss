@@ -87,6 +87,9 @@ a{
   &_uppercase{
     text-transform: uppercase;
   }
+  &_center{
+    text-align: center;
+  }
 }
 .align-items{
   &_center{
@@ -109,8 +112,7 @@ a{
 .slide-section{
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
-  padding: 0 20px;
+  padding: 0 60px;
 }
 img{
   // max-height: 100vh;
@@ -130,6 +132,7 @@ img{
   }
 }
 .slide-section__text-head{
+  margin-bottom: 20px;
   h1,h2{
     font-size: 3.4vw;
     line-height: 1.3;
@@ -145,14 +148,96 @@ img{
   &_32{
     font-size: 1.7vw;
   }
+  &_48{
+    font-size: 2.4vw;
+  }
+  &_64{
+    font-size: 3.4vw;
+  }
+}
+.ff{
+  &_icon{
+    @include segoe(icons);
+  }
 }
 .mb{
   &_32{
-    margin-bottom: 1.7vw;
+    margin-bottom: 1vw;
+  }
+}
+.mr{
+  &_20{
+    margin-right: 1vw;
+  }
+}
+.cursor{
+  &_pointer{
+    cursor: pointer;
   }
 }
 .scrl-down{
   @include centered(x);
-  bottom: 40px;
+  bottom: 1vw;
   opacity: .6;
+  p{
+    &:first-child{
+      @include segoe(semibold)
+    }
+  }
+}
+.slide-section__step{
+  margin-right: 36px;
+}
+.slide-section__step-counter{
+  width: 6.5vw;
+  height: 6.5vw;
+  border-radius: 50%;
+  background-color: $green;
+  position: relative;
+  z-index: 2;
+  p{
+    font-size: 3.4vw;
+    color: $gray;
+    @include segoe(semibold);
+  }
+}
+.slide-section__step-line{
+  position: absolute;
+  @include centered(x);
+  top: 0;
+  height: 100%;
+  width: 6px;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 8px,
+    $green 8px,
+    $green 16px
+  );
+}
+.docSlider section{
+  background-color: $black;
+}
+.animation-steps{
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+.animation-steps__wrapper{
+  height: 100%;
+  overflow: hidden;
+}
+.slider-section__text-cta{
+  margin-top: 25px;
+  a{
+    color: $green;
+    font-size: 40px;
+    font-size: 2.1vw;
+    @include segoe(semibold);
+  }
+}
+.slide-section__decor{
+  img{
+    width: 100%;
+  }
 }

@@ -11,22 +11,28 @@
   @if $style == bold  {
     font-family: 'Segoe UI Bold', Arial, Helvetica, sans-serif;
   }
+  @if $style == icons  {
+    font-family: 'Segoe MDL2 Assets', Arial, Helvetica, sans-serif;
+  }
 }
 
 
 @mixin centered($axes : both){
   @if $axes == both {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%)
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
   }
   @if $axes == y {
-      top: 50%;
-      transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
   }
   @if $axes == x {
-      left: 50%;
-      transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 

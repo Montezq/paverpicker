@@ -1,7 +1,9 @@
 <template>
-  <picture>
-    <img :src="img" :alt="alt"/>
-  </picture>
+  <div class="picture">
+    <picture>
+      <img :src="img" :alt="alt"/>
+    </picture>
+  </div>
 </template>
 <script setup>
   defineProps({
