@@ -1,0 +1,22 @@
+@import '@/assets/styles/helpers';
+
+.docSlider-index_1.docSlider-page_2{
+  .home__hero,
+  .home__send{
+    transform: translateY(-50%) !important
+  }
+}
+.home__hero-img{
+  @include centered(y);
+  left: 0;
+  top: 48%;
+  img{
+    max-height: 106vh;
+  }
+}
+.home__hero{
+  .slide-section__text{
+    margin-top: -5vw;
+    left: 55vw;
+  }
+}

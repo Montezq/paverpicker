@@ -1,25 +1,55 @@
 <template>
-  <div>
+  <div class="home">
     <Header />
     <client-only>
       <div class="docSlider">
-        <section id="foo" class="docSlider-scroll">
-          <div>
-            <div>Hello1
-              <div>Hello 6</div>
+        <section class="home__hero">
+          <div class="slide-section d_flex align-items_center flex_wrap position_relative">
+            <div class="home__hero-img position_absolute">
+              <Img :img="'/images/decor/home-hero.png'" :alt="'Home hero laptop'" />
             </div>
-            <div>Hello3
-              <div>Hello 4</div>
+            <div class="slide-section__text position_relative">
+              <div class="slide-section__text-head mb_32">
+                <h1>
+                  Visualise Bricks <br> and Pavers in <br> Their Best Light
+                </h1>
+              </div>
+              <div class="slide-section__text-cta">
+                <p class="color_green fs_32">Watch Video</p>
+              </div>
             </div>
-            <div>Hello2</div>
+            <div class="scrl-down position_absolute fs_32">
+              <p>So, how does it work?</p>
+            </div>
           </div>
         </section>
-        <section id="bar">Hello {{currentSlide}} {{pastSlide}}</section>
-        <section id="baz">Hello {{currentSlide}} {{pastSlide}}</section>
+        <section class="home__send">
+          <div class="slide-section d_flex align-items_center flex_wrap position_relative">
+            <div class="home__hero-img position_absolute">
+              <Img :img="'/images/decor/home-hero.png'" :alt="'Home hero laptop'" />
+            </div>
+            <div class="slide-section__text position_relative">
+              <div class="slide-section__text-head mb_32">
+                <h1>
+                  Visualise Bricks <br> and Pavers in <br> Their Best Light
+                </h1>
+              </div>
+              <div class="slide-section__text-cta">
+                <p class="color_green fs_32">Watch Video</p>
+              </div>
+            </div>
+            <div class="scrl-down position_absolute fs_32">
+              <p>So, how does it work?</p>
+            </div>
+          </div>
+        </section>
       </div>
     </client-only>
   </div>
 </template>
+<style lang="scss">
+  @import 'index.scss';
+</style>
 <script setup>
   useHead({
     link: [

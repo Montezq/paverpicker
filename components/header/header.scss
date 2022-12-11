@@ -2,8 +2,13 @@
 
 .header{
   padding: 20px 0;
-  background-color: $black;
-  backdrop-filter: opacity(20%) saturate(180%) blur(15px);
+  background-color: rgba($black, .7);
+  backdrop-filter: saturate(180%) blur(15px);
+  z-index: 9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 .header__logo{
   margin-right: 40px;
