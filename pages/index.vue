@@ -85,8 +85,10 @@
               <div class="photography__blitz"></div>
               <div class="photography__camera">
                 <Img :img="'/images/decor/camera.png'" :alt="'Box'" class="photography__camera-inside" />
-                <Img :img="'/images/decor/rig.png'" :alt="'Box'" class="photography__rig-inside" />
-                <Img :img="'/images/decor/brick.png'" :alt="'Brick'" class="photography_brick" />
+                <div class="photography__camera-ins">
+                  <Img :img="'/images/decor/rig.png'" :alt="'Box'" class="photography__rig-inside" />
+                  <Img :img="'/images/decor/brick.png'" :alt="'Brick'" class="photography_brick" />
+                </div>
               </div>
             </div>
           </div>
@@ -117,7 +119,12 @@
               </div>
             </div>
             <div class="slide-section__decor visualisation position_relative">
-              
+              <Img :img="'/images/decor/photoshop-window.png'" class="visualisation__window" :alt="'Photoshop Window'" />
+              <Img :img="'/images/decor/brick.png'" :alt="'Brick'" class="visualisation_brick-single" />
+              <div class="visualisation__brick">
+                <Img :img="'/images/decor/zoomed_bricks.png'" class="visualisation__wall" :alt="'Photoshop Window'" />
+                <Img :img="'/images/decor/Bricks.png'" class="visualisation__wall-big" :alt="'Photoshop Window'" />
+              </div>
             </div>
           </div>
         </section>
