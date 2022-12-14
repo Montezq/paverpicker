@@ -166,7 +166,6 @@
       }
     })
   }
-  let lastKnownScrollPosition = 0;
   let ticking = ref(false);
 
   function slide(speed=3000, y=null, direction=null) {
