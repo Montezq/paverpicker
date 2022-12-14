@@ -12,5 +12,9 @@
     "sass": "^1.56.1",
     "sass-loader": "^13.2.0",
     "vite-svg-loader": "^3.6.0"
+  },
+  "dependencies": {
+    "gsap": "^3.11.3",
+    "scrollmagic": "^2.0.8"
   }
 }

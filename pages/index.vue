@@ -2,7 +2,8 @@
   <div class="home">
     <Header />
     <div class="animation-steps__wrapper">
-      <div :class="'animation-steps animation-steps_'+currentSlide">
+      <div :class="'animation-steps'">
+        <div id="bric_trigger"></div>
         <section class="home__hero">
           <div class="slide-section d_flex align-items_center flex_wrap position_relative">
             <div class="home__hero-img position_absolute">
@@ -47,14 +48,16 @@
                 </div>
               </div>
             </div>
-            <div class="slide-section__decor box position_relative">
-              <Img :img="'/images/decor/box_back.png'" :alt="'Box'" class="box__back" />
-              <Img :img="'/images/decor/box_front.png'" :alt="'Box'" class="box__front" />
-              <Img :img="'/images/decor/brick.png'" :alt="'Brick'" class="box_brick" />
-            </div>
+            
           </div>
         </section>
+        <div id="photograph_trigger"></div>
         <section class="home__photograph">
+          <div class="slide-section__decor box position_relative">
+            <Img :img="'/images/decor/box_back.png'" :alt="'Box'" class="box__back" />
+            <Img :img="'/images/decor/box_front.png'" :alt="'Box'" class="box__front" />
+            <Img :img="'/images/decor/brick.png'" :alt="'Brick'" class="box_brick" />
+          </div>
           <div class="slide-section position_relative d_flex">
             <div class="d_flex slide-section__content">
               <div class="slide-section__step position_relative">
@@ -136,82 +139,77 @@
   @import 'index.scss';
 </style>
 <script setup>
-  useHead({
-    link: [
-      {
-        rel: 'stylesheet',
-        href: 'https://cdn.jsdelivr.net/npm/docslider@3.0.1/docSlider.css'
-      }
-    ],
-    script: [
-      { 
-        hid: 'docslider',
-        src: 'https://cdn.jsdelivr.net/npm/docslider@3.0.1/docSlider.min.js',
-        defer: true,
-        async: true,
-        body: true,
-      },
-    ],
-  });
-  let currentSlide = ref(0),
-      pastSlide = ref(null);
-  function initDocSlider(){
-    docSlider.init({
-      pager: false,
-      speed: 3000,
-      easing: 'ease-in-out',
-      beforeChange : (index, page, toIndex, toPage, type) =>{
-        pastSlide.value = index
-        currentSlide.value = toIndex
-      }
-    })
-  }
-  let lastKnownScrollPosition = 0;
-  let ticking = ref(false);
-
-  function slide(speed=3000, y=null, direction=null) {
-    const lngth = document.querySelectorAll('.animation-steps section').length
-    if((y>0 || direction==='up') && currentSlide.value < lngth){
-      currentSlide.value+=1
-    }else if((y<0 || direction==='down') && currentSlide.value > 0){
-      currentSlide.value-=1
-    }
-    ticking.value = true;
-    setTimeout(() => {
-      ticking.value = false;
-    }, speed);
-  }
-  function nextPage(){
-    docSlider.nextPage()
-  }
-  function touch(){
-    let touchstartY = 0
-    let touchendY = 0
-    function checkDirection() {
-      if (touchendY < touchstartY && ticking.value === false)
-        slide(3000,null,'up')
-      if (touchendY > touchstartY && ticking.value === false)
-        slide(3000,null,'down')
-    }
-    document.addEventListener('touchstart', e => {
-      touchstartY = e.changedTouches[0].screenY
-    })
-    document.addEventListener('touchend', e => {
-      touchendY = e.changedTouches[0].screenY
-      checkDirection()
-    })
-  }
+  import gsap from 'gsap'
   onMounted(() => {
-    setTimeout(() => {
-      // initDocSlider()
-      let wrapper = document.querySelector('.animation-steps');
-      wrapper.addEventListener('wheel', (e) => {
-        console.log(e.deltaY)
-        if (ticking.value === false) {
-          slide(3000, e.deltaY)
-        }
-      });
-      touch();
-    }, 1);
+
+    if (process.client && window) {
+      setTimeout(() => {
+        let controller = new ScrollMagic.Controller();
+        let blockBrick = gsap.timeline()
+          .fromTo(".box_brick", 
+            {rotate: -90, x: '-50%', y: '-200vh',}, 
+            {rotate: -180, x: '-50%', y: 0,})
+          .fromTo(".slide-section__decor.box", 
+            {rotate: 0, y: 0}, 
+            {rotate: 180, y: '12%'})
+          .fromTo(".box_brick", 
+            {y: 0}, 
+            {y: '-80vh'});
+        let blockPhoto = gsap.timeline()
+          .fromTo(".box_brick", 
+            { }, 
+            {y: '-110vh', filter: 'blur(8px)'}, 'first')
+          .fromTo(".photography__rig", 
+            {x: '8%', y: '-12%', filter: 'blur(0px)'}, 
+            {x: '4%', y: 0, filter: 'blur(8px)'}, 'first')
+          .fromTo(".photography__camera", 
+            {x: '100%'}, 
+            {x: 0}, 'first')
+          .fromTo(".photography_brick", 
+            {y: '-30vw'}, 
+            {y: 0}, 'first')
+          .fromTo(".photography__camera-ins", 
+            {opacity: 0}, 
+            {opacity: 1}, 'first')
+          .fromTo(".photography__blitz", 
+            {opacity: 0 }, 
+            {opacity: 1 },  'second')
+          .fromTo(".photography__blitz", 
+            {}, 
+            {opacity: 0 }, 'third')
+          .fromTo(".photography_brick", 
+            {x: 0, y: 0, opacity: 1}, 
+            {x: '-1vw', y: '10vw', opacity: 0}, 'third');
+
+        new ScrollMagic.Scene({
+          triggerElement: '#bric_trigger',
+          triggerHook: "onLeave",
+          duration: '200%',
+        })
+          .setTween(blockBrick)
+          .addTo(controller);
+
+        new ScrollMagic.Scene({
+          triggerElement: '#photograph_trigger',
+          triggerHook: "onLeave",
+          offset: -50,
+          duration: '200%',
+        })
+          .setTween(blockPhoto)
+          .setPin(".home__photograph")
+          .addTo(controller);
+
+        // new ScrollMagic.Scene({
+        //   triggerElement: '#photograph_trigger',
+        //   triggerHook: "onLeave",
+        //   offset: -50,
+        //   duration: '200%',
+        // })
+        //   .setPin(".box_brick")
+        //   .addTo(controller);
+
+
+      }, 1);
+    }
   })
 </script>

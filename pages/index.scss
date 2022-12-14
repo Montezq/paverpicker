@@ -5,8 +5,6 @@ $speed: 3s;
   height:100%;
 }
 .animation-steps{
-  transition: $speed ease-in-out;
-  transform: translateY(0);
   &_1{
     transform: translateY(-100vh);
     .box_brick{
@@ -125,9 +123,9 @@ $speed: 3s;
     }
   }
 }
-.slide-section__text{
-  transition: $speed ease-in-out;
-}
+// .slide-section__text{
+//   transition: $speed ease-in-out;
+// }
 .home__hero-img{
   @include centered(y);
   left: 0;
@@ -151,7 +149,8 @@ $speed: 3s;
 .slide-section__decor.box{
   width: 47vw;
   margin-left: 4vw;
-  transition: $speed ease-in-out;
+  top: -48vh;
+  left: 36vw;
 }
 .box__back,
 .box__front{
@@ -170,9 +169,8 @@ $speed: 3s;
   position: absolute;
   left:50%;
   top: 50%;
-  transform: translateX(-50%) translateY(-200vh) rotate(-90deg);
   z-index: 2;
-  transition: $speed ease-in-out, filter .2s ease-in-out 2s ;;
+  // transition: $speed ease-in-out, filter .2s ease-in-out 2s ;;
 }
 
 .home__photograph{
@@ -192,7 +190,7 @@ $speed: 3s;
     top: 7vw;
     left: -11%;
     transform: translate(8%, -12%);
-    transition: $speed ease-in-out, filter .2s ease-in-out 2s ;
+    // transition: $speed ease-in-out, filter .2s ease-in-out 2s ;
   }
   .photography__camera{
     width: calc(100% + 6vw);
@@ -200,8 +198,6 @@ $speed: 3s;
     bottom: -21vw;
     right: -14vw;
     transform: translateX(100%);
-    transition: $speed ease-in-out;
-    
   }
   .photography__camera-ins{
     width: 21.5vw;
@@ -220,7 +216,7 @@ $speed: 3s;
       top: 0;
       left: 0;
       opacity: 0;
-      transition: $speed ease-in-out, background-color .4s linear 3s;
+      // transition: $speed ease-in-out, background-color .4s linear 3s;
     }
   }
   .photography__rig-inside{
@@ -237,7 +233,6 @@ $speed: 3s;
     left: 5.3vw;
     z-index: 4;
     transform: translateY(-30vw);
-    transition: $speed ease-in-out;
   }
   .photography__blitz{
     width: 100vw;
@@ -245,7 +240,6 @@ $speed: 3s;
     background: radial-gradient(circle, $white, rgba($white, 0) 60%);
     @include centered;
     margin-left: 5vw;
-    opacity: 0;
   }
 }
 .home__visualisation{
