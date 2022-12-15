@@ -110,6 +110,9 @@ a{
   &_center{
     justify-content: center;
   }
+  &_between{
+    justify-content: space-between;
+  }
 }
 .fw{
   &_bold{

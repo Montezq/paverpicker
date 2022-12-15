@@ -2,4 +2,34 @@
 
 .partners{
   padding-top: 12vw;
+  margin-bottom: 120px;
+}
+.partners__head{
+  margin-bottom: 90px;
+}
+.partners__body{
+  padding: 0 8vw;
+}
+.partners__body-list{
+  margin: -50px -15px 0 ;
+}
+.partners__body-item{
+  width: 25%;
+  padding: 50px 20px;
+  a{
+    width: 100%;
+  }
+  svg{
+    width: 100%;
+    max-width: 60%;
+    filter: grayscale(1);
+    transition: .4s ease-in-out;
+    opacity: .6;
+  }
+  &:hover{
+    svg{
+      filter: grayscale(0);
+      opacity: 1;
+    }
+  }
 }

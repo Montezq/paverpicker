@@ -7,9 +7,9 @@
       </h2>
     </div>
     <div class="partners__body">
-      <ul class="partners__body-list">
-        <li class="partners__body-item" v-for="(item, index) in partners" v-bind:key="index">
-          <a :href="item.url" target="_blank" v-html="item.logo" :aria-label="'Partner logo '+item.alt">
+      <ul class="partners__body-list d_flex flex_wrap">
+        <li class="partners__body-item d_flex align-items_center justify-content_center" v-for="(item, index) in partners" v-bind:key="index">
+          <a :href="item.url" class="d_flex align-items_center justify-content_center" target="_blank" v-html="item.logo" :aria-label="'Partner logo '+item.alt">
           </a>
         </li>
       </ul>

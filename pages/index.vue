@@ -235,7 +235,6 @@
       wrapper.addEventListener('wheel', (e) => {
         if (ticking.value === false && scrlTicking.value) {
           if((currentSlide.value === 3 && pastSlide.value === 2) || (currentSlide.value === 3 && pastSlide.value === 4)){
-            console.log('here')
             slide(6000, e.deltaY)
           }
           else
