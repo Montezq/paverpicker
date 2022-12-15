@@ -208,9 +208,9 @@
     let touchstartY = 0
     let touchendY = 0
     function checkDirection() {
-      if (touchendY < touchstartY && ticking.value === false)
+      if (touchendY < touchstartY && ticking.value === false && scrlTicking.value)
         slide(3000,null,'up')
-      if (touchendY > touchstartY && ticking.value === false)
+      if (touchendY > touchstartY && ticking.value === false && scrlTicking.value)
         slide(3000,null,'down')
     }
     document.addEventListener('touchstart', e => {
@@ -227,6 +227,7 @@
       const wrapper = document.querySelector('.animation-steps');
       const scrl = document.querySelector('.home__software');
       scrl.addEventListener('scroll', (e) =>{
+        console.log(scrl.scrollTop)
         if(scrl.scrollTop>1)
           scrlTicking.value=false
         else

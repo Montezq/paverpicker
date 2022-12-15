@@ -162,7 +162,8 @@ $speed: 3s;
       .visualisation_brick-single{
         transform: translateX(-50%) translateY(17.8vw);
         opacity: 1;
-        animation: opac .4s ease 3s forwards;
+        visibility: hidden;
+        // animation: opac .4s ease 3s forwards;
       }
     }
     .visualisation__door-wrapper{
@@ -414,6 +415,7 @@ $speed: 3s;
     top: 54.7%;
     left: 52%;
     transform: translate(-50%, -50%);
+    width: 96%;
     img{
       height: 100%;
       width: auto;
@@ -438,7 +440,7 @@ $speed: 3s;
     transform: translateX(-3%) translateY(-40vw);
     opacity: 1;
     z-index: 4;
-    transition: $speed ease-in-out, opacity .6s ease-in-out .8s;
+    transition: $speed ease-in-out, opacity .6s ease-in-out .8s, visibility 0s ease 3s;
     opacity: 0;
   }
   .visualisation__door-wrapper{
