@@ -1,6 +1,16 @@
 *{
   box-sizing: border-box;
 }
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: $black;
+}
+::-webkit-scrollbar-thumb {
+  background: $dark;
+  border-radius: 4px;
+}
 html, body{
   height: 100%;
   margin: 0;
@@ -154,6 +164,9 @@ img{
   }
   &_64{
     font-size: 3.4vw;
+  }
+  &_68{
+    font-size: 3.54vw;
   }
 }
 .ff{

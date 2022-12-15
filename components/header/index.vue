@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row d_flex align-items_center justify-content_center">
         <div class="header__logo">
-          <NuxtLink to="/">
+          <NuxtLink to="/" aria-label="Header Logo">
             <div v-html="logo"></div>
           </NuxtLink>
         </div>

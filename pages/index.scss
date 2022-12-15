@@ -197,6 +197,12 @@ $speed: 3s;
   }
   &_5{
     transform: translateY(-400vh);
+    .home__software{
+      &.oh{
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+    }
   }
   &_5.animation-lstep_4{
     .software{
@@ -210,7 +216,7 @@ $speed: 3s;
         padding-bottom: 57%;
       }
       .visualisation__wall-big{
-        width: 50vw;
+        width: 106%;
         left: 0;
         z-index: 3;
         transition: $speed ease-in-out;
@@ -370,6 +376,7 @@ $speed: 3s;
 
 }
 .home__software{
+  height: 100vh;
   .slide-section__content{
     height: 30vh;
   }
