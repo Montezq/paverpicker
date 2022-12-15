@@ -84,7 +84,9 @@
               </div>
             </div>
             <div class="slide-section__decor photography position_relative">
-              <Img :img="'/images/decor/rig.png'" :alt="'Box'" class="photography__rig" />
+              <div class="photography__rig-wrapper">
+                <Img :img="'/images/decor/rig.png'" :alt="'Box'" class="photography__rig" />
+              </div>
               <div class="photography__blitz"></div>
               <div class="photography__camera">
                 <Img :img="'/images/decor/camera.png'" :alt="'Box'" class="photography__camera-inside" />
@@ -140,76 +142,85 @@
 </style>
 <script setup>
   import gsap from 'gsap'
+  useHead({
+    script: [
+      { 
+        src: 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js',
+        defer: true,
+        body: true,
+      },
+      { 
+        src: 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js',
+        defer: true,
+        body: true,
+      },
+    ],
+  })
   onMounted(() => {
-
     if (process.client && window) {
-      setTimeout(() => {
-        let controller = new ScrollMagic.Controller();
-        let blockBrick = gsap.timeline()
-          .fromTo(".box_brick", 
-            {rotate: -90, x: '-50%', y: '-200vh',}, 
-            {rotate: -180, x: '-50%', y: 0,})
-          .fromTo(".slide-section__decor.box", 
-            {rotate: 0, y: 0}, 
-            {rotate: 180, y: '12%'})
-          .fromTo(".box_brick", 
-            {y: 0}, 
-            {y: '-80vh'});
-        let blockPhoto = gsap.timeline()
-          .fromTo(".box_brick", 
-            { }, 
-            {y: '-110vh', filter: 'blur(8px)'}, 'first')
-          .fromTo(".photography__rig", 
-            {x: '8%', y: '-12%', filter: 'blur(0px)'}, 
-            {x: '4%', y: 0, filter: 'blur(8px)'}, 'first')
-          .fromTo(".photography__camera", 
-            {x: '100%'}, 
-            {x: 0}, 'first')
-          .fromTo(".photography_brick", 
-            {y: '-30vw'}, 
-            {y: 0}, 'first')
-          .fromTo(".photography__camera-ins", 
-            {opacity: 0}, 
-            {opacity: 1}, 'first')
-          .fromTo(".photography__blitz", 
-            {opacity: 0 }, 
-            {opacity: 1 },  'second')
-          .fromTo(".photography__blitz", 
-            {}, 
-            {opacity: 0 }, 'third')
-          .fromTo(".photography_brick", 
-            {x: 0, y: 0, opacity: 1}, 
-            {x: '-1vw', y: '10vw', opacity: 0}, 'third');
+      let controller = new ScrollMagic.Controller();
+      let blockBrick = gsap.timeline()
+        .fromTo(".box_brick", 
+          {rotate: -90, x: '-50%', y: '-200vh',}, 
+          {rotate: -180, x: '-50%', y: 0,})
+        .fromTo(".slide-section__decor.box", 
+          {rotate: 0, y: 0}, 
+          {rotate: 180, y: '12%'})
+        .fromTo(".box_brick", 
+          {y: 0}, 
+          {y: '-80vh'});
+      let blockPhoto = gsap.timeline()
+        .fromTo(".box_brick", 
+          { }, 
+          {y: '-110vh', filter: 'blur(8px)'}, 'first')
+        .fromTo(".photography__rig", 
+          {x: '8%', y: '-12%', filter: 'blur(0px)'}, 
+          {x: '4%', y: 0, filter: 'blur(8px)'}, 'first')
+        .fromTo(".photography__camera", 
+          {x: '100%'}, 
+          {x: 0}, 'first')
+        .fromTo(".photography_brick", 
+          {y: '-30vw'}, 
+          {y: 0}, 'first')
+        .fromTo(".photography__camera-ins", 
+          {opacity: 0}, 
+          {opacity: 1}, 'first')
+        .fromTo(".photography__blitz", 
+          {opacity: 0 }, 
+          {opacity: 1 },  'second')
+        .fromTo(".photography__blitz", 
+          {}, 
+          {opacity: 0 }, 'third')
+        .fromTo(".photography_brick", 
+          {x: 0, y: 0, opacity: 1}, 
+          {x: '-1vw', y: '10vw', opacity: 0}, 'fourth');
 
-        new ScrollMagic.Scene({
-          triggerElement: '#bric_trigger',
-          triggerHook: "onLeave",
-          duration: '200%',
-        })
-          .setTween(blockBrick)
-          .addTo(controller);
+      new ScrollMagic.Scene({
+        triggerElement: '#bric_trigger',
+        triggerHook: "onLeave",
+        duration: '200%',
+      })
+        .setTween(blockBrick)
+        .addTo(controller);
 
-        new ScrollMagic.Scene({
-          triggerElement: '#photograph_trigger',
-          triggerHook: "onLeave",
-          offset: -50,
-          duration: '200%',
-        })
-          .setTween(blockPhoto)
-          .setPin(".home__photograph")
-          .addTo(controller);
+      new ScrollMagic.Scene({
+        triggerElement: '#photograph_trigger',
+        triggerHook: "onLeave",
+        offset: -50,
+        duration: '200%',
+      })
+        .setTween(blockPhoto)
+        .setPin(".home__photograph")
+        .addTo(controller);
 
-        // new ScrollMagic.Scene({
-        //   triggerElement: '#photograph_trigger',
-        //   triggerHook: "onLeave",
-        //   offset: -50,
-        //   duration: '200%',
-        // })
-        //   .setPin(".box_brick")
-        //   .addTo(controller);
-
-
-      }, 1);
+      // new ScrollMagic.Scene({
+      //   triggerElement: '#photograph_trigger',
+      //   triggerHook: "onLeave",
+      //   offset: -50,
+      //   duration: '200%',
+      // })
+      //   .setPin(".box_brick")
+      //   .addTo(controller);
     }
   })
 </script>
