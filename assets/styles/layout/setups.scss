@@ -122,6 +122,7 @@ img{
   image-rendering: -webkit-optimize-contrast!important;
   image-rendering: crisp-edges!important;
   -ms-interpolation-mode: nearest-neighbor!important;
+  display: block;
 }
 .position{
   &_relative{

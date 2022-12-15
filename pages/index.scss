@@ -78,6 +78,13 @@ $speed: 3s;
     .photography .photography__blitz{
       animation: blitz .5s linear 3s;
     }
+    .software{
+      .visualisation__brick{
+        width: 52vw;
+        top: -100vh;
+        padding-bottom: 75%;
+      }
+    }
   }
   &_4{
     transform: translateY(-300vh);
@@ -116,11 +123,105 @@ $speed: 3s;
         transform: translateY(0)
       }
     }
-    .visualisation{
-      .visualisation_brick-single{
-        transform: translateY(0) translateX(0);
+    .software{
+      .visualisation__brick{
+        width: 52vw;
+        top: -100vh;
+        padding-bottom: 75%;
+      }
+    }
+  }
+
+  &_3.animation-lstep_4{
+    .software{
+      .visualisation__wall{
         opacity: 1;
-        transition: $speed ease-in-out, opacity .6s ease-in-out .8s;
+        transition: opacity 0s ease 3s;
+      }
+      .visualisation__wall-big{
+        width: 186vw;
+        transition: $speed ease-in-out;
+      }
+    }
+    .visualisation__door-wrapper{
+      transform: translateX(-100%);
+      transition: transform 2s ease;
+    }
+  }
+  &_4.animation-lstep_3{
+    .visualisation__wall{
+      opacity: 0;
+      transition: 0s ease 3s;
+    }
+    .software{
+      .visualisation__wall-big{
+        // animation: wall 2s ease 3s forwards;
+        width: 80vw;
+        transition: 2s ease-in-out 3s;
+      }
+      .visualisation_brick-single{
+        transform: translateX(-50%) translateY(17.8vw);
+        opacity: 1;
+        animation: opac .4s ease 3s forwards;
+      }
+    }
+    .visualisation__door-wrapper{
+      transform: translateX(0);
+      transition: transform 1.4s ease 4s;
+    }
+  }
+  &_4.animation-lstep_5{
+    .software{
+      .visualisation__brick{
+        width: 52vw;
+        top: -100vh;
+        padding-bottom: 75%;
+        left: 0;
+      }
+      .visualisation__wall{
+        opacity: 0;
+      }
+      .visualisation__wall-big{
+        width: 80vw;
+        transition: $speed ease-in-out;
+      }
+      .visualisation__door-wrapper{
+        transform: translateX(0);
+        width: 58vw;
+        transition: $speed ease-in-out;
+      }
+      .visualisation__dotted{
+        opacity: 1;
+      }
+    }
+  }
+  &_5{
+    transform: translateY(-400vh);
+  }
+  &_5.animation-lstep_4{
+    .software{
+      .visualisation__wall{
+        opacity: 0;
+      }
+      .visualisation__brick{
+        width: 66.6%;
+        top: 1.5vw;
+        left: 11.3vw;
+        padding-bottom: 57%;
+      }
+      .visualisation__wall-big{
+        width: 50vw;
+        left: 0;
+        z-index: 3;
+        transition: $speed ease-in-out;
+      }
+      .visualisation__door-wrapper{
+        transform: translateX(0);
+        width: 23vw;
+        transition: $speed ease-in-out;
+      }
+      .visualisation__dotted{
+        opacity: 0;
       }
     }
   }
@@ -266,21 +367,57 @@ $speed: 3s;
     bottom: 5vw;
     left: 0;
   }
+
+}
+.home__software{
+  .slide-section__content{
+    height: 30vh;
+  }
+  .slide-section__step,
+  .slide-section__text{
+    padding-top: 30vh;
+  }
+}
+.software{
+  width: 92vw;
+  right: -14vw;
+  margin-top: 7vw;
+  @include centered(y);
+  .software__monitor{
+    width: 100%;
+    position: relative;
+    z-index: 4;
+    img{
+      width: 100%;
+    }
+  }
   .visualisation__brick{
     position: absolute;
-    width: calc(100% - 2.9vw);
-    bottom: 5.9vw;
-    left: 2.03vw;
+    width: 37.6%;
+    top: 0;
+    left: 0;
+    padding-bottom: 32%;
     overflow: hidden;
+    transition: $speed ease-in-out;
   }
   .visualisation__wall{
-    width: 100%;
+    position: absolute;
+    height: 88%;
+    z-index: 3;
+    top: 54.7%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    img{
+      height: 100%;
+      width: auto;
+    }
   }
   .visualisation__wall-big{
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 2.2%;
+    left: 4%;
     width: 186vw;
+    z-index: 2;
     img{
       max-width: initial;
     }
@@ -288,18 +425,86 @@ $speed: 3s;
   .visualisation_brick-single{
     width: 11vw;
     position: absolute;
-    z-index: 2;
-    bottom: 22.9vw;
-    left: 19.4vw;
-    transform: translateY(-100vh) translateX(4vw);
+    z-index: 3;
+    top: -100vh;
+    left: 48.3%;
+    transform: translateX(-3%) translateY(-40vw);
+    opacity: 1;
+    z-index: 4;
+    transition: $speed ease-in-out, opacity .6s ease-in-out .8s;
     opacity: 0;
-    transition: $speed ease-in-out, opacity .6s ease-in-out 1.6s;
+  }
+  .visualisation__door-wrapper{
+    position: absolute;
+    left: 0;
+    bottom: 2%;
+    z-index: 3;
+    width: 58vw;
+    transform: translateX(-100%);
+  }
+  .visualisation__door{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  .visualisation__dotted{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 55%;
+    z-index: 2;
+    transition: .6s ease-in-out;
+  }
+  .visualisation__brick-wrapper{
+    width: 52vw;
+    position: absolute;
+    padding-bottom: 44%;
+    right: 18vw;
+  }
+  .visualisation__window{
+    width: 100%;
+    position: absolute;
+    top: -100vh;
+    right: 0;
+    z-index: 4;
   }
 }
+
+// .software{
+//   height: 100vh;
+//   .software__monitor{
+//     position: absolute;
+//     @include centered;
+//     width: 85vw;
+//     bottom: -13vw;
+//     left: 33vw;
+//     z-index: 3;
+//   }
+// }
+
 
 
 @keyframes blitz {
   0%{opacity: 0;}
   50%{opacity: 1;}
   100%{opacity: 0;}
+}
+
+
+@keyframes opac {
+  0%{opacity: 1;}
+  100%{opacity: 0;}
+}
+
+@keyframes wall {
+  0%{z-index: 3;}
+  10%{width: 186vw}
+  100%{width: 80vw; z-index: 3;}
+}
+@keyframes wallreverse {
+  0%{z-index: 3;width: 80vw}
+  90%{z-index: 3;}
+  100%{width: 186vw; z-index: 1;}
 }

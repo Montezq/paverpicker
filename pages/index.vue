@@ -2,7 +2,7 @@
   <div class="home">
     <Header />
     <div class="animation-steps__wrapper">
-      <div :class="'animation-steps animation-steps_'+currentSlide">
+      <div :class="'animation-steps animation-steps_'+currentSlide+' animation-lstep_'+pastSlide">
         <section class="home__hero">
           <div class="slide-section d_flex align-items_center flex_wrap position_relative">
             <div class="home__hero-img position_absolute">
@@ -118,13 +118,48 @@
                 </div>
               </div>
             </div>
-            <div class="slide-section__decor visualisation position_relative">
-              <Img :img="'/images/decor/photoshop-window.png'" class="visualisation__window" :alt="'Photoshop Window'" />
-              <Img :img="'/images/decor/brick.png'" :alt="'Brick'" class="visualisation_brick-single" />
-              <div class="visualisation__brick">
-                <Img :img="'/images/decor/zoomed_bricks.png'" class="visualisation__wall" :alt="'Photoshop Window'" />
-                <Img :img="'/images/decor/Bricks.png'" class="visualisation__wall-big" :alt="'Photoshop Window'" />
+          </div>
+        </section>
+        <section class="home__software">
+          <div class="slide-section position_relative d_flex">
+            <div class="d_flex slide-section__content">
+              <div class="slide-section__step position_relative">
+                <div class="slide-section__step-counter d_flex align-items_center justify-content_center">
+                  <p>4</p>
+                </div>
+                <div class="slide-section__step-line"></div>
               </div>
+              <div class="slide-section__text">
+                <div class="slide-section__text-head">
+                  <h2>We Send You  <br> Your Software </h2>
+                </div>
+                <div class="slider-section__text-desc">
+                  <p class="fs_32">
+                    We send you a link to your
+                    <br> software, and advise on the
+                    <br> best way to integrate it into your
+                    <br> website.
+                  </p>
+                </div>
+                <div class="slider-section__text-cta">
+                  <NuxtLink to="/">Learn more </NuxtLink>
+                </div>
+              </div>
+            </div>
+            <div class="slide-section__decor software">
+              <div class="visualisation__brick-wrapper">
+                <Img :img="'/images/decor/photoshop-window.png'" class="visualisation__window" :alt="'Photoshop Window'" />
+                <Img :img="'/images/decor/brick.png'" :alt="'Brick'" class="visualisation_brick-single" />
+                <div class="visualisation__brick">
+                  <Img :img="'/images/decor/zoomed_bricks.png'" class="visualisation__wall" :alt="'Photoshop Window'" />
+                  <Img :img="'/images/decor/bricks.png'" class="visualisation__wall-big" :alt="'Photoshop Window'" />
+                  <div class="visualisation__door-wrapper">
+                    <Img :img="'/images/decor/door.png'" class="visualisation__door" :alt="'Photoshop Window'" />
+                    <Img :img="'/images/decor/dotted.png'" class="visualisation__dotted" :alt="'Photoshop Window'" />
+                  </div>
+                </div>
+              </div>
+              <Img :img="'/images/decor/monitor.png'" class="software__monitor" :alt="'Sfotware monitor'" />
             </div>
           </div>
         </section>
@@ -137,29 +172,21 @@
 </style>
 <script setup>
   let currentSlide = ref(0),
-      pastSlide = ref(null);
-  function initDocSlider(){
-    docSlider.init({
-      pager: false,
-      speed: 3000,
-      easing: 'ease-in-out',
-      beforeChange : (index, page, toIndex, toPage, type) =>{
-        pastSlide.value = index
-        currentSlide.value = toIndex
-      }
-    })
-  }
-  let lastKnownScrollPosition = 0;
-  let ticking = ref(false);
+      pastSlide = ref(0),
+      ticking = ref(false);
+  
 
   function slide(speed=3000, y=null, direction=null) {
     const lngth = document.querySelectorAll('.animation-steps section').length
     if((y>0 || direction==='up') && currentSlide.value < lngth){
       currentSlide.value+=1
+      pastSlide.value = currentSlide.value-1
     }else if((y<0 || direction==='down') && currentSlide.value > 0){
       currentSlide.value-=1
+      pastSlide.value = currentSlide.value+1
     }
     ticking.value = true;
+    console.log([currentSlide.value, pastSlide.value, speed])
     setTimeout(() => {
       ticking.value = false;
     }, speed);
@@ -189,9 +216,13 @@
       // initDocSlider()
       let wrapper = document.querySelector('.animation-steps');
       wrapper.addEventListener('wheel', (e) => {
-        console.log(e.deltaY)
         if (ticking.value === false) {
-          slide(3000, e.deltaY)
+          if((currentSlide.value === 3 && pastSlide.value === 2) || (currentSlide.value === 3 && pastSlide.value === 4)){
+            console.log('here')
+            slide(6000, e.deltaY)
+          }
+          else
+            slide(3000, e.deltaY)
         }
       });
       touch();
