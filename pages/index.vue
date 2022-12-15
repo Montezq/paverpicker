@@ -136,22 +136,6 @@
   @import 'index.scss';
 </style>
 <script setup>
-  useHead({
-    link: [
-      {
-        rel: 'stylesheet',
-        href: 'https://cdn.jsdelivr.net/npm/docslider@3.0.1/docSlider.css'
-      }
-    ],
-    script: [
-      { 
-        hid: 'docslider',
-        src: 'https://cdn.jsdelivr.net/npm/docslider@3.0.1/docSlider.min.js',
-        defer: true,
-        body: true,
-      },
-    ],
-  });
   let currentSlide = ref(0),
       pastSlide = ref(null);
   function initDocSlider(){

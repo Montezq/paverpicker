@@ -7,25 +7,19 @@ export default defineNuxtConfig({
         lang: 'en'
       },
       title: 'Paver Picker | YOUR Online Showroom',
+      link: [
+        {
+          rel: 'stylesheet',
+          href: 'https://cdn.jsdelivr.net/npm/docslider@3.0.1/docSlider.css'
+        }
+      ],
       script: [
         { 
-          src: 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js',
+          hid: 'docslider',
+          src: 'https://cdn.jsdelivr.net/npm/docslider@3.0.1/docSlider.min.js',
           defer: true,
-          async: true,
           body: true,
         },
-        { 
-          src: 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js',
-          defer: true,
-          async: true,
-          body: true,
-        },
-        // { 
-        //   src: 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js',
-        //   defer: true,
-        //   async: true,
-        //   body: true,
-        // },
       ],
     }
   },
