@@ -148,7 +148,6 @@
         hid: 'docslider',
         src: 'https://cdn.jsdelivr.net/npm/docslider@3.0.1/docSlider.min.js',
         defer: true,
-        async: true,
         body: true,
       },
     ],
