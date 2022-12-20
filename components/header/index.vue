@@ -2,6 +2,8 @@
   <header class="header">
     <div class="container">
       <div class="row d_flex align-items_center justify-content_center">
+        <div class="header__menu-btn">
+        </div>
         <div class="header__logo">
           <NuxtLink to="/" aria-label="Header Logo">
             <div v-html="logo"></div>

@@ -9,16 +9,55 @@
   top: 0;
   left: 0;
   right: 0;
+  @include laptops{
+    padding: 12px;
+  }
+  .row{
+    @include laptops{
+      justify-content: space-between;
+      margin: 0;
+    }
+  }
+}
+.header__menu-btn{
+  display: none;
+  @include laptops{
+    display: block;
+    width: 12px;
+    height: 16px;
+    border: 2px solid $white;
+  }
 }
 .header__logo{
   margin-right: 40px;
   width: 212px;
+  @include laptops{
+    margin-right: 0;
+  }
+  svg{
+    display: block;
+  }
+  @include laptops{
+    width: 131px;
+  }
 }
 .header__menu{
   margin-right: 26px;
+  @include laptops{
+    margin-right: 0;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    transform: translateX(-100%);
+  }
 }
 .header__menu-list{
   margin-left: -20px;
+  @include laptops{
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .header__menu-list-item{
   margin-left: 20px;

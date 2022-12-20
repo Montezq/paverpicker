@@ -55,6 +55,20 @@ $speed: 3s;
         translateY(-48vw) 
         rotate(-180deg);
       filter: blur(8px);
+      @include desktoplg{
+        transform: 
+          translateX(-50%)
+          translateY(-650%)
+          rotate(-180deg);
+        filter: blur(8px);
+      }
+      @include tlxl{
+        transform: 
+          translateX(-50%)
+          translateY(-840%)
+          rotate(-180deg);
+        filter: blur(8px);
+      }
     }
     .photography .photography__camera{
       transform: translateX(0%);
@@ -102,6 +116,20 @@ $speed: 3s;
         translateY(-48vw) 
         rotate(-180deg);
       filter: blur(8px);
+      @include desktoplg{
+        transform: 
+          translateX(-50%)
+          translateY(-650%)
+          rotate(-180deg);
+        filter: blur(8px);
+      }
+      @include tlxl{
+        transform: 
+          translateX(-50%)
+          translateY(-840%)
+          rotate(-180deg);
+        filter: blur(8px);
+      }
     }
     .photography .photography__camera{
       transform: translateX(0%) translateY(-30%);
@@ -235,19 +263,49 @@ $speed: 3s;
 }
 .slide-section__text{
   transition: $speed ease-in-out;
+  position: relative;
+  z-index: 3;
 }
 .home__hero-img{
   @include centered(y);
   left: 0;
   top: 48%;
+  @include tabletPortrait{
+    left: 60%;
+    transform: translate(-50%, 0);
+    top: 0;
+  }
+  @include tablet{
+    top: 6%;
+  }
+  @include tabletLandscape{
+    top: 48%;
+  }
   img{
     max-height: 106vh;
+    @include tabletPortrait{
+      max-height: initial;
+      max-width: initial;
+      height: 60vh;
+    }
+    @include tablet{
+      height: 90vw;
+    }
+    @include tabletLandscape{
+      max-height: 90vh;
+    }
   }
 }
 .home__hero{
   .slide-section__text{
     margin-top: -5vw;
     left: 55vw;
+    @include tabletPortrait{
+      margin-top: 47vw;
+      left: 0;
+      text-align: center;
+      width: 100%;
+    }
   }
 }
 .home__send{
@@ -301,6 +359,12 @@ $speed: 3s;
     left: -11%;
     transform: translate(8%, -12%);
     transition: $speed ease-in-out, filter .2s ease-in-out 2s ;
+    @include desktoplg{
+      top: 10vw;
+    }
+    @include tlxl{
+      top: 16vw
+    }
   }
   .photography__camera{
     width: calc(100% + 6vw);

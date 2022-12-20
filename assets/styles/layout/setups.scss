@@ -129,6 +129,12 @@ a{
   width: 100vw;
   height: 100vh;
   padding: 0 60px;
+  @include laptops{
+    padding: 0 7px;
+    @supports (-webkit-touch-callout: none) {
+      height: -webkit-fill-available;
+    }
+  }
 }
 img{
   // max-height: 100vh;
@@ -154,7 +160,20 @@ img{
     font-size: 3.4vw;
     line-height: 1.3;
     @include segoe(semibold);
+    @include tablet{
+      font-size: 10vw;
+    }
+    @include tabletPortrait{
+      font-size: 8vw;
+    }
+    @include tabletLandscape{
+      font-size: 3.4vw;
+    }
   }
+}
+.slide-section__text-cta{
+  display: flex;
+  justify-content: center;
 }
 .color{
   &_green{
@@ -164,12 +183,36 @@ img{
 .fs{
   &_32{
     font-size: 1.7vw;
+    @include tablet{
+      font-size: 5vw;
+    }
+    @include tabletPortrait{
+      font-size: 3.4vw;
+    }
+    @include tabletLandscape{
+      font-size: 1.7vw;
+    }
   }
   &_48{
     font-size: 2.4vw;
+    @include tabletPortrait{
+      font-size: 4vw;
+    }
+    @include tabletLandscape{
+      font-size: 2.4vw;
+    }
   }
   &_64{
     font-size: 3.4vw;
+    @include tablet{
+      font-size: 10vw;
+    }
+    @include tabletPortrait{
+      font-size: 7vw;
+    }
+    @include tabletLandscape{
+      font-size: 3.4vw;
+    }
   }
   &_68{
     font-size: 3.54vw;
@@ -199,6 +242,9 @@ img{
   @include centered(x);
   bottom: 1vw;
   opacity: .6;
+  @include tablet{
+    bottom: 16px;
+  }
   p{
     &:first-child{
       @include segoe(semibold)

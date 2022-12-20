@@ -48,7 +48,7 @@
   }
 }
 @mixin desktoplg{
-  @media screen and (max-width: 1700px){
+  @media screen and (max-width: 1600px){
       @content;
   }
 }
@@ -73,7 +73,22 @@
       @content;
   }
 }
+@mixin laptops{
+  @media screen and (max-width: 991px){
+      @content;
+  }
+}
 //tablets
+@mixin tabletPortrait{
+  @media screen and (max-width: 1140px) and (orientation: portrait){
+    @content;
+  }
+}
+@mixin tabletLandscape{
+  @media screen and (max-width: 1140px) and (orientation: landscape){
+    @content;
+  }
+}
 @mixin tabletxl{
   @media screen and (max-width: 900px){
       @content;
@@ -87,6 +102,13 @@
 //phones
 @mixin phone{
   @media screen and (max-width: 575px){
+      @content;
+  }
+}
+
+
+@mixin tlxl{
+  @media screen and (max-width: 1400px) and (max-height: 1100px) and (min-height: 900px){
       @content;
   }
 }
