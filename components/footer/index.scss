@@ -1,1 +1,19 @@
 @import '~/assets/styles/helpers.scss';
+
+.footer{
+  padding: 40px 0;
+  .container{
+    max-width: 900px;
+  }
+}
+.footer__top{
+  margin-bottom: 60px;
+}
+.footer__item{
+  p,a{
+    font-size: 15px;
+  }
+  a{
+    color: $lightGray;
+  }
+}

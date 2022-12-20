@@ -166,6 +166,7 @@
             <div class="scrollable-section">
               <Partners />
               <Cta />
+              <Footer />
             </div>
           </div>
         </section>
@@ -227,7 +228,6 @@
       const wrapper = document.querySelector('.animation-steps');
       const scrl = document.querySelector('.home__software');
       scrl.addEventListener('scroll', (e) =>{
-        console.log(scrl.scrollTop)
         if(scrl.scrollTop>1)
           scrlTicking.value=false
         else

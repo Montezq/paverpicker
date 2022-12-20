@@ -1,0 +1,60 @@
+@import '~/assets/styles/helpers.scss';
+
+.socials__item{
+  margin: 0 20px;
+  svg{
+    path{
+      transition: .26s cubic-bezier(0.215, 0.610, 0.355, 1);
+    }
+  }
+}
+.socials{
+  &_facebook{
+    &:hover{
+      svg{
+        path{
+          fill: #1877F2;
+        }
+      }
+    }
+    svg{
+      width: 35px;
+    }
+  }
+  &_twitter{
+    &:hover{
+      svg{
+        path{
+          fill: #1D9BF0;
+        }
+      }
+    }
+    svg{
+      width: 36px;
+    }
+  }
+  &_linkedin{
+    &:hover{
+      svg{
+        path{
+          fill: #0A66C2;
+        }
+      }
+    }
+    svg{
+      width: 32px;
+    }
+  }
+  &_youtube{
+    &:hover{
+      svg{
+        path{
+          fill: #FF0000;
+        }
+      }
+    }
+    svg{
+      width: 39px;
+    }
+  }
+}
