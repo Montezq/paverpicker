@@ -168,11 +168,11 @@
                 <Img :img="'/images/decor/monitor.png'" class="software__monitor" :alt="'Sfotware monitor'" />
               </div>
             </div>
-            <div class="scrollable-section">
+            <!-- <div class="scrollable-section">
               <Partners />
               <Cta />
               <Footer />
-            </div>
+            </div> -->
           </div>
         </section>
       </div>
