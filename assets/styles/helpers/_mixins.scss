@@ -99,10 +99,30 @@
       @content;
   }
 }
+@mixin tabletsPortrait{
+  @media screen and (max-width: 767px) and (orientation: portrait){
+    @content;
+  }
+}
+@mixin tabletsLandscape{
+  @media screen and (max-width: 767px) and (orientation: landscape){
+    @content;
+  }
+}
 //phones
 @mixin phone{
   @media screen and (max-width: 575px){
       @content;
+  }
+}
+@mixin minphone{
+  @media screen and (max-width: 360px){
+      @content;
+  }
+}
+@mixin minphoneLandscape{
+  @media screen and (max-width: 580px) and (orientation: landscape){
+    @content;
   }
 }
 

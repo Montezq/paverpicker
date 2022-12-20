@@ -1,0 +1,44 @@
+@import '~/assets/styles/helpers.scss';
+
+.notify{
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  z-index: -9;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: $dark;
+  opacity: 0;
+  transition: .26s ease;
+  h2{
+    font-size: 6vw;
+  }
+  .phone {
+    height: 50px;
+    width: 100px;
+    border: 3px solid white;
+    border-radius: 10px;
+    transform: rotate(90deg);
+    animation: rotate 1.5s ease-in-out infinite alternate;
+    margin-bottom: 25px;
+  }
+  @include minphoneLandscape{
+    visibility: visible;
+    z-index: 999;
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  0% {
+		transform: rotate(90deg)
+	}
+	50% {
+		transform: rotate(90deg)
+	}
+	100% {
+		transform: rotate(0deg)
+	}
+}

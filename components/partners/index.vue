@@ -2,8 +2,8 @@
   <section class="partners">
     <div class="partners__head">
       <h2 class="fs_68 text_center">
-        Discover how others have created <span class="color_green">innovative</span>  
-        <br> websites using our <span  class="color_green">unique</span>  software
+        Discover how <br class="dt_block"> others have <br class="dt_block"> created <span class="color_green">innovative</span>  
+        <br> websites using our <br class="dt_block"> <span  class="color_green">unique</span>  software
       </h2>
     </div>
     <div class="partners__body">

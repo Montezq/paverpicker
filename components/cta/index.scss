@@ -4,9 +4,42 @@
   padding: 40px;
   background: linear-gradient(125deg, #54D193, #54BCD1);
   color: $black;
+  @include tabletPortrait{
+    padding: 30px;
+  }
+  @include tabletsPortrait{
+    padding: 20px;
+  }
 }
 .cta__header{
   margin-bottom: 20px;
+  @include tabletPortrait{
+    margin-bottom: 12px;
+  }
+  .fs_68{
+    @include tabletPortrait{
+      font-size: 42px;
+    }
+    @include tabletsPortrait{
+      font-size: 32px;
+    }
+  }
+  .fs_64{
+    @include tabletPortrait{
+      font-size: 48px;
+    }
+    @include tabletsPortrait{
+      font-size: 32px;
+    }
+  }
+  .fs_32{
+    @include tabletPortrait{
+      font-size: 24px;
+    }
+    @include tabletsPortrait{
+      font-size: 16px;
+    }
+  }
 }
 .cta__link{
   a{
@@ -15,5 +48,8 @@
   }
   span{
     margin-right: 20px;
+    @include tabletPortrait{
+      margin-right: 10px;
+    }
   }
 }

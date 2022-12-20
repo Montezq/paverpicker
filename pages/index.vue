@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <Header />
+    <Rotate />
     <div class="animation-steps__wrapper">
       <div :class="'animation-steps animation-steps_'+currentSlide+' animation-lstep_'+pastSlide">
         <section class="home__hero">
@@ -118,6 +119,9 @@
                 </div>
               </div>
             </div>
+            <div class="slide-section__decor visualisation">
+              <Img :img="'/images/decor/photoshop.png'" class="visualisation__photoshop" :alt="'Photoshop Window'" />
+            </div>
           </div>
         </section>
         <section class="home__software">
@@ -148,6 +152,7 @@
                 </div>
               </div>
               <div class="slide-section__decor software">
+                <Img :img="'/images/decor/send.png'" class="software__send" :alt="'Send Laptop'" />
                 <div class="visualisation__brick-wrapper">
                   <Img :img="'/images/decor/photoshop-window.png'" class="visualisation__window" :alt="'Photoshop Window'" />
                   <Img :img="'/images/decor/brick.png'" :alt="'Brick'" class="visualisation_brick-single" />

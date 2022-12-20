@@ -4,10 +4,25 @@
   padding: 40px 0;
   .container{
     max-width: 900px;
+    @include desktop{
+      padding: 0 20px;
+    }
   }
+}
+.footer__list{
+  margin-top: 20px;
 }
 .footer__top{
   margin-bottom: 60px;
+  .row{
+    margin-top: -20px;
+  }
+  .col{
+    @include tablet{
+      width: 50%;
+      flex: 0 0 50%;
+    }
+  }
 }
 .footer__item{
   p,a{
