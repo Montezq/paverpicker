@@ -11,11 +11,7 @@ $speed: 3s;
   &_1{
     transform: translate3d(0,-100vh,0);
     .box_brick{
-      transform: 
-        translateX(-50%) 
-        translateY(0%) 
-        translateZ(0)
-        rotate(-180deg);
+      transform: translate3d(-50%, 0, 0) rotate(-180deg);
     }
     .slide-section__decor.box{
       transition-property: transform;
@@ -26,53 +22,49 @@ $speed: 3s;
   &_2{
     transform: translate3d(0,-150vh,0);
     .box_brick{
-      transform: 
-        translateX(-50%) 
-        translateY(-60%) 
-        translateZ(0)
-        rotate(-180deg);
+      transform: translate3d(-50%, -60%, 0) rotate(-180deg);
     }
     .slide-section__decor.box{
       transition-property: transform;
       transition-duration: $speed;
       transition-timing-function: ease-in-out;
-      transform: rotate(180deg) translateY(-14%) translateZ(0);
+      transform: rotate(180deg) translate3d(0, -14%, 0) ;
       @include tabletPortrait{
-        transform: rotate(180deg) translateY(-95%) translateX(50%) translateZ(0);
+        transform: rotate(180deg) translate3d(50%, -95%, 0);
       }
     }
     .home__send .slide-section__text{
-      transform: translateY(18%) translateZ(0);
+      transform: translate3d(0, 18%, 0) ;
       @include tabletPortrait{
-        transform: translateY(-30%) translateZ(0);
+        transform: translate3d(0, -30%, 0) ;
       }
     }
     .home__photograph{
       .slide-section__text{
-        transform: translateY(0) translateZ(0);
+        transform: translate3d(0, 0, 0) ;
       }
     }
   }
   &_3{
     transform: translate3d(0,-200vh,0);
     .home__send .slide-section__text{
-      transform: translateY(18%) translateZ(0);
+      transform: translate3d(0, 18%, 0) ;
       @include tabletPortrait{
-        transform: translateY(-30%) translateZ(0);
+        transform: translate3d(0, -30%, 0) ;
       }
     }
     .home__photograph{
       .slide-section__text{
-        transform: translateY(0) translateZ(0);
+        transform: translate3d(0, 0, 0) ;
       }
     }
     .slide-section__decor.box{
       transition-property: transform;
       transition-duration: $speed;
       transition-timing-function: ease-in-out;
-      transform: rotate(180deg) translateY(-14%) translateZ(0);
+      transform: rotate(180deg) translate3d(0, -14%, 0) ;
       @include tabletPortrait{
-        transform: rotate(180deg) translateY(-95%) translateX(50%) translateZ(0);
+        transform: rotate(180deg) translate3d(50%, -95%, 0) ;
       }
     }
     .box_brick{
@@ -125,7 +117,7 @@ $speed: 3s;
       }
     }
     .photography .photography__camera{
-      transform: translateX(0%) translateZ(0);
+      transform: translate3d(0, 0, 0) ;
     }
     .photography .photography__camera-ins{
       &:after{
@@ -134,18 +126,18 @@ $speed: 3s;
       }
     }
     .photography .photography__rig-inside{
-      transform: translateX(0%) translateZ(0);
+      transform: translate3d(0, 0, 0) ;
     }
     .photography .photography__rig{
-      transform: translate(0) translateZ(0);
+      transform: translate3d(0, 0, 0) ;
       filter: blur(8px);
       @include tabletPortrait{
-        transform: translate(-50%, 0) translateZ(0);
+        transform: translate3d(-50%, 0, 0) ;
         filter: blur(15px);
       }
     }
     .photography .photography_brick{
-      transform: translate(0) translateZ(0);
+      transform: translate3d(0, 0, 0) ;
     }
     .photography .photography__blitz{
       animation: blitz .5s linear 3s;
@@ -165,14 +157,14 @@ $speed: 3s;
   &_4{
     transform: translate3d(0,-300vh,0);
     .slide-section__decor.box{
-      transform: rotate(180deg) translateY(-14%) translateZ(0);
+      transform: rotate(180deg) translate3d(0, -14%, 0) ;
       @include tabletPortrait{
-        transform: rotate(180deg) translateY(-95%) translateX(50%) translateZ(0);
+        transform: rotate(180deg) translate3d(50%, -95%, 0) ;
       }
     }
     .home__photograph{
       .slide-section__text{
-        transform: translateY(0) translateZ(0);
+        transform: translate3d(0, 0, 0) ;
       }
     }
     .box_brick{
@@ -225,32 +217,32 @@ $speed: 3s;
       }
     }
     .photography .photography__camera{
-      transform: translateX(0%) translateY(-30%) translateZ(0);
+      transform: translate3d(0, -30%, 0) ;
       &:after{
         opacity: 1;
         background-color: #333333;
       }
     }
     .photography .photography__rig{
-      transform: translate(0) translateZ(0);
+      transform: translate3d(0, 0, 0) ;
       filter: blur(8px);
       @include tabletPortrait{
-        transform: translate(-50%, 0) translateZ(0);
+        transform: translate3d(-50%, 0, 0) ;
         filter: blur(15px);
       }
     }
     .photography .photography_brick{
-      transform: translate(-4vw, 90vh) translateZ(0);
+      transform: translate3d(-4vw, 90vh, 0) ;
       opacity: 0;
     }
     .home__visualisation{
       .slide-section__text{
-        transform: translateY(0) translateZ(0)
+        transform: translate3d(0, 0, 0) 
       }
     }
     .visualisation{
       .visualisation__photoshop{
-        transform: translateX(0) translateZ(0);
+        transform: translate3d(0, 0, 0) ;
         opacity: 1;
       }
     }
@@ -283,8 +275,8 @@ $speed: 3s;
       }
     }
     .visualisation__door-wrapper{
-      transform: translateX(-100%) translateZ(0);
-      transition: transform 2s ease;
+      transform: translate3d(-100%, 0, 0) ;
+      transition: 2s ease;
     }
   }
   &_4.animation-lstep_3{
@@ -304,17 +296,17 @@ $speed: 3s;
         }
       }
       .visualisation_brick-single{
-        transform: translateX(-50%) translateY(17.8vw) translateZ(0);
+        transform: translate3d(-50%, 17.8vw, 0) ;
         opacity: 1;
         visibility: hidden;
         @include tabletPortrait{
-          transform: translateX(-50%) translateY(23.7vw) translateZ(0);
+          transform: translate3d(-50%, 23.7vw, 0);
         }
       }
     }
     .visualisation__door-wrapper{
-      transform: translateX(0) translateZ(0);
-      transition: transform 1.4s ease 4s;
+      transform: translate3d(0, 0, 0) ;
+      transition: 1.4s ease 4s;
     }
   }
   &_4.animation-lstep_5{
@@ -336,7 +328,7 @@ $speed: 3s;
         }
       }
       .visualisation__door-wrapper{
-        transform: translateX(0) translateZ(0);
+        transform: translate3d(0, 0, 0) ;
         width: 58vw;
         transition: $speed ease-in-out;
       }
@@ -349,7 +341,7 @@ $speed: 3s;
     transform: translate3d(0,-400vh,0);
     .visualisation{
       .visualisation__photoshop{
-        transform: translateX(0) translateZ(0);
+        transform: translate3d(0, 0, 0) ;
         opacity: 1;
       }
     }
@@ -381,7 +373,7 @@ $speed: 3s;
         transition: $speed ease-in-out;
       }
       .visualisation__door-wrapper{
-        transform: translateX(0) translateZ(0);
+        transform: translate3d(0, 0, 0) ;
         width: 23vw;
         transition: $speed ease-in-out;
       }
@@ -402,7 +394,7 @@ $speed: 3s;
   top: 48%;
   @include tabletPortrait{
     left: 60%;
-    transform: translate(-50%, 0) translateZ(0);
+    transform: translate3d(-50%, 0, 0) ;
     top: 0;
   }
   @include tablet{
@@ -486,7 +478,7 @@ $speed: 3s;
     margin-left: 0;
     left: 50%;
     margin-top: 5%;
-    transform: translateX(-50%) translateZ(0);
+    transform: translate3d(-50%, 0, 0) ;
   }
   @include phone{
     width: 90%;
@@ -512,9 +504,9 @@ $speed: 3s;
   position: absolute;
   left:50%;
   top: 50%;
-  transform: translateX(-50%) translateY(-200vh) rotate(-90deg) translateZ(0);
+  transform: translate3d(-50%, -200vh, 0) rotate(-90deg);
   z-index: 2;
-  transition: transform $speed ease-in-out, filter .2s ease-in-out 2s ;
+  transition: $speed ease-in-out, filter .2s ease-in-out 2s ;
   @include tabletPortrait{
     width: 40vw;
   }
@@ -541,7 +533,7 @@ $speed: 3s;
     }
   }
   .slide-section__text{
-    transform: translateY(-10%) translateZ(0)
+    transform: translate3d(0, -10%, 0) 
   }
   .slide-section{
     @include tabletPortrait{
@@ -564,7 +556,7 @@ $speed: 3s;
     position: absolute;
     top: 7vw;
     left: -11%;
-    transform: translate(8%, -12%) translateZ(0); 
+    transform: translate3d(8%, -12%, 0) ; 
     transition: $speed ease-in-out, filter .2s ease-in-out 2s ;
     @include desktoplg{
       top: 10vw;
@@ -576,7 +568,7 @@ $speed: 3s;
       left: calc(50% - 60px);
       width: 90%;
       top: 18vw;
-      transform: translate(-45%, -12%) translateZ(0);
+      transform: translate3d(-45%, -12%, 0) ;
     }
     @include laptops{
       left: calc(50% - 14px);
@@ -594,7 +586,7 @@ $speed: 3s;
     position: absolute;
     bottom: -21vw;
     right: -14vw;
-    transform: translateX(100%) translateZ(0);
+    transform: translate3d(100%, 0, 0) ;
     transition: $speed ease-in-out;
     @include tabletPortrait{
       width: 85vw;
@@ -658,7 +650,7 @@ $speed: 3s;
     top: 4vw;
     left: 5.3vw;
     z-index: 4;
-    transform: translateY(-30vw) translateZ(0);
+    transform: translate3d(0, -30vw, 0) ;
     transition: $speed ease-in-out;
     @include tabletPortrait{
       width: 15vw;
@@ -704,7 +696,7 @@ $speed: 3s;
     }
   }
   .slide-section__text{
-    transform: translateY(10%) translateZ(0);
+    transform: translate3d(0, 10%, 0) ;
   }
 }
 .visualisation{
@@ -725,7 +717,7 @@ $speed: 3s;
       margin-top: 12vh;
       margin-bottom: 20px;
       width: calc(100% + 26vh);
-      transform: translateX(60%) translateZ(0);
+      transform: translate3d(60%, 0, 0) ;
       transition: $speed ease-in-out;
       opacity: .4;
     }
@@ -782,10 +774,9 @@ $speed: 3s;
     right: initial;
     margin-top: -6%;
     position: relative;
-    transform: translate(0) translateZ(0);
     top: 0;
     left: 60%;
-    transform: translateX(-50%) translateZ(0);
+    transform: translate3d(-50%, 0, 0) ;
   }
   .software__send{
     display: none;
@@ -824,7 +815,7 @@ $speed: 3s;
     z-index: 3;
     top: 54.7%;
     left: 52%;
-    transform: translate(-50%, -50%) translateZ(0);
+    transform: translate3d(-50%, -50%, 0) ;
     width: 96%;
     img{
       height: 100%;
@@ -850,7 +841,7 @@ $speed: 3s;
     z-index: 3;
     top: -100vh;
     left: 48.3%;
-    transform: translateX(-3%) translateY(-40vw) translateZ(0);
+    transform: translate3d(-3%, -40vw, 0) ;
     opacity: 1;
     z-index: 4;
     transition: $speed ease-in-out, opacity .6s ease-in-out .8s, visibility 0s ease 3s;
@@ -868,7 +859,7 @@ $speed: 3s;
     bottom: 2%;
     z-index: 3;
     width: 58vw;
-    transform: translateX(-100%) translateZ(0);
+    transform: translate3d(-100%, 0, 0) ;
     @include tabletPortrait{
       width: 71vw;
     }
