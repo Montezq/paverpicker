@@ -7,9 +7,9 @@ $speed: 3s;
 .animation-steps{
   transition-duration: $speed;
   transition-timing-function: ease-in-out;
-  transform: translateY(0) translateZ(0);
+  transform: translate3d(0);
   &_1{
-    transform: translateY(-100vh) translateZ(0);
+    transform: translate3d(0,-100vh,0);
     .box_brick{
       transform: 
         translateX(-50%) 
@@ -24,7 +24,7 @@ $speed: 3s;
     }
   }
   &_2{
-    transform: translateY(-150vh) translateZ(0);
+    transform: translate3d(0,-150vh,0);
     .box_brick{
       transform: 
         translateX(-50%) 
@@ -54,7 +54,7 @@ $speed: 3s;
     }
   }
   &_3{
-    transform: translateY(-200vh) translateZ(0);
+    transform: translate3d(0,-200vh,0);
     .home__send .slide-section__text{
       transform: translateY(18%) translateZ(0);
       @include tabletPortrait{
@@ -163,7 +163,7 @@ $speed: 3s;
     }
   }
   &_4{
-    transform: translateY(-300vh) translateZ(0);
+    transform: translate3d(0,-300vh,0);
     .slide-section__decor.box{
       transform: rotate(180deg) translateY(-14%) translateZ(0);
       @include tabletPortrait{
@@ -346,7 +346,7 @@ $speed: 3s;
     }
   }
   &_5{
-    transform: translateY(-400vh) translateZ(0);
+    transform: translate3d(0,-400vh,0);
     .visualisation{
       .visualisation__photoshop{
         transform: translateX(0) translateZ(0);
