@@ -1,0 +1,19 @@
+@import '~/assets/styles/helpers.scss';
+
+.cta{
+  padding: 40px;
+  background: linear-gradient(125deg, #54D193, #54BCD1);
+  color: $black;
+}
+.cta__header{
+  margin-bottom: 20px;
+}
+.cta__link{
+  a{
+    color: $black;
+    @include segoe(semibold);
+  }
+  span{
+    margin-right: 20px;
+  }
+}

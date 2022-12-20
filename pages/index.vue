@@ -165,6 +165,7 @@
             </div>
             <div class="scrollable-section">
               <Partners />
+              <Cta />
             </div>
           </div>
         </section>
@@ -223,7 +224,6 @@
   }
   onMounted(() => {
     setTimeout(() => {
-      // initDocSlider()
       const wrapper = document.querySelector('.animation-steps');
       const scrl = document.querySelector('.home__software');
       scrl.addEventListener('scroll', (e) =>{
