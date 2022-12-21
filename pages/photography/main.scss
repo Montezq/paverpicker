@@ -1,37 +1,288 @@
 
-$speed: 3s;
+$speed: 2.2s;
+$speed2: 1.8s;
 
 .photography-page{
   height: 100%;
-}
-.photography-page__hero-video{
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-  video{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-.photography-page__hero{
-  .slide-section__text{
-    @include centered;
-    h1{
-      text-shadow: 0 0 20px rgba(#000000, 1);
+
+  .animation-steps{
+    transition-duration: $speed;
+    transition-timing-function: ease-in-out;
+    transform: translate3d(0,0,0);
+    &_1{
+      transform: translate3d(0,-100vh,0);
+      .light_bg{
+        img{
+          transform: rotate(0) translate3d(0,0,0);
+        }
+      }
+    }
+    &_2{
+      transform: translate3d(0,-100vh,0);
+      .light_bg{
+        img{
+          transform: rotate(0) translate3d(100%,0,0);
+          opacity: 0;
+        }
+      }
+      .butterfly_bg{
+        transform: rotate(0) translate3d(0, 0, 0);
+      }
+      .photography-page__brick{
+        .slide-section__text{
+          &_1{
+            transform: translate3d(0, -80vh, 0);
+          }
+          &_2{
+            transition-delay: .3s;
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+          }
+        }
+      }
+      .slide-section__brick-text{
+        &_1{
+          opacity: 0;
+          transform: translate3d(0, -350%, 0);
+        }
+        &_2{
+          transition-delay: .4s;
+          transform: translate3d(0, 0, 0);
+          opacity: 1;
+        }
+      }
+    }
+    &_3{
+      transform: translate3d(0,-100vh,0);
+      .light_bg{
+        img{
+          transform: rotate(0) translate3d(200%,0,0);
+          opacity: 0;
+        }
+      }
+      .butterfly_bg{
+        transform: rotate(35deg) translate3d(200%, -100%, 0);
+      }
+      .colour_calibration_bg{
+        transform: rotate(-30deg) translate3d(0,0,0);
+      }
+      .photography-page__brick{
+        .slide-section__text{
+          &_1{
+            transform: translate3d(0, -80vh, 0);
+          }
+          &_2{
+            transform: translate3d(0, -80vh, 0);
+            opacity: 1;
+          }
+          &_3{
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+          }
+        }
+      }
+      .slide-section__brick-text{
+        &_1{
+          opacity: 0;
+          transform: translate3d(0, -350%, 0);
+        }
+        &_2{
+          opacity: 0;
+          transform: translate3d(0, -350%, 0);
+        }
+        &_3{
+          transition-delay: .4s;
+          transform: translate3d(0, 0, 0);
+          opacity: 1;
+        }
+      }
     }
   }
-}
 
-.animation-steps{
-  transition-duration: $speed;
-  transition-timing-function: ease-in-out;
-  transform: translate3d(0,0,0);
-  &_1{
-    transform: translate3d(0,-100vh,0);
+  .photography-page__hero-video{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    video{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .photography-page__hero{
+    z-index: 4;
+    .slide-section__text{
+      @include centered;
+      h1{
+        text-shadow: 0 0 20px rgba(#000000, 1);
+      }
+    }
+  }
+  .photography-page__brick{
+    background-color: $black;
+    .container{
+      height: 100%;
+      max-width: 1040px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+    .slide-section__text{
+      margin-bottom: 60px;
+      position: relative;
+      &-inside{
+        padding-left: 40px;
+        transition: $speed ease-in-out;
+      }
+      &_2,
+      &_3{
+        top: 0;
+        left: 0;
+        opacity: 0;
+      }
+      &_2{
+        transform: translate3d(0, 140%, 0);
+      }
+      &_3{
+        transform: translate3d(0, 200%, 0);
+      }
+    }
+    .background-img{
+      img{
+        width: 100%;
+      }
+    }
+    .background-slider{
+      width: 100%;
+      height: 100%;
+      input{
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        z-index: 4;
+        &:hover,
+        &:focus{
+          &+span span,
+          &+span svg{
+            animation: none !important;
+          }
+        }
+      }
+    }
+  }
+  .slide-section__brick-box{
+    margin-bottom: 20px;
+    z-index: 2;
+  }
+  .background-slider__icon{
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    display: flex;
+    align-items: center;
+    height: calc(100% + 40px);
+    margin-top: -20px;
+    z-index: 3;
+    transition: .6s ease-in-out;
+    span{
+      &:nth-child(2){
+        animation: slide 2s ease-in-out infinite;
+        display: inline-block;
+        width: 15px;
+        height: 100%;
+        background-color: $green;
+        margin: 0 20px;
+      }
+      &:first-child{
+        svg{
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  .foreground-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    width: 50%;
+    overflow: hidden;
+    transition: .6s ease-in-out;
+    img{
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 1040px;
+      position: relative;
+    }
+  }
+  .slide-section__brick-text{
+    p{
+      font-size: 2.1vw;
+    }
+  }
+  .slide-section__bg{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  .light_bg{
+    img{
+      transform: rotate(-45deg) translate3d(40%,0,0);
+      transform-origin: left;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      mix-blend-mode: lighten;
+      transition: $speed ease-in-out;
+    }
+  }
+  .butterfly_bg{
+    position: absolute;
+    top: 80px;
+    right: -2vw;
+    width: 25vw;
+    transform: rotate(35deg) translate3d(200%, -100%, 0);
+    transition: $speed ease-in-out;
+    img{
+      width: 100%;
+    }
+  }
+  .colour_calibration_bg{
+    position: absolute;
+    position: absolute;
+    top: -14%;
+    right: -24%;
+    width: 46vw;
+    transition: $speed ease-in-out;
+    transform: rotate(0) translate3d(100%,0,0);
+    img{
+      width: 100%;
+    }
+  }
+  .slide-section__brick-text{
+    &-inside{
+      padding: 0 10px;
+      transition: $speed2 ease-in-out;
+      width: 100%;
+    }
+    &_2,
+    &_3{
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transform: translate3d(0, -350%, 0);
+    }
   }
 }

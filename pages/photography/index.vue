@@ -3,7 +3,7 @@
     <Rotate />
     <div class="animation-steps__wrapper">
       <div :class="'animation-steps animation-steps_'+currentSlide+' animation-lstep_'+pastSlide">
-        <section class="photography-page__hero">
+        <section class="photography-page__hero position_relative">
           <div class="slide-section position_relative">
             <div class="photography-page__hero-video position_absolute">
               <video class="section__video" autoplay="autoplay" muted="muted" playsinline="playsinline" @ended="videoLoop" :src="`/video/brick${videoCount}.mp4`" id="brickVideo"></video>
@@ -20,36 +20,80 @@
           </div>
         </section>
         <section class="photography-page__brick">
-          <div class="slide-section d_flex flex_column">
-            <div class="slide-section__text">
-              <div class="slide-section__text-head">
-                <h2>Realistic Lighting</h2>
-              </div>
-              <div class="slide-section__text-desc">
-                <p class="fs_32">
-                  We mimic sunlight in our lighting setup which enables us
-                  <br> to capture texture. Shown here is the contrast between a
-                  <br> scanned image and our method.
-                </p>
-              </div>
+          <div class="slide-section position_relative">
+            <div class="slide-section__bg position_absolute">
+              <Img :img="'light'" :alt="'Light'" class="light_bg"/>
+              <Img :img="'butterfly'" :alt="'Butterfly'" class="butterfly_bg"/>
+              <Img :img="'colour_calibration'" :alt="'Colour Calibration'" class="colour_calibration_bg"/>
             </div>
-            <div class="slide-section__brick">
-              <div class="slide-section__brick-box">
-                <label class="background-slider">
-                  <input type="range" v-model="slideval" max="100" min="0" @input="slideInput"/>
-                  <span class="background-slider__icon">
-                    <span v-html="arrowSlide"></span>
-                    <span></span>
-                    <span v-html="arrowSlide"></span>
-                  </span>
-                </label>
-                <div class="background-img"></div>
-                <div class="foreground-img"></div>
+            <div class="container d_flex flex_column justify-content_center">
+              <div class="slide-section__text">
+                <div class="slide-section__text-inside slide-section__text_1">
+                  <div class="slide-section__text-head">
+                    <h2>Realistic Lighting</h2>
+                  </div>
+                  <div class="slide-section__text-desc">
+                    <p class="fs_32">
+                      We mimic sunlight in our lighting setup which enables us
+                      <br> to capture texture. Shown here is the contrast between a
+                      <br> scanned image and our method.
+                    </p>
+                  </div>
+                </div>
+                <div class="slide-section__text-inside slide-section__text_2 position_absolute">
+                  <div class="slide-section__text-head">
+                    <h2>Incredible Detail</h2>
+                  </div>
+                  <div class="slide-section__text-desc">
+                    <p class="fs_32">
+                      We take it to the next level with our photography, our
+                      <br> process involves techniques used in the macro world for
+                      <br> insect photography. Simply put - details are captured.
+                    </p>
+                  </div>
+                </div>
+                <div class="slide-section__text-inside slide-section__text_3 position_absolute">
+                  <div class="slide-section__text-head">
+                    <h2>Accurate Colour</h2>
+                  </div>
+                  <div class="slide-section__text-desc">
+                    <p class="fs_32">
+                      Colour accuracy checks are carried out on each image to
+                      <br> ensure we capture the true nature of your products.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div class="slide-section__brick-text">
-                <div class="slide-section__brick-text-1 d_flex justify-content_between">
-                  <p><strong>Scanned</strong></p>
-                  <p><strong>Photograph</strong></p>
+              <div class="slide-section__brick">
+                <div class="slide-section__brick-box position_relative">
+                  <label class="background-slider position_absolute">
+                    <input type="range" v-model="slideval" max="100" min="0" @input="slideInput"/>
+                    <span class="background-slider__icon">
+                      <span v-html="arrowSlide"></span>
+                      <span></span>
+                      <span v-html="arrowSlide"></span>
+                    </span>
+                  </label>
+                  <div class="background-img">
+                    <Img :img="'brick_1'" :alt="'Door'"/>
+                  </div>
+                  <div class="foreground-img">
+                    <Img :img="'brick_2'" :alt="'Door'" class="foreground-img_1"/>
+                  </div>
+                </div>
+                <div class="slide-section__brick-text position_relative">
+                  <div class="slide-section__brick-text-inside slide-section__brick-text_1 d_flex justify-content_between">
+                    <p><strong>Scanned</strong></p>
+                    <p><strong>Photograph</strong></p>
+                  </div>
+                  <div class="slide-section__brick-text-inside slide-section__brick-text_2 position_absolute d_flex justify-content_between">
+                    <p><strong>Low Res</strong></p>
+                    <p><strong>High Res</strong></p>
+                  </div>
+                  <div class="slide-section__brick-text-inside slide-section__brick-text_3 position_absolute d_flex justify-content_between">
+                    <p><strong>Uncalibrated</strong></p>
+                    <p><strong>Calibrated</strong></p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -59,7 +103,7 @@
     </div>
   </div>
 </template>
-<style lang="scss" scoped>
+<style lang="scss" >
   @import 'main.scss';
 </style>
 <script setup>
@@ -77,7 +121,7 @@
     document.querySelector('.background-slider__icon').style.left = slideval.value+'%'
   }
   function nextPage(){
-    slide(3000, 100)
+    slide(2200, 100)
   }
   function videoLoop(){
     let video = document.getElementById("brickVideo")
@@ -85,7 +129,7 @@
     if (videoCount.value === 4) 
       videoCount.value = 1;
   }
-  function slide(speed=3000, y=null, direction=null) {
+  function slide(speed=2200, y=null, direction=null) {
     // const scrl = document.querySelector('.home__software');
     const lngth = 3;
     if((y>0 || direction==='up') && currentSlide.value < lngth){
@@ -109,9 +153,9 @@
     let touchendY = 0
     function checkDirection() {
       if (touchendY < touchstartY && ticking.value === false && scrlTicking.value)
-        slide(3000,null,'up')
+        slide(2200,null,'up')
       if (touchendY > touchstartY && ticking.value === false && scrlTicking.value)
-        slide(3000,null,'down')
+        slide(2200,null,'down')
     }
     document.addEventListener('touchstart', e => {
       touchstartY = e.changedTouches[0].screenY
@@ -133,7 +177,7 @@
       // })
       wrapper.addEventListener('wheel', (e) => {
         if (ticking.value === false && scrlTicking.value) {
-          slide(3000, e.deltaY)
+          slide(2200, e.deltaY)
         }
       });
       touch();
