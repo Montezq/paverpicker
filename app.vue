@@ -9,7 +9,6 @@
   const menu = toggleMenu();
   function menuToggle(){
     menu.toggle()
-    document.querySelector('body').classList.toggle('oh')
   }
   const route = useRoute();
   watch(route,(e)=>{
