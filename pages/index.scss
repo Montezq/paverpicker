@@ -423,6 +423,7 @@ $speed: 3s;
   .slide-section__text{
     margin-top: -5vw;
     left: 55vw;
+    transition: 0s ease-in-out;
     @include tabletPortrait{
       margin-top: 47vw;
       left: 0;

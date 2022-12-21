@@ -208,9 +208,6 @@
       ticking.value = false;
     }, speed);
   }
-  function nextPage(){
-    docSlider.nextPage()
-  }
   function touch(){
     let touchstartY = 0
     let touchendY = 0
@@ -227,6 +224,9 @@
       touchendY = e.changedTouches[0].screenY
       checkDirection()
     })
+  }
+  function nextPage(){
+    slide(3000, 100)
   }
   onMounted(() => {
     setTimeout(() => {
