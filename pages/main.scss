@@ -3,909 +3,909 @@ $speed: 3s;
 
 .home{
   height:100%;
-}
-.animation-steps{
-  transition-duration: $speed;
-  transition-timing-function: ease-in-out;
-  transform: translate3d(0,0,0);
-  &_1{
-    transform: translate3d(0,-100vh,0);
-    .box_brick{
-      transform: translate3d(-50%, 0, 0) rotate(-180deg);
-    }
-    .slide-section__decor.box{
-      transition-property: transform;
-      transition-duration: $speed;
-      transition-timing-function: ease-in-out;
-    }
-  }
-  &_2{
-    transform: translate3d(0,-150vh,0);
-    .box_brick{
-      transform: translate3d(-50%, -60%, 0) rotate(-180deg);
-    }
-    .slide-section__decor.box{
-      transition-property: transform;
-      transition-duration: $speed;
-      transition-timing-function: ease-in-out;
-      transform: rotate(180deg) translate3d(0, -14%, 0) ;
-      @include tabletPortrait{
-        transform: rotate(180deg) translate3d(50%, -95%, 0);
+  .animation-steps{
+    transition-duration: $speed;
+    transition-timing-function: ease-in-out;
+    transform: translate3d(0,0,0);
+    &_1{
+      transform: translate3d(0,-100vh,0);
+      .box_brick{
+        transform: translate3d(-50%, 0, 0) rotate(-180deg);
+      }
+      .slide-section__decor.box{
+        transition-property: transform;
+        transition-duration: $speed;
+        transition-timing-function: ease-in-out;
       }
     }
-    .home__send .slide-section__text{
-      transform: translate3d(0, 18%, 0) ;
-      @include tabletPortrait{
-        transform: translate3d(0, -30%, 0) ;
+    &_2{
+      transform: translate3d(0,-150vh,0);
+      .box_brick{
+        transform: translate3d(-50%, -60%, 0) rotate(-180deg);
       }
-    }
-    .home__photograph{
-      .slide-section__text{
-        transform: translate3d(0, 0, 0) ;
-      }
-    }
-  }
-  &_3{
-    transform: translate3d(0,-200vh,0);
-    .home__send .slide-section__text{
-      transform: translate3d(0, 18%, 0) ;
-      @include tabletPortrait{
-        transform: translate3d(0, -30%, 0) ;
-      }
-    }
-    .home__photograph{
-      .slide-section__text{
-        transform: translate3d(0, 0, 0) ;
-      }
-    }
-    .slide-section__decor.box{
-      transition-property: transform;
-      transition-duration: $speed;
-      transition-timing-function: ease-in-out;
-      transform: rotate(180deg) translate3d(0, -14%, 0) ;
-      @include tabletPortrait{
-        transform: rotate(180deg) translate3d(50%, -95%, 0) ;
-      }
-    }
-    .box_brick{
-      transform: 
-        translateX(-50%) 
-        translateY(-48vw) 
-        rotate(-180deg);
-      filter: blur(8px);
-      @include desktoplg{
-        transform: 
-          translateX(-50%)
-          translateY(-650%)
-          rotate(-180deg);
-        filter: blur(8px);
-      }
-      @include tlxl{
-        transform: 
-          translateX(-50%)
-          translateY(-840%)
-          rotate(-180deg);
-        filter: blur(8px);
-      }
-      @include desktop{
-        transform: 
-          translateX(-50%)
-          translateY(-740%)
-          rotate(-180deg);
-        filter: blur(8px);
-      }
-      @include tabletPortrait{
-        transform: 
-          translateX(-50%)
-          translateY(-630%)
-          rotate(-180deg);
-        filter: blur(14px);
-      }
-      @include tabletLandscape{
-        transform: 
-          translateX(-50%)
-          translateY(-620%)
-          rotate(-180deg);
-        filter: blur(14px);
-      }
-      @include phone{
-        transform: 
-          translateX(-50%)
-          translateY(-700%)
-          rotate(-180deg);
-        filter: blur(14px);
-      }
-    }
-    .photography .photography__camera{
-      transform: translate3d(0, 0, 0) ;
-    }
-    .photography .photography__camera-ins{
-      &:after{
-        opacity: 1;
-        background-color: #333333;
-      }
-    }
-    .photography .photography__rig-inside{
-      transform: translate3d(0, 0, 0) ;
-    }
-    .photography .photography__rig{
-      transform: translate3d(0, 0, 0) ;
-      filter: blur(8px);
-      @include tabletPortrait{
-        transform: translate3d(-50%, 0, 0) ;
-        filter: blur(15px);
-      }
-    }
-    .photography .photography_brick{
-      transform: translate3d(0, 0, 0) ;
-    }
-    .photography .photography__blitz{
-      animation: blitz .5s linear 3s;
-    }
-    .software{
-      .visualisation__brick{
-        width: 52vw;
-        top: -100vh;
-        padding-bottom: 75%;
+      .slide-section__decor.box{
+        transition-property: transform;
+        transition-duration: $speed;
+        transition-timing-function: ease-in-out;
+        transform: rotate(180deg) translate3d(0, -14%, 0) ;
         @include tabletPortrait{
-          top: -128vh;
-          width: 52vh;
+          transform: rotate(180deg) translate3d(50%, -95%, 0);
         }
       }
-    }
-  }
-  &_4{
-    transform: translate3d(0,-300vh,0);
-    .slide-section__decor.box{
-      transform: rotate(180deg) translate3d(0, -14%, 0) ;
-      @include tabletPortrait{
-        transform: rotate(180deg) translate3d(50%, -95%, 0) ;
-      }
-    }
-    .home__photograph{
-      .slide-section__text{
-        transform: translate3d(0, 0, 0) ;
-      }
-    }
-    .box_brick{
-      transform: 
-        translateX(-50%) 
-        translateY(-48vw) 
-        rotate(-180deg);
-      filter: blur(8px);
-      @include desktoplg{
-        transform: 
-          translateX(-50%)
-          translateY(-650%)
-          rotate(-180deg);
-        filter: blur(8px);
-      }
-      @include tlxl{
-        transform: 
-          translateX(-50%)
-          translateY(-840%)
-          rotate(-180deg);
-        filter: blur(8px);
-      }
-      @include desktop{
-        transform: 
-          translateX(-50%)
-          translateY(-740%)
-          rotate(-180deg);
-        filter: blur(8px);
-      }
-      @include tabletPortrait{
-        transform: 
-          translateX(-50%)
-          translateY(-630%)
-          rotate(-180deg);
-        filter: blur(14px);
-      }
-      @include tabletLandscape{
-        transform: 
-          translateX(-50%)
-          translateY(-620%)
-          rotate(-180deg);
-        filter: blur(14px);
-      }
-      @include phone{
-        transform: 
-          translateX(-50%)
-          translateY(-700%)
-          rotate(-180deg);
-        filter: blur(14px);
-      }
-    }
-    .photography .photography__camera{
-      transform: translate3d(0, -30%, 0) ;
-      &:after{
-        opacity: 1;
-        background-color: #333333;
-      }
-    }
-    .photography .photography__rig{
-      transform: translate3d(0, 0, 0) ;
-      filter: blur(8px);
-      @include tabletPortrait{
-        transform: translate3d(-50%, 0, 0) ;
-        filter: blur(15px);
-      }
-    }
-    .photography .photography_brick{
-      transform: translate3d(-4vw, 90vh, 0) ;
-      opacity: 0;
-    }
-    .home__visualisation{
-      .slide-section__text{
-        transform: translate3d(0, 0, 0) 
-      }
-    }
-    .visualisation{
-      .visualisation__photoshop{
-        transform: translate3d(0, 0, 0) ;
-        opacity: 1;
-      }
-    }
-    .software{
-      .visualisation__brick{
-        width: 52vw;
-        top: -100vh;
-        padding-bottom: 75%;
+      .home__send .slide-section__text{
+        transform: translate3d(0, 18%, 0) ;
         @include tabletPortrait{
-          top: -128vh;
-          width: 52vh;
+          transform: translate3d(0, -30%, 0) ;
         }
-        
       }
-    }
-  }
-
-  &_3.animation-lstep_4{
-    .software{
-      .visualisation__wall{
-        opacity: 1;
-        transition: opacity 0s ease 3s;
-      }
-      .visualisation__wall-big{
-        width: 186vw;
-        transition: $speed ease-in-out;
-        @include phone{
-          width: 347%;
+      .home__photograph{
+        .slide-section__text{
+          transform: translate3d(0, 0, 0) ;
         }
       }
     }
-    .visualisation__door-wrapper{
-      transform: translate3d(-100%, 0, 0) ;
-      transition: 2s ease;
-    }
-  }
-  &_4.animation-lstep_3{
-    .visualisation__wall{
-      opacity: 0;
-      transition: 0s ease 3s;
-    }
-    .software{
-      .visualisation__wall-big{
-        width: 80vw;
-        transition: 2s ease-in-out 3s;
-        @include tablet{
-          width: 140vw;
-        }
-        @include phone{
-          width: 180vw;
-        }
-      }
-      .visualisation_brick-single{
-        transform: translate3d(-50%, 17.8vw, 0) ;
-        opacity: 1;
-        visibility: hidden;
+    &_3{
+      transform: translate3d(0,-200vh,0);
+      .home__send .slide-section__text{
+        transform: translate3d(0, 18%, 0) ;
         @include tabletPortrait{
-          transform: translate3d(-50%, 23.7vw, 0);
+          transform: translate3d(0, -30%, 0) ;
         }
       }
-    }
-    .visualisation__door-wrapper{
-      transform: translate3d(0, 0, 0) ;
-      transition: 1.4s ease 4s;
-    }
-  }
-  &_4.animation-lstep_5{
-    .software{
-      .visualisation__brick{
-        width: 52vw;
-        top: -100vh;
-        padding-bottom: 75%;
-        left: 0;
-      }
-      .visualisation__wall{
-        opacity: 0;
-      }
-      .visualisation__wall-big{
-        width: 80vw;
-        transition: $speed ease-in-out;
-        @include tablet{
-          width: 140vw;
+      .home__photograph{
+        .slide-section__text{
+          transform: translate3d(0, 0, 0) ;
         }
       }
-      .visualisation__door-wrapper{
-        transform: translate3d(0, 0, 0) ;
-        width: 58vw;
-        transition: $speed ease-in-out;
-      }
-      .visualisation__dotted{
-        opacity: 1;
-      }
-    }
-  }
-  &_5{
-    transform: translate3d(0,-400vh,0);
-    .visualisation{
-      .visualisation__photoshop{
-        transform: translate3d(0, 0, 0) ;
-        opacity: 1;
-      }
-    }
-    .home__software{
-      &.oh{
-        overflow-y: auto;
-        overflow-x: hidden;
-        @supports (-webkit-touch-callout: none) {
-          height: -webkit-fill-available;;
+      .slide-section__decor.box{
+        transition-property: transform;
+        transition-duration: $speed;
+        transition-timing-function: ease-in-out;
+        transform: rotate(180deg) translate3d(0, -14%, 0) ;
+        @include tabletPortrait{
+          transform: rotate(180deg) translate3d(50%, -95%, 0) ;
         }
       }
-    }
-  }
-  &_5.animation-lstep_4{
-    .software{
-      .visualisation__wall{
-        opacity: 0;
-      }
-      .visualisation__brick{
-        width: 66.6%;
-        top: 1.5vw;
-        left: 11.3vw;
-        padding-bottom: 57%;
-      }
-      .visualisation__wall-big{
-        width: 106%;
-        left: 0;
-        z-index: 3;
-        transition: $speed ease-in-out;
-      }
-      .visualisation__door-wrapper{
-        transform: translate3d(0, 0, 0) ;
-        width: 23vw;
-        transition: $speed ease-in-out;
-      }
-      .visualisation__dotted{
-        opacity: 0;
-      }
-    }
-  }
-}
-.slide-section__text{
-  transition: $speed ease-in-out;
-  position: relative;
-  z-index: 3;
-}
-.home__hero-img{
-  @include centered(y);
-  left: 0;
-  top: 48%;
-  @include tabletPortrait{
-    left: 60%;
-    transform: translate3d(-50%, 0, 0) ;
-    top: 0;
-  }
-  @include tablet{
-    top: 6%;
-  }
-  @include tabletLandscape{
-    top: 48%;
-  }
-  img{
-    max-height: 106vh;
-    width: auto;
-    @include tabletPortrait{
-      max-height: initial;
-      max-width: initial;
-      height: 60vh;
-    }
-    @include tablet{
-      height: 90vw;
-    }
-    @include tabletLandscape{
-      max-height: 90vh;
-    }
-  }
-}
-.home__hero{
-  .slide-section__text{
-    margin-top: -5vw;
-    left: 55vw;
-    transition: 0s ease-in-out;
-    @include tabletPortrait{
-      margin-top: 47vw;
-      left: 0;
-      text-align: center;
-      width: 100%;
-      margin-left: 0;
-    }
-    &-head{
-      h1{
-        @include tablet{
-          font-size: 10vw;
+      .box_brick{
+        transform: 
+          translateX(-50%) 
+          translateY(-48vw) 
+          rotate(-180deg);
+        filter: blur(8px);
+        @include desktoplg{
+          transform: 
+            translateX(-50%)
+            translateY(-650%)
+            rotate(-180deg);
+          filter: blur(8px);
+        }
+        @include tlxl{
+          transform: 
+            translateX(-50%)
+            translateY(-840%)
+            rotate(-180deg);
+          filter: blur(8px);
+        }
+        @include desktop{
+          transform: 
+            translateX(-50%)
+            translateY(-740%)
+            rotate(-180deg);
+          filter: blur(8px);
         }
         @include tabletPortrait{
-          font-size: 8vw;
+          transform: 
+            translateX(-50%)
+            translateY(-630%)
+            rotate(-180deg);
+          filter: blur(14px);
         }
         @include tabletLandscape{
-          font-size: 3.4vw;
+          transform: 
+            translateX(-50%)
+            translateY(-620%)
+            rotate(-180deg);
+          filter: blur(14px);
+        }
+        @include phone{
+          transform: 
+            translateX(-50%)
+            translateY(-700%)
+            rotate(-180deg);
+          filter: blur(14px);
+        }
+      }
+      .photography .photography__camera{
+        transform: translate3d(0, 0, 0) ;
+      }
+      .photography .photography__camera-ins{
+        &:after{
+          opacity: 1;
+          background-color: #333333;
+        }
+      }
+      .photography .photography__rig-inside{
+        transform: translate3d(0, 0, 0) ;
+      }
+      .photography .photography__rig{
+        transform: translate3d(0, 0, 0) ;
+        filter: blur(8px);
+        @include tabletPortrait{
+          transform: translate3d(-50%, 0, 0) ;
+          filter: blur(15px);
+        }
+      }
+      .photography .photography_brick{
+        transform: translate3d(0, 0, 0) ;
+      }
+      .photography .photography__blitz{
+        animation: blitz .5s linear 3s;
+      }
+      .software{
+        .visualisation__brick{
+          width: 52vw;
+          top: -100vh;
+          padding-bottom: 75%;
+          @include tabletPortrait{
+            top: -128vh;
+            width: 52vh;
+          }
+        }
+      }
+    }
+    &_4{
+      transform: translate3d(0,-300vh,0);
+      .slide-section__decor.box{
+        transform: rotate(180deg) translate3d(0, -14%, 0) ;
+        @include tabletPortrait{
+          transform: rotate(180deg) translate3d(50%, -95%, 0) ;
+        }
+      }
+      .home__photograph{
+        .slide-section__text{
+          transform: translate3d(0, 0, 0) ;
+        }
+      }
+      .box_brick{
+        transform: 
+          translateX(-50%) 
+          translateY(-48vw) 
+          rotate(-180deg);
+        filter: blur(8px);
+        @include desktoplg{
+          transform: 
+            translateX(-50%)
+            translateY(-650%)
+            rotate(-180deg);
+          filter: blur(8px);
+        }
+        @include tlxl{
+          transform: 
+            translateX(-50%)
+            translateY(-840%)
+            rotate(-180deg);
+          filter: blur(8px);
+        }
+        @include desktop{
+          transform: 
+            translateX(-50%)
+            translateY(-740%)
+            rotate(-180deg);
+          filter: blur(8px);
+        }
+        @include tabletPortrait{
+          transform: 
+            translateX(-50%)
+            translateY(-630%)
+            rotate(-180deg);
+          filter: blur(14px);
+        }
+        @include tabletLandscape{
+          transform: 
+            translateX(-50%)
+            translateY(-620%)
+            rotate(-180deg);
+          filter: blur(14px);
+        }
+        @include phone{
+          transform: 
+            translateX(-50%)
+            translateY(-700%)
+            rotate(-180deg);
+          filter: blur(14px);
+        }
+      }
+      .photography .photography__camera{
+        transform: translate3d(0, -30%, 0) ;
+        &:after{
+          opacity: 1;
+          background-color: #333333;
+        }
+      }
+      .photography .photography__rig{
+        transform: translate3d(0, 0, 0) ;
+        filter: blur(8px);
+        @include tabletPortrait{
+          transform: translate3d(-50%, 0, 0) ;
+          filter: blur(15px);
+        }
+      }
+      .photography .photography_brick{
+        transform: translate3d(-4vw, 90vh, 0) ;
+        opacity: 0;
+      }
+      .home__visualisation{
+        .slide-section__text{
+          transform: translate3d(0, 0, 0) 
+        }
+      }
+      .visualisation{
+        .visualisation__photoshop{
+          transform: translate3d(0, 0, 0) ;
+          opacity: 1;
+        }
+      }
+      .software{
+        .visualisation__brick{
+          width: 52vw;
+          top: -100vh;
+          padding-bottom: 75%;
+          @include tabletPortrait{
+            top: -128vh;
+            width: 52vh;
+          }
+          
+        }
+      }
+    }
+
+    &_3.animation-lstep_4{
+      .software{
+        .visualisation__wall{
+          opacity: 1;
+          transition: opacity 0s ease 3s;
+        }
+        .visualisation__wall-big{
+          width: 186vw;
+          transition: $speed ease-in-out;
+          @include phone{
+            width: 347%;
+          }
+        }
+      }
+      .visualisation__door-wrapper{
+        transform: translate3d(-100%, 0, 0) ;
+        transition: 2s ease;
+      }
+    }
+    &_4.animation-lstep_3{
+      .visualisation__wall{
+        opacity: 0;
+        transition: 0s ease 3s;
+      }
+      .software{
+        .visualisation__wall-big{
+          width: 80vw;
+          transition: 2s ease-in-out 3s;
+          @include tablet{
+            width: 140vw;
+          }
+          @include phone{
+            width: 180vw;
+          }
+        }
+        .visualisation_brick-single{
+          transform: translate3d(-50%, 17.8vw, 0) ;
+          opacity: 1;
+          visibility: hidden;
+          @include tabletPortrait{
+            transform: translate3d(-50%, 23.7vw, 0);
+          }
+        }
+      }
+      .visualisation__door-wrapper{
+        transform: translate3d(0, 0, 0) ;
+        transition: 1.4s ease 4s;
+      }
+    }
+    &_4.animation-lstep_5{
+      .software{
+        .visualisation__brick{
+          width: 52vw;
+          top: -100vh;
+          padding-bottom: 75%;
+          left: 0;
+        }
+        .visualisation__wall{
+          opacity: 0;
+        }
+        .visualisation__wall-big{
+          width: 80vw;
+          transition: $speed ease-in-out;
+          @include tablet{
+            width: 140vw;
+          }
+        }
+        .visualisation__door-wrapper{
+          transform: translate3d(0, 0, 0) ;
+          width: 58vw;
+          transition: $speed ease-in-out;
+        }
+        .visualisation__dotted{
+          opacity: 1;
+        }
+      }
+    }
+    &_5{
+      transform: translate3d(0,-400vh,0);
+      .visualisation{
+        .visualisation__photoshop{
+          transform: translate3d(0, 0, 0) ;
+          opacity: 1;
+        }
+      }
+      .home__software{
+        &.oh{
+          overflow-y: auto;
+          overflow-x: hidden;
+          @supports (-webkit-touch-callout: none) {
+            height: -webkit-fill-available;;
+          }
+        }
+      }
+    }
+    &_5.animation-lstep_4{
+      .software{
+        .visualisation__wall{
+          opacity: 0;
+        }
+        .visualisation__brick{
+          width: 66.6%;
+          top: 1.5vw;
+          left: 11.3vw;
+          padding-bottom: 57%;
+        }
+        .visualisation__wall-big{
+          width: 106%;
+          left: 0;
+          z-index: 3;
+          transition: $speed ease-in-out;
+        }
+        .visualisation__door-wrapper{
+          transform: translate3d(0, 0, 0) ;
+          width: 23vw;
+          transition: $speed ease-in-out;
+        }
+        .visualisation__dotted{
+          opacity: 0;
         }
       }
     }
   }
-}
-.home__send{
-  .slide-section__content{
-    margin-top: 30vh;
-    height:calc(100vh - 30vh);
-    @include tabletPortrait{
-      margin-top: 0;
-      height:initial;
-    }
-  }
-  .slide-section{
-    @include tabletPortrait{
-      flex-direction: column;
-    }
-  }
-  .slide-section__step{
-    @include tabletPortrait{
-      top: 25vh;
-    }
-  }
-  .slide-section__step{
-    @include tabletPortrait{
-      height: 76vh;
-    }
-  }
-}
-.slide-section__decor.box{
-  width: 47vw;
-  margin-left: 4vw;
-  @include tabletPortrait{
-    order: -1;
-    width: 52vh;
-    margin-left: 0;
-    left: 50%;
-    margin-top: 5%;
-    transform: translate3d(-50%, 0, 0) ;
-  }
-  @include phone{
-    width: 90%;
-    left: 55%;
-    margin-top: 14vw;
-  }
-}
-.box__back,
-.box__front{
-  margin-top: 2vw;
-  width: 100%;
-  @include centered;
-}
-.box__back{
-  z-index: 1;
-  position: relative;
-}
-.box__front{
-  z-index: 3;
-}
-.box_brick{
-  width: 26vw;
-  position: absolute;
-  left:50%;
-  top: 50%;
-  transform: translate3d(-50%, -200vh, 0) rotate(-90deg);
-  z-index: 2;
-  transition: $speed ease-in-out, filter .2s ease-in-out 2s ;
-  @include tabletPortrait{
-    width: 40vw;
-  }
-  @include phone{
-    width: 50vw;
-  }
-}
-
-.home__photograph{
-  .slide-section__step,
   .slide-section__text{
-    padding-top: 30vh;
-    @include tabletPortrait{
-      padding-top: 0;
-    }
-    @include tabletLandscape{
-      padding-top: 25vh;
-    }
-  }
-  .slide-section__step{
-    z-index: 2;
-    @include tabletPortrait{
-      padding-top: 25vh;
-    }
-  }
-  .slide-section__text{
-    transform: translate3d(0, -10%, 0) 
-  }
-  .slide-section{
-    @include tabletPortrait{
-      flex-direction: column;
-    }
-  }
-}
-.photography{
-  width: 55vw;
-  @include tabletPortrait{
-    width: 100vw;
-    order: -1;
-    padding-top: 65vw;
-  }
-  @include phone{
-    padding-top: 90vw;
-  }
-  .photography__rig{
-    width: calc(100% + 8vw);
-    position: absolute;
-    top: 7vw;
-    left: -11%;
-    transform: translate3d(8%, -12%, 0) ; 
-    transition: $speed ease-in-out, filter .2s ease-in-out 2s ;
-    @include desktoplg{
-      top: 10vw;
-    }
-    @include tlxl{
-      top: 16vw
-    }
-    @include tabletPortrait{
-      left: calc(50% - 60px);
-      width: 90%;
-      top: 18vw;
-      transform: translate3d(-45%, -12%, 0) ;
-    }
-    @include laptops{
-      left: calc(50% - 14px);
-    }
-    @include tabletLandscape{
-      left: -11%;
-    }
-    @include phone{
-      width: 110%;
-      left: 57%;
-    }
-  }
-  .photography__camera{
-    width: calc(100% + 6vw);
-    position: absolute;
-    bottom: -21vw;
-    right: -14vw;
-    transform: translate3d(100%, 0, 0) ;
     transition: $speed ease-in-out;
-    @include tabletPortrait{
-      width: 85vw;
-      right: -5vw;
-      bottom: -28vh;
-    }
-    @include phone{
-      bottom: -26vw;
-      width: 94vw;
-      right: -7vw;
-    }
-  }
-  .photography__camera-ins{
-    width: 21.5vw;
-    height: 14.3vw;
-    position: absolute;
-    top: 15vw;
-    left: 18vw;
-    overflow: hidden;
-    &:after{
-      content: "";
-      display: block;
-      width: 100%;
-      height: 100%;
-      background-color: $black;
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0;
-      transition: $speed ease-in-out, background-color .4s linear 3s;
-    }
-    @include tabletPortrait{
-      width: 29.3vw;
-      height: 19.8vw;
-      top: 21vw;
-      left: 25.5vw;
-    }
-    @include phone{
-      width: 33.3vw;
-      height: 21.8vw;
-      top: 23vw;
-      left: 27.5vw;
-    }
-  }
-  .photography__rig-inside{
-    position: absolute;
-    width: 19vw;
-    top: 1vw;
-    left: 1.3vw;
+    position: relative;
     z-index: 3;
+  }
+  .home__hero-img{
+    @include centered(y);
+    left: 0;
+    top: 48%;
     @include tabletPortrait{
-      width: 27vw;
+      left: 60%;
+      transform: translate3d(-50%, 0, 0) ;
+      top: 0;
     }
-    @include phone{
-      width: 31vw;
+    @include tablet{
+      top: 6%;
     }
-  }
-  .photography_brick{
-    width: 11vw;
-    position: absolute;
-    top: 4vw;
-    left: 5.3vw;
-    z-index: 4;
-    transform: translate3d(0, -30vw, 0) ;
-    transition: $speed ease-in-out;
-    @include tabletPortrait{
-      width: 15vw;
-      left: 7.3vw;
-      top: 5.8vw;
-    }
-    @include phone{
-      width: 17vw;
-      left: 8.5vw;
-      top: 6.4vw;
-    }
-  }
-  .photography__blitz{
-    width: 100vw;
-    height:100vw;
-    background: radial-gradient(circle, $white, rgba($white, 0) 60%);
-    @include centered;
-    margin-left: 5vw;
-    opacity: 0;
-  }
-}
-.home__visualisation{
-  .slide-section{
-    @include tabletPortrait{
-      flex-direction: column;
-    }
-  }
-  .slide-section__step,
-  .slide-section__text{
-    padding-top: 35vh;
-    @include tabletPortrait{
-      padding-top: 0;
-    }
-  }
-  .slide-section__step{
-    @include tabletPortrait{
-      padding-top: 15vh;
-    }
-  }
-  .slide-section__text{
-    @include tabletPortrait{
-      padding-top: 0;
-    }
-  }
-  .slide-section__text{
-    transform: translate3d(0, 10%, 0) ;
-  }
-}
-.visualisation{
-  width: 52vw;
-  margin-left: 8vw;
-  @include tabletPortrait{
-    order: -1;
-    margin-left: 12vw;
-    width: 100%;
-  }
-  @include tablet{
-    margin-left: 77px;
-  }
-  .visualisation__photoshop{
-    display: none;
-    @include tabletPortrait{
-      display: block;
-      margin-top: 12vh;
-      margin-bottom: 20px;
-      width: calc(100% + 26vh);
-      transform: translate3d(60%, 0, 0) ;
-      transition: $speed ease-in-out;
-      opacity: .4;
-    }
-    @include minphone{
-      width: calc(100% + 16vh);
+    @include tabletLandscape{
+      top: 48%;
     }
     img{
-      @include tabletsPortrait{
+      max-height: 106vh;
+      width: auto;
+      @include tabletPortrait{
+        max-height: initial;
         max-width: initial;
+        height: 60vh;
+      }
+      @include tablet{
+        height: 90vw;
+      }
+      @include tabletLandscape{
+        max-height: 90vh;
       }
     }
   }
-}
-.home__software{
-  height: 100vh;
-  .slide-section{
-    @include tabletPortrait{
-      flex-direction: column;
-      height: initial;
+  .home__hero{
+    .slide-section__text{
+      margin-top: -5vw;
+      left: 55vw;
+      transition: 0s ease-in-out;
+      @include tabletPortrait{
+        margin-top: 47vw;
+        left: 0;
+        text-align: center;
+        width: 100%;
+        margin-left: 0;
+      }
+      &-head{
+        h1{
+          @include tablet{
+            font-size: 10vw;
+          }
+          @include tabletPortrait{
+            font-size: 8vw;
+          }
+          @include tabletLandscape{
+            font-size: 3.4vw;
+          }
+        }
+      }
     }
   }
-  .slide-section__decor{
+  .home__send{
+    .slide-section__content{
+      margin-top: 30vh;
+      height:calc(100vh - 30vh);
+      @include tabletPortrait{
+        margin-top: 0;
+        height:initial;
+      }
+    }
+    .slide-section{
+      @include tabletPortrait{
+        flex-direction: column;
+      }
+    }
+    .slide-section__step{
+      @include tabletPortrait{
+        top: 25vh;
+      }
+    }
+    .slide-section__step{
+      @include tabletPortrait{
+        height: 76vh;
+      }
+    }
+  }
+  .slide-section__decor.box{
+    width: 47vw;
+    margin-left: 4vw;
     @include tabletPortrait{
       order: -1;
+      width: 52vh;
+      margin-left: 0;
+      left: 50%;
+      margin-top: 5%;
+      transform: translate3d(-50%, 0, 0) ;
+    }
+    @include phone{
+      width: 90%;
+      left: 55%;
+      margin-top: 14vw;
     }
   }
-  .slide-section__content{
-    height: 30vh;
+  .box__back,
+  .box__front{
+    margin-top: 2vw;
+    width: 100%;
+    @include centered;
   }
-  .slide-section__step,
-  .slide-section__text{
-    padding-top: 30vh;
-  }
-  .slide-section__step{
-    @include tabletPortrait{
-      padding-top: 25vh;
-      height: 25vh;
-    }
-  }
-  .slide-section__text{
-    @include tabletPortrait{
-      padding-top: 0;
-      margin-top: -8vh;
-    }
-  }
-}
-.software{
-  width: 92vw;
-  right: -14vw;
-  margin-top: 7vw;
-  @include centered(y);
-  @include tabletPortrait{
-    width: 190%;
-    right: initial;
-    margin-top: -6%;
+  .box__back{
+    z-index: 1;
     position: relative;
-    top: 0;
-    left: 60%;
-    transform: translate3d(-50%, 0, 0) ;
   }
-  .software__send{
-    display: none;
+  .box__front{
+    z-index: 3;
+  }
+  .box_brick{
+    width: 26vw;
+    position: absolute;
+    left:50%;
+    top: 50%;
+    transform: translate3d(-50%, -200vh, 0) rotate(-90deg);
+    z-index: 2;
+    transition: $speed ease-in-out, filter .2s ease-in-out 2s ;
     @include tabletPortrait{
-      display: block;
+      width: 40vw;
     }
-    img{
+    @include phone{
+      width: 50vw;
+    }
+  }
+
+  .home__photograph{
+    .slide-section__step,
+    .slide-section__text{
+      padding-top: 30vh;
       @include tabletPortrait{
-        max-width: initial;
+        padding-top: 0;
+      }
+      @include tabletLandscape{
+        padding-top: 25vh;
+      }
+    }
+    .slide-section__step{
+      z-index: 2;
+      @include tabletPortrait{
+        padding-top: 25vh;
+      }
+    }
+    .slide-section__text{
+      transform: translate3d(0, -10%, 0) 
+    }
+    .slide-section{
+      @include tabletPortrait{
+        flex-direction: column;
       }
     }
   }
-  .software__monitor{
-    width: 100%;
-    position: relative;
-    z-index: 4;
-    img{
-      width: 100%;
-    }
+  .photography{
+    width: 55vw;
     @include tabletPortrait{
-      display: none;
-    }
-  }
-  .visualisation__brick{
-    position: absolute;
-    width: 37.6%;
-    top: 0;
-    left: 0;
-    padding-bottom: 32%;
-    overflow: hidden;
-    transition: $speed ease-in-out;
-  }
-  .visualisation__wall{
-    position: absolute;
-    height: 88%;
-    z-index: 3;
-    top: 54.7%;
-    left: 52%;
-    transform: translate3d(-50%, -50%, 0) ;
-    width: 96%;
-    img{
-      height: 100%;
-      width: auto;
-    }
-  }
-  .visualisation__wall-big{
-    position: absolute;
-    bottom: 2.2%;
-    left: 4%;
-    width: 186vw;
-    z-index: 2;
-    @include tablet{
-      width: 280vw;
-    }
-    img{
-      max-width: initial;
-    }
-  }
-  .visualisation_brick-single{
-    width: 11vw;
-    position: absolute;
-    z-index: 3;
-    top: -100vh;
-    left: 48.3%;
-    transform: translate3d(-3%, -40vw, 0) ;
-    opacity: 1;
-    z-index: 4;
-    transition: $speed ease-in-out, opacity .6s ease-in-out .8s, visibility 0s ease 3s;
-    opacity: 0;
-    @include tabletPortrait{
-      top: -128vh;
-      left: 48.7%;
-      width: 15vw;
-    }
-    
-  }
-  .visualisation__door-wrapper{
-    position: absolute;
-    left: 0;
-    bottom: 2%;
-    z-index: 3;
-    width: 58vw;
-    transform: translate3d(-100%, 0, 0) ;
-    @include tabletPortrait{
-      width: 71vw;
-    }
-  }
-  .visualisation__door{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: 1;
-  }
-  .visualisation__dotted{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 55%;
-    z-index: 2;
-    transition: .6s ease-in-out;
-  }
-  .visualisation__brick-wrapper{
-    width: 52vw;
-    position: absolute;
-    padding-bottom: 44%;
-    right: 18vw;
-    @include tabletPortrait{
-      width: 52vh;
-      right: initial;
-      left: 0;
-    }
-    @include tabletPortrait{
-      display: none;
-    }
-  }
-  .visualisation__window{
-    width: 100%;
-    position: absolute;
-    top: -100vh;
-    right: 0;
-    z-index: 4;
-    @include tabletPortrait{
-      top: -128vh;
+      width: 100vw;
+      order: -1;
+      padding-top: 65vw;
     }
     @include phone{
-      top: -130vh;
+      padding-top: 90vw;
+    }
+    .photography__rig{
+      width: calc(100% + 8vw);
+      position: absolute;
+      top: 7vw;
+      left: -11%;
+      transform: translate3d(8%, -12%, 0) ; 
+      transition: $speed ease-in-out, filter .2s ease-in-out 2s ;
+      @include desktoplg{
+        top: 10vw;
+      }
+      @include tlxl{
+        top: 16vw
+      }
+      @include tabletPortrait{
+        left: calc(50% - 60px);
+        width: 90%;
+        top: 18vw;
+        transform: translate3d(-45%, -12%, 0) ;
+      }
+      @include laptops{
+        left: calc(50% - 14px);
+      }
+      @include tabletLandscape{
+        left: -11%;
+      }
+      @include phone{
+        width: 110%;
+        left: 57%;
+      }
+    }
+    .photography__camera{
+      width: calc(100% + 6vw);
+      position: absolute;
+      bottom: -21vw;
+      right: -14vw;
+      transform: translate3d(100%, 0, 0) ;
+      transition: $speed ease-in-out;
+      @include tabletPortrait{
+        width: 85vw;
+        right: -5vw;
+        bottom: -28vh;
+      }
+      @include phone{
+        bottom: -26vw;
+        width: 94vw;
+        right: -7vw;
+      }
+    }
+    .photography__camera-ins{
+      width: 21.5vw;
+      height: 14.3vw;
+      position: absolute;
+      top: 15vw;
+      left: 18vw;
+      overflow: hidden;
+      &:after{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: $black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: $speed ease-in-out, background-color .4s linear 3s;
+      }
+      @include tabletPortrait{
+        width: 29.3vw;
+        height: 19.8vw;
+        top: 21vw;
+        left: 25.5vw;
+      }
+      @include phone{
+        width: 33.3vw;
+        height: 21.8vw;
+        top: 23vw;
+        left: 27.5vw;
+      }
+    }
+    .photography__rig-inside{
+      position: absolute;
+      width: 19vw;
+      top: 1vw;
+      left: 1.3vw;
+      z-index: 3;
+      @include tabletPortrait{
+        width: 27vw;
+      }
+      @include phone{
+        width: 31vw;
+      }
+    }
+    .photography_brick{
+      width: 11vw;
+      position: absolute;
+      top: 4vw;
+      left: 5.3vw;
+      z-index: 4;
+      transform: translate3d(0, -30vw, 0) ;
+      transition: $speed ease-in-out;
+      @include tabletPortrait{
+        width: 15vw;
+        left: 7.3vw;
+        top: 5.8vw;
+      }
+      @include phone{
+        width: 17vw;
+        left: 8.5vw;
+        top: 6.4vw;
+      }
+    }
+    .photography__blitz{
+      width: 100vw;
+      height:100vw;
+      background: radial-gradient(circle, $white, rgba($white, 0) 60%);
+      @include centered;
+      margin-left: 5vw;
+      opacity: 0;
+    }
+  }
+  .home__visualisation{
+    .slide-section{
+      @include tabletPortrait{
+        flex-direction: column;
+      }
+    }
+    .slide-section__step,
+    .slide-section__text{
+      padding-top: 35vh;
+      @include tabletPortrait{
+        padding-top: 0;
+      }
+    }
+    .slide-section__step{
+      @include tabletPortrait{
+        padding-top: 15vh;
+      }
+    }
+    .slide-section__text{
+      @include tabletPortrait{
+        padding-top: 0;
+      }
+    }
+    .slide-section__text{
+      transform: translate3d(0, 10%, 0) ;
+    }
+  }
+  .visualisation{
+    width: 52vw;
+    margin-left: 8vw;
+    @include tabletPortrait{
+      order: -1;
+      margin-left: 12vw;
+      width: 100%;
+    }
+    @include tablet{
+      margin-left: 77px;
+    }
+    .visualisation__photoshop{
+      display: none;
+      @include tabletPortrait{
+        display: block;
+        margin-top: 12vh;
+        margin-bottom: 20px;
+        width: calc(100% + 26vh);
+        transform: translate3d(60%, 0, 0) ;
+        transition: $speed ease-in-out;
+        opacity: .4;
+      }
+      @include minphone{
+        width: calc(100% + 16vh);
+      }
+      img{
+        @include tabletsPortrait{
+          max-width: initial;
+        }
+      }
+    }
+  }
+  .home__software{
+    height: 100vh;
+    .slide-section{
+      @include tabletPortrait{
+        flex-direction: column;
+        height: initial;
+      }
+    }
+    .slide-section__decor{
+      @include tabletPortrait{
+        order: -1;
+      }
+    }
+    .slide-section__content{
+      height: 30vh;
+    }
+    .slide-section__step,
+    .slide-section__text{
+      padding-top: 30vh;
+    }
+    .slide-section__step{
+      @include tabletPortrait{
+        padding-top: 25vh;
+        height: 25vh;
+      }
+    }
+    .slide-section__text{
+      @include tabletPortrait{
+        padding-top: 0;
+        margin-top: -8vh;
+      }
+    }
+  }
+  .software{
+    width: 92vw;
+    right: -14vw;
+    margin-top: 7vw;
+    @include centered(y);
+    @include tabletPortrait{
+      width: 190%;
+      right: initial;
+      margin-top: -6%;
+      position: relative;
+      top: 0;
+      left: 60%;
+      transform: translate3d(-50%, 0, 0) ;
+    }
+    .software__send{
+      display: none;
+      @include tabletPortrait{
+        display: block;
+      }
+      img{
+        @include tabletPortrait{
+          max-width: initial;
+        }
+      }
+    }
+    .software__monitor{
+      width: 100%;
+      position: relative;
+      z-index: 4;
+      img{
+        width: 100%;
+      }
+      @include tabletPortrait{
+        display: none;
+      }
+    }
+    .visualisation__brick{
+      position: absolute;
+      width: 37.6%;
+      top: 0;
+      left: 0;
+      padding-bottom: 32%;
+      overflow: hidden;
+      transition: $speed ease-in-out;
+    }
+    .visualisation__wall{
+      position: absolute;
+      height: 88%;
+      z-index: 3;
+      top: 54.7%;
+      left: 52%;
+      transform: translate3d(-50%, -50%, 0) ;
+      width: 96%;
+      img{
+        height: 100%;
+        width: auto;
+      }
+    }
+    .visualisation__wall-big{
+      position: absolute;
+      bottom: 2.2%;
+      left: 4%;
+      width: 186vw;
+      z-index: 2;
+      @include tablet{
+        width: 280vw;
+      }
+      img{
+        max-width: initial;
+      }
+    }
+    .visualisation_brick-single{
+      width: 11vw;
+      position: absolute;
+      z-index: 3;
+      top: -100vh;
+      left: 48.3%;
+      transform: translate3d(-3%, -40vw, 0) ;
+      opacity: 1;
+      z-index: 4;
+      transition: $speed ease-in-out, opacity .6s ease-in-out .8s, visibility 0s ease 3s;
+      opacity: 0;
+      @include tabletPortrait{
+        top: -128vh;
+        left: 48.7%;
+        width: 15vw;
+      }
+      
+    }
+    .visualisation__door-wrapper{
+      position: absolute;
+      left: 0;
+      bottom: 2%;
+      z-index: 3;
+      width: 58vw;
+      transform: translate3d(-100%, 0, 0) ;
+      @include tabletPortrait{
+        width: 71vw;
+      }
+    }
+    .visualisation__door{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      z-index: 1;
+    }
+    .visualisation__dotted{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 55%;
+      z-index: 2;
+      transition: .6s ease-in-out;
+    }
+    .visualisation__brick-wrapper{
+      width: 52vw;
+      position: absolute;
+      padding-bottom: 44%;
+      right: 18vw;
+      @include tabletPortrait{
+        width: 52vh;
+        right: initial;
+        left: 0;
+      }
+      @include tabletPortrait{
+        display: none;
+      }
+    }
+    .visualisation__window{
+      width: 100%;
+      position: absolute;
+      top: -100vh;
+      right: 0;
+      z-index: 4;
+      @include tabletPortrait{
+        top: -128vh;
+      }
+      @include phone{
+        top: -130vh;
+      }
     }
   }
 }

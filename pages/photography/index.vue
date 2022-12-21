@@ -4,25 +4,87 @@
     <div class="animation-steps__wrapper">
       <div :class="'animation-steps animation-steps_'+currentSlide+' animation-lstep_'+pastSlide">
         <section class="photography-page__hero">
-          <div class="slide-section"></div>
+          <div class="slide-section position_relative">
+            <div class="photography-page__hero-video position_absolute">
+              <video class="section__video" autoplay="autoplay" muted="muted" playsinline="playsinline" @ended="videoLoop" :src="`/video/brick${videoCount}.mp4`" id="brickVideo"></video>
+            </div>
+            <div class="slide-section__text">
+              <div class="slide-section__text-head text_center">
+                <h1>Your Products, <br> Professionally Captured</h1>
+              </div>
+            </div>
+            <div @click="nextPage" class="scrl-down position_absolute fs_32 text_center cursor_pointer">
+              <p>What makes our photography so life-like?</p>
+              <p class="ff_icon fs_48"></p>
+            </div>
+          </div>
         </section>
         <section class="photography-page__brick">
-          <div class="slide-section"></div>
+          <div class="slide-section d_flex flex_column">
+            <div class="slide-section__text">
+              <div class="slide-section__text-head">
+                <h2>Realistic Lighting</h2>
+              </div>
+              <div class="slide-section__text-desc">
+                <p class="fs_32">
+                  We mimic sunlight in our lighting setup which enables us
+                  <br> to capture texture. Shown here is the contrast between a
+                  <br> scanned image and our method.
+                </p>
+              </div>
+            </div>
+            <div class="slide-section__brick">
+              <div class="slide-section__brick-box">
+                <label class="background-slider">
+                  <input type="range" v-model="slideval" max="100" min="0" @input="slideInput"/>
+                  <span class="background-slider__icon">
+                    <span v-html="arrowSlide"></span>
+                    <span></span>
+                    <span v-html="arrowSlide"></span>
+                  </span>
+                </label>
+                <div class="background-img"></div>
+                <div class="foreground-img"></div>
+              </div>
+              <div class="slide-section__brick-text">
+                <div class="slide-section__brick-text-1 d_flex justify-content_between">
+                  <p><strong>Scanned</strong></p>
+                  <p><strong>Photograph</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </div>
   </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
   @import 'main.scss';
 </style>
 <script setup>
+  import arrowSlide from '~/assets/svg/icons/arrow-slide.svg?raw'
+
   let currentSlide = ref(0),
       pastSlide = ref(0),
+      videoCount = ref(1),
+      slideval = ref(50),
       ticking = ref(false),
       scrlTicking = ref(true);
-  
 
+  function slideInput(){
+    document.querySelector('.foreground-img').style.width = slideval.value+'%'
+    document.querySelector('.background-slider__icon').style.left = slideval.value+'%'
+  }
+  function nextPage(){
+    slide(3000, 100)
+  }
+  function videoLoop(){
+    let video = document.getElementById("brickVideo")
+    videoCount.value++
+    if (videoCount.value === 4) 
+      videoCount.value = 1;
+  }
   function slide(speed=3000, y=null, direction=null) {
     // const scrl = document.querySelector('.home__software');
     const lngth = 3;

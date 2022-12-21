@@ -1,0 +1,37 @@
+
+$speed: 3s;
+
+.photography-page{
+  height: 100%;
+}
+.photography-page__hero-video{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.photography-page__hero{
+  .slide-section__text{
+    @include centered;
+    h1{
+      text-shadow: 0 0 20px rgba(#000000, 1);
+    }
+  }
+}
+
+.animation-steps{
+  transition-duration: $speed;
+  transition-timing-function: ease-in-out;
+  transform: translate3d(0,0,0);
+  &_1{
+    transform: translate3d(0,-100vh,0);
+  }
+}

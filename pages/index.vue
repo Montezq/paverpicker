@@ -37,7 +37,7 @@
                 <div class="slide-section__text-head">
                   <h2>Send Your <br> Products to Us</h2>
                 </div>
-                <div class="slider-section__text-desc">
+                <div class="slide-section__text-desc">
                   <p class="fs_32">
                     Package your products and
                     <br> send them to us, if your 
@@ -67,7 +67,7 @@
                 <div class="slide-section__text-head">
                   <h2>We Photograph  <br> Your Products </h2>
                 </div>
-                <div class="slider-section__text-desc">
+                <div class="slide-section__text-desc">
                   <p class="fs_32">
                     We photograph each product
                     <br> sample individually, this allows
@@ -106,7 +106,7 @@
                 <div class="slide-section__text-head">
                   <h2>We Set Up Your  <br> Visualisations </h2>
                 </div>
-                <div class="slider-section__text-desc">
+                <div class="slide-section__text-desc">
                   <p class="fs_32">
                     The data infrastructure is built 
                     <br> unique to your products, and
@@ -137,7 +137,7 @@
                   <div class="slide-section__text-head">
                     <h2>We Send You  <br> Your Software </h2>
                   </div>
-                  <div class="slider-section__text-desc">
+                  <div class="slide-section__text-desc">
                     <p class="fs_32">
                       We send you a link to your
                       <br> software, and advise on the
@@ -184,7 +184,7 @@
     </div>
   </div>
 </template>
-<style lang="scss" scoped>
+<style lang="scss" >
   @import 'main.scss';
 </style>
 <script setup>
