@@ -146,6 +146,8 @@ img{
   image-rendering: crisp-edges!important;
   -ms-interpolation-mode: nearest-neighbor!important;
   display: block;
+  width: auto;
+  height: auto;
 }
 .position{
   &_relative{
