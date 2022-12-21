@@ -69,16 +69,22 @@
                   <label class="background-slider position_absolute">
                     <input type="range" v-model="slideval" max="100" min="0" @input="slideInput"/>
                     <span class="background-slider__icon">
-                      <span v-html="arrowSlide"></span>
-                      <span></span>
-                      <span v-html="arrowSlide"></span>
+                      <span class="background-slider__icon-wrapper ">
+                        <div class="background-slider__icon-wrapper-inside d_flex align-items_center">
+                          <span v-html="arrowSlide"></span>
+                          <span></span>
+                          <span v-html="arrowSlide"></span>
+                        </div>
+                      </span>
                     </span>
                   </label>
                   <div class="background-img">
                     <Img :img="'brick_1'" :alt="'Door'"/>
                   </div>
                   <div class="foreground-img">
-                    <Img :img="'brick_2'" :alt="'Door'" class="foreground-img_1"/>
+                    <Img :img="'brick_2'" :alt="'Door'" class="foreground-img-inside foreground-img_1"/>
+                    <Img :img="'brick_1'" :alt="'Door'" class="foreground-img-inside foreground-img_2"/>
+                    <Img :img="'brick_4'" :alt="'Door'" class="foreground-img-inside foreground-img_3"/>
                   </div>
                 </div>
                 <div class="slide-section__brick-text position_relative">
@@ -118,7 +124,7 @@
 
   function slideInput(){
     document.querySelector('.foreground-img').style.width = slideval.value+'%'
-    document.querySelector('.background-slider__icon').style.left = slideval.value+'%'
+    document.querySelector('.background-slider__icon').style.width = slideval.value+'%'
   }
   function nextPage(){
     slide(2200, 100)
