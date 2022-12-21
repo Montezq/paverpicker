@@ -405,6 +405,7 @@ $speed: 3s;
   }
   img{
     max-height: 106vh;
+    width: auto;
     @include tabletPortrait{
       max-height: initial;
       max-width: initial;

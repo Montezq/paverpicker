@@ -7,9 +7,7 @@
         <section class="home__hero">
           <div class="slide-section d_flex align-items_center flex_wrap position_relative">
             <div class="home__hero-img position_absolute">
-              <Img :imgx="'/images/decor/home-hero@x2.png'" :alt="'Home hero laptop'"
-                :img="'/images/decor/home-hero.png'" :imgmd="'/images/decor/home-hero.png'"
-                :imgmdx="'/images/decor/home-hero-md@x2.png'" />
+              <Img :img="'home-hero'" :alt="'Home hero laptop'"/>
             </div>
             <div class="slide-section__text position_relative">
               <div class="slide-section__text-head mb_32">
@@ -51,15 +49,9 @@
               </div>
             </div>
             <div class="slide-section__decor box position_relative">
-              <Img :imgx="'/images/decor/box_back@x2.png'" :alt="'Box'" class="box__back"
-                :img="'/images/decor/box_back.png'" :imgmd="'/images/decor/box_back.png'"
-                :imgmdx="'/images/decor/box_back-md@x2.png'" />
-              <Img :imgx="'/images/decor/box_front@x2.png'" :alt="'Box'" class="box__front"
-                :img="'/images/decor/box_front.png'" :imgmd="'/images/decor/box_front.png'"
-                :imgmdx="'/images/decor/box_front-md@x2.png'" />
-              <Img :imgx="'/images/decor/brick@x2.png'" :alt="'Box'" class="box_brick"
-                :img="'/images/decor/brick.png'" :imgmd="'/images/decor/brick.png'"
-                :imgmdx="'/images/decor/brick-md@x2.png'" />
+              <Img :img="'box_back'" :alt="'Box'" class="box__back"/>
+              <Img :img="'box_front'" :alt="'Box'" class="box__front"/>
+              <Img :img="'brick'" :alt="'Box'" class="box_brick"/>
             </div>
           </div>
         </section>
@@ -90,21 +82,13 @@
               </div>
             </div>
             <div class="slide-section__decor photography position_relative">
-              <Img :imgx="'/images/decor/rig@x2.png'" :alt="'Photography'" class="photography__rig"
-                :img="'/images/decor/rig.png'" :imgmd="'/images/decor/rig.png'"
-                :imgmdx="'/images/decor/rig-md@x2.png'" />
+              <Img :img="'rig'" :alt="'Rig'" class="photography__rig"/>
               <div class="photography__blitz"></div>
               <div class="photography__camera">
-                <Img :imgx="'/images/decor/camera@x2.png'" :alt="'Photography'" class="photography__camera-inside"
-                  :img="'/images/decor/camera.png'" :imgmd="'/images/decor/camera.png'"
-                  :imgmdx="'/images/decor/camera-md@x2.png'" />
+                <Img :img="'camera'" :alt="'Camera'" class="photography__camera-inside"/>
                 <div class="photography__camera-ins">
-                  <Img :imgx="'/images/decor/rig@x2.png'" :alt="'Photography'" class="photography__rig-inside"
-                    :img="'/images/decor/rig.png'" :imgmd="'/images/decor/rig.png'"
-                    :imgmdx="'/images/decor/rig-md@x2.png'" />
-                  <Img :imgx="'/images/decor/brick@x2.png'" :alt="'Photography'" class="photography_brick"
-                    :img="'/images/decor/brick.png'" :imgmd="'/images/decor/brick.png'"
-                    :imgmdx="'/images/decor/brick-md@x2.png'" />
+                  <Img :img="'rig'" :alt="'Rig inside'" class="photography__rig-inside"/>
+                  <Img :img="'brick'" :alt="'Brick'" class="photography_brick"/>
                 </div>
               </div>
             </div>
@@ -136,9 +120,7 @@
               </div>
             </div>
             <div class="slide-section__decor visualisation">
-              <Img :imgx="'/images/decor/photoshop@x2.png'" :alt="'Photoshop Window'" class="visualisation__photoshop"
-                  :img="'/images/decor/photoshop.png'" :imgmd="'/images/decor/photoshop.png'"
-                  :imgmdx="'/images/decor/photoshop@x2.png'" />
+              <Img :img="'photoshop'" :alt="'Photoshop Window'" class="visualisation__photoshop"/>
             </div>
           </div>
         </section>
@@ -170,36 +152,20 @@
                 </div>
               </div>
               <div class="slide-section__decor software">
-                <Img :imgx="'/images/decor/send@x2.png'" :alt="'Send Laptop'" class="software__send"
-                  :img="'/images/decor/send.png'" :imgmd="'/images/decor/send@x2.png'"
-                  :imgmdx="'/images/decor/send@x2.png'" />
+                <Img :img="'send'" :alt="'Send Laptop'" class="software__send"/>
                 <div class="visualisation__brick-wrapper">
-                  <Img :imgx="'/images/decor/photoshop-window@x2.png'" :alt="'Send Laptop'" class="visualisation__window"
-                    :img="'/images/decor/photoshop-window.png'" :imgmd="'/images/decor/photoshop-window.png'"
-                    :imgmdx="'/images/decor/photoshop-window-md@x2.png'" />
-                  <Img :imgx="'/images/decor/brick@x2.png'" :alt="'Brick'" class="visualisation_brick-single"
-                    :img="'/images/decor/brick.png'" :imgmd="'/images/decor/brick.png'"
-                    :imgmdx="'/images/decor/brick-md@x2.png'" />
+                  <Img :img="'photoshop-window'" :alt="'Window'" class="visualisation__window"/>
+                  <Img :img="'brick'" :alt="'Brick'" class="visualisation_brick-single"/>
                   <div class="visualisation__brick">
-                    <Img :imgx="'/images/decor/zoomed_bricks@x2.png'" :alt="'Send Laptop'" class="visualisation__wall"
-                      :img="'/images/decor/zoomed_bricks.png'" :imgmd="'/images/decor/zoomed_bricks.png'"
-                      :imgmdx="'/images/decor/zoomed_bricks-md@x2.png'" />
-                    <Img :imgx="'/images/decor/bricks@x2.png'" :alt="'Send Laptop'" class="visualisation__wall-big"
-                      :img="'/images/decor/bricks.png'" :imgmd="'/images/decor/bricks.png'"
-                      :imgmdx="'/images/decor/bricks-md@x2.png'" />
+                    <Img :img="'zoomed_bricks'" :alt="'Bricks'" class="visualisation__wall"/>
+                    <Img :img="'bricks'" :alt="'Bricks'" class="visualisation__wall-big"/>
                     <div class="visualisation__door-wrapper">
-                      <Img :imgx="'/images/decor/door@x2.png'" :alt="'Send Laptop'" class="visualisation__door"
-                        :img="'/images/decor/door.png'" :imgmd="'/images/decor/door.png'"
-                        :imgmdx="'/images/decor/door-md@x2.png'" />
-                      <Img :imgx="'/images/decor/dotted@x2.png'" :alt="'Send Laptop'" class="visualisation__dotted"
-                        :img="'/images/decor/dotted.png'" :imgmd="'/images/decor/dotted.png'"
-                        :imgmdx="'/images/decor/dotted-md@x2.png'" />
+                      <Img :img="'door'" :alt="'Door'" class="visualisation__door"/>
+                      <Img :img="'dotted'" :alt="'Dotted for dor'" class="visualisation__dotted"/>
                     </div>
                   </div>
                 </div>
-                <Img :imgx="'/images/decor/monitor@x2.png'" :alt="'Send Laptop'" class="software__monitor"
-                  :img="'/images/decor/monitor.png'" :imgmd="'/images/decor/monitor.png'"
-                  :imgmdx="'/images/decor/monitor-md@x2.png'" />
+                <Img :img="'monitor'" :alt="'Monitor'" class="software__monitor"/>
               </div>
             </div>
             <div class="scrollable-section">
