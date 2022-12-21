@@ -2,7 +2,6 @@
 $speed: 2.2s;
 $speed2: 1.8s;
 $speed3: 1.4s;
-$speed4: 1.8s;
 
 .photography-page{
   height: 100%;
@@ -257,6 +256,18 @@ $speed4: 1.8s;
         bottom: 0;
         opacity: 0;
         z-index: 4;
+        &::-webkit-slider-thumb {
+          width: 50px;
+          height: 50px;
+        }
+        &::-moz-range-thumb {
+          width: 50px;
+          height: 50px;
+        }
+        &::-ms-thumb {
+          width: 50px;
+          height: 50px;
+        }
       }
     }
   }
@@ -271,7 +282,7 @@ $speed4: 1.8s;
     height: calc(100% + 40px);
     margin-top: -20px;
     z-index: 3;
-    transition: .6s ease-in-out;
+    
   }
   .background-slider__icon-wrapper{
     width: 100%;
@@ -308,7 +319,6 @@ $speed4: 1.8s;
     z-index: 2;
     width: 50%;
     overflow: hidden;
-    transition: .6s ease-in-out;
     &-inside{
       position: absolute;
       top: 0;
@@ -316,7 +326,6 @@ $speed4: 1.8s;
       bottom: 0;
       width: 100%;
       overflow: hidden;
-      // transition: $speed3 ease;
     }
     img{
       top: 0;
