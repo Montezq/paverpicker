@@ -56,58 +56,58 @@ $speed4: 1.8s;
     }
     &_2.animation-lstep_1{
       .background-slider__icon-wrapper{
-        animation: islide 2.6s ease-in-out;
+        animation: islide $speed ease-in-out;
       }
       .foreground-img{
         &_1{
-          animation: islide 2.6s ease-in-out;
+          animation: islide $speed ease-in-out;
         }
         &_2{
-          animation: islide 2.6s ease-in-out;
+          animation: islide $speed ease-in-out;
           z-index: 1;
           transition-delay: 1.3s;
         }
         &_3{
-          animation: islide 2.6s ease-in-out;
+          animation: islide $speed ease-in-out;
           z-index: -2;
         }
       }
     }
     &_1.animation-lstep_2{
       .background-slider__icon-wrapper{
-        animation: islide2 2.6s ease-in-out;
+        animation: islide2 $speed ease-in-out;
         // background-color: yellow;
       }
       .foreground-img{
         &_1{
-          animation: islide2 2.6s ease-in-out;
+          animation: islide2 $speed ease-in-out;
         }
         &_2{
-          animation: islide2 2.6s ease-in-out;
+          animation: islide2 $speed ease-in-out;
           z-index: -1;
           transition-delay: 1.3s;
         }
         &_3{
-          animation: islide2 2.6s ease-in-out;
+          animation: islide2 $speed ease-in-out;
           z-index: -2;
         }
       }
     }
     &_2.animation-lstep_3{
       .background-slider__icon-wrapper{
-        animation: islide 2.6s ease-in-out;
+        animation: islide $speed ease-in-out;
         // background-color: yellow;
       }
       .foreground-img{
         &_1{
-          animation: islide 2.6s ease-in-out;
+          animation: islide $speed ease-in-out;
         }
         &_2{
-          animation: islide 2.6s ease-in-out;
+          animation: islide $speed ease-in-out;
           z-index: 3;
         }
         &_3{
-          animation: islide 2.6s ease-in-out;
+          animation: islide $speed ease-in-out;
           z-index: 2;
           transition-delay: 1.3s;
         }
@@ -115,19 +115,19 @@ $speed4: 1.8s;
     }
     &_3.animation-lstep_2{
       .background-slider__icon-wrapper{
-        animation: islide2 2.6s ease-in-out;
+        animation: islide2 $speed ease-in-out;
         // background-color: red;
       }
       .foreground-img{
         &_1{
-          animation: islide2 2.6s ease-in-out;
+          animation: islide2 $speed ease-in-out;
         }
         &_2{
-          animation: islide2 2.6s ease-in-out;
+          animation: islide2 $speed ease-in-out;
           z-index: 3;
         }
         &_3{
-          animation: islide2 2.6s ease-in-out;
+          animation: islide2 $speed ease-in-out;
           z-index: 4;
           transition-delay: 1.3s;
         }
@@ -205,6 +205,14 @@ $speed4: 1.8s;
   }
   .photography-page__brick{
     background-color: $black;
+    &.oh{
+      height: 100vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+      @supports (-webkit-touch-callout: none) {
+        height: -webkit-fill-available;;
+      }
+    }
     .container{
       height: 100%;
       max-width: 1040px;
