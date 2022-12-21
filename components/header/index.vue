@@ -13,7 +13,7 @@
         <div :class="['header__menu', {'active':menu.menu}]">
           <ul class="header__menu-list d_flex">
             <li class="header__menu-list-item">
-              <NuxtLink to="/" class="text_uppercase fw_semibold">Photography</NuxtLink>
+              <NuxtLink to="photography" class="text_uppercase fw_semibold">Photography</NuxtLink>
             </li>
             <li class="header__menu-list-item">
               <NuxtLink to="/" class="text_uppercase fw_semibold">Visualisation</NuxtLink>

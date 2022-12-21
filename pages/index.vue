@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <Header />
     <Rotate />
     <div class="animation-steps__wrapper">
       <div :class="'animation-steps animation-steps_'+currentSlide+' animation-lstep_'+pastSlide">
