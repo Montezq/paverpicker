@@ -1,15 +1,16 @@
 <template>
   <header class="header">
+    <div :class="['header__menu-close',{'active':menu.menu}]" @click="menuToggle()"></div>
     <div class="container">
       <div class="row d_flex align-items_center justify-content_center">
-        <div class="header__menu-btn">
+        <div class="header__menu-btn" @click="menuToggle()">
         </div>
         <div class="header__logo">
           <NuxtLink to="/" aria-label="Header Logo">
             <div v-html="logo"></div>
           </NuxtLink>
         </div>
-        <div class="header__menu">
+        <div :class="['header__menu', {'active':menu.menu}]">
           <ul class="header__menu-list d_flex">
             <li class="header__menu-list-item">
               <NuxtLink to="/" class="text_uppercase fw_semibold">Photography</NuxtLink>
@@ -34,4 +35,10 @@
 </style>
 <script setup>
   import logo  from '~/assets/svg/logo/logo.svg?raw';
+  import { toggleMenu } from '@/store/menu'
+  const menu = toggleMenu();
+  function menuToggle(){
+    menu.toggle()
+    document.querySelector('body').classList.toggle('oh')
+  }
 </script>

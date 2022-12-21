@@ -180,7 +180,7 @@
   </div>
 </template>
 <style lang="scss">
-  @import 'index.scss';
+  @import 'main.scss';
 </style>
 <script setup>
   let currentSlide = ref(0),

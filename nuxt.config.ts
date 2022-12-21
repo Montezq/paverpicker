@@ -12,7 +12,17 @@ export default defineNuxtConfig({
   css: [
     '~/assets/styles/app.scss'
   ],
+  modules: [
+    '@pinia/nuxt',
+  ],
   vite: {
-    plugins: [svgLoader()]
+    plugins: [svgLoader()],
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@import "@/assets/styles/helpers.scss";'
+        }
+      }
+    }
   },
 })

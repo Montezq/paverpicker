@@ -14,7 +14,9 @@
     "vite-svg-loader": "^3.6.0"
   },
   "dependencies": {
+    "@pinia/nuxt": "^0.4.6",
     "gsap": "^3.11.3",
+    "pinia": "^2.0.28",
     "scrollmagic": "^2.0.8"
   },
   "browserslist": [

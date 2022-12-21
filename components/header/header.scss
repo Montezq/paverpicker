@@ -1,4 +1,4 @@
-@import '~/assets/styles/helpers.scss';
+
 
 .header{
   padding: 20px 0;
@@ -49,7 +49,21 @@
     top: 50px;
     left: 0;
     width: 100%;
-    transform: translateX(-100%);
+    transform: translate3d(0,50px,0);
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s ease-in-out;
+    z-index: -2;
+    padding: 20px 12px;
+    background-color: #262626;
+  }
+  &.active{
+    @include laptops{
+      transform: translate3d(0,0,0);
+      opacity: 1;
+      visibility: visible;
+      z-index: 99;
+    }
   }
 }
 .header__menu-list{
@@ -62,7 +76,28 @@
 .header__menu-list-item{
   margin-left: 20px;
   a{
-    letter-spacing:1px;
     letter-spacing:.09em;
+    line-height: 42px;
+    @include tablet{
+      font-size: 12px;
+      line-height: 32px;
+    }
+  }
+}
+.header__menu-close{
+  display: none;
+  @include laptops{
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    z-index: 98;
+    width: 100%;
+    height: calc(100vh - 50px);
+  }
+  &.active{
+    @include laptops{
+      display: block;
+    }
   }
 }
