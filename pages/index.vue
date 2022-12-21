@@ -157,7 +157,13 @@
                   <Img :img="'brick'" :alt="'Brick'" class="visualisation_brick-single"/>
                   <div class="visualisation__brick">
                     <Img :img="'zoomed_bricks'" :alt="'Bricks'" class="visualisation__wall"/>
-                    <Img :img="'bricks'" :alt="'Bricks'" class="visualisation__wall-big"/>
+                    <div class="picture visualisation__wall-big">
+                      <picture>
+                        <source type="image/png" srcset="/images/decor/bricks@x2.png 2x"/>
+                        <source type="image/webp" srcset="/images/decor/bricks@x2.webp 2x"/>
+                        <img :src="'/images/decor/bricks@x2.webp'" alt="Bricks" width="500" height="500"/>
+                      </picture>
+                    </div>
                     <div class="visualisation__door-wrapper">
                       <Img :img="'door'" :alt="'Door'" class="visualisation__door"/>
                       <Img :img="'dotted'" :alt="'Dotted for dor'" class="visualisation__dotted"/>
@@ -178,7 +184,7 @@
     </div>
   </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
   @import 'main.scss';
 </style>
 <script setup>
