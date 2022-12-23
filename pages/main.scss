@@ -386,6 +386,15 @@ $speed: 3s;
     transition: $speed ease-in-out;
     position: relative;
     z-index: 3;
+    @include tabletPortrait{
+      margin-left: 14vw;
+    }
+    @include phone{
+      margin-left: 60px;
+    }
+    @include tabletsLandscape{
+      margin-left: 0 !important;
+    }
   }
   .home__hero-img{
     @include centered(y);

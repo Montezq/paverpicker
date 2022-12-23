@@ -31,7 +31,7 @@
                 <div class="slide-section__text">
                   <div class="slide-section__text-inside slide-section__text_1">
                     <div class="slide-section__text-head">
-                      <h2>Realistic Lighting</h2>
+                      <h2>Realistic <br> Lighting</h2>
                     </div>
                     <div class="slide-section__text-desc">
                       <p class="fs_32">
@@ -43,7 +43,7 @@
                   </div>
                   <div class="slide-section__text-inside slide-section__text_2 position_absolute">
                     <div class="slide-section__text-head">
-                      <h2>Incredible Detail</h2>
+                      <h2>Incredible <br> Detail</h2>
                     </div>
                     <div class="slide-section__text-desc">
                       <p class="fs_32">
@@ -55,7 +55,7 @@
                   </div>
                   <div class="slide-section__text-inside slide-section__text_3 position_absolute">
                     <div class="slide-section__text-head">
-                      <h2>Accurate Colour</h2>
+                      <h2>Accurate <br> Colour</h2>
                     </div>
                     <div class="slide-section__text-desc">
                       <p class="fs_32">

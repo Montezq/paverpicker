@@ -157,17 +157,6 @@ img{
     position: absolute;
   }
 }
-.slide-section__text{
-  @include tabletPortrait{
-    margin-left: 14vw;
-  }
-  @include phone{
-    margin-left: 60px;
-  }
-  @include tabletsLandscape{
-    margin-left: 0 !important;
-  }
-}
 .slide-section__text-head{
   margin-bottom: 20px;
   h1,h2{

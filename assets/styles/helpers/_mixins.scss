@@ -53,7 +53,7 @@
   }
 }
 @mixin desktopminlg{
-  @media screen and (max-width: 1399px){
+  @media screen and (max-width: 1500px){
       @content;
   }
 }
@@ -129,6 +129,21 @@
 
 @mixin tlxl{
   @media screen and (max-width: 1400px) and (max-height: 1100px) and (min-height: 900px){
+      @content;
+  }
+}
+@mixin mh{
+  @media screen and (max-height: 770px) and (orientation: landscape){
+      @content;
+  }
+}
+@mixin mh2{
+  @media screen and (max-height: 620px) and (orientation: landscape){
+      @content;
+  }
+}
+@mixin mh3{
+  @media screen and (max-height: 530px) and (orientation: landscape){
       @content;
   }
 }

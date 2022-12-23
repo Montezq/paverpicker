@@ -60,11 +60,14 @@ $speed3: 1.4s;
       .foreground-img{
         &_1{
           animation: islide $speed ease-in-out;
+          visibility: hidden;
+          transition-delay: 1.2s;
         }
         &_2{
           animation: islide $speed ease-in-out;
           z-index: 1;
-          transition-delay: 1.3s;
+          transition-delay: 1.2s;
+          visibility: visible;
         }
         &_3{
           animation: islide $speed ease-in-out;
@@ -80,15 +83,20 @@ $speed3: 1.4s;
       .foreground-img{
         &_1{
           animation: islide2 $speed ease-in-out;
+          visibility: visible;
+          transition-delay: 1.2s;
         }
         &_2{
           animation: islide2 $speed ease-in-out;
           z-index: -1;
-          transition-delay: 1.3s;
+          visibility: hidden;
+          transition-delay: 1.2s;
         }
         &_3{
           animation: islide2 $speed ease-in-out;
           z-index: -2;
+          visibility: hidden;
+          transition-delay: 1.2s;
         }
       }
     }
@@ -104,11 +112,14 @@ $speed3: 1.4s;
         &_2{
           animation: islide $speed ease-in-out;
           z-index: 3;
+          visibility: visible;
+          transition-delay: 1.2s;
         }
         &_3{
           animation: islide $speed ease-in-out;
           z-index: 2;
-          transition-delay: 1.3s;
+          visibility: hidden;
+          transition-delay: 1.2s;
         }
       }
     }
@@ -124,11 +135,14 @@ $speed3: 1.4s;
         &_2{
           animation: islide2 $speed ease-in-out;
           z-index: 3;
+          visibility: hidden;
+          transition-delay: 1.2s;
         }
         &_3{
           animation: islide2 $speed ease-in-out;
           z-index: 4;
-          transition-delay: 1.3s;
+          visibility: visible;
+          transition-delay: 1.2s;
         }
       }
     }
@@ -187,6 +201,9 @@ $speed3: 1.4s;
     right: 0;
     bottom: 0;
     overflow: hidden;
+    @include tabletPortrait{
+      height: 40%;
+    }
     video{
       width: 100%;
       height: 100%;
@@ -195,15 +212,50 @@ $speed3: 1.4s;
   }
   .photography-page__hero{
     z-index: 4;
+    background-color: $black;
+    @include tabletPortrait{
+      &:after{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 80%;
+        position: absolute;
+        top: 20%;
+        left: 0;
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 64%, rgba(0,0,0,0) 100%);
+      }
+    }
     .slide-section__text{
       @include centered;
+      z-index: 3;
+      @include tabletPortrait{
+        width: 100%;
+        top: 54%;
+      }
       h1{
         text-shadow: 0 0 20px rgba(#000000, 1);
+        @include tabletPortrait{
+          br{
+            display: none;
+          }
+        }
+      }
+    }
+    .scrl-down{
+      z-index: 3;
+      @include tabletPortrait{
+        width: 62%;
       }
     }
   }
   .photography-page__brick{
     background-color: $black;
+    @include mh{
+      padding-top: 30px;
+    }
+    @include mh3{
+      padding-top: 0px;
+    }
     &.oh{
       height: 100vh;
       overflow-y: auto;
@@ -218,13 +270,68 @@ $speed3: 1.4s;
       margin: 0 auto;
       position: relative;
       z-index: 2;
+      @include desktopminlg{
+        max-width: 800px;
+      }
+      @include desktop{
+        max-width: 100%;
+      }
+      @include mh{
+        max-width: 760px;
+      }
+      @include mh3{
+        max-width: 500px;
+      }
+    }
+    .slide-section{
+      @include laptops{
+        padding: 0 20px;
+      }
+    }
+    .slide-section__text-head{
+      h2{
+        br{
+          display: none;
+        }
+        @include mh2{
+          font-size: 3vw;
+        }
+        @include tabletPortrait{
+          br{
+            display: block;
+          }
+        }
+        @include phone{
+          font-size: 10vw;
+        }
+      }
+    }
+    .slide-section__text-desc{
+      p{
+        @include desktop{
+          font-size: 3.2vw;
+        }
+        @include phone{
+          br{
+            display: none;
+          }
+          font-size: 5vw;
+        }
+      }
     }
     .slide-section__text{
       margin-bottom: 60px;
       position: relative;
+      @include mh3{
+        margin-top: -20px;
+        margin-bottom: 20px;
+      }
       &-inside{
         padding-left: 40px;
         transition: $speed ease-in-out;
+        @include desktop{
+          padding-left: 0;
+        }
       }
       &_2,
       &_3{
@@ -271,9 +378,21 @@ $speed3: 1.4s;
       }
     }
   }
+  .slide-section__brick{
+    @include mh2{
+      max-width: 460px;
+      margin: 0 auto;
+    }
+    @include mh3{
+      max-width: 300px;
+    }
+  }
   .slide-section__brick-box{
     margin-bottom: 20px;
     z-index: 2;
+    @include tablet{
+      margin-bottom: 16px;
+    }
   }
   .background-slider__icon{
     position: absolute;
@@ -282,6 +401,14 @@ $speed3: 1.4s;
     height: calc(100% + 40px);
     margin-top: -20px;
     z-index: 3;
+    @include tablet{
+      height: calc(100% + 20px);
+      margin-top: -10px;
+    }
+    @include mh2{
+      height: calc(100% + 20px);
+      margin-top: -10px;
+    }
     
   }
   .background-slider__icon-wrapper{
@@ -294,6 +421,12 @@ $speed3: 1.4s;
     height: 100%;
     left: 62px;
     position: relative;
+    @include tablet{
+      left: 40px;
+    }
+    @include mh2{
+      left: 40px;
+    }
     span{
       &:nth-child(2){
         animation: slide 2s ease-in-out infinite;
@@ -302,6 +435,22 @@ $speed3: 1.4s;
         height: 100%;
         background-color: $green;
         margin: 0 20px;
+        @include tablet{
+          width: 8px;
+          margin: 0 6px;
+        }
+        @include mh2{
+          width: 8px;
+          margin: 0 6px;
+        }
+      }
+      svg{
+        @include tablet{
+          height: 40px;
+        }
+        @include mh2{
+          height: 40px;
+        }
       }
       &:first-child{
         svg{
@@ -326,6 +475,7 @@ $speed3: 1.4s;
       bottom: 0;
       width: 100%;
       overflow: hidden;
+      visibility: hidden;
     }
     img{
       top: 0;
@@ -333,11 +483,35 @@ $speed3: 1.4s;
       position: absolute;
       width: 1040px;
       position: relative;
+      @include desktopminlg{
+        width: 800px;
+      }
+      @include desktop{
+        width: calc(100vw - 120px);
+      }
+      @include laptops{
+        width: calc(100vw - 40px);
+      }
+      @include mh{
+        width: 760px;
+      }
+      @include mh2{
+        width: 460px;
+      }
+      @include mh3{
+        width: 300px;
+      }
+    }
+    &_1{
+      visibility: visible;
     }
     &_2{
       z-index: -1;
       img{
         filter: blur(4px);
+        @include mh2{
+          filter: blur(2px);
+        }
       }
     }
     &_3{
@@ -347,6 +521,18 @@ $speed3: 1.4s;
   .slide-section__brick-text{
     p{
       font-size: 2.1vw;
+      @include desktop{
+        font-size: 3.2vw;
+      }
+      @include phone{
+        font-size: 3.6vw;
+      }
+      @include mh2{
+        font-size: 1.4vw;
+      }
+      @include mh3{
+        font-size: 1.8vw;
+      }
     }
   }
   .slide-section__bg{
@@ -356,6 +542,19 @@ $speed3: 1.4s;
     left: 0;
   }
   .light_bg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include tabletPortrait{
+      width: 170vw;
+      max-width: initial;
+      top: 0;
+      right: 0;
+      position: absolute;
+    }
+    @include phone{
+      width: 200vw;
+    }
     img{
       transform: rotate(-45deg) translate3d(40%,0,0);
       transform-origin: left;
@@ -364,6 +563,9 @@ $speed3: 1.4s;
       object-fit: cover;
       mix-blend-mode: lighten;
       transition: $speed ease-in-out;
+      @include tabletPortrait{
+        max-width: initial;
+      }
     }
   }
   .butterfly_bg{
@@ -373,8 +575,16 @@ $speed3: 1.4s;
     width: 25vw;
     transform: rotate(35deg) translate3d(200%, -100%, 0);
     transition: $speed ease-in-out;
+    @include tabletPortrait{
+      width: 50vw;
+      right: -3vw;
+      top: 50px;
+    }
     img{
       width: 100%;
+      @include tabletPortrait{
+        max-width: initial;
+      }
     }
   }
   .colour_calibration_bg{
@@ -385,8 +595,16 @@ $speed3: 1.4s;
     width: 46vw;
     transition: $speed ease-in-out;
     transform: rotate(0) translate3d(100%,0,0);
+    @include tabletPortrait{
+      width: 95vw;
+      right: -50%;
+      top: -10%;
+    }
     img{
       width: 100%;
+      @include tabletPortrait{
+        max-width: initial;
+      }
     }
   }
   .slide-section__brick-text{
