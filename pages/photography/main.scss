@@ -576,9 +576,12 @@ $speed3: 1.4s;
     transform: rotate(35deg) translate3d(200%, -100%, 0);
     transition: $speed ease-in-out;
     @include tabletPortrait{
-      width: 50vw;
+      width: 45vw;
       right: -3vw;
       top: 50px;
+    }
+    @include phone{
+      width: 50vw;
     }
     img{
       width: 100%;
@@ -596,9 +599,12 @@ $speed3: 1.4s;
     transition: $speed ease-in-out;
     transform: rotate(0) translate3d(100%,0,0);
     @include tabletPortrait{
-      width: 95vw;
+      width: 75vw;
       right: -50%;
       top: -10%;
+    }
+    @include phone{
+      width: 100vw;
     }
     img{
       width: 100%;
