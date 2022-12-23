@@ -4,7 +4,7 @@
     <div class="animation-steps__wrapper">
       <div :class="'animation-steps animation-steps_'+currentSlide+' animation-lstep_'+pastSlide">
         <section class="visualisation-page__hero position_relative">
-          <div class="slide-section position_relative">
+          <div class="slide-section position_relative d_flex align-items_center flex_column">
             <div class="slide-section__text">
               <div class="slide-section__text-head text_center">
                 <h1>True to Life Visualisations</h1>
@@ -21,6 +21,44 @@
         </section>
         <section class="visualisation-page__steps">
           <div>
+            <div class="slide-section position_relative d_flex align-items_center">
+              <div class="slide-section__text">
+                <div class="slide-section__text-inside slide-section__text_1">
+                  <div class="slide-section__text-head">
+                    <h2>Precise Cut-Outs</h2>
+                  </div>
+                  <div class="slide-section__text-desc">
+                    <p class="fs_32">
+                      We take no shortcuts when it comes to
+                      <br> preparing the areas to be visualised. We
+                      <br> ensure each and every blade of grass is
+                      <br> properly preserved. 
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="slide-section__decor position_relative">
+                <div class="slide-section__decor-box visualisation__bg-box position_absolute">
+                  <div class="visualisation__img-insde"></div>
+                </div>
+                <div class="slide-section__decor-box visualisation__garden-box">
+                  <Img :img="'visualisation_garden'" :alt="'Box'" class="visualisation__img-insde visualisation__garden"/>
+                </div>
+                <div class="slide-section__decor-box visualisation__paver-box position_absolute">
+                  <Img :img="'visualisation_paver'" :alt="'Box'" class="visualisation__img-insde visualisation__paver"/>
+                </div>
+                <div class="slide-section__decor-box visualisation__shadows-box position_absolute">
+                  <div class="visualisation__img-insde">
+                    <Img :img="'shadows'" :alt="'Box'" class=" visualisation__shadows"/>
+                  </div>
+                </div>
+                <div class="slide-section__decor-box visualisation__paver2-box position_absolute">
+                  <div class="visualisation__img-insde">
+                    <Img :img="'paver-2'" :alt="'Box'" class="visualisation__paver2"/>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="scrollable-section">
               <Cta />
               <Footer />
@@ -48,7 +86,7 @@
     document.querySelector('.background-slider__icon').style.width = slideval.value+'%'
   }
   function nextPage(){
-    slide(2200, 100)
+    slide(1800, 100)
   }
   function videoLoop(){
     let video = document.getElementById("brickVideo")
@@ -56,9 +94,9 @@
     if (videoCount.value === 4) 
       videoCount.value = 1;
   }
-  function slide(speed=2200, y=null, direction=null) {
+  function slide(speed=1800, y=null, direction=null) {
     const scrl = document.querySelector('.visualisation-page__steps');
-    const lngth = 3;
+    const lngth = 6;
     if((y>0 || direction==='up') && currentSlide.value < lngth){
       currentSlide.value+=1
       pastSlide.value = currentSlide.value-1
@@ -67,7 +105,7 @@
       pastSlide.value = currentSlide.value+1
     }
     ticking.value = true;
-    if(currentSlide.value!==3)
+    if(currentSlide.value!==6)
       scrl.classList.remove('oh')
     setTimeout(() => {
       if(currentSlide.value===3)
@@ -97,9 +135,9 @@
       if(Math.abs( xDiff )+Math.abs( yDiff )>1){
         if( Math.abs( yDiff  ) > Math.abs( xDiff ) ) {
           if( yDiff > 0 && ticking.value === false && scrlTicking.value) 
-            slide(2200,null,'up')
+            slide(1800,null,'up')
           if( yDiff < 0 && ticking.value === false && scrlTicking.value)  
-            slide(2200,null,'down')                                                              
+            slide(1800,null,'down')                                                              
         } 
         xDown = null;
         yDown = null;
@@ -118,7 +156,7 @@
       })
       wrapper.addEventListener('wheel', (e) => {
         if (ticking.value === false && scrlTicking.value) {
-          slide(2200, e.deltaY)
+          slide(1800, e.deltaY)
         }
       });
       touch();
