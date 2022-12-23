@@ -16,7 +16,7 @@
               <NuxtLink to="photography" class="text_uppercase fw_semibold">Photography</NuxtLink>
             </li>
             <li class="header__menu-list-item">
-              <NuxtLink to="/" class="text_uppercase fw_semibold">Visualisation</NuxtLink>
+              <NuxtLink to="visualisation" class="text_uppercase fw_semibold">Visualisation</NuxtLink>
             </li>
             <li class="header__menu-list-item">
               <NuxtLink to="/" class="text_uppercase fw_semibold">Software</NuxtLink>
