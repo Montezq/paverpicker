@@ -22,18 +22,52 @@
         <section class="visualisation-page__steps">
           <div>
             <div class="slide-section position_relative d_flex align-items_center">
-              <div class="slide-section__text">
-                <div class="slide-section__text-inside slide-section__text_1">
-                  <div class="slide-section__text-head">
-                    <h2>Precise Cut-Outs</h2>
+              <div class="slide-section__text-wrapper">
+                <div class="slide-section__text position_relative">
+                  <div class="slide-section__text-inside slide-section__text_1 position_relative">
+                    <div class="slide-section__text-head">
+                      <h2>Precise Cut-Outs</h2>
+                    </div>
+                    <div class="slide-section__text-desc">
+                      <p class="fs_32">
+                        We take no shortcuts when it comes to
+                        <br> preparing the areas to be visualised. We
+                        <br> ensure each and every blade of grass is
+                        <br> properly preserved. 
+                      </p>
+                    </div>
                   </div>
-                  <div class="slide-section__text-desc">
-                    <p class="fs_32">
-                      We take no shortcuts when it comes to
-                      <br> preparing the areas to be visualised. We
-                      <br> ensure each and every blade of grass is
-                      <br> properly preserved. 
-                    </p>
+                  <div class="slide-section__text-inside  slide-section__text_2 position_absolute">
+                    <div class="slide-section__text-head">
+                      <h2>Realistic Shadows</h2>
+                    </div>
+                    <div class="slide-section__text-desc">
+                      <p class="fs_32">
+                        To add to the realism, we redraw every
+                        <br> detail of shadows and highlights back
+                        <br> into the image.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="slide-section__text-inside  slide-section__text_3 position_absolute">
+                    <div class="slide-section__text-head">
+                      <h2>Perfect Integration</h2>
+                    </div>
+                    <div class="slide-section__text-desc">
+                      <p class="fs_32">
+                        Finally, our software displays your
+                        <br> products with perfect perspective and
+                        <br> scale to ensure the visualisation looks
+                        <br> natural.
+                      </p>
+                    </div>
+                    <div class="slider-section__text-cta">
+                      <NuxtLink to="/" >
+                        <span class="fs_32 fw_regular">
+                          Learn about our software
+                        </span>
+                      </NuxtLink>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -108,7 +142,7 @@
     if(currentSlide.value!==6)
       scrl.classList.remove('oh')
     setTimeout(() => {
-      if(currentSlide.value===3)
+      if(currentSlide.value===6)
         scrl.classList.add('oh')
       ticking.value = false;
     }, speed);

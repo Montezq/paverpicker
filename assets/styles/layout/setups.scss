@@ -122,6 +122,9 @@ a{
   }
 }
 .fw{
+  &_regular{
+    @include segoe;
+  }
   &_bold{
     @include segoe(bold);
   }
@@ -264,8 +267,11 @@ img{
   @include tablet{
     bottom: 16px;
     @supports (-webkit-touch-callout: none) {
-      bottom: 95px;
+      bottom: 95px !important;
     }
+  }
+  @include tabletsPortrait{
+    bottom: 10vh;
   }
   p{
     &:first-child{

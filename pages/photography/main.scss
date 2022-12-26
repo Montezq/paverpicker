@@ -308,7 +308,9 @@ $speed3: 1.4s;
     }
     .slide-section__text-desc{
       p{
+        white-space: nowrap;
         @include desktop{
+          white-space: initial;
           font-size: 3.2vw;
         }
         @include phone{

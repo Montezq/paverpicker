@@ -78,6 +78,11 @@
       @content;
   }
 }
+@mixin laptopsPortrait{
+  @media screen and (max-width: 991px) and (orientation: portrait){
+      @content;
+  }
+}
 //tablets
 @mixin tabletPortrait{
   @media screen and (max-width: 1140px) and (orientation: portrait){
@@ -86,6 +91,11 @@
 }
 @mixin tabletLandscape{
   @media screen and (max-width: 1140px) and (orientation: landscape){
+    @content;
+  }
+}
+@mixin tablestLandscape{
+  @media screen and (max-width: 991px) and (orientation: landscape){
     @content;
   }
 }
