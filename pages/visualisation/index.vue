@@ -110,23 +110,11 @@
 
   let currentSlide = ref(0),
       pastSlide = ref(0),
-      videoCount = ref(1),
-      slideval = ref(50),
       ticking = ref(false),
       scrlTicking = ref(true);
 
-  function slideInput(){
-    document.querySelector('.foreground-img').style.width = slideval.value+'%'
-    document.querySelector('.background-slider__icon').style.width = slideval.value+'%'
-  }
   function nextPage(){
     slide(1800, 100)
-  }
-  function videoLoop(){
-    let video = document.getElementById("brickVideo")
-    videoCount.value++
-    if (videoCount.value === 4) 
-      videoCount.value = 1;
   }
   function slide(speed=1800, y=null, direction=null) {
     const scrl = document.querySelector('.visualisation-page__steps');
