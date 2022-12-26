@@ -10,19 +10,19 @@
             <div v-html="logo"></div>
           </NuxtLink>
         </div>
-        <div :class="['header__menu', {'active':menu.menu}]">
+        <nav :class="['header__menu', {'active':menu.menu}]">
           <ul class="header__menu-list d_flex">
             <li class="header__menu-list-item">
-              <NuxtLink to="photography" class="text_uppercase fw_semibold">Photography</NuxtLink>
+              <NuxtLink to="/photography/" class="text_uppercase fw_semibold">Photography</NuxtLink>
             </li>
             <li class="header__menu-list-item">
-              <NuxtLink to="visualisation" class="text_uppercase fw_semibold">Visualisation</NuxtLink>
+              <NuxtLink to="/visualisation/" class="text_uppercase fw_semibold">Visualisation</NuxtLink>
             </li>
             <li class="header__menu-list-item">
-              <NuxtLink to="software" class="text_uppercase fw_semibold">Software</NuxtLink>
+              <NuxtLink to="/software/" class="text_uppercase fw_semibold">Software</NuxtLink>
             </li>
           </ul>
-        </div>
+        </nav>
         <div class="header__cta">
           <a href="Get started" class="text_uppercase btn btn_primary">Get started</a>
         </div>

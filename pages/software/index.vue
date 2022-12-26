@@ -5,13 +5,14 @@
       <div :class="'animation-steps animation-steps_'+currentSlide+' animation-lstep_'+pastSlide">
         <section class="software-page__hero position_relative">
           <div class="slide-section position_relative d_flex align-items_center flex_column">
+            <SoftwareNav />
             <div class="slide-section__text">
-              <div class="slide-section__text-head text_center">
+              <div class="slide-section__text-head">
                 <h1>Custom Built <br> Software</h1>
               </div>
             </div>
             <div class="slide-section__hero-img">
-              <Img :img="'visualisation_hero'" :alt="'Home hero visualisation'"/>
+              <Img :img="'pc-2'" :alt="'Home hero visualisation'"/>
             </div>
             <div @click="nextPage" class="scrl-down position_absolute fs_32 text_center cursor_pointer">
               <p>How can our software help you?</p>
@@ -64,9 +65,9 @@
       scrlTicking = ref(true);
 
   function nextPage(){
-    slide(1800, 100)
+    slide(2400, 100)
   }
-  function slide(speed=1800, y=null, direction=null) {
+  function slide(speed=2400, y=null, direction=null) {
     const scrl = document.querySelector('.software-page__steps');
     const lngth = 6;
     if((y>0 || direction==='up') && currentSlide.value < lngth){
@@ -107,9 +108,9 @@
       if(Math.abs( xDiff )+Math.abs( yDiff )>1){
         if( Math.abs( yDiff  ) > Math.abs( xDiff ) ) {
           if( yDiff > 0 && ticking.value === false && scrlTicking.value) 
-            slide(1800,null,'up')
+            slide(2400,null,'up')
           if( yDiff < 0 && ticking.value === false && scrlTicking.value)  
-            slide(1800,null,'down')                                                              
+            slide(2400,null,'down')                                                              
         } 
         xDown = null;
         yDown = null;
@@ -128,7 +129,7 @@
       })
       wrapper.addEventListener('wheel', (e) => {
         if (ticking.value === false && scrlTicking.value) {
-          slide(1800, e.deltaY)
+          slide(2400, e.deltaY)
         }
       });
       touch();
