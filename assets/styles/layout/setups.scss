@@ -132,6 +132,11 @@ a{
     @include segoe(semibold);
   }
 }
+.h{
+  &_100{
+    height: 100%;
+  }
+}
 .slide-section{
   width: 100vw;
   height: 100vh;

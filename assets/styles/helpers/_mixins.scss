@@ -126,7 +126,12 @@
   }
 }
 @mixin minphone{
-  @media screen and (max-width: 360px){
+  @media screen and (max-width: 380px){
+      @content;
+  }
+}
+@mixin minphone2{
+  @media screen and (max-width: 370px){
       @content;
   }
 }
@@ -144,6 +149,11 @@
 }
 @mixin mh{
   @media screen and (max-height: 770px) and (orientation: landscape){
+      @content;
+  }
+}
+@mixin mh1{
+  @media screen and (max-height: 730px) and (orientation: landscape){
       @content;
   }
 }
