@@ -94,8 +94,20 @@
                   </div>
                 </div>
                 <div class="slide-section__decor position_relative">
-                  <div class="slide-section__decor-box slide-section__decor-box_video">
+                  <div class="slide-section__decor-box slide-section__decor-box_video postion_relative">
                     <Img :img="'paver-3'" :alt="'Box'" class="software_paver"/>
+                    <video class="section__video position_absolute section__video_1" autoplay="autoplay" 
+                      muted="muted" loop playsinline="playsinline" 
+                      :src="`/video/api-vid-1.mp4`" id="apiVideo">
+                    </video>
+                    <video class="section__video position_absolute section__video_2" autoplay="autoplay" 
+                      muted="muted" loop playsinline="playsinline" 
+                      :src="`/video/api-vid-2.mp4`" id="apiVideo">
+                    </video>
+                    <video class="section__video position_absolute section__video_3" autoplay="autoplay" 
+                      muted="muted" loop playsinline="playsinline" 
+                      :src="`/video/api-vid-3.mp4`" id="apiVideo">
+                    </video>
                   </div>
                 </div>
                 <div class="slide-section__decor-box slide-section__decor-box_tablet position_absolute">
