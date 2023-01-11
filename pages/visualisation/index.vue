@@ -11,7 +11,7 @@
               </div>
             </div>
             <div class="slide-section__hero-img">
-              <Img :img="'visualisation_hero'" :alt="'Home hero visualisation'"/>
+              <Img :img="'visualisation_hero'" :resp="false" :alt="'Home hero visualisation'"/>
             </div>
             <div @click="nextPage" class="scrl-down position_absolute fs_32 text_center cursor_pointer">
               <p>What makes our visualisations realistic?</p>
@@ -121,10 +121,17 @@
     const lngth = 6;
     if((y>0 || direction==='up') && currentSlide.value < lngth){
       currentSlide.value+=1
+      setTimeout(() => {
+        currentSlide.value+=1
+      }, 1800);
       pastSlide.value = currentSlide.value-1
     }else if((y<0 || direction==='down') && currentSlide.value > 0){
       currentSlide.value-=1
       pastSlide.value = currentSlide.value+1
+      setTimeout(() => {
+        currentSlide.value-=1
+        pastSlide.value = currentSlide.value+1
+      }, 1800);
     }
     ticking.value = true;
     if(currentSlide.value!==6)

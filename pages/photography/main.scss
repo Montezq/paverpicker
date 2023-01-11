@@ -293,7 +293,7 @@ $speed3: 1.4s;
         br{
           display: none;
         }
-        @include mh2{
+        @include mhs2{
           font-size: 3vw;
         }
         @include tabletPortrait{
@@ -311,6 +311,9 @@ $speed3: 1.4s;
         white-space: nowrap;
         @include desktop{
           white-space: initial;
+          font-size: 2.2vw;
+        }
+        @include laptop{
           font-size: 3.2vw;
         }
         @include phone{
@@ -381,7 +384,7 @@ $speed3: 1.4s;
     }
   }
   .slide-section__brick{
-    @include mh2{
+    @include mhs2{
       max-width: 460px;
       margin: 0 auto;
     }
@@ -407,7 +410,7 @@ $speed3: 1.4s;
       height: calc(100% + 20px);
       margin-top: -10px;
     }
-    @include mh2{
+    @include mhs2{
       height: calc(100% + 20px);
       margin-top: -10px;
     }
@@ -426,7 +429,7 @@ $speed3: 1.4s;
     @include tablet{
       left: 40px;
     }
-    @include mh2{
+    @include mhs2{
       left: 40px;
     }
     span{
@@ -441,7 +444,7 @@ $speed3: 1.4s;
           width: 8px;
           margin: 0 6px;
         }
-        @include mh2{
+        @include mhs2{
           width: 8px;
           margin: 0 6px;
         }
@@ -450,7 +453,7 @@ $speed3: 1.4s;
         @include tablet{
           height: 40px;
         }
-        @include mh2{
+        @include mhs2{
           height: 40px;
         }
       }
@@ -497,7 +500,7 @@ $speed3: 1.4s;
       @include mh{
         width: 760px;
       }
-      @include mh2{
+      @include mhs2{
         width: 460px;
       }
       @include mh3{
@@ -511,7 +514,7 @@ $speed3: 1.4s;
       z-index: -1;
       img{
         filter: blur(4px);
-        @include mh2{
+        @include mhs2{
           filter: blur(2px);
         }
       }
@@ -529,7 +532,7 @@ $speed3: 1.4s;
       @include phone{
         font-size: 3.6vw;
       }
-      @include mh2{
+      @include mhs2{
         font-size: 1.4vw;
       }
       @include mh3{
