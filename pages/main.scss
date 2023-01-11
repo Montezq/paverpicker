@@ -3,6 +3,11 @@ $speed: 3s;
 
 .home{
   height:100%;
+  .slide-section__text-head{
+    h2{
+      white-space: nowrap;
+    }
+  }
   .animation-steps{
     transition-duration: $speed;
     transition-timing-function: ease-in-out;
@@ -43,6 +48,11 @@ $speed: 3s;
           transform: translate3d(0, 0, 0) ;
         }
       }
+      .software{
+        .photography__camera{
+          transform: translate3d(0, 0, 0) ;
+        }
+      }
     }
     &_3{
       transform: translate3d(0,-200vh,0);
@@ -79,17 +89,24 @@ $speed: 3s;
             rotate(-180deg);
           filter: blur(8px);
         }
+        @include desktopxminlg{
+          transform: 
+            translateX(-50%)
+            translateY(-700%)
+            rotate(-180deg);
+          filter: blur(8px);
+        }
+        @include mh2{
+          transform: 
+            translateX(-50%)
+            translateY(-670%)
+            rotate(-180deg);
+          filter: blur(8px);
+        }
         @include tlxl{
           transform: 
             translateX(-50%)
             translateY(-840%)
-            rotate(-180deg);
-          filter: blur(8px);
-        }
-        @include desktop{
-          transform: 
-            translateX(-50%)
-            translateY(-740%)
             rotate(-180deg);
           filter: blur(8px);
         }
@@ -110,46 +127,75 @@ $speed: 3s;
         @include phone{
           transform: 
             translateX(-50%)
-            translateY(-700%)
+            translateY(-670%)
+            rotate(-180deg);
+          filter: blur(14px);
+        }
+        @include minphone{
+          transform: 
+            translateX(-50%)
+            translateY(-580%)
+            rotate(-180deg);
+        }
+        @include minphone2{
+          transform: 
+            translateX(-50%)
+            translateY(-550%)
             rotate(-180deg);
           filter: blur(14px);
         }
       }
-      .photography .photography__camera{
-        transform: translate3d(0, 0, 0) ;
-      }
-      .photography .photography__camera-ins{
-        &:after{
-          opacity: 1;
-          background-color: #333333;
+      .photography{
+        .photography__blitz{
+          animation: blitz .5s linear 3s;
         }
-      }
-      .photography .photography__rig-inside{
-        transform: translate3d(0, 0, 0) ;
-      }
-      .photography .photography__rig{
-        transform: translate3d(0, 0, 0) ;
-        filter: blur(8px);
-        @include tabletPortrait{
-          transform: translate3d(-50%, 0, 0) ;
-          filter: blur(15px);
+        .photography__rig{
+          transform: translate3d(0, 0, 0) ;
+          filter: blur(8px);
+          @include tabletPortrait{
+            transform: translate3d(-50%, 0, 0) ;
+            filter: blur(15px);
+          }
         }
-      }
-      .photography .photography_brick{
-        transform: translate3d(0, 0, 0) ;
-      }
-      .photography .photography__blitz{
-        animation: blitz .5s linear 3s;
+        .photography__camera{
+          transform: translate3d(0, 0, 0) ;
+          &:after{
+            opacity: 1;
+          }
+        }
+        .photography__camera-ins{
+          &:after{
+            opacity: 1;
+          }
+        }
+        .photography_brick{
+          transform: translate3d(0, 0, 0) ;
+        }
       }
       .software{
         .visualisation__brick{
           width: 52vw;
-          top: -100vh;
+          top: -99vh;
           padding-bottom: 75%;
           @include tabletPortrait{
             top: -128vh;
             width: 52vh;
           }
+        }
+        .visualisation_brick-single{
+          transform: translate3d(-14%, 20.06vw, 0);
+          opacity: 1;
+          @include tabletPortrait{
+            transform: translate3d(-50%, 23.7vw, 0);
+          }
+        }
+        .photography__camera-ins{
+          &:after{
+            opacity: 1;
+          }
+        }
+        .photography__camera{
+          transform: translate3d(0, 0, 0) ;
         }
       }
     }
@@ -179,17 +225,17 @@ $speed: 3s;
             rotate(-180deg);
           filter: blur(8px);
         }
+        @include desktopxminlg{
+          transform: 
+            translateX(-50%)
+            translateY(-700%)
+            rotate(-180deg);
+          filter: blur(8px);
+        }
         @include tlxl{
           transform: 
             translateX(-50%)
             translateY(-840%)
-            rotate(-180deg);
-          filter: blur(8px);
-        }
-        @include desktop{
-          transform: 
-            translateX(-50%)
-            translateY(-740%)
             rotate(-180deg);
           filter: blur(8px);
         }
@@ -215,25 +261,6 @@ $speed: 3s;
           filter: blur(14px);
         }
       }
-      .photography .photography__camera{
-        transform: translate3d(0, -30%, 0) ;
-        &:after{
-          opacity: 1;
-          background-color: #333333;
-        }
-      }
-      .photography .photography__rig{
-        transform: translate3d(0, 0, 0) ;
-        filter: blur(8px);
-        @include tabletPortrait{
-          transform: translate3d(-50%, 0, 0) ;
-          filter: blur(15px);
-        }
-      }
-      .photography .photography_brick{
-        transform: translate3d(-4vw, 90vh, 0) ;
-        opacity: 0;
-      }
       .home__visualisation{
         .slide-section__text{
           transform: translate3d(0, 0, 0) 
@@ -245,20 +272,64 @@ $speed: 3s;
           opacity: 1;
         }
       }
+      .photography{
+        .photography__rig{
+          transform: translate3d(0, 0, 0) ;
+          filter: blur(8px);
+          @include tabletPortrait{
+            transform: translate3d(-50%, 0, 0) ;
+            filter: blur(15px);
+          }
+        }
+        .photography__camera{
+          transform: translate3d(0, -30%, 0) ;
+          &:after{
+            opacity: 1;
+            background-color: #333333;
+          }
+        }
+        .photography__camera-ins{
+          &:after{
+            opacity: 1;
+          }
+        }
+        .photography_brick{
+          transform: translate3d(-4vw, 90vh, 0) ;
+          opacity: 0;
+        }
+      }
       .software{
         .visualisation__brick{
           width: 52vw;
-          top: -100vh;
+          top: -99vh;
           padding-bottom: 75%;
           @include tabletPortrait{
             top: -128vh;
             width: 52vh;
           }
-          
+        }
+        .photography__camera{
+          transform: translate3d(0, -30%, 0) ;
+        }
+        .photography__camera-ins{
+          &:after{
+            opacity: 1;
+          }
+        }
+        .visualisation_brick-single{
+          top: -100vh;
+          transform: translate3d(-50.3%, 18.38vw, 0);
+          opacity: 0;
+          transition: $speed ease-in-out, opacity 0s ease-in-out $speed;
+          @include desktopxminlg{
+            transform: translate3d(-49%, 18.38vw, 0);
+          }
+          @include tabletPortrait{
+            transform: translate3d(-50%, 23.7vw, 0);
+          }
         }
       }
     }
-
     &_3.animation-lstep_4{
       .software{
         .visualisation__wall{
@@ -270,6 +341,14 @@ $speed: 3s;
           transition: $speed ease-in-out;
           @include phone{
             width: 347%;
+          }
+        }
+        .visualisation_brick-single{
+          transform: translate3d(-14%, 20.06vw, 0);
+          opacity: 1;
+          transition:  $speed ease-in-out, opacity .4s ease-in-out .7s;
+          @include tabletPortrait{
+            transform: translate3d(-50%, 23.7vw, 0);
           }
         }
       }
@@ -294,14 +373,6 @@ $speed: 3s;
             width: 180vw;
           }
         }
-        .visualisation_brick-single{
-          transform: translate3d(-50%, 17.8vw, 0) ;
-          opacity: 1;
-          visibility: hidden;
-          @include tabletPortrait{
-            transform: translate3d(-50%, 23.7vw, 0);
-          }
-        }
       }
       .visualisation__door-wrapper{
         transform: translate3d(0, 0, 0) ;
@@ -312,7 +383,7 @@ $speed: 3s;
       .software{
         .visualisation__brick{
           width: 52vw;
-          top: -100vh;
+          top: -99vh;
           padding-bottom: 75%;
           left: 0;
         }
@@ -344,24 +415,16 @@ $speed: 3s;
           opacity: 1;
         }
       }
-      .home__software{
-        &.oh{
-          overflow-y: auto;
-          overflow-x: hidden;
-          @supports (-webkit-touch-callout: none) {
-            height: -webkit-fill-available;;
-          }
-        }
-      }
     }
-    &_5.animation-lstep_4{
+    &_5.animation-lstep_4,
+    &_5.animation-lstep_6{
       .software{
         .visualisation__wall{
           opacity: 0;
         }
         .visualisation__brick{
           width: 66.6%;
-          top: 1.5vw;
+          top: 4.5vw;
           left: 11.3vw;
           padding-bottom: 57%;
         }
@@ -378,6 +441,50 @@ $speed: 3s;
         }
         .visualisation__dotted{
           opacity: 0;
+        }
+      }
+    }
+    &_6{
+      transform: translate3d(0,-500vh,0);
+      .software{
+        .visualisation__wall{
+          opacity: 0;
+        }
+        .visualisation__brick{
+          width: 66.6%;
+          top: 4.5vw;
+          left: 11.3vw;
+          padding-bottom: 57%;
+        }
+        .visualisation__wall-big{
+          width: 106%;
+          left: 0;
+          z-index: 3;
+          transition: $speed ease-in-out;
+        }
+        .visualisation__door-wrapper{
+          transform: translate3d(0, 0, 0) ;
+          width: 23vw;
+          transition: $speed ease-in-out;
+        }
+        .visualisation__dotted{
+          opacity: 0;
+        }
+      }
+      .visualisation{
+        .visualisation__photoshop{
+          transform: translate3d(0, 0, 0) ;
+          opacity: 1;
+        }
+      }
+      .home__clients{
+        &.oh{
+          height: 100vh;
+          overflow-y: auto;
+          overflow-x: hidden;
+          @supports (-webkit-touch-callout: none) {
+            height: -webkit-fill-available;;
+          }
         }
       }
     }
@@ -410,6 +517,52 @@ $speed: 3s;
     }
     @include tabletLandscape{
       top: 48%;
+    }
+    .picture{
+      transition: 1s ease;
+    }
+    .home-hero{
+      &-1{
+        opacity: 1;
+      }
+      &-2{
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      &-3{
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    &-2{
+      .home-hero{
+        &-1{
+          opacity: 1;
+        }
+        &-2{
+          opacity: 1;
+        }
+        &-3{
+          opacity: 0;
+        }
+      }
+    }
+    &-3{
+      .home-hero{
+        &-1{
+          opacity: 1;
+        }
+        &-2{
+          opacity: 0;
+        }
+        &-3{
+          opacity: 1;
+        }
+      }
     }
     img{
       max-height: 106vh;
@@ -535,6 +688,9 @@ $speed: 3s;
       @include tabletLandscape{
         padding-top: 25vh;
       }
+      @include mh3{
+        padding-top: 20vh;
+      }
     }
     .slide-section__step{
       z-index: 2;
@@ -591,14 +747,37 @@ $speed: 3s;
         left: 57%;
       }
     }
-    .photography__camera{
-      width: calc(100% + 6vw);
+    .photography__blitz{
+      width: 100vw;
+      height:100vw;
+      background: radial-gradient(circle, $white, rgba($white, 0) 60%);
+      @include centered;
+      margin-left: 5vw;
+      opacity: 0;
+    }
+    .photography_brick{
       position: absolute;
-      bottom: -21vw;
-      right: -14vw;
+      z-index: 4;
+      transform: translate3d(0, -30vw, 0) ;
+      transition: $speed ease-in-out;
+      @include tabletPortrait{
+        width: 15vw;
+        left: 7.3vw;
+        top: 5.9vw;
+      }
+      @include phone{
+        width: 17vw;
+        left: 8.5vw;
+        top: 6.7vw;
+      }
+    }
+    .photography__camera{
+      display: none;
+      position: absolute;
       transform: translate3d(100%, 0, 0) ;
       transition: $speed ease-in-out;
       @include tabletPortrait{
+        display: block;
         width: 85vw;
         right: -5vw;
         bottom: -28vh;
@@ -610,11 +789,7 @@ $speed: 3s;
       }
     }
     .photography__camera-ins{
-      width: 21.5vw;
-      height: 14.3vw;
       position: absolute;
-      top: 15vw;
-      left: 18vw;
       overflow: hidden;
       &:after{
         content: "";
@@ -643,43 +818,15 @@ $speed: 3s;
     }
     .photography__rig-inside{
       position: absolute;
-      width: 19vw;
       top: 1vw;
       left: 1.3vw;
-      z-index: 3;
+      z-index: 2;
       @include tabletPortrait{
         width: 27vw;
       }
       @include phone{
         width: 31vw;
       }
-    }
-    .photography_brick{
-      width: 11vw;
-      position: absolute;
-      top: 4vw;
-      left: 5.3vw;
-      z-index: 4;
-      transform: translate3d(0, -30vw, 0) ;
-      transition: $speed ease-in-out;
-      @include tabletPortrait{
-        width: 15vw;
-        left: 7.3vw;
-        top: 5.8vw;
-      }
-      @include phone{
-        width: 17vw;
-        left: 8.5vw;
-        top: 6.4vw;
-      }
-    }
-    .photography__blitz{
-      width: 100vw;
-      height:100vw;
-      background: radial-gradient(circle, $white, rgba($white, 0) 60%);
-      @include centered;
-      margin-left: 5vw;
-      opacity: 0;
     }
   }
   .home__visualisation{
@@ -693,6 +840,9 @@ $speed: 3s;
       padding-top: 35vh;
       @include tabletPortrait{
         padding-top: 0;
+      }
+      @include mh3{
+        padding-top: 20vh;
       }
     }
     .slide-section__step{
@@ -760,6 +910,9 @@ $speed: 3s;
     .slide-section__step,
     .slide-section__text{
       padding-top: 30vh;
+      @include mh3{
+        padding-top: 20vh;
+      }
     }
     .slide-section__step{
       @include tabletPortrait{
@@ -846,16 +999,16 @@ $speed: 3s;
       }
     }
     .visualisation_brick-single{
-      width: 11vw;
+      width: 10.95vw;
       position: absolute;
       z-index: 3;
-      top: -100vh;
-      left: 48.3%;
-      transform: translate3d(-3%, -40vw, 0) ;
+      top: -200vh;
+      left: 48.5%;
+      transform: translate3d(-19%, 14.8vw, 0);
       opacity: 1;
       z-index: 4;
-      transition: $speed ease-in-out, opacity .6s ease-in-out .8s, visibility 0s ease 3s;
       opacity: 0;
+      transition: $speed ease-in-out, opacity 2s ease-in-out;
       @include tabletPortrait{
         top: -128vh;
         left: 48.7%;
@@ -906,7 +1059,7 @@ $speed: 3s;
     .visualisation__window{
       width: 100%;
       position: absolute;
-      top: -100vh;
+      top: -99vh;
       right: 0;
       z-index: 4;
       @include tabletPortrait{
@@ -916,20 +1069,66 @@ $speed: 3s;
         top: -130vh;
       }
     }
+    .photography__camera{
+      width: 61vw;
+      position: absolute;
+      top: -200vh;
+      transform: translate3d(100%, 0, 0) ;
+      transition: $speed ease-in-out;
+      @include tabletPortrait{
+        width: 85vw;
+      }
+      @include phone{
+        width: 94vw;
+      }
+    }
+    .photography__rig-inside{
+      position: absolute;
+      width: 25vw;
+      top: -0.6vw;
+      left: -1.8vw;
+      z-index: 3;
+      @include tabletPortrait{
+        width: 27vw;
+      }
+      @include phone{
+        width: 31vw;
+      }
+    }
+    .photography__camera-ins{
+      width: 21vw;
+      height: 14vw;
+      position: absolute;
+      top: 15.1vw;
+      left: 18.4vw;
+      overflow: hidden;
+      &:after{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: $black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: $speed ease-in-out, background-color .4s linear 3s;
+      }
+      @include tabletPortrait{
+        width: 29.3vw;
+        height: 19.8vw;
+        top: 21vw;
+        left: 25.5vw;
+      }
+      @include phone{
+        width: 33.3vw;
+        height: 21.8vw;
+        top: 23vw;
+        left: 27.5vw;
+      }
+    }
   }
 }
-
-// .software{
-//   height: 100vh;
-//   .software__monitor{
-//     position: absolute;
-//     @include centered;
-//     width: 85vw;
-//     bottom: -13vw;
-//     left: 33vw;
-//     z-index: 3;
-//   }
-// }
 
 
 
@@ -955,3 +1154,5 @@ $speed: 3s;
   90%{z-index: 3;}
   100%{width: 186vw; z-index: 1;}
 }
+
+

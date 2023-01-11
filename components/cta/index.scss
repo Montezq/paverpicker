@@ -45,6 +45,12 @@
   a{
     color: $black;
     @include segoe(semibold);
+    &:hover{
+      text-decoration: underline;
+      span{
+        text-decoration: none;
+      }
+    }
   }
   span{
     margin-right: 20px;

@@ -78,6 +78,11 @@
   a{
     letter-spacing:.09em;
     line-height: 42px;
+    color: $lightGray2;
+    transition: .22s ease-in-out;
+    &:hover{
+      color: $white;
+    }
     @include tablet{
       font-size: 12px;
       line-height: 32px;

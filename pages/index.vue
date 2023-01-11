@@ -5,8 +5,10 @@
       <div :class="'animation-steps animation-steps_'+currentSlide+' animation-lstep_'+pastSlide">
         <section class="home__hero">
           <div class="slide-section d_flex align-items_center flex_wrap position_relative">
-            <div class="home__hero-img position_absolute">
-              <Img :img="'home-hero'" :alt="'Home hero laptop'"/>
+            <div :class="`home__hero-img position_absolute home__hero-img-${heroImg}`">
+              <Img :img="`home-hero-1`" class="home-hero-1" :alt="'Home hero laptop'"/>
+              <Img :img="`home-hero-2`" class="home-hero-2" :alt="'Home hero laptop'"/>
+              <Img :img="`home-hero-3`" class="home-hero-3" :alt="'Home hero laptop'"/>
             </div>
             <div class="slide-section__text position_relative">
               <div class="slide-section__text-head mb_32">
@@ -19,7 +21,7 @@
               </div>
             </div>
             <div @click="nextPage" class="scrl-down position_absolute fs_32 text_center cursor_pointer">
-              <p>So, how does it work?</p>
+              <p>How does it work?</p>
               <p class="ff_icon fs_48"></p>
             </div>
           </div>
@@ -76,7 +78,7 @@
                   </p>
                 </div>
                 <div class="slider-section__text-cta">
-                  <NuxtLink to="/">Learn more </NuxtLink>
+                  <NuxtLink to="/photography/">Learn more </NuxtLink>
                 </div>
               </div>
             </div>
@@ -119,60 +121,73 @@
               </div>
             </div>
             <div class="slide-section__decor visualisation">
-              <Img :img="'photoshop'" :alt="'Photoshop Window'" class="visualisation__photoshop"/>
+              <div class="picture visualisation__photoshop">
+                <picture>
+                  <source type="image/png" srcset="/images/decor/photoshop@x2.png 2x"/>
+                  <img :src="'/images/decor/photoshop@x2.webp'" alt="photoshop" width="500" height="500"/>
+                </picture>
+              </div>
             </div>
           </div>
         </section>
         <section class="home__software">
-          <div>
-            <div class="slide-section position_relative d_flex">
-              <div class="d_flex slide-section__content">
-                <div class="slide-section__step position_relative">
-                  <div class="slide-section__step-counter d_flex align-items_center justify-content_center">
-                    <p>4</p>
-                  </div>
-                  <div class="slide-section__step-line"></div>
+          <div class="slide-section position_relative d_flex">
+            <div class="d_flex slide-section__content">
+              <div class="slide-section__step position_relative">
+                <div class="slide-section__step-counter d_flex align-items_center justify-content_center">
+                  <p>4</p>
                 </div>
-                <div class="slide-section__text">
-                  <div class="slide-section__text-head">
-                    <h2>We Send You  <br> Your Software </h2>
-                  </div>
-                  <div class="slide-section__text-desc">
-                    <p class="fs_32">
-                      We send you a link to your
-                      <br> software, and advise on the
-                      <br> best way to integrate it into your
-                      <br> website.
-                    </p>
-                  </div>
-                  <div class="slider-section__text-cta">
-                    <NuxtLink to="/">Learn more </NuxtLink>
-                  </div>
-                </div>
+                <div class="slide-section__step-line"></div>
               </div>
-              <div class="slide-section__decor software">
-                <Img :img="'send'" :alt="'Send Laptop'" class="software__send"/>
-                <div class="visualisation__brick-wrapper">
-                  <Img :img="'photoshop-window'" :alt="'Window'" class="visualisation__window"/>
-                  <Img :img="'brick'" :alt="'Brick'" class="visualisation_brick-single"/>
-                  <div class="visualisation__brick">
-                    <Img :img="'zoomed_bricks'" :alt="'Bricks'" class="visualisation__wall"/>
-                    <div class="picture visualisation__wall-big">
-                      <picture>
-                        <source type="image/png" srcset="/images/decor/bricks@x2.png 2x"/>
-                        <source type="image/webp" srcset="/images/decor/bricks@x2.webp 2x"/>
-                        <img :src="'/images/decor/bricks@x2.webp'" alt="Bricks" width="500" height="500"/>
-                      </picture>
-                    </div>
-                    <div class="visualisation__door-wrapper">
-                      <Img :img="'door'" :alt="'Door'" class="visualisation__door"/>
-                      <Img :img="'dotted'" :alt="'Dotted for dor'" class="visualisation__dotted"/>
-                    </div>
-                  </div>
+              <div class="slide-section__text">
+                <div class="slide-section__text-head">
+                  <h2>We Send You  <br> Your Software </h2>
                 </div>
-                <Img :img="'monitor'" :alt="'Monitor'" class="software__monitor"/>
+                <div class="slide-section__text-desc">
+                  <p class="fs_32">
+                    We send you a link to your
+                    <br> software, and advise on the
+                    <br> best way to integrate it into your
+                    <br> website.
+                  </p>
+                </div>
+                <div class="slider-section__text-cta">
+                  <NuxtLink to="/">Learn more </NuxtLink>
+                </div>
               </div>
             </div>
+            <div class="slide-section__decor software">
+              <Img :img="'send'" :resp="false" :alt="'Send Laptop'" class="software__send"/>
+              <div class="visualisation__brick-wrapper">
+                <Img :img="'photoshop-wind'" :resp="false" :alt="'Window'" class="visualisation__window"/>
+                <Img :img="'brick'" :alt="'Brick'" class="visualisation_brick-single"/>
+                <div class="photography__camera">
+                  <Img :img="'camera'" :alt="'Camera'" class="photography__camera-inside"/>
+                  <div class="photography__camera-ins">
+                    <Img :img="'rig'" :alt="'Rig inside'" class="photography__rig-inside"/>
+                  </div>
+                </div>
+                <div class="visualisation__brick">
+                  <Img :img="'zoomed_bricks'" :alt="'Bricks'" class="visualisation__wall"/>
+                  <div class="picture visualisation__wall-big">
+                    <picture>
+                      <source type="image/png" srcset="/images/decor/bricks@x2.png 2x"/>
+                      <source type="image/webp" srcset="/images/decor/bricks@x2.webp 2x"/>
+                      <img :src="'/images/decor/bricks@x2.webp'" alt="Bricks" width="500" height="500"/>
+                    </picture>
+                  </div>
+                  <div class="visualisation__door-wrapper">
+                    <Img :img="'door'" :alt="'Door'" class="visualisation__door"/>
+                    <Img :img="'dotted'" :alt="'Dotted for dor'" class="visualisation__dotted"/>
+                  </div>
+                </div>
+              </div>
+              <Img :img="'monitor'" :resp="false" :alt="'Monitor'" class="software__monitor"/>
+            </div>
+          </div>
+        </section>
+        <section class="home__clients">
+          <div>
             <div class="scrollable-section">
               <Partners />
               <Cta />
@@ -190,25 +205,32 @@
 <script setup>
   let currentSlide = ref(0),
       pastSlide = ref(0),
+      nextSlide = ref(1),
+      heroImg = ref(1),
       ticking = ref(false),
       scrlTicking = ref(true);
   
-
+  function change() {
+    heroImg.value >= 3 ? heroImg.value = 1 : heroImg.value++;
+  }
   function slide(speed=3000, y=null, direction=null) {
-    const scrl = document.querySelector('.home__software');
+    const scrl = document.querySelector('.home__clients');
     const lngth = document.querySelectorAll('.animation-steps>section').length
     if((y>0 || direction==='up') && currentSlide.value < lngth){
       currentSlide.value+=1
+      nextSlide.value+=1
       pastSlide.value = currentSlide.value-1
     }else if((y<0 || direction==='down') && currentSlide.value > 0){
       currentSlide.value-=1
+      nextSlide.value-=1
       pastSlide.value = currentSlide.value+1
     }
+   
     ticking.value = true;
-    if(currentSlide.value!==5)
+    if(currentSlide.value!==6)
       scrl.classList.remove('oh')
     setTimeout(() => {
-      if(currentSlide.value===5)
+      if(currentSlide.value===6)
         scrl.classList.add('oh')
       ticking.value = false;
     }, speed);
@@ -234,10 +256,26 @@
       var yDiff = yDown - yUp;
       if(Math.abs( xDiff )+Math.abs( yDiff )>1){
         if( Math.abs( yDiff  ) > Math.abs( xDiff ) ) {
-          if( yDiff > 0 && ticking.value === false && scrlTicking.value) 
-            slide(3000,null,'up')
-          if( yDiff < 0 && ticking.value === false && scrlTicking.value)  
-            slide(3000,null,'down')                                                              
+          if( yDiff > 0 && ticking.value === false && scrlTicking.value){
+            if(currentSlide.value === 1){
+              slide(3000,null,'up')
+              setTimeout(() => {
+                slide(3000,null,'up')
+              }, 3000);
+            }
+            else
+              slide(3000,null,'up')
+          }
+          if( yDiff < 0 && ticking.value === false && scrlTicking.value){
+            if((currentSlide.value === 3 && pastSlide.value === 4) || (currentSlide.value === 3 && pastSlide.value === 2)){
+              slide(3000,null,'down')
+              setTimeout(() => {
+                slide(3000,null,'down')
+              }, 3000);
+            }
+            else
+              slide(3000,null,'down')                                                              
+          }
         } 
         xDown = null;
         yDown = null;
@@ -250,7 +288,7 @@
   onMounted(() => {
     setTimeout(() => {
       const wrapper = document.querySelector('.animation-steps');
-      const scrl = document.querySelector('.home__software');
+      const scrl = document.querySelector('.home__clients');
       scrl.addEventListener('scroll', (e) =>{
         if(scrl.scrollTop>1)
           scrlTicking.value=false
@@ -259,13 +297,23 @@
       })
       wrapper.addEventListener('wheel', (e) => {
         if (ticking.value === false && scrlTicking.value) {
-          if((currentSlide.value === 3 && pastSlide.value === 2) || (currentSlide.value === 3 && pastSlide.value === 4)){
+          if(currentSlide.value === 1 
+            || (currentSlide.value === 3 && pastSlide.value === 4 && e.deltaY<0) 
+            || (currentSlide.value === 3 && pastSlide.value === 2 && e.deltaY<0 ))
+          {
+            slide(3000, e.deltaY)
+            setTimeout(() => {
+              slide(3000, e.deltaY)
+            }, 3000);
+          }
+          else if((currentSlide.value === 3 && pastSlide.value === 2) || (currentSlide.value === 3 && pastSlide.value === 4)){
             slide(6000, e.deltaY)
           }
           else
             slide(3000, e.deltaY)
         }
       });
+      setInterval(change, 4000);
       touch();
     }, 610);
   })

@@ -8,14 +8,11 @@
             <SoftwareNav />
             <div class="slide-section__text">
               <div class="slide-section__text-head">
-                <h1>Custom Built <br> Software</h1>
+                <h1>API Website Integration</h1>
               </div>
             </div>
-            <div class="slide-section__hero-img">
-              <Img :img="'pc-2'" :alt="'Home hero visualisation'"/>
-            </div>
             <div @click="nextPage" class="scrl-down position_absolute fs_32 text_center cursor_pointer">
-              <p>How can our software help you?</p>
+              <p>What can the Paver Picker API do for your website?</p>
               <p class="ff_icon fs_48"></p>
             </div>
           </div>
@@ -28,81 +25,43 @@
                   <div class="slide-section__text position_relative">
                     <div class="slide-section__text-inside slide-section__text_1 position_absolute">
                       <div class="slide-section__text-head text_center">
-                        <h2>Your Online Showroom</h2>
+                        <h2>Any Layout</h2>
                       </div>
                       <div class="slide-section__text-desc text_center">
                         <p class="fs_32">
-                          Present your products in one place, the
-                          <br> use of filters make browsing easy.
+                          Integrate key features of the Paver Picker software directly 
+                          <br> into your website with full control over the layout. 
                         </p>
                       </div>
                     </div>
                     <div class="slide-section__text-inside slide-section__text_2 position_absolute">
                       <div class="slide-section__text-head text_center">
-                        <h2>Limitless Possibilities</h2>
+                        <h2>Matched Styling</h2>
                       </div>
                       <div class="slide-section__text-desc text_center">
                         <p class="fs_32">
-                          Change laying patterns, joint colours and angles.
-                          <br> Take it a step further with the blender module.
+                          You have full control over every element which means your
+                          <br> fonts, your colours, your style.
                         </p>
-                      </div>
-                      <div class="slider-section__text-cta text_center">
-                        <NuxtLink to="/" >
-                          <p class="fs_32 fw_regular">
-                            Learn about the blender module
-                          </p>
-                        </NuxtLink>
                       </div>
                     </div>
                     <div class="slide-section__text-inside slide-section__text_3 position_absolute">
                       <div class="slide-section__text-head text_center">
-                        <h2>Inspiring Visualisation</h2>
+                        <h2>Your Analytics</h2>
                       </div>
                       <div class="slide-section__text-desc text_center">
                         <p class="fs_32">
-                          Check to see how products look by viewing them in a
-                          <br> scene.
+                          Since the software is embedded into your website, you can 
+                          <br> easily track your analytics.
                         </p>
-                      </div>
-                      <div class="slider-section__text-cta text_center">
-                        <NuxtLink to="/" >
-                          <p class="fs_32 fw_regular">
-                            Learn more about visualisation
-                          </p>
-                        </NuxtLink>
-                      </div>
-                    </div>
-                    <div class="slide-section__text-inside slide-section__text_4 position_relative">
-                      <div class="slide-section__text-head text_center">
-                        <h2>Any Device</h2>
-                      </div>
-                      <div class="slide-section__text-desc text_center">
-                        <p class="fs_32">
-                          Fully Adaptable to screen sizes. If you want even more control 
-                          <br> we offer API for integrating straight into your website.
-                        </p>
-                      </div>
-                      <div class="slider-section__text-cta text_center">
-                        <NuxtLink to="/" >
-                          <p class="fs_32 fw_regular">
-                            Learn about the API module
-                          </p>
-                        </NuxtLink>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="slide-section__decor position_relative">
-                  <div class="slide-section__decor-box slide-section__decor-box_video">
-                    <Img :img="'paver-3'" :alt="'Box'" class="software_paver"/>
+                  <div class="slide-section__decor-box">
+                    <Img :img="'api-hero'" :alt="'Rig'" class="api__bg"/>
                   </div>
-                </div>
-                <div class="slide-section__decor-box slide-section__decor-box_tablet position_absolute">
-                  <Img :img="'paver-3'" :alt="'Box'" class="software_paver"/>
-                </div>
-                <div class="slide-section__decor-box slide-section__decor-box_mobile position_absolute">
-                  <Img :img="'paver-3mobile'" :alt="'Box'" class="software_paver"/>
                 </div>
               </div>
             </div>

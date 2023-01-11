@@ -16,22 +16,22 @@
   const socials = [
     {
       icon: facebook,
-      url: '#',
+      url: 'https://www.facebook.com/paverpicker',
       alt: 'facebook'
     },
     {
       icon: twitter,
-      url: '#',
+      url: 'https://twitter.com/Paverpicker',
       alt: 'twitter'
     },
     {
       icon: linkedin,
-      url: '#',
+      url: 'https://www.linkedin.com/company/paver-picker/',
       alt: 'linkedin'
     },
     {
       icon: youtube,
-      url: '#',
+      url: 'https://www.youtube.com/@paverpicker',
       alt: 'youtube'
     },
   ]

@@ -24,73 +24,73 @@
   import marshalls from '~/assets/svg/logo/marshalls.svg?raw';
   import ibstock from '~/assets/svg/logo/ibstock.svg?raw';
   import kilsaran from '~/assets/svg/logo/kilsaran.svg?raw';
-  import breedon from '~/assets/svg/logo/breedon.svg?raw';
+  import wienerberge from '~/assets/svg/logo/wienerberge.svg?raw';
   import banas from '~/assets/svg/logo/banas-stones.svg?raw';
   import ethan from '~/assets/svg/logo/ethan-mason.svg?raw';
   import ag from '~/assets/svg/logo/ag.svg?raw';
   import stone from '~/assets/svg/logo/global-stone.svg?raw';
-  import kingscourt from '~/assets/svg/logo/kingscourt.svg?raw';
+  import forticrete from '~/assets/svg/logo/forticrete.svg?raw';
   import roadstone from '~/assets/svg/logo/roadstone.svg?raw';
   import outhaus from '~/assets/svg/logo/outhaus.svg?raw';
   const partners = [
     {
       logo: tobermore,
-      url: '#',
+      url: 'https://www.tobermore.co.uk/professional/paving-walling-creator/',
       alt: 'Tobermore'
     },
     {
       logo: marshalls,
-      url: '#',
+      url: 'https://www.marshalls.co.uk/commercial/product/contemporary-facing-bricks-earlswood-grey',
       alt: 'Marshalls'
     },
     {
       logo: ibstock,
-      url: '#',
+      url: 'https://www.ibstockbrick.co.uk/brick-selector/',
       alt: 'Ibstock'
     },
     {
       logo: kilsaran,
-      url: '#',
+      url: 'https://www.kilsaran.ie/paver-planner/',
       alt: 'Kilsaran'
     },
     {
-      logo: breedon,
-      url: '#',
-      alt: 'Breedon'
+      logo: wienerberge,
+      url: 'https://www.wienerberger.co.uk/products/facades/corium-brick-cladding-systems.htm',
+      alt: 'Wienerberge'
     },
     {
       logo: banas,
-      url: '#',
+      url: 'https://www.banasstones.com/sandstone/banas-slate-grey/',
       alt: 'Banas Stones'
     },
     {
       logo: ethan,
-      url: '#',
+      url: 'https://virtualpaver.ethanmasonpaving.com/',
       alt: 'Ethan Mason'
     },
     {
       logo: ag,
-      url: '#',
+      url: 'https://ag.uk.com/outside-rooms/design-inspiration/product-visualiser/',
       alt: 'AG'
     },
     {
       logo: stone,
-      url: '#',
+      url: 'https://globalstonepaving.co.uk/',
       alt: 'Global Stone'
     },
     {
-      logo: kingscourt,
-      url: '#',
-      alt: 'Kingscourt'
+      logo: forticrete,
+      url: 'https://www.forticrete.co.uk/products/walling-stone',
+      alt: 'Forticrete'
     },
     {
       logo: roadstone,
-      url: '#',
+      url: 'https://www.roadstone.ie/product/milan/',
       alt: 'Roadstone'
     },
     {
       logo: outhaus,
-      url: '#',
+      url: 'https://www.outhaus.ie/brick-library/',
       alt: 'Outhaus'
     }
   ]

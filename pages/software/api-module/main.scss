@@ -1,0 +1,25 @@
+$speed: 3s;
+$speed2: 1.2s;
+.api-page{
+  height: 100%;
+  .animation-steps{
+    transition-duration: $speed;
+    transition-timing-function: ease-in-out;
+    transform: translate3d(0,0,0);
+    &_1{
+      transform: translate3d(0,-100vh,0);
+    }
+  }
+  .api-page__hero{
+    .slide-section__text{
+      margin-top: 220px;
+    }
+  }
+  .slide-section__decor-box{
+    border: 10px solid #000000;
+    width: 34vw;
+    border-radius: 10px;
+    box-shadow:  0 0 80px rgba(#FFFFFF, .4);
+    overflow: hidden;
+  }
+}

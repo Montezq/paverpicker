@@ -30,5 +30,10 @@
   }
   a{
     color: $lightGray;
+    transition: .22s ease-in-out;
+    &:hover{
+      color: $lightGray2;
+      text-decoration: underline;
+    }
   }
 }
