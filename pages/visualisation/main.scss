@@ -79,7 +79,7 @@ $speed2: 1.1s;
         &_2{
           transform: translate3d(0,0,0);
           @include tabletPortrait{
-            transform: translate3d(0,32vh,0);
+            transform: translate3d(0,6vh,0);
           }
         }
       }
