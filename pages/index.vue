@@ -1,14 +1,28 @@
 <template>
   <div class="home">
     <Rotate />
+    <Transition  >
+      <div class="modal d_flex align-items_center justify-content_center" v-if="videoPopup">
+        <div class="modal__backdrop position_absolute" @click="videoPopup=!videoPopup"></div>
+        <div class="modal__content">
+          <div class="modal__close position_absolute cursor_pointer" @click="videoPopup=!videoPopup" v-html="closeIcon"></div>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/NL-mA2AmtG8?autoplay=1&mute=1" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </Transition>
     <div class="animation-steps__wrapper">
       <div :class="'animation-steps animation-steps_'+currentSlide+' animation-lstep_'+pastSlide">
         <section class="home__hero">
           <div class="slide-section d_flex align-items_center flex_wrap position_relative">
             <div :class="`home__hero-img position_absolute home__hero-img-${heroImg}`">
-              <Img :img="`home-hero-1`" class="home-hero-1" :alt="'Home hero laptop'"/>
-              <Img :img="`home-hero-2`" class="home-hero-2" :alt="'Home hero laptop'"/>
-              <Img :img="`home-hero-3`" class="home-hero-3" :alt="'Home hero laptop'"/>
+              <Img :img="`hero-desktop`" class="home-hero-desktop" :alt="'Home hero laptop'"/>
+              <Img :img="`hero-pav-1`" class="home-hero-1" :alt="'Home hero laptop'"/>
+              <Img :img="`hero-pav-2`" class="home-hero-2" :alt="'Home hero laptop'"/>
+              <Img :img="`hero-pav-3`" class="home-hero-3" :alt="'Home hero laptop'"/>
             </div>
             <div class="slide-section__text position_relative">
               <div class="slide-section__text-head mb_32">
@@ -17,7 +31,7 @@
                 </h1>
               </div>
               <div class="slide-section__text-cta">
-                <p class="color_green fs_32 d_flex align-items_center"><span class="ff_icon fs_64 mr_20"></span> Watch Video</p>
+                <p class="color_green fs_32 d_flex align-items_center cursor_pointer" @click="videoPopup=!videoPopup"><span class="ff_icon fs_64 mr_20"></span> Watch Video</p>
               </div>
             </div>
             <div @click="nextPage" class="scrl-down position_absolute fs_32 text_center cursor_pointer">
@@ -74,7 +88,7 @@
                     We photograph each product
                     <br> sample individually, this allows
                     <br> us to assemble any layout
-                    <br> pattern at the click of a button. 
+                    <br> at the click of a button. 
                   </p>
                 </div>
                 <div class="slider-section__text-cta">
@@ -110,13 +124,13 @@
                 </div>
                 <div class="slide-section__text-desc">
                   <p class="fs_32">
-                    The data infrastructure is built 
+                    The software is built 
                     <br> unique to your products, and
                     <br> configured to your requirements.
                   </p>
                 </div>
                 <div class="slider-section__text-cta">
-                  <NuxtLink to="/">Learn more </NuxtLink>
+                  <NuxtLink to="/visualisation/">Learn more </NuxtLink>
                 </div>
               </div>
             </div>
@@ -203,11 +217,13 @@
   @import 'main.scss';
 </style>
 <script setup>
+  import closeIcon  from '~/assets/svg/icons/close.svg?raw';
   let currentSlide = ref(0),
       pastSlide = ref(0),
       nextSlide = ref(1),
       heroImg = ref(1),
       ticking = ref(false),
+      videoPopup = ref(false),
       scrlTicking = ref(true);
   
   function change() {
@@ -261,7 +277,7 @@
               slide(3000,null,'up')
               setTimeout(() => {
                 slide(3000,null,'up')
-              }, 3000);
+              }, 2600);
             }
             else
               slide(3000,null,'up')
@@ -271,7 +287,7 @@
               slide(3000,null,'down')
               setTimeout(() => {
                 slide(3000,null,'down')
-              }, 3000);
+              }, 2600);
             }
             else
               slide(3000,null,'down')                                                              
@@ -304,7 +320,7 @@
             slide(3000, e.deltaY)
             setTimeout(() => {
               slide(3000, e.deltaY)
-            }, 3000);
+            }, 2600);
           }
           else if((currentSlide.value === 3 && pastSlide.value === 2) || (currentSlide.value === 3 && pastSlide.value === 4)){
             slide(6000, e.deltaY)
@@ -313,7 +329,7 @@
             slide(3000, e.deltaY)
         }
       });
-      setInterval(change, 4000);
+      setInterval(change, 3000);
       touch();
     }, 610);
   })
