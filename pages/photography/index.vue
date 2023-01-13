@@ -14,7 +14,7 @@
               </div>
             </div>
             <div @click="nextPage" class="scrl-down position_absolute fs_32 text_center cursor_pointer">
-              <p>What makes our photography so life-like?</p>
+              <p>What makes our photography so true to life?</p>
               <p class="ff_icon fs_48"></p>
             </div>
           </div>

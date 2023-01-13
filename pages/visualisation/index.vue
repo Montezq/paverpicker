@@ -14,7 +14,7 @@
               <Img :img="'visualisation_hero'" :resp="false" :alt="'Home hero visualisation'"/>
             </div>
             <div @click="nextPage" class="scrl-down position_absolute fs_32 text_center cursor_pointer">
-              <p>What makes our visualisations realistic?</p>
+              <p>What makes our visualisations so realistic?</p>
               <p class="ff_icon fs_48"></p>
             </div>
           </div>
@@ -62,7 +62,7 @@
                       </p>
                     </div>
                     <div class="slider-section__text-cta">
-                      <NuxtLink to="/" >
+                      <NuxtLink to="/software/" >
                         <span class="fs_32 fw_regular">
                           Learn about our software
                         </span>
@@ -123,7 +123,7 @@
       currentSlide.value+=1
       setTimeout(() => {
         currentSlide.value+=1
-      }, 1800);
+      }, 1600);
       pastSlide.value = currentSlide.value-1
     }else if((y<0 || direction==='down') && currentSlide.value > 0){
       currentSlide.value-=1
@@ -131,7 +131,7 @@
       setTimeout(() => {
         currentSlide.value-=1
         pastSlide.value = currentSlide.value+1
-      }, 1800);
+      }, 1600);
     }
     ticking.value = true;
     if(currentSlide.value!==6)

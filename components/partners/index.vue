@@ -55,7 +55,7 @@
     },
     {
       logo: wienerberge,
-      url: 'https://www.wienerberger.co.uk/products/facades/corium-brick-cladding-systems.htm',
+      url: 'https://www.wienerberger.co.uk/products/facades/corium-brick-cladding-systems.html',
       alt: 'Wienerberge'
     },
     {
@@ -85,7 +85,7 @@
     },
     {
       logo: roadstone,
-      url: 'https://www.roadstone.ie/product/milan/',
+      url: 'https://www.roadstone.ie/product/castlestone/',
       alt: 'Roadstone'
     },
     {
