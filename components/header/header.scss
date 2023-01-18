@@ -22,10 +22,9 @@
 .header__menu-btn{
   display: none;
   @include laptops{
+    cursor: pointer;
     display: block;
-    width: 12px;
-    height: 16px;
-    border: 2px solid $white;
+    font-size: 24px;
   }
 }
 .header__logo{
@@ -49,7 +48,7 @@
     top: 50px;
     left: 0;
     width: 100%;
-    transform: translate3d(0,50px,0);
+    transform: translate3d(0,-50px,0);
     opacity: 0;
     visibility: hidden;
     transition: .4s ease-in-out;

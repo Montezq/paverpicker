@@ -3,7 +3,7 @@
     <div :class="['header__menu-close',{'active':menu.menu}]" @click="menuToggle()"></div>
     <div class="container">
       <div class="row d_flex align-items_center justify-content_center">
-        <div class="header__menu-btn" @click="menuToggle()">
+        <div class="header__menu-btn ff_icon" @click="menuToggle()">
         </div>
         <div class="header__logo">
           <NuxtLink to="/" aria-label="Header Logo">
