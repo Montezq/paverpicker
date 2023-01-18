@@ -99,6 +99,9 @@ a{
   &_column{
     flex-direction: column;
   }
+  &_1{
+    flex: 1;
+  }
 }
 .text{
   &_uppercase{
@@ -135,6 +138,11 @@ a{
 .h{
   &_100{
     height: 100%;
+  }
+}
+.mh{
+  &_100{
+    min-height: 100%;
   }
 }
 .slide-section{
@@ -202,6 +210,15 @@ img{
   }
 }
 .fs{
+  &_r32{
+    font-size: 32px;
+    @include desktop{
+      font-size: 24px;
+    }
+    @include phone{
+      font-size: 16px;
+    }
+  }
   &_32{
     font-size: 1.7vw;
     @include tabletPortrait{
@@ -212,6 +229,15 @@ img{
     }
     @include tabletLandscape{
       font-size: 1.7vw !important;
+    }
+  }
+  &_42{
+    font-size: 42px;
+    @include desktop{
+      font-size: 32px;
+    }
+    @include phone{
+      font-size: 18px;
     }
   }
   &_48{
@@ -398,6 +424,28 @@ img{
     flex: 1;
   }
 }
+.col{
+  &-lg-3{
+    width: 25%;
+    flex: initial !important;
+  }
+  &-lg-4{
+    width: 33.333%;
+    flex: initial !important;
+  }
+  &-md-6{
+    @include desktop{
+      width: 50%;
+      flex: initial !important;
+    }
+  }
+  &-sm-12{
+    @include phone{
+      width: 100%;
+      flex: initial !important;
+    }
+  }
+}
 .page-enter-active,
 .page-leave-active {
   transition: all .4s;
@@ -406,4 +454,108 @@ img{
 .page-leave-to {
   opacity: 0;
   filter: blur(1rem);
+}
+.scenes{
+  overflow: auto;
+  .main{
+    padding-top: 103px;
+    @include laptops{
+      padding-top: 80px;
+    }
+    @include tabletPortrait{
+      padding-top: 140px;
+    }
+    @include tablet{
+      padding-top: 70px;
+    }
+  }
+  .card{
+    transition: .3s ease;
+    &:hover{
+      transform: scale(1.05);
+    }
+  }
+}
+.scenes-inside{
+  .main{
+    padding-top: 130px;
+    @include laptops{
+      padding-top: 85px;
+    }
+    @include tablet{
+      padding-top: 70px;
+    }
+  }
+}
+.scenes-general{
+  padding: 150px 0;
+  @include desktopminlg{
+    padding: 120px 0;
+  }
+  @include desktopxminlg{
+    padding: 60px 0 60px;
+  }
+  @include laptops{
+    padding: 40px 0 60px;
+  }
+  @include tabletPortrait{
+    padding: 60px 0;
+  }
+  @include tablet{
+    padding: 50px 0;
+  }
+  .container_mw{
+    max-width: 1830px;
+    padding: 0 40px;
+    width: 100%;
+  }
+  .row{
+    margin-top: -42px;
+  }
+  .col{
+    margin-top: 42px;
+  }
+}
+.scenes-examples{
+  padding-bottom: 100px;
+  @include phone{
+    padding-bottom: 80px;
+  }
+  .container_mw{
+    max-width: 1540px;
+    padding: 0 40px;
+    width: 100%;
+    @include phone{
+      padding: 0 20px;
+    }
+  }
+  .row{
+    margin: 15px -30px 0 -30px;
+    @include laptops{
+      margin: 5px -20px 0 -20px;
+    }
+    @include phone{
+      margin-top: -20px;
+    }
+  }
+  .col{
+    margin-top: 65px;
+    padding: 0 30px;
+    @include laptops{
+      margin-top: 54px;
+      padding: 0 20px;
+    }
+    @include phone{
+      margin-top: 40px;
+    }
+  }
+  .card__img{
+    margin-bottom: 25px;
+    @include phone{
+      margin-bottom: 14px;
+    }
+    img{
+      background-color: #FFFFFF;
+    }
+  }
 }

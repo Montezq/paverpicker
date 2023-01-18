@@ -1,0 +1,33 @@
+.breadcrumbs{
+  li{
+    margin-left: 10px;
+    @include phone{
+      margin-left: 6px;
+    }
+  }
+  a{
+    color: $green;
+    position: relative;
+    margin-right: 10px;
+    @include phone{
+      margin-right: 6px;
+    }
+    &:after{
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background-color: $green;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      margin-top: 2px;
+      transition: .24s ease-in-out;
+    }
+    &:hover{
+      &:after{
+        width: 100%;
+      }
+    }
+  }
+}

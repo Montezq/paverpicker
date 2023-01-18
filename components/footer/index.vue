@@ -37,16 +37,16 @@
               <p>Scenes</p>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/">Paving</NuxtLink>
+              <NuxtLink to="/scenes/paving/">Paving</NuxtLink>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/">Walling</NuxtLink>
+              <NuxtLink to="/scenes/walling/">Walling</NuxtLink>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/">Internal</NuxtLink>
+              <NuxtLink to="/scenes/internal/">Internal</NuxtLink>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/">Roofing</NuxtLink>
+              <NuxtLink to="/scenes/roofing/">Roofing</NuxtLink>
             </li>
           </ul>
         </div>
