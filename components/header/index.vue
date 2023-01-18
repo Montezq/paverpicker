@@ -24,7 +24,7 @@
           </ul>
         </nav>
         <div class="header__cta">
-          <a href="Get started" class="text_uppercase btn btn_primary">Get started</a>
+          <NuxtLink to="/contacts/" class="text_uppercase btn btn_primary">Get started</NuxtLink>
         </div>
       </div>
     </div>

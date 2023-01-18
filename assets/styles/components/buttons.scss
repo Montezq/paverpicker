@@ -7,6 +7,8 @@
   border-radius:2px;
   letter-spacing:.09em;
   transition: .22s ease-in-out;
+  border-width: 0;
+  cursor: pointer;
   @include laptops{
     font-size: 12px;
     padding: 5px 6px 4px;

@@ -127,6 +127,7 @@ a{
 .fw{
   &_regular{
     @include segoe;
+    font-weight: 400
   }
   &_bold{
     @include segoe(bold);
@@ -216,6 +217,9 @@ img{
       font-size: 24px;
     }
     @include phone{
+      font-size: 18px;
+    }
+    @include minphone{
       font-size: 16px;
     }
   }
@@ -446,6 +450,11 @@ img{
     }
   }
 }
+.overflow{
+  &_auto{
+    overflow: auto;
+  }
+}
 .page-enter-active,
 .page-leave-active {
   transition: all .4s;
@@ -467,12 +476,6 @@ img{
     }
     @include tablet{
       padding-top: 70px;
-    }
-  }
-  .card{
-    transition: .3s ease;
-    &:hover{
-      transform: scale(1.05);
     }
   }
 }
@@ -514,6 +517,12 @@ img{
   }
   .col{
     margin-top: 42px;
+  }
+  .card{
+    transition: .3s ease;
+    &:hover{
+      transform: scale(1.05);
+    }
   }
 }
 .scenes-examples{

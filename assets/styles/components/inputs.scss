@@ -1,0 +1,64 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+input[type=file] {
+  display: none;
+}
+input[type=search],
+input[type=checkbox],
+input[type=radio] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none ;
+}
+.el-radio:focus:not(.is-focus):not(:active):not(.is-disabled) .el-radio__inner{
+  box-shadow: 0 0 0 transparent !important;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none !important;
+}
+textarea{
+  resize: none;
+}
+input,
+textarea{
+  width: 100%;
+  font-size: 18px;
+  height: 50px;
+  box-shadow: 0 0 10px #000;
+  background-color: rgba(#fff, .8);
+  outline: 0;
+  border-width: 0;
+  padding: 10px 16px;
+  @include phone{
+    height: 46px;
+    padding: 5px 12px;
+  }
+  @include minphone{
+    height: 40px;
+  }
+}
+.form__item{
+  margin-bottom: 26px;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+.form__item-label{
+  margin-bottom: 6px;
+  label{
+    font-size: 24px;
+    @include laptops{
+      font-size: 16px;
+    }
+  }
+}

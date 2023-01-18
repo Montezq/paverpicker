@@ -62,7 +62,7 @@
               <NuxtLink to="/">Clients</NuxtLink>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/">Contact</NuxtLink>
+              <NuxtLink to="/contacts/">Contact</NuxtLink>
             </li>
           </ul>
         </div>

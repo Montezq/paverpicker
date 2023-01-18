@@ -152,6 +152,11 @@
       @content;
   }
 }
+@mixin muh1{
+  @media screen and (min-height: 910px) and (orientation: landscape){
+      @content;
+  }
+}
 @mixin mh1{
   @media screen and (max-height: 730px) and (orientation: landscape){
       @content;
