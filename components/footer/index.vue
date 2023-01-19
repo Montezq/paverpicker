@@ -59,10 +59,10 @@
               <NuxtLink to="/faq/">FAQ</NuxtLink>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/">Clients</NuxtLink>
+              <NuxtLink to="/">Our Clients</NuxtLink>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/contacts/">Contact</NuxtLink>
+              <NuxtLink to="/contacts/">Contact Us</NuxtLink>
             </li>
           </ul>
         </div>
