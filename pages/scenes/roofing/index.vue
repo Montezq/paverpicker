@@ -18,14 +18,14 @@
         <div class="container container_mw">
           <div class="row align-items_center">
             <div class="col col-lg-4 col-md-6 col-sm-12" v-for="(item,idx) in scenes" v-bind:key="idx">
-              <NuxtLink :to="item.url" class="card scenes__card d_block">
+              <div :to="item.url" class="card scenes__card d_block">
                 <div class="card__img scenes__card-img">
                   <Img :resp="false" :scenes="false" :img="item.img" :alt="item.title"/>
                 </div>
                 <div class="card__title scenes__card-title">
                   <h2 class="fs_r32 text_center">{{ item.title }} </h2>
                 </div>
-              </NuxtLink>
+              </div>
             </div>
           </div>
         </div>
