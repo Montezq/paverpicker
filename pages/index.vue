@@ -99,13 +99,13 @@
             <div class="slide-section__decor photography position_relative">
               <Img :img="'rig'" :alt="'Rig'" class="photography__rig"/>
               <div class="photography__blitz"></div>
-              <div class="photography__camera">
+              <!-- <div class="photography__camera">
                 <Img :img="'camera'" :alt="'Camera'" class="photography__camera-inside"/>
                 <div class="photography__camera-ins">
                   <Img :img="'rig'" :alt="'Rig inside'" class="photography__rig-inside"/>
                   <Img :img="'brick'" :alt="'Brick'" class="photography_brick"/>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </section>
@@ -134,14 +134,14 @@
                 </div>
               </div>
             </div>
-            <div class="slide-section__decor visualisation">
+            <!-- <div class="slide-section__decor visualisation">
               <div class="picture visualisation__photoshop">
                 <picture>
                   <source type="image/png" srcset="/images/decor/photoshop@x2.png 2x"/>
                   <img :src="'/images/decor/photoshop@x2.webp'" alt="photoshop" width="500" height="500"/>
                 </picture>
               </div>
-            </div>
+            </div> -->
           </div>
         </section>
         <section class="home__software">
@@ -171,7 +171,7 @@
               </div>
             </div>
             <div class="slide-section__decor software">
-              <Img :img="'send'" :resp="false" :alt="'Send Laptop'" class="software__send"/>
+              <!-- <Img :img="'send'" :resp="false" :alt="'Send Laptop'" class="software__send"/> -->
               <div class="visualisation__brick-wrapper">
                 <Img :img="'photoshop-wind'" :resp="false" :alt="'Window'" class="visualisation__window"/>
                 <Img :img="'brick'" :alt="'Brick'" class="visualisation_brick-single"/>

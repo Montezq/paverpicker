@@ -209,6 +209,9 @@ img{
     @include tabletLandscape{
       font-size: 3.4vw;
     }
+    @include special{
+      font-size: 7vw;
+    }
   }
 }
 .slide-section__text-cta{
@@ -227,6 +230,9 @@ img{
     }
     @include tablet{
       font-size: 5vw;
+    }
+    @include special{
+      font-size: 4vw;
     }
   }
 }
@@ -302,6 +308,9 @@ img{
     @include tabletsPortrait{
       font-size: 9vw
     }
+    @include special{
+      font-size: 7vw
+    }
   }
 }
 .ff{
@@ -335,7 +344,10 @@ img{
     }
   }
   @include tabletsPortrait{
-    bottom: 10vh;
+    bottom: 8vh;
+  }
+  @include special{
+    bottom: 4vh;
   }
   p{
     &:first-child{
