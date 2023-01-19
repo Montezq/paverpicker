@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import svgLoader from "vite-svg-loader"
+import svgLoader from "vite-svg-loader";
 export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
@@ -11,13 +11,18 @@ export default defineNuxtConfig({
     }
   },
   css: [
+    'element-plus/theme-chalk/el-collapse.css',
+    'element-plus/theme-chalk/el-collapse-item.css',
+    'element-plus/theme-chalk/el-collapse-transition.css',
     '~/assets/styles/app.scss'
   ],
   modules: [
     '@pinia/nuxt',
   ],
   vite: {
-    plugins: [svgLoader()],
+    plugins: [
+      svgLoader()
+    ],
     css: {
       preprocessorOptions: {
         scss: {

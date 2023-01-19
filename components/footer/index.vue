@@ -56,7 +56,7 @@
               <p>About Us</p>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/">FAQ</NuxtLink>
+              <NuxtLink to="/faq/">FAQ</NuxtLink>
             </li>
             <li class="footer__item">
               <NuxtLink to="/">Clients</NuxtLink>
