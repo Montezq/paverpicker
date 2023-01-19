@@ -237,6 +237,18 @@ img{
   }
 }
 .fs{
+  &_r24{
+    font-size: 24px;
+    @include laptop{
+      font-size: 16px;
+    }
+    @include phone{
+      font-size: 16px;
+    }
+    @include minphone{
+      font-size: 14px;
+    }
+  }
   &_r32{
     font-size: 32px;
     @include desktop{
@@ -607,6 +619,28 @@ img{
     }
     img{
       background-color: #FFFFFF;
+    }
+  }
+}
+
+.link{
+  position: relative;
+  color: $green;
+  &:after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: $green;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 2px;
+    transition: .24s ease-in-out;
+  }
+  &:hover{
+    &:after{
+      width: 100%;
     }
   }
 }

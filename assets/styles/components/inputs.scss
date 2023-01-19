@@ -39,6 +39,7 @@ textarea{
   outline: 0;
   border-width: 0;
   padding: 10px 16px;
+  @include segoe;
   @include phone{
     height: 46px;
     padding: 5px 12px;

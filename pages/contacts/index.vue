@@ -41,9 +41,9 @@
           <div class="contacts__col">
             <div class="contacts__col-head">
               <h2 class="fs_r32 fw_regular">
-                Got a question?
+                Do you have a question?
                 <br>
-                Feel free to ask
+                <span class="fs_r24">Check out <NuxtLink class="link" to="/faq/">FAQ's</NuxtLink> or feel free to ask</span>
               </h2>
             </div>
             <form class="contacts__form form">
