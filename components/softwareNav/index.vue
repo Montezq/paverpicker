@@ -11,7 +11,7 @@
     <div class="software-nav__item">
       <NuxtLink to="/software/blender-module/" class="software-nav__item-link position_relative d_flex flex_column align-items_center">
         <div class="software-nav__item-link-icon">
-          <p class="ff_icon">&#xf000;</p>
+          <p class="ff_icon"></p>
         </div>
         <div class="software-nav__item-link-text">
           <p class="fw_semibold">Blender Module</p>
@@ -20,8 +20,11 @@
     </div>
     <div class="software-nav__item">
       <NuxtLink to="/software/api-module/" class="software-nav__item-link position_relative d_flex flex_column align-items_center">
-        <div class="software-nav__item-link-icon">
-          <p class="ff_icon"></p>
+        <div class="software-nav__item-link-icon software-nav__item-link-icon_custom d_flex flex_wrap">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
         <div class="software-nav__item-link-text">
           <p class="fw_semibold">API Module</p>

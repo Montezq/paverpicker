@@ -6,7 +6,7 @@
         <div class="modal__backdrop position_absolute" @click="videoPopup=!videoPopup"></div>
         <div class="modal__content">
           <div class="modal__close position_absolute cursor_pointer" @click="videoPopup=!videoPopup" v-html="closeIcon"></div>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/NL-mA2AmtG8?autoplay=1&mute=1" 
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/NL-mA2AmtG8?autoplay=1" 
             title="YouTube video player" frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             allowfullscreen>
