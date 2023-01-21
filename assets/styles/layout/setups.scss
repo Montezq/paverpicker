@@ -193,6 +193,9 @@ img{
   &_absolute{
     position: absolute;
   }
+  &_fixed{
+    position: fixed;
+  }
 }
 .slide-section__text-head{
   margin-bottom: 20px;
