@@ -3,11 +3,6 @@ $speed: 3s;
 
 .home{
   height:100%;
-  .slide-section__text-head{
-    h2{
-      white-space: nowrap;
-    }
-  }
   .animation-steps{
     transition-duration: $speed;
     transition-timing-function: ease-in-out;
@@ -179,8 +174,9 @@ $speed: 3s;
           padding-bottom: 75%;
           @include tabletPortrait{
             top: -94.8vh;
-            width: 51vh;
+            width: 66.7%;
             left: 26vw;
+            padding-bottom: 50.2%;
           }
           @include tabletsPortrait{
             width: 77vw;
@@ -321,8 +317,9 @@ $speed: 3s;
           padding-bottom: 75%;
           @include tabletPortrait{
             top: -94.8vh;
-            width: 51vh;
+            width: 66.7%;
             left: 26vw;
+            padding-bottom: 50.2%;
           }
           @include tabletsPortrait{
             width: 77vw;
@@ -351,10 +348,12 @@ $speed: 3s;
             transform: translate3d(-49%, 18.38vw, 0);
           }
           @include tabletPortrait{
-            transform: translate3d(-70%, 23.1vh, 0);
+            transform: translate3d(-95%, 29.8vw, 0);
+            left: 63.2%;
+            width: 14.6vw;
           }
           @include tabletsPortrait{
-            transform: translate3d(-9.2%, 27.4vw, 0);
+            transform: translate3d(-46.2%, 27.4vw, 0);
             width: 16.3vw;
             top: -95vh;
           }
@@ -387,7 +386,7 @@ $speed: 3s;
           opacity: 1;
           transition:  $speed ease-in-out, opacity .4s ease-in-out .7s;
           @include tabletPortrait{
-            transform: translate3d(0, 20.6vh, 0);
+            transform: translate3d(0, 27.8vw, 0);
           }
           @include tabletsPortrait{
             transform: translate3d(0, 38vw, 0);
@@ -430,8 +429,9 @@ $speed: 3s;
           left: 0;
           @include tabletPortrait{
             top: -94.8vh;
-            width: 51vh;
+            width: 66.7%;
             left: 26vw;
+            padding-bottom: 50.2%;
           }
           @include tabletsPortrait{
             width: 77vw;
@@ -486,6 +486,8 @@ $speed: 3s;
           @include tabletPortrait{
             left: 42.5vw;
             top: 5.5vw;
+            padding-bottom: 40%;
+            width: 47%;
           }
           @include tabletsPortrait{
             padding-bottom: 46%;
@@ -528,6 +530,8 @@ $speed: 3s;
           @include tabletPortrait{
             left: 42.5vw;
             top: 5.5vw;
+            padding-bottom: 40%;
+            width: 47%;
           }
           @include tabletsPortrait{
             padding-bottom: 46%;
@@ -679,18 +683,30 @@ $speed: 3s;
       margin-top: -5vw;
       left: 55vw;
       transition: 0s ease-in-out;
+      max-width: 28vw;
       @include tabletPortrait{
-        margin-top: 32vh;
         left: 0;
         text-align: center;
         width: 100%;
-        margin-left: 0;
+        margin: 32vh auto 0 auto;
+        max-width: 45vw;
       }
       @include tabletsPortrait{
         margin-top: 40vw;
+        max-width: 55vw;
+      }
+      @include phone{
+        max-width: 65vw;
+      }
+      @include minphone2{
+        max-width: 75vw;
+      }
+      @include sphoneLandscape{
+        max-width: 34vw;
       }
       @include special{
         margin-top: 30vw;
+
       }
       &-head{
         h1{
@@ -720,6 +736,18 @@ $speed: 3s;
       @include tabletPortrait{
         margin-top: 0;
         height:initial;
+      }
+      .slide-section__text-head{
+        max-width: 25vw;
+        @include tabletPortrait{
+          max-width: 320px;
+        }
+      }
+      .slide-section__text-desc{
+        max-width: 23vw;
+        @include tabletPortrait{
+          max-width: 330px;
+        }
       }
     }
     .slide-section{
@@ -820,6 +848,21 @@ $speed: 3s;
     .slide-section{
       @include tabletPortrait{
         flex-direction: column;
+      }
+    }
+    .slide-section__text-head{
+      max-width: 25vw;
+      @include tabletPortrait{
+        max-width: 360px;
+      }
+    }
+    .slide-section__text-desc{
+      max-width: 23vw;
+      @include tabletPortrait{
+        max-width: 385px;
+      }
+      @include tabletsPortrait{
+        max-width: 300px;
       }
     }
   }
@@ -976,18 +1019,34 @@ $speed: 3s;
       }
     }
     .slide-section__text{
+      transform: translate3d(0, 10%, 0) ;
       @include tabletPortrait{
         padding-top: 52vh;
       }
       @include tabletsPortrait{
         padding-top: 46vh;
       }
+      @include minphone{
+        padding-top: 52vh;
+      }
       @include special{
         padding-top: 51vh;
       }
     }
-    .slide-section__text{
-      transform: translate3d(0, 10%, 0) ;
+    .slide-section__text-head{
+      max-width: 25vw;
+      @include tabletPortrait{
+        max-width: 360px;
+      }
+    }
+    .slide-section__text-desc{
+      max-width: 23vw;
+      @include tabletPortrait{
+        max-width: 350px;
+      }
+      @include tabletsPortrait{
+        max-width: 300px;
+      }
     }
   }
   .visualisation{
@@ -1055,6 +1114,21 @@ $speed: 3s;
       @include tabletPortrait{
         padding-top: 0;
         margin-top: -8vh;
+      }
+    }
+    .slide-section__text-head{
+      max-width: 25vw;
+      @include tabletPortrait{
+        max-width: 360px;
+      }
+    }
+    .slide-section__text-desc{
+      max-width: 25vw;
+      @include tabletPortrait{
+        max-width: 385px;
+      }
+      @include tabletsPortrait{
+        max-width: 300px;
       }
     }
   }
@@ -1180,12 +1254,13 @@ $speed: 3s;
       opacity: 0;
       transition: $speed ease-in-out, opacity 2s ease-in-out;
       @include tabletPortrait{
-        width: 14.5vw;
-        left: 87.5%;
+        width: 13.7vw;
+        left: 73.4%;
         transform: translate3d(0, 20.8vw, 0);
       }
       @include tabletsPortrait{
         left: 57.2%;
+        width: 14.5vw;
         transform: translate3d(0, 30vw, 0);
       }
       @include special{
@@ -1202,6 +1277,7 @@ $speed: 3s;
       z-index: 3;
       width: 58vw;
       transform: translate3d(-100%, 0, 0) ;
+      height: 100%;
       @include tabletPortrait{
         width: 71vw;
       }
@@ -1227,16 +1303,10 @@ $speed: 3s;
       padding-bottom: 44%;
       right: 18vw;
       @include tabletPortrait{
-        width: 52vh;
+        width: 100vw;
         right: initial;
         left: 0;
       }
-      @include tabletsPortrait{
-        width: 100vw;
-      }
-      // @include tabletPortrait{
-      //   display: none;
-      // }
     }
     .visualisation__window{
       width: 100%;
@@ -1246,7 +1316,8 @@ $speed: 3s;
       z-index: 4;
       @include tabletPortrait{
         top: -95vh;
-        right: -25vw;
+        right: 7vw;
+        width: 67%;
       }
       @include tabletsPortrait{
         width: 79%;

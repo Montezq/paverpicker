@@ -27,7 +27,7 @@
             <div class="slide-section__text position_relative">
               <div class="slide-section__text-head mb_32">
                 <h1>
-                  Visualise Bricks <br> and Pavers in <br> Their Best Light
+                  Visualise Bricks  and Pavers in  Their Best Light
                 </h1>
               </div>
               <div class="slide-section__text-cta">
@@ -51,19 +51,19 @@
               </div>
               <div class="slide-section__text">
                 <div class="slide-section__text-head">
-                  <h2>Send Your <br> Products to Us</h2>
+                  <h2>Send Your  Products to Us</h2>
                 </div>
                 <div class="slide-section__text-desc">
                   <p class="fs_32">
                     Package your products and
-                    <br> send them to us, if your 
-                    <br> collection is large, we will 
-                    <br> come to you.
+                     send them to us, if your 
+                     collection is large, we will 
+                     come to you.
                   </p>
                 </div>
               </div>
             </div>
-            <div class="slide-section__decor box position_relative">
+            <div class="slide-section__decor box position_relative d_flex align-items_center">
               <Img :img="'box_back'" :alt="'Box'" class="box__back"/>
               <Img :img="'box_front'" :alt="'Box'" class="box__front"/>
               <Img :img="'brick'" :alt="'Box'" class="box_brick"/>
@@ -81,14 +81,14 @@
               </div>
               <div class="slide-section__text">
                 <div class="slide-section__text-head">
-                  <h2>We Photograph  <br> Your Products </h2>
+                  <h2>We Photograph   Your Products </h2>
                 </div>
                 <div class="slide-section__text-desc">
                   <p class="fs_32">
                     We photograph each product
-                    <br> sample individually, this allows
-                    <br> us to assemble any layout
-                    <br> at the click of a button. 
+                     sample individually, this allows
+                     us to assemble any layout
+                     at the click of a button. 
                   </p>
                 </div>
                 <div class="slider-section__text-cta">
@@ -120,13 +120,13 @@
               </div>
               <div class="slide-section__text">
                 <div class="slide-section__text-head">
-                  <h2>We Set Up Your  <br> Visualisations </h2>
+                  <h2>We Set Up Your   Visualisations </h2>
                 </div>
                 <div class="slide-section__text-desc">
                   <p class="fs_32">
                     The software is built 
-                    <br> unique to your products, and
-                    <br> configured to your requirements.
+                     unique to your products, and
+                     configured to your requirements.
                   </p>
                 </div>
                 <div class="slider-section__text-cta">
@@ -155,14 +155,14 @@
               </div>
               <div class="slide-section__text">
                 <div class="slide-section__text-head">
-                  <h2>We Send You  <br> Your Software </h2>
+                  <h2>We Send You   Your Software </h2>
                 </div>
                 <div class="slide-section__text-desc">
                   <p class="fs_32">
                     We send you a link to your
-                    <br> software, and advise on the
-                    <br> best way to integrate it into your
-                    <br> website.
+                     software, and advise on the
+                     best way to integrate it into your
+                     website.
                   </p>
                 </div>
                 <div class="slider-section__text-cta">
