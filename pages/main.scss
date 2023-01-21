@@ -661,9 +661,9 @@ $speed: 3s;
       @include tabletPortrait{
         max-height: initial;
         max-width: initial;
-        height: 60vh;
+        height: 58vh;
       }
-      @include tablet{
+      @include tabletsPortrait{
         height: 90vw;
       }
       @include tabletLandscape{
@@ -680,11 +680,14 @@ $speed: 3s;
       left: 55vw;
       transition: 0s ease-in-out;
       @include tabletPortrait{
-        margin-top: 47vw;
+        margin-top: 32vh;
         left: 0;
         text-align: center;
         width: 100%;
         margin-left: 0;
+      }
+      @include tabletsPortrait{
+        margin-top: 40vw;
       }
       @include special{
         margin-top: 30vw;
@@ -692,13 +695,16 @@ $speed: 3s;
       &-head{
         h1{
           @include tablet{
-            font-size: 10vw;
+            font-size: clamp(32px, 10vw, 42px);
           }
           @include tabletPortrait{
-            font-size: 8vw;
+            font-size: clamp(42px, 8vw, 44px);
+          }
+          @include tabletsPortrait{
+            font-size: clamp(32px, 8vw, 44px);
           }
           @include tabletLandscape{
-            font-size: 3.4vw;
+            font-size: clamp(32px, 3.4vw, 3.4vw);
           }
           @include special{
             font-size: 7vw;
@@ -762,6 +768,9 @@ $speed: 3s;
   .box__back{
     z-index: 1;
     position: relative;
+    top: 0;
+    left: 0;
+     transform: translate(0,0);
   }
   .box__front{
     z-index: 3;
@@ -775,7 +784,7 @@ $speed: 3s;
     z-index: 2;
     transition: $speed ease-in-out, filter .2s ease-in-out 2s ;
     @include tabletPortrait{
-      width: 40vw;
+      width: 30vh;
     }
     @include phone{
       width: 50vw;

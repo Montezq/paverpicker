@@ -250,11 +250,12 @@ $speed3: 1.4s;
   }
   .photography-page__brick{
     background-color: $black;
+    padding-top: 2vh;
     @include mh{
       padding-top: 30px;
     }
     @include mh3{
-      padding-top: 0px;
+      padding-top: 1vh;
     }
     &.oh{
       height: 100vh;
@@ -317,16 +318,19 @@ $speed3: 1.4s;
           font-size: 2.2vw;
         }
         @include laptop{
-          font-size: 3.2vw;
+          font-size: clamp(18px, 3.2vw, 24px);
         }
         @include phone{
           br{
             display: none;
           }
-          font-size: 5vw;
+          font-size: clamp(16px, 4vw, 24px);
         }
         @include special{
           font-size: 3.4vw;
+        }
+        @include phoneLandscape{
+          font-size: clamp(16px, 1.7vw, 24px) !important;
         }
       }
     }

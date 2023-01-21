@@ -271,6 +271,7 @@ $speed2: 1.2s;
       box-shadow:  0 0 80px rgba(#FFFFFF, .4);
       margin-bottom: 50px;
       transition: $speed ease-in-out;
+      max-width: 90%;
       @include tabletPortrait{
         width: 100%;
         flex: initial;
@@ -286,6 +287,8 @@ $speed2: 1.2s;
       }
       .picture{
         height: 100%;
+        position: relative;
+        z-index: -1;
         @include tabletPortrait{
           height: auto;
         }
