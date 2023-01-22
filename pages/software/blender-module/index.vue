@@ -17,9 +17,16 @@
             <div class="blender__bricks d_flex flex_wrap position_absolute">
               <div class="blender__brick-item position_relative" v-for="(item, idx) in bricks" v-bind:key="idx">
                 <Img :img="item.href" :resp="false" :alt="'Brick'"/>
-                <Img v-if="item.nested" :img="item.nested" :alt="'Brick'" class="position_absolute"/>
+                <Img v-if="item.nested" :resp="false" :img="item.nested" :alt="'Brick'" class="position_absolute"/>
               </div>
+              <Img class="blender__bricks-decor position_absolute" :img="'blender/bricks-white/brick-0'" :resp="false" :alt="'Brick'"/>
+              <Img class="blender__bricks-decor position_absolute" :img="'blender/bricks-white/brick-2'" :resp="false" :alt="'Brick'"/>
+              <Img class="blender__bricks-decor position_absolute" :img="'blender/bricks-brown/brick-7'" :resp="false" :alt="'Brick'"/>
+              <Img class="blender__bricks-decor position_absolute" :img="'blender/bricks-brown/brick-9'" :resp="false" :alt="'Brick'"/>
+              <Img class="blender__bricks-decor position_absolute" :img="'blender/bricks-brown/brick-12'" :resp="false" :alt="'Brick'"/>
+              <Img class="blender__bricks-decor position_absolute" :img="'blender/bricks-white/brick-12'" :resp="false" :alt="'Brick'"/>
             </div>
+            <div class="blender-page__shadow position_abosolute"></div>
             <div @click="nextPage" class="scrl-down position_absolute fs_32 text_center cursor_pointer">
               <p>How does Paver Picker create inspiring blends?</p>
               <p class="ff_icon fs_48"></p>
@@ -27,10 +34,29 @@
           </div>
         </section>
         <div class="blender-page__create position_relative">
-          <div class="slide-section">
+          <div class="slide-section d_flex ">
+            <div class="slide-section__decor">
+              <div class="range d_flex align-items_center position_absolute">
+                <div class="range__text">
+                  <strong>50%</strong>
+                </div>
+                <div class="range__input position_relative">
+                  <input type="range" v-model="slideval" max="100" min="0" @input="slideInput">
+                  <div class="range__track"></div>
+                </div>
+                <div class="range__text">
+                  <strong>50%</strong>
+                </div>
+              </div>
+            </div>
             <div class="slide-section__text">
               <div class="slide-section__text-head">
-                <h1>Introducing Paver Picker Blender</h1>
+                <h2>Create Bespoke Blends</h2>
+              </div>
+              <div class="slide-section__text-desc">
+                <p class="fs_32">
+                  Blend multiple products together and change the blend percentages to suit your needs.
+                </p>
               </div>
             </div>
           </div>
@@ -39,7 +65,12 @@
           <div class="slide-section">
             <div class="slide-section__text">
               <div class="slide-section__text-head text_center">
-                <h1>Unlimited Possibilities</h1>
+                <h2>Unlimited Possibilities</h2>
+              </div>
+              <div class="slide-section__text-desc">
+                <p class="fs_32 text_center">
+                  Add more products to create the look you want.
+                </p>
               </div>
             </div>
           </div>
@@ -48,7 +79,7 @@
           <div class="slide-section">
             <div class="slide-section__text">
               <div class="slide-section__text-head text_center">
-                <h1>Unlimited Possibilities</h1>
+                <h2>Unlimited Possibilities</h2>
               </div>
             </div>
           </div>
@@ -64,6 +95,7 @@
   let currentSlide = ref(0),
       pastSlide = ref(0),
       ticking = ref(false),
+      slideval = ref(50),
       scrlTicking = ref(true);
 
   const brickw = 'blender/bricks-white/brick-',
@@ -151,6 +183,10 @@
       href: brickw+'14'
     },
   ]
+
+  function slideInput(){
+    document.querySelector('.range__track').style.left = slideval.value+'%'
+  }
 
   function nextPage(){
     slide(2000, 100)

@@ -18,8 +18,34 @@ $speed2: 1.2s;
         .blender__brick-item{
           transform: translate3d(0,0,0) !important;
         }
+        .blender__bricks-decor{
+          &:nth-child(25){
+            transform: translateX(-60vw) !important;
+          }
+          &:nth-child(26){
+            transform: translateX(-60vw) !important;
+            top: 4vw;
+          }
+          &:nth-child(27){
+            transform: translateX(100vw) !important;
+            top: 8vw;
+          }
+          &:nth-child(28){
+            transform: translateX(100vw) !important;
+            top: 11.9vw;
+          }
+          &:nth-child(29){
+            transform: translateX(100vw) !important;
+            top: 15.8vw;
+          }
+          &:nth-child(30){
+            transform: translateX(-60vw) !important;
+            top: 19.8vw;
+          }
+        }
       }
-      .blender-page__bg{
+      .blender-page__bg,
+      .blender-page__shadow{
         transform: translate3d(0, 100vh, 0);
       }
     }
@@ -30,8 +56,39 @@ $speed2: 1.2s;
         .blender__brick-item{
           transform: translate3d(0,0,0) !important;
         }
+        .blender__bricks-decor{
+          &:nth-child(25){
+            transform: translateX(-60vw) !important;
+          }
+          &:nth-child(26){
+            transform: translateX(-60vw) !important;
+            top: 4vw;
+          }
+          &:nth-child(27){
+            transform: translateX(100vw) !important;
+            top: 8vw;
+          }
+          &:nth-child(28){
+            transform: translateX(100vw) !important;
+            top: 11.9vw;
+          }
+          &:nth-child(29){
+            transform: translateX(100vw) !important;
+            top: 15.8vw;
+          }
+          &:nth-child(30){
+            transform: translateX(-60vw) !important;
+            top: 19.8vw;
+          }
+        }
       }
-      .blender-page__bg{
+      .blender-page__shadow{
+        &:before{
+          opacity: 1;
+        }
+      }
+      .blender-page__bg,
+      .blender-page__shadow{
         transform: translate3d(0, 200vh, 0);
       }
     }
@@ -47,8 +104,35 @@ $speed2: 1.2s;
             }
           }
         }
+        .blender__bricks-decor{
+          &:nth-child(25){
+            transform: translateX(-60vw) !important;
+          }
+          &:nth-child(26){
+            transform: translateX(-60vw) !important;
+            top: 4vw;
+          }
+          &:nth-child(27){
+            transform: translateX(100vw) !important;
+            top: 8vw;
+          }
+          &:nth-child(28){
+            transform: translateX(100vw) !important;
+            top: 11.9vw;
+          }
+          &:nth-child(29){
+            transform: translateX(100vw) !important;
+            top: 15.8vw;
+          }
+          &:nth-child(30){
+            transform: translateX(-60vw) !important;
+            top: 19.8vw;
+          }
+        }
       }
-      .blender-page__bg{
+
+      .blender-page__bg,
+      .blender-page__shadow{
         transform: translate3d(0, 200vh, 0);
       }
     }
@@ -64,8 +148,34 @@ $speed2: 1.2s;
             }
           }
         }
+        .blender__bricks-decor{
+          &:nth-child(25){
+            transform: translateX(-60vw) !important;
+          }
+          &:nth-child(26){
+            transform: translateX(-60vw) !important;
+            top: 4vw;
+          }
+          &:nth-child(27){
+            transform: translateX(100vw) !important;
+            top: 8vw;
+          }
+          &:nth-child(28){
+            transform: translateX(100vw) !important;
+            top: 11.9vw;
+          }
+          &:nth-child(29){
+            transform: translateX(100vw) !important;
+            top: 15.8vw;
+          }
+          &:nth-child(30){
+            transform: translateX(-60vw) !important;
+            top: 19.8vw;
+          }
+        }
       }
-      .blender-page__bg{
+      .blender-page__bg,
+      .blender-page__shadow{
         transform: translate3d(0, 300vh, 0) scale(0);
       }
     }
@@ -78,7 +188,6 @@ $speed2: 1.2s;
     left: 0;
     transition: $speed ease-in-out;
     &:after{
-      transition: $speed ease-in-out;
       content: "";
       display: block;
       width: 100%;
@@ -86,7 +195,7 @@ $speed2: 1.2s;
       position: absolute;
       top: 0;
       left: 0;
-      background: radial-gradient(closest-side, rgba(13,13,13,0) 0%, rgba(13,13,13,1) 95%);
+      background: radial-gradient(closest-side, rgba(13,13,13,0) 0%, rgba(13,13,13,1) 98%);
     }
     .picture{
       height: 100%;
@@ -98,8 +207,30 @@ $speed2: 1.2s;
       }
     }
   }
-
-  .animation-steps__wrapper{
+  .blender-page__shadow{
+    transition: $speed ease-in-out;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background: radial-gradient(closest-side, rgba(13,13,13,0) 0%, rgba(13,13,13,0) 40%, rgba(13,13,13,.3) 100%);
+    &:before{
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(#171717, .1);
+      backdrop-filter: blur(5px);
+      opacity: 0;
+      transition: $speed ease-in-out;
+    }
+  }
+  .blender-page__hero{
     .slide-section__text{
       padding-top: 200px;
     }
@@ -207,8 +338,76 @@ $speed2: 1.2s;
         }
       }
     }
+    .blender__bricks-decor{
+      width: 12.45vw;
+      transition: $speed ease-in-out;
+      top: 0;
+      left: 0;
+      margin-top: -.68vw;
+      margin-left: -.68vw;
+      &:nth-child(25){
+        transform: translateX(-32.8vw);
+      }
+      &:nth-child(26){
+        transform: translateX(-38.8vw);
+        top: 4vw;
+      }
+      &:nth-child(27){
+        transform: translateX(62.8vw);
+        top: 8vw;
+      }
+      &:nth-child(28){
+        transform: translateX(57vw);
+        top: 11.9vw;
+      }
+      &:nth-child(29){
+        transform: translateX(62.8vw);
+        top: 15.8vw;
+      }
+      &:nth-child(30){
+        transform: translateX(-38.8vw);
+        top: 19.8vw;
+      }
+      img{
+        width: 100%;
+      }
+    }
   }
   .brick{
     margin-top: -10px;
+  }
+  .blender-page__create{
+    .slide-section{
+      padding: 80px 9vw 0;
+    }
+    .slide-section__decor{
+      width: 52.7vw;
+      flex: 0 0 52.7vw;
+      margin-right: 100px;
+      position: relative;
+      .range{
+        width: 100%;
+        top: 50%;
+        transform: translateY(10vw);
+      }
+    }
+    .slide-section__text{
+      margin: auto 0;
+    }
+    .slide-section__text-head{
+      max-width: 13vw;
+      margin-top: -4vw;
+      h1{
+        line-height: 1.16;
+      }
+    }
+    .slide-section__text-desc{
+      max-width: 20vw;
+    }
+  }
+  .blender-page__unlimited{
+    .slide-section__text{
+      padding-top: clamp(120px, 6vw, 6vw);
+    }
   }
 }

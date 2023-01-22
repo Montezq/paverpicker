@@ -63,3 +63,53 @@ textarea{
     }
   }
 }
+.range__input{
+  width: 100%;
+  height: 20px;
+  background-color: #59BFAE;
+  border-radius: 20px;
+  flex: 0 0 1;
+  margin: 0 40px;
+  @include desktopminlg{
+    margin: 0 30px;
+    height: 16px;
+  }
+  input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: auto;
+    box-shadow: 0 0 transparent;
+    width: 100%;
+    height: 100%;
+    -webkit-appearance: none;
+    opacity: 0;
+    z-index: 2;
+    cursor: e-resize;
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 60px;
+      width: 60px;
+    }
+  }
+  .range__track{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0 0 20px #000;
+    @include desktopminlg{
+      width: 45px;
+      height: 45px;
+    }
+  }
+}
+.range__text{
+  strong{
+    font-size: 3vw;
+  }
+}
