@@ -8,13 +8,13 @@
               <p>What we do</p>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/">Photography</NuxtLink>
+              <NuxtLink to="/photography/">Photography</NuxtLink>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/">Visualisation</NuxtLink>
+              <NuxtLink to="/visualisation/">Visualisation</NuxtLink>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/">Software</NuxtLink>
+              <NuxtLink to="/software/">Software</NuxtLink>
             </li>
           </ul>
         </div>
@@ -24,10 +24,10 @@
               <p>Software Modules</p>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/">API Module</NuxtLink>
+              <NuxtLink to="/software/api-module/">API Module</NuxtLink>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/">Blender Module</NuxtLink>
+              <NuxtLink to="/software/blender-module/">Blender Module</NuxtLink>
             </li>
           </ul>
         </div>
