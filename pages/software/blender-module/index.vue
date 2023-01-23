@@ -33,9 +33,9 @@
             </div>
           </div>
         </section>
-        <div class="blender-page__create position_relative">
+        <section class="blender-page__create position_relative">
           <div class="slide-section d_flex ">
-            <div class="slide-section__decor">
+            <div class="slide-section__decor position_absolute">
               <div class="range d_flex align-items_center position_absolute">
                 <div class="range__text">
                   <strong>50%</strong>
@@ -60,9 +60,19 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="blender-page__unlimited position_relative">
+        </section>
+        <section class="blender-page__unlimited position_relative">
           <div class="slide-section">
+            <div class="slide-section__decor d_flex justify-content_center position_absolute">
+              <div class="slider-section__decor-brick position_relative" v-for="i in 3" v-bind:key="i">
+                <div class="slider-section__decor-brick-icon"></div>
+                <picture>
+                  <source type="image/png" :srcset="`/images/decor/blender/brick-option-${i}.png`"/>
+                  <source type="image/webp" :srcset="`/images/decor/blender/brick-option-${i}.webp`"/>
+                  <img :src="`/images/decor/blender/brick-option-${i}.png`" alt="Brick option" width="430" height="130"/>
+                </picture>
+              </div>
+            </div>
             <div class="slide-section__text">
               <div class="slide-section__text-head text_center">
                 <h2>Unlimited Possibilities</h2>
@@ -74,16 +84,39 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="blender-page__try position_relative">
-          <div class="slide-section">
-            <div class="slide-section__text">
-              <div class="slide-section__text-head text_center">
-                <h2>Unlimited Possibilities</h2>
+        </section>
+        <section class="blender-page__try position_relative">
+          <div>
+            <div class="slide-section">
+              <div class="slide-section__text">
+                <div class="slide-section__text-head text_center">
+                  <h2>Try it for yourself</h2>
+                </div>
+                <div class="slide-section__text-desc">
+                  <p class="fs_32 text_center">
+                    Create unique blends, any pattern, any mortar colour.
+                  </p>
+                </div>
+              </div>
+              <div class="slide-section__btns position_relative d_flex justify-content_center">
+                <a href="#" class="text_uppercase btn btn_primary text_uppercase">Try Brick Blender</a>
+                <a href="#" class="text_uppercase btn btn_primary text_uppercase">Try Paving Blender</a>
+              </div>
+              <div class="slide-section__decor d_flex justify-content_center">
+                <div class="slide-section__decor-video position_relative">
+                  <video class="section__video position_absolute" autoplay="autoplay" 
+                    muted="muted" loop playsinline="playsinline" 
+                    :src="`/video/api-vid-1.mp4`" id="apiVideo">
+                  </video>
+                </div>
               </div>
             </div>
+            <div class="scrollable-section">
+              <Cta />
+              <Footer />
+            </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   </div>
