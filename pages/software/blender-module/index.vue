@@ -302,21 +302,13 @@
       wrapper.addEventListener('wheel', (e) => {
         if (ticking.value === false && scrlTicking.value) {
           slide(2000, e.deltaY)
-          if(currentSlide.value===1){
-            vid.play()
-            setTimeout(() => {
-              vid.pause();
-              console.log(vid)
-            }, 1400);
-          }
           if(currentSlide.value===4){
             setTimeout(() => {
               vid.play()
             }, 2001);
           }
-          if(currentSlide.value===3){
+          else
             vid.pause()
-          }
         }
       });
       touch();
