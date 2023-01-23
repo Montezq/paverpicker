@@ -9,15 +9,29 @@
         <section class="blender-page__hero position_relative">
           <div class="slide-section position_relative d_flex align-items_center flex_column">
             <SoftwareNav />
-            <div class="slide-section__text">
-              <div class="slide-section__text-head">
+            <div class="slide-section__text position_relative">
+              <div class="slide-section__text-head text_center">
                 <h1>Introducing Paver Picker Blender</h1>
               </div>
             </div>
             <div class="blender__bricks d_flex flex_wrap position_absolute">
               <div class="blender__brick-item position_relative" v-for="(item, idx) in bricks" v-bind:key="idx">
-                <Img :img="item.href" :resp="false" :alt="'Brick'"/>
-                <Img v-if="item.nested" :resp="false" :img="item.nested" :alt="'Brick'" class="position_absolute"/>
+                <div class="picture">
+                  <picture>
+                    <source type="image/png" :srcset="'/images/decor/'+item.href+'.png , /images/decor/'+item.href+'@x2.png 2x'"/>
+                    <source type="image/webp" :srcset="'/images/decor/'+item.href+'.webp , /images/decor/'+item.href+'@x2.webp 2x'"/>
+                    <img :src="'/images/decor/'+item.href+'@x2.png'" alt="Bricks" width="500" height="500"/>
+                  </picture>
+                </div>
+                <div class="picture position_absolute" v-if="item.nested">
+                  <picture>
+                    <source type="image/png" :srcset="'/images/decor/'+item.nested+'.png , /images/decor/'+item.nested+'@x2.png 2x'"/>
+                    <source type="image/webp" :srcset="'/images/decor/'+item.nested+'.webp , /images/decor/'+item.nested+'@x2.webp 2x'"/>
+                    <img :src="'/images/decor/'+item.nested+'@x2.png'" alt="Bricks" width="500" height="500"/>
+                  </picture>
+                </div>
+                <!-- <Img :img="item.href" :resp="false" :alt="'Brick'"/> -->
+                <!-- <Img v-if="item.nested" :resp="false" :img="item.nested" :alt="'Brick'" class="position_absolute"/> -->
               </div>
               <Img class="blender__bricks-decor position_absolute" :img="'blender/bricks-white/brick-0'" :resp="false" :alt="'Brick'"/>
               <Img class="blender__bricks-decor position_absolute" :img="'blender/bricks-white/brick-2'" :resp="false" :alt="'Brick'"/>
@@ -104,8 +118,8 @@
               </div>
               <div class="slide-section__decor d_flex justify-content_center">
                 <div class="slide-section__decor-video position_relative">
-                  <video class="section__video position_absolute" autoplay="autoplay" 
-                    muted="muted" loop playsinline="playsinline" 
+                  <video class="section__video position_absolute" 
+                    muted="muted" loop  playsinline="playsinline" autoplay
                     :src="`/video/api-vid-1.mp4`" id="apiVideo">
                   </video>
                 </div>
@@ -278,6 +292,7 @@
     setTimeout(() => {
       const wrapper = document.querySelector('.animation-steps');
       const scrl = document.querySelector('.blender-page__try');
+      const vid = document.querySelector('.section__video');
       scrl.addEventListener('scroll', (e) =>{
         if(scrl.scrollTop>1)
           scrlTicking.value=false
@@ -287,6 +302,21 @@
       wrapper.addEventListener('wheel', (e) => {
         if (ticking.value === false && scrlTicking.value) {
           slide(2000, e.deltaY)
+          if(currentSlide.value===1){
+            vid.play()
+            setTimeout(() => {
+              vid.pause();
+              console.log(vid)
+            }, 1400);
+          }
+          if(currentSlide.value===4){
+            setTimeout(() => {
+              vid.play()
+            }, 2001);
+          }
+          if(currentSlide.value===3){
+            vid.pause()
+          }
         }
       });
       touch();

@@ -74,6 +74,10 @@ textarea{
     margin: 0 30px;
     height: 16px;
   }
+  @include tabletsPortrait{
+   margin: 0 12px;   
+   height: 10px;
+  }
   input{
     position: absolute;
     top: 0;
@@ -90,6 +94,10 @@ textarea{
       -webkit-appearance: none;
       height: 60px;
       width: 60px;
+      @include tabletPortrait{
+        width: 40px;
+        height: 40px;
+      }
     }
   }
   .range__track{
@@ -106,10 +114,14 @@ textarea{
       width: 45px;
       height: 45px;
     }
+    @include tabletPortrait{
+      width: 24px;
+      height: 24px;
+    }
   }
 }
 .range__text{
   strong{
-    font-size: 3vw;
+    font-size: clamp(15px, 3vw, 3vw);
   }
 }

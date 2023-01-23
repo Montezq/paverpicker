@@ -20,6 +20,8 @@
 
 *{
   box-sizing: border-box;
+  touch-action: none;
+  overscroll-behavior-y: none;
 }
 ::-webkit-scrollbar {
   width: 6px;
@@ -34,7 +36,7 @@
 html, body{
   height: 100%;
   margin: 0;
-  transform: translate3d(0)
+  transform: translate3d(0);
 }
 body{
   @include segoe;
@@ -659,4 +661,13 @@ img{
       width: 100%;
     }
   }
+}
+
+.scenes,
+.main,
+.main *,
+section.oh,
+section.oh *{
+  touch-action: auto !important;
+  overscroll-behavior-y: auto !important;
 }

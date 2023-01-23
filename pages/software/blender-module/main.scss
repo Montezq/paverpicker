@@ -1,6 +1,11 @@
 $hw: calc((12.45vw * 4) / 2);
+$hw2: calc((20.45vw * 4) / 2);
 $step1: calc(100vh - 60%);
+$step1md: calc(100vh - 15vw);
+$step1s: calc(100vh - 2vw);
 $step2: calc(200vh - 25%);
+$step2md: calc(200vh - 15%);
+$step2s: calc(200vh - 0vw);
 $step3: calc(300vh - 55%);
 $speed: 2s;
 $speed2: 1.2s;
@@ -15,6 +20,18 @@ $speed2: 1.2s;
       transform: translate3d(0,-100vh,0);
       .blender__bricks{
         transform: translate3d(8vw, $step1, 0);
+        @include tabletPortrait{
+          transform: translate3d(8vw, $step1md, 0);
+        }
+        @include tabletsPortrait{
+          transform: translate3d(8vw, $step1s, 0);
+        }
+        @include special{
+          transform: translate3d(8vw, calc(100vh - 8vw), 0);
+        }
+        @include phoneLandscape{
+          transform: translate3d(8vw, calc(100vh - 85%), 0);
+        }
         .blender__brick-item{
           transform: translate3d(0,0,0) !important;
         }
@@ -58,6 +75,12 @@ $speed2: 1.2s;
       transform: translate3d(0,-200vh,0);
       .blender__bricks{
         transform: translate3d(45%, $step2, 0);
+        @include tabletPortrait{
+          transform: translate3d(8vw, $step2md, 0);
+        }
+        @include tabletsPortrait{
+          transform: translate3d(8vw, $step2s, 0);
+        }
         .blender__brick-item{
           transform: translate3d(0,0,0) !important;
         }
@@ -105,6 +128,12 @@ $speed2: 1.2s;
       transform: translate3d(0,-200vh,0);
       .blender__bricks{
         transform: translate3d(45%, $step2, 0);
+        @include tabletPortrait{
+          transform: translate3d(8vw, $step2md, 0);
+        }
+        @include tabletsPortrait{
+          transform: translate3d(8vw, $step2s, 0);
+        }
         .blender__brick-item{
           transform: translate3d(0,0,0) !important;
           .picture{
@@ -154,6 +183,12 @@ $speed2: 1.2s;
         .slide-section__decor{
           transform: translate(-50%, 40%) scale(.5);
           opacity: 0;
+          @include tabletPortrait{
+            transform: translate(-50%, 10vw) scale(.5);
+          }
+          @include tabletsPortrait{
+            transform: translate(-50%, -17%) scale(.5);
+          }
         }
       }
     }
@@ -161,6 +196,9 @@ $speed2: 1.2s;
       transform: translate3d(0,-300vh,0);
       .blender__bricks{
         transform: translate3d(35%, $step3, 0) scale(0);
+        @include tabletPortrait{
+          transform: translate3d(8vw, $step3, 0) scale(0);
+        }
         .blender__brick-item{
           transform: translate3d(0,0,0) !important;
           .picture{
@@ -234,6 +272,9 @@ $speed2: 1.2s;
       top: 0;
       left: 0;
       background: radial-gradient(closest-side, rgba(13,13,13,0) 0%, rgba(13,13,13,1) 98%);
+      @include tabletPortrait{
+        background: radial-gradient(closest-side, rgba(13,13,13,0) 0%, rgba(13,13,13,1) 90%);
+      }
     }
     &:before{
       content: "";
@@ -294,6 +335,20 @@ $speed2: 1.2s;
   .blender-page__hero{
     .slide-section__text{
       padding-top: 200px;
+      z-index: 2;
+      @include tabletPortrait{
+        max-width: 440px;
+        padding-top: clamp(240px, 21vh, 300px);
+      }
+      @include laptops{
+        padding-top: clamp(180px, 18vh, 200px);
+      }
+      @include tabletsPortrait{
+        padding-top: 180px;
+      }
+      @include phoneLandscape{
+        padding-top: 140px;
+      }
     }
   }
   .blender__bricks{
@@ -305,11 +360,24 @@ $speed2: 1.2s;
     left: 0;
     transform: translate3d($hw, -34%, 0);
     transition: $speed ease-in-out;
+    @include tabletPortrait{
+      max-width: calc(20.45vw * 4);
+      margin-top: 1vw;
+    }
+    @include tabletsPortrait{
+      transform: translate3d($hw, -20%, 0);
+    }
     .blender__brick-item{
       margin-top: -.68vw;
       margin-left: -.68vw;
       width: 12.45vw;
       transition: $speed ease-in-out;
+      @include tabletPortrait{
+        width: 20.45vw;
+        margin-top: -1vw;
+        margin-left: -1vw;
+      }
+      
       &:nth-child(5),
       &:nth-child(13),
       &:nth-child(21){
@@ -317,75 +385,135 @@ $speed2: 1.2s;
       }
       &:first-child{
         transform: translateX(37vw);
+        @include tabletPortrait{
+          transform: translateX(54vw);
+        }
       }
       &:nth-child(2){
         transform: translateX(39.4vw);
+        @include tabletPortrait{
+          transform: translateX(56vw);
+        }
       }
       &:nth-child(3){
         transform: translateX(-43.6vw);
+        @include tabletPortrait{
+          transform: translateX(-78vw);
+        }
       }
       &:nth-child(4){
         transform: translateX(27.6vw);
       }
       &:nth-child(5){
         transform: translateX(-21vw);
+        @include tabletPortrait{
+          transform: translateX(-52vw);
+        }
       }
       &:nth-child(6){
         transform: translateX(36.3vw);
+        @include tabletPortrait{
+          transform: translateX(49vw);
+        }
       }
       &:nth-child(7){
         transform: translateX(-23.5vw);
+        @include tabletPortrait{
+          transform: translateX(-51.5vw);
+        }
       }
       &:nth-child(8){
         transform: translateX(27.8vw);
       }
       &:nth-child(9){
         transform: translateX(21.2vw);
+        @include tabletPortrait{
+          transform: translateX(29.5vw);
+        }
       }
       &:nth-child(10){
         transform: translateX(-44.6vw);
+        @include tabletPortrait{
+          transform: translateX(-71.5vw);
+        }
       }
       &:nth-child(11){
         transform: translateX(27.6vw);
+        @include tabletPortrait{
+          transform: translateX(34vw);
+        }
       }
       &:nth-child(12){
         transform: translateX(-48.6vw);
+        @include tabletPortrait{
+          transform: translateX(-91.5vw);
+        }
       }
       &:nth-child(13){
         transform: translateX(-32.8vw);
+        @include tabletPortrait{
+          transform: translateX(-46.5vw);
+        }
       }
       &:nth-child(14){
         transform: translateX(31.7vw);
+        @include tabletPortrait{
+          transform: translateX(40.7vw);
+        }
       }
       &:nth-child(15){
         transform: translateX(-44.6vw);
+        @include tabletPortrait{
+          transform: translateX(-84.5vw);
+        }
       }
       &:nth-child(16){
         transform: translateX(-26.4vw);
+        @include tabletPortrait{
+          transform: translateX(-56.5vw);
+        }
       }
       &:nth-child(17){
         transform: translateX(-32.8vw);
+        @include tabletPortrait{
+          transform: translateX(-49.5vw);
+        }
       }
       &:nth-child(18){
         transform: translateX(-29.7vw);
+        @include tabletPortrait{
+          transform: translateX(-59.7vw);
+        }
       }
       &:nth-child(19){
         transform: translateX(6.5vw);
+        @include tabletPortrait{
+          transform: translateX(2.5vw);
+        }
       }
       &:nth-child(20){
         transform: translateX(15.8vw);
       }
       &:nth-child(21){
         transform: translateX(-21vw);
+        @include tabletPortrait{
+          transform: translateX(-49vw);
+        }
       }
       &:nth-child(22){
         transform: translateX(38.4vw);
+        @include tabletPortrait{
+          transform: translateX(47.5vw);
+        }
       }
       &:nth-child(23){
         transform: translateX(39.4vw);
       }
       &:nth-child(24){
         transform: translateX(-41.5vw);
+        @include tabletPortrait{
+          transform: translateX(-85.5vw);
+        }
       }
       .picture{
         width: 100%;
@@ -407,6 +535,9 @@ $speed2: 1.2s;
       left: 0;
       margin-top: -.68vw;
       margin-left: -.68vw;
+      @include tabletPortrait{
+        width: 18.45vw;
+      }
       &:nth-child(25){
         transform: translateX(-32.8vw);
       }
@@ -430,6 +561,12 @@ $speed2: 1.2s;
         transform: translateX(-38.8vw);
         top: 19.8vw;
       }
+      &:nth-child(n+25){
+        @include tabletPortrait{
+          display: none;
+        }
+      }
+      .picture,
       img{
         width: 100%;
       }
@@ -441,45 +578,113 @@ $speed2: 1.2s;
   .blender-page__create{
     .slide-section{
       padding: 80px 9vw 0;
+      @include tabletPortrait{
+        flex-direction: column;
+      }
+      @include laptops{
+        padding: 58px 8vw 0;
+      }
     }
     .slide-section__decor{
       width: 52.7vw;
       flex: 0 0 52.7vw;
       margin-right: 100px;
       position: relative;
+      @include tabletPortrait{
+        margin-right: 0;
+        width: 100%;
+        flex: 1;
+      }
       .range{
         width: 100%;
         top: 50%;
         transform: translateY(10vw);
+        @include tabletPortrait{
+          transform: translateY(14vw);
+        }
+        @include special{
+          transform: translateY(18vw);
+        }
+        @include phoneLandscape{
+          transform: translateY(4vw);
+        }
       }
     }
     .slide-section__text{
       margin: auto 0;
+      @include tabletPortrait{
+        margin: 3vh auto 0;
+        order: -1;
+      }
+      @include tabletsPortrait{
+        margin-top: 6vh;
+      }
+      @include minphone2{
+        margin-top: 3vh;
+      }
+      @include special{
+        margin-top: 3vh;
+      }
+      @include phoneLandscape{
+        margin-top: 60px;
+      }
     }
     .slide-section__text-head{
       max-width: 13vw;
       margin-top: -4vw;
+      @include tabletPortrait{
+        max-width: 330px;
+        text-align: center;
+        margin: 0 auto 10px auto;
+      }
       h1{
         line-height: 1.16;
       }
     }
     .slide-section__text-desc{
       max-width: 20vw;
+      @include tabletPortrait{
+        max-width: 440px;
+        text-align: center;
+      }
     }
   }
   .blender-page__unlimited{
     .slide-section__text{
       padding-top: clamp(120px, 7.5vw, 7.5vw);
+      @include tabletsPortrait{
+        padding-top: clamp(70px, 12vh, 12vh);
+      }
+      @include phoneLandscape{
+        padding-top: 75px;
+      }
     }
     .slide-section__decor{
       left: 50%;
       top: 50%;
       transform: translate(-50%, 40%);
       transition: $speed ease-in-out;
+      @include tabletPortrait{
+        transform: translate(-50%, 10vw);
+      }
+      @include tabletsPortrait{
+        flex-direction: column;
+        transform: translate(-50%, -17%);
+      }
+      @include phoneLandscape{
+        transform: translate(-50%, 10%);
+      }
     }
     .slider-section__decor-brick{
       width: 22.4vw;
       margin: 0 1.1vw;
+      @include tabletPortrait{
+        width: 26vw;
+      }
+      @include tabletsPortrait{
+        width: 44vw;
+        margin-top: 20px;
+      }
       &:after,
       &:before{
         content: "";
@@ -490,6 +695,10 @@ $speed2: 1.2s;
         position: absolute;
         @include centered;
         box-shadow: 0 0 20px #000;
+        @include tabletsPortrait{
+          width: 7vw;
+          height: .93vw;
+        }
       }
       &:before{
         transform: translate(-50%, -50%) rotate(90deg);
@@ -504,10 +713,32 @@ $speed2: 1.2s;
         position: absolute;
         @include centered;
         z-index: 2;
+        @include tabletsPortrait{
+          width: 7vw;
+          height: .93vw;
+        }
       }
       img{
         filter: drop-shadow(40px 40px 40px rgba(#000000, .9));
         width: 100%;
+      }
+    }
+    .slide-section__text-head{
+      @include tabletPortrait{
+        max-width: 320px;
+        margin: 3vh auto 10px;
+      }
+      @include tabletsPortrait{
+        margin: 0 auto 10px;
+      }
+    }
+    .slide-section__text-desc{
+      @include tabletPortrait{
+        max-width: 480px;
+        margin: 0 auto;
+      }
+      @include tabletsPortrait{
+        max-width: 360px;
       }
     }
   }
@@ -522,31 +753,61 @@ $speed2: 1.2s;
     }
     .slide-section__text{
       padding-top: clamp(120px, 7vw, 7vw);
+      @include tabletsPortrait{
+        padding-top: clamp(70px, 12vh, 12vh);
+      }
+      @include phoneLandscape{
+        padding-top: 75px;
+      }
     }
     .slide-section__btns{
       margin-top: 30px;
       margin-bottom: 20px;
       z-index: 2;
+      @include tabletPortrait{
+        margin-bottom: 10vh
+      }
+      @include tabletsPortrait{
+        margin-bottom: 5vh;
+        flex-direction: column;
+        margin-top: 20px;
+      }
       a{
         @include segoe(semibold);
         font-size: 1.25vw;
         padding: 1.2vw 1.1vw;
         border-radius: 0;
         box-shadow: 0 0 10px #000;
+        @include tabletsPortrait{
+          max-width: clamp(200px, 65vw, 65vw);
+          margin: 0 auto;
+          width: 100%;
+          font-size: clamp(14px, 4vw, 17px);
+          padding: 10px 12px 12px;
+        }
         &:first-child{
+          @include tabletsPortrait{
+            margin-right: auto;
+            margin-bottom: 10px;
+          }
           margin-right: 1.1vw;
         }
       }
     }
     .slide-section__decor-video{
-      width: clamp(300px, 50vw, 95vh);
+      width: clamp(300px, 960px, 95vh);
       border: 10px solid #000000;
       border-radius: 10px;
       box-shadow: 0 0 80px rgba(#FFFFFF, 4);
       padding-bottom: 27%;
+      @include tabletPortrait{
+        width: clamp(300px, 95vw, 100vh);
+        padding-bottom: 26%;
+      }
       @supports (aspect-ratio: 16/9) {
         aspect-ratio: 16/9;
         padding-bottom: 0;
+        height: 100%;
       }
       video{
         width: 100%;
@@ -554,11 +815,15 @@ $speed2: 1.2s;
         top: 0;
         left: 0;
         object-fit: cover;
+        background-color: $black;
       }
     }
   }
   .scrollable-section{
     margin-top: 100px;
+    @include tabletPortrait{
+      margin-top: 0;
+    }
   }
   .scrl-down{
     z-index: 3;
