@@ -13,7 +13,7 @@ $step1: calc(-100vh - 30%);
         top: 50%;
       }
       .slide-section__decor-box-wall{
-        transform: translate(40.4%, 31%);
+        transform: translate(40.4%, 33%);
         opacity: 1;
       }
       .slide-section__decor-box-aside{
@@ -63,10 +63,15 @@ $step1: calc(-100vh - 30%);
         }
       }
       .slide-section__decor-box-wall{
-        transform: translate(40.4%, 31%);
+        width: 61%;
+        transform: translate(20%, 27%);
         opacity: 1;
+        height: 72%;
+        transition: 1.4s ease;
       }
       .slide-section__decor-box-aside{
+        transform: translate3d(398%, 19%, 0);
+        transition: 1.4s ease;
         .slide-section__decor-box-aside-controls{
           transform: translate3d(-7%, 0, 0);
           opacity: 1;
@@ -252,12 +257,13 @@ $step1: calc(-100vh - 30%);
     top: 0;
     left: 0;
     width: 69%;
-    padding-bottom: 34.6%;
+    height: 59%;
     overflow: hidden;
     transition: $speed ease-in-out, opacity 1.3s ease-in-out ;
     transform: translate(-128.6%, 17.9%);
     opacity: 0;
     z-index: 2;
+    will-change: height;
     .picture{
       position: absolute;
       width: 100%;
