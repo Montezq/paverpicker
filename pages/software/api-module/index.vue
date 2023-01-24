@@ -23,7 +23,7 @@
               <div class="d_flex flex_column align-items_center h_100 position_relative">
                 <div class="slide-section__text-wrapper">
                   <div class="slide-section__text position_relative">
-                    <div class="slide-section__text-inside slide-section__text_1 position_absolute">
+                    <div class="slide-section__text-inside slide-section__text_1 position_relative">
                       <div class="slide-section__text-head text_center">
                         <h2>Any Layout</h2>
                       </div>
@@ -58,9 +58,24 @@
                     </div>
                   </div>
                 </div>
-                <div class="slide-section__decor position_relative">
+                <div class="slide-section__decor position_absolute d_flex">
                   <div class="slide-section__decor-box">
-                    <Img :img="'api-hero'" :alt="'Rig'" class="api__bg"/>
+                    <Img :img="'api-hero'" :alt="'Hero'" class="api__bg"/>
+                  </div>
+                  <div class="slide-section__decor-box slide-section__decor-box-steps position_relative">
+                    <Img :resp="false" :img="'api-steps'" :alt="'Hero'"/>
+                    <div class="slide-section__decor-box-wall position_absolute">
+                      <Img :resp="false" :img="'api-bricks'" :alt="'Brick'"/>
+                    </div>
+                    <div class="slide-section__decor-box-aside position_absolute">
+                      <Img :resp="false" :img="'engels_fogo'" :alt="'Brick'"/>
+                      <div class="slide-section__decor-box-aside-controls">
+                        <Img :resp="false" :img="'controls_style-1'" :alt="'Brick'"/>
+                      </div>
+                    </div>
+                    <Img :resp="false" class="slide-section__decor-box-variants-item position_absolute"
+                    v-for="i in 7" :key="i" :img="'api-bg-'+i" :alt="'Variants'"/>
+                    <Img :resp="false" :img="'analitics'" :alt="'Dashboard image'" class="slide-section__decor-box-analitics position_absolute"/>
                   </div>
                 </div>
               </div>
@@ -86,11 +101,11 @@
       scrlTicking = ref(true);
 
   function nextPage(){
-    slide(3000, 100)
+    slide(2000, 100)
   }
-  function slide(speed=3000, y=null, direction=null) {
+  function slide(speed=2000, y=null, direction=null) {
     const scrl = document.querySelector('.api-page__steps');
-    const lngth = 3;
+    const lngth = 4;
     if((y>0 || direction==='up') && currentSlide.value < lngth){
       currentSlide.value+=1
       pastSlide.value = currentSlide.value-1
@@ -99,10 +114,10 @@
       pastSlide.value = currentSlide.value+1
     }
     ticking.value = true;
-    if(currentSlide.value!==3)
+    if(currentSlide.value!==4)
       scrl.classList.remove('oh')
     setTimeout(() => {
-      if(currentSlide.value===3)
+      if(currentSlide.value===4)
         scrl.classList.add('oh')
       ticking.value = false;
     }, speed);
@@ -129,9 +144,9 @@
       if(Math.abs( xDiff )+Math.abs( yDiff )>1){
         if( Math.abs( yDiff  ) > Math.abs( xDiff ) ) {
           if( yDiff > 0 && ticking.value === false && scrlTicking.value) 
-            slide(3000,null,'up')
+            slide(2000,null,'up')
           if( yDiff < 0 && ticking.value === false && scrlTicking.value)  
-            slide(3000,null,'down')                                                              
+            slide(2000,null,'down')                                                              
         } 
         xDown = null;
         yDown = null;
@@ -150,10 +165,11 @@
       })
       wrapper.addEventListener('wheel', (e) => {
         if (ticking.value === false && scrlTicking.value) {
-          slide(3000, e.deltaY)
+          slide(2000, e.deltaY)
         }
       });
       touch();
+      slide(2000, 100)
     }, 610);
   })
 </script>
