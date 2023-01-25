@@ -73,8 +73,10 @@
                         <Img :resp="false" :img="'controls_style-1'" :alt="'Brick'"/>
                       </div>
                     </div>
-                    <Img :resp="false" class="slide-section__decor-box-variants-item position_absolute"
-                    v-for="i in 7" :key="i" :img="'api-bg-'+i" :alt="'Variants'"/>
+                    <div class="slide-section__decor-box-variants position_absolute d_flex">
+                      <Img :resp="false" class="slide-section__decor-box-variants-item position_absolute"
+                      v-for="i in 7" :key="i" :img="'api-bg-'+i" :alt="'Variants'"/>
+                    </div>
                     <Img :resp="false" :img="'analitics'" :alt="'Dashboard image'" class="slide-section__decor-box-analitics position_absolute"/>
                   </div>
                 </div>

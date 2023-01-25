@@ -1,5 +1,6 @@
-$speed: 2s;
+$speed: 2.4s;
 $speed2: 1.2s;
+$time: ease 2s;
 $step1: calc(-100vh - 30%);
 .api-page{
   height: 100%;
@@ -22,29 +23,9 @@ $step1: calc(-100vh - 30%);
           opacity: 1;
         }
       }
-      .slide-section__decor-box-variants-item{
+      .slide-section__decor-box-variants{
         opacity: 1;
-        &:nth-child(4){
-          transform: translate(calc(1130% - 0px), -90%);
-        }
-        &:nth-child(5){
-          transform: translate(calc(1030% - 5px), -90%);
-        }
-        &:nth-child(6){
-          transform: translate(calc(930% - 10px), -90%);
-        }
-        &:nth-child(7){
-          transform: translate(calc(830% - 15px), -90%);
-        }
-        &:nth-child(8){
-          transform: translate(calc(730% - 20px), -90%);
-        }
-        &:nth-child(9){
-          transform: translate(calc(630% - 25px), -90%);
-        }
-        &:nth-child(10){
-          transform: translate(calc(530% - 30px), -90%);
-        }
+        transform: translate3d(-28%, -68%, 0);
       }
     }
     &_2{
@@ -63,42 +44,52 @@ $step1: calc(-100vh - 30%);
         }
       }
       .slide-section__decor-box-wall{
-        width: 61%;
-        transform: translate(20%, 27%);
+        transform: translate(18%, 26.8%);
         opacity: 1;
+        transition: $speed2;
         height: 72%;
-        transition: 1.4s ease;
+        transform-origin: top left;
+        transition: $speed2 $time;
+        .picture{
+          transition: $speed2 $time;
+          transform: translate3d(-12%,0,0);
+        }
       }
       .slide-section__decor-box-aside{
         transform: translate3d(398%, 19%, 0);
-        transition: 1.4s ease;
+        transition: $speed2 $time;
         .slide-section__decor-box-aside-controls{
           transform: translate3d(-7%, 0, 0);
           opacity: 1;
         }
       }
-      .slide-section__decor-box-variants-item{
+      .slide-section__decor-box-variants{
         opacity: 1;
+        transform: translate3d(-28%, -70%, 0);
+      }
+      .slide-section__decor-box-variants-item{
+        position: absolute;
+        transition: $speed2 $time;
+        &:nth-child(1){
+          transform: translate3d(-385%, -40%, 0);
+        }
+        &:nth-child(2){
+          transform: translate3d(-385%, -150%, 0);
+        }
+        &:nth-child(3){
+          transform: translate3d(-385%, -260%, 0);
+        }
         &:nth-child(4){
-          transform: translate(calc(1130% - 0px), -90%);
+          transform: translate3d(-385%, -370%, 0);
         }
         &:nth-child(5){
-          transform: translate(calc(1030% - 5px), -90%);
+          transform: translate3d(-385%, -480%, 0);
         }
         &:nth-child(6){
-          transform: translate(calc(930% - 10px), -90%);
+          transform: translate3d(-385%, -590%, 0);
         }
         &:nth-child(7){
-          transform: translate(calc(830% - 15px), -90%);
-        }
-        &:nth-child(8){
-          transform: translate(calc(730% - 20px), -90%);
-        }
-        &:nth-child(9){
-          transform: translate(calc(630% - 25px), -90%);
-        }
-        &:nth-child(10){
-          transform: translate(calc(530% - 30px), -90%);
+          transform: translate3d(-385%, -696%, 0);
         }
       }
     }
@@ -130,25 +121,25 @@ $step1: calc(-100vh - 30%);
       .slide-section__decor-box-variants-item{
         opacity: 1;
         &:nth-child(4){
-          transform: translate(calc(1130% - 0px), -90%);
+          transform: translate3d(calc(1130% - 0px), -80%, 0);
         }
         &:nth-child(5){
-          transform: translate(calc(1030% - 5px), -90%);
+          transform: translate3d(calc(1030% - 5px), -80%, 0);
         }
         &:nth-child(6){
-          transform: translate(calc(930% - 10px), -90%);
+          transform: translate3d(calc(930% - 10px), -80%, 0);
         }
         &:nth-child(7){
-          transform: translate(calc(830% - 15px), -90%);
+          transform: translate3d(calc(830% - 15px), -80%, 0);
         }
         &:nth-child(8){
-          transform: translate(calc(730% - 20px), -90%);
+          transform: translate3d(calc(730% - 20px), -80%, 0);
         }
         &:nth-child(9){
-          transform: translate(calc(630% - 25px), -90%);
+          transform: translate3d(calc(630% - 25px), -80%, 0);
         }
         &:nth-child(10){
-          transform: translate(calc(530% - 30px), -90%);
+          transform: translate3d(calc(530% - 30px), -80%, 0);
         }
       }
       .slide-section__text{
@@ -192,25 +183,25 @@ $step1: calc(-100vh - 30%);
       .slide-section__decor-box-variants-item{
         opacity: 1;
         &:nth-child(4){
-          transform: translate(calc(1130% - 0px), -90%);
+          transform: translate3d(calc(1130% - 0px), -80%, 0);
         }
         &:nth-child(5){
-          transform: translate(calc(1030% - 5px), -90%);
+          transform: translate3d(calc(1030% - 5px), -80%, 0);
         }
         &:nth-child(6){
-          transform: translate(calc(930% - 10px), -90%);
+          transform: translate3d(calc(930% - 10px), -80%, 0);
         }
         &:nth-child(7){
-          transform: translate(calc(830% - 15px), -90%);
+          transform: translate3d(calc(830% - 15px), -80%, 0);
         }
         &:nth-child(8){
-          transform: translate(calc(730% - 20px), -90%);
+          transform: translate3d(calc(730% - 20px), -80%, 0);
         }
         &:nth-child(9){
-          transform: translate(calc(630% - 25px), -90%);
+          transform: translate3d(calc(630% - 25px), -80%, 0);
         }
         &:nth-child(10){
-          transform: translate(calc(530% - 30px), -90%);
+          transform: translate3d(calc(530% - 30px), -80%, 0);
         }
       }
       .slide-section__text{
@@ -257,17 +248,18 @@ $step1: calc(-100vh - 30%);
     top: 0;
     left: 0;
     width: 69%;
-    height: 59%;
+    height: 61.4%;
     overflow: hidden;
-    transition: $speed ease-in-out, opacity 1.3s ease-in-out ;
+    transition: $speed ease-in-out, opacity $speed2 ;
     transform: translate(-128.6%, 17.9%);
     opacity: 0;
     z-index: 2;
-    will-change: height;
     .picture{
       position: absolute;
       width: 100%;
-      height: calc(100% + 10%);
+      height: 110%;
+      transition: $speed;
+      transform-origin: right top;
     }
   }
   .slide-section__decor-box-aside{
@@ -275,7 +267,7 @@ $step1: calc(-100vh - 30%);
     left: 0;
     height: 100%;
     width: 19%;
-    transition: $speed ease-in-out, opacity 1.3s ease-in-out ;
+    transition: $speed ease-in-out, opacity $speed2 ;
     transform: translate(18%, 20%);
     .picture{
       width: 100%;
@@ -284,43 +276,57 @@ $step1: calc(-100vh - 30%);
       width: calc(100% + 30%);
       transform: translate(-474%, 0);
       opacity: 0;
-      transition: $speed ease-in-out, opacity 1.3s ease-in-out ;
+      transition: $speed ease-in-out, opacity $speed2 ;
     }
   }
   .slide-section__decor-box-variants{
-    bottom: 0;
-    left: 0;
     flex-direction: row-reverse;
-    transform: translate(13%, -80%);
+    width: 60%;
+    bottom: 0;
+    left: 50%;
+    opacity: 0;
+    transform: translate3d(-205%, -30%,0);
+    transition: $speed ease-in-out, opacity 1.6s ease-in-out ;
+    height: 10%;
+    z-index: 3;
   }
   .slide-section__decor-box-variants-item{
-    width: 7.4%;
-    border-radius: 5px;
-    overflow: hidden;
+    width: 13%;
     bottom: 0;
     left: 0;
-    opacity: 0;
-    transition: $speed ease-in-out, opacity 1.3s ease-in-out ;
+    transform: translate3d(0,0,0);
+    transition: $speed;
+    border-radius: 2px;
+    overflow: hidden;
+    transform: perspective(1px) translateZ(0);
+    backface-visibility: hidden;
+    will-change: transform;
+    &:nth-child(1){
+      transform: translate3d(648%, 0%, 0);
+    }
+    &:nth-child(2){
+      transform: translate3d(540%, 0%, 0);
+    }
+    &:nth-child(3){
+      transform: translate3d(432%, 0%, 0);
+    }
     &:nth-child(4){
-      transform: translate(calc(-420% - 0px), -30%);
+      transform: translate3d(324%, 0%, 0);
     }
     &:nth-child(5){
-      transform: translate(calc(-520% - 3px), -30%);
+      transform: translate3d(216%, 0%, 0);
     }
     &:nth-child(6){
-      transform: translate(calc(-620% - 7px), -30%);
+      transform: translate3d(108%, 0%, 0);
     }
     &:nth-child(7){
-      transform: translate(calc(-720% - 11px), -30%);
+      transform: translate3d(0%, 0%, 0);
     }
-    &:nth-child(8){
-      transform: translate(calc(-820% - 15px), -30%);
-    }
-    &:nth-child(9){
-      transform: translate(calc(-920% - 20px), -30%);
-    }
-    &:nth-child(10){
-      transform: translate(calc(-1020% - 24px), -30%);
+    img,
+    picture{
+      transform: perspective(1px) translateZ(0);
+      backface-visibility: hidden;
+      will-change: transform;
     }
   }
   .slide-section__text-wrapper{

@@ -48,7 +48,7 @@
                         </p>
                       </div>
                       <div class="slider-section__text-cta text_center">
-                        <NuxtLink to="/" >
+                        <NuxtLink to="blender-module/" >
                           <p class="fs_32 fw_regular">
                             Learn about the blender module
                           </p>
@@ -66,7 +66,7 @@
                         </p>
                       </div>
                       <div class="slider-section__text-cta text_center">
-                        <NuxtLink to="/" >
+                        <NuxtLink to="visualisation/" >
                           <p class="fs_32 fw_regular">
                             Learn more about visualisation
                           </p>
