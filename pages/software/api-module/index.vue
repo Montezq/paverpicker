@@ -7,7 +7,7 @@
           <div class="slide-section position_relative d_flex align-items_center flex_column">
             <SoftwareNav />
             <div class="slide-section__text">
-              <div class="slide-section__text-head">
+              <div class="slide-section__text-head text_center">
                 <h1>API Website Integration</h1>
               </div>
             </div>
@@ -111,14 +111,13 @@
     const lngth = 6;
     if((y>0 || direction==='up') && currentSlide.value < lngth){
       currentSlide.value+=1
-      console.log(currentSlide.value)
       if(currentSlide.value === 2 || currentSlide.value === 4){
         setTimeout(() => {
           currentSlide.value+=1
         }, 2000);
       }
       pastSlide.value = currentSlide.value-1
-    }else if((y<0 || direction==='down') && currentSlide.value > 0){
+    }else if((y<0 || direction==='down') && currentSlide.value > 1){
       currentSlide.value-=1
       pastSlide.value = currentSlide.value+1
       if(currentSlide.value === 2 || currentSlide.value === 4){

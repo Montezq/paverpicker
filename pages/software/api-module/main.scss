@@ -10,9 +10,6 @@ $step1: calc(-100vh - 30%);
     transform: translate3d(0,0,0);
     &_1{
       transform: translate3d(0,0,0);
-      .slide-section__decor{
-        top: 50%;
-      }
       .slide-section__decor-box-wall{
         transform: translate(40.4%, 33%);
         opacity: 1;
@@ -38,9 +35,18 @@ $step1: calc(-100vh - 30%);
         &:first-child{
           opacity: 0;
           transform: translate3d(70%, 0, 0);
+          @include tabletPortrait{
+            transform: translate3d(0, 50%, 0);
+          }
         }
         &:nth-child(2){
           transform: translate3d(-55%, 5%, 0) scale(1.28);
+          @include tabletPortrait{
+            transform: translate3d(0, -80%, 0) scale(1.3);
+          }
+          @include phoneLandscape{
+            transform: translate3d(-64%, -16%, 0) scale(1.2);
+          }
         }
       }
       .slide-section__decor-box-wall{
@@ -68,9 +74,18 @@ $step1: calc(-100vh - 30%);
         &:first-child{
           opacity: 0;
           transform: translate3d(70%, 0, 0);
+          @include tabletPortrait{
+            transform: translate3d(0, 50%, 0);
+          }
         }
         &:nth-child(2){
           transform: translate3d(-55%, 5%, 0) scale(1.28);
+          @include tabletPortrait{
+            transform: translate3d(0, -80%, 0) scale(1.3);
+          }
+          @include phoneLandscape{
+            transform: translate3d(-64%, -16%, 0) scale(1.2);
+          }
         }
       }
       .slide-section__decor-box-wall{
@@ -134,9 +149,18 @@ $step1: calc(-100vh - 30%);
         &:first-child{
           opacity: 0;
           transform: translate3d(70%, 0, 0);
+          @include tabletPortrait{
+            transform: translate3d(0, 50%, 0);
+          }
         }
         &:nth-child(2){
           transform: translate3d(-55%, 5%, 0) scale(1.28);
+          @include tabletPortrait{
+            transform: translate3d(0, -80%, 0) scale(1.3);
+          }
+          @include phoneLandscape{
+            transform: translate3d(-64%, -16%, 0) scale(1.2);
+          }
         }
       }
       .slide-section__decor-box-wall{
@@ -212,9 +236,18 @@ $step1: calc(-100vh - 30%);
         &:first-child{
           opacity: 0;
           transform: translate3d(70%, 0, 0);
+          @include tabletPortrait{
+            transform: translate3d(0, 50%, 0);
+          }
         }
         &:nth-child(2){
           transform: translate3d(-55%, 5%, 0) scale(1.28);
+          @include tabletPortrait{
+            transform: translate3d(0, -80%, 0) scale(1.3);
+          }
+          @include phoneLandscape{
+            transform: translate3d(-64%, -16%, 0) scale(1.2);
+          }
         }
       }
       .slide-section__decor-box-wall{
@@ -225,6 +258,12 @@ $step1: calc(-100vh - 30%);
         transform-origin: top left;
         transition: $speed2 $time;
         border-radius: 40px;
+        @include tabletsPortrait{
+          border-radius: 20px;
+        }
+        @include phoneLandscape{
+          border-radius: 20px;
+        }
         .picture{
           overflow: hidden;
           transition: $speed2 $time;
@@ -233,6 +272,13 @@ $step1: calc(-100vh - 30%);
         img{
           border-radius: 40px;
           transition: $speed2 $time;
+          @include tabletsPortrait{
+            border-radius: 20px;
+          }
+          @include phoneLandscape{
+            border-radius: 20px;
+          }
+          
         }
       }
       .slide-section__decor-box-aside{
@@ -301,9 +347,18 @@ $step1: calc(-100vh - 30%);
         &:first-child{
           opacity: 0;
           transform: translate3d(70%, 0, 0);
+          @include tabletPortrait{
+            transform: translate3d(0, 50%, 0);
+          }
         }
         &:nth-child(2){
           transform: translate3d(-55%, 5%, 0) scale(1.28);
+          @include tabletPortrait{
+            transform: translate3d(0, -80%, 0) scale(1.3);
+          }
+          @include phoneLandscape{
+            transform: translate3d(-64%, -16%, 0) scale(1.2);
+          }
         }
       }
       .slide-section__decor-box-wall{
@@ -314,6 +369,12 @@ $step1: calc(-100vh - 30%);
         transform-origin: top left;
         transition: $speed2 $time;
         border-radius: 40px;
+        @include tabletsPortrait{
+          border-radius: 20px;
+        }
+        @include phoneLandscape{
+          border-radius: 20px;
+        }
         .picture{
           overflow: hidden;
           transition: $speed2 $time;
@@ -322,6 +383,12 @@ $step1: calc(-100vh - 30%);
         img{
           border-radius: 40px;
           transition: $speed2 $time;
+          @include tabletsPortrait{
+            border-radius: 20px;
+          }
+          @include phoneLandscape{
+            border-radius: 20px;
+          }
         }
       }
       .slide-section__decor-box-aside{
@@ -390,12 +457,37 @@ $step1: calc(-100vh - 30%);
     z-index: 2;
     .slide-section__text{
       margin-top: 220px;
+      @include tabletsPortrait{
+        margin-top: 130px;
+      }
+      @include phoneLandscape{
+        margin-top: 130px;
+      }
+    }
+    .scrl-down{
+      width: 100%;
+      @include tabletPortrait{
+        max-width: 280px;
+      }
     }
   }
   .slide-section__decor{
     top: 50%;
     transform: translate3d(0, $step1, 0);
     transition: $speed ease-in-out;
+    @include tabletPortrait{
+      flex-direction: column;
+      top: 43%;
+    }
+    @include tabletsPortrait{
+      top: 46%;
+    }
+    @include phoneLandscape{
+      top: 54%;
+    }
+    @include special{
+      top: 43%;
+    }
   }
   .slide-section__decor-box{
     border: 10px solid #000000;
@@ -403,8 +495,27 @@ $step1: calc(-100vh - 30%);
     border-radius: 10px;
     box-shadow:  0 0 50px rgba(#FFFFFF, .4);
     transition: $speed ease-in-out;
+    @include tabletPortrait{
+      width: clamp(260px, calc(100vw - 40px), 50vh);
+    }
+    @include tabletsPortrait{
+      width: 70vw;
+    }
+    @include phoneLandscape{
+      width: clamp(260px, calc(100vw - 40px), 45vh);
+    }
+    @include special{
+      width: 60vw;
+    }
     &:first-child{
       margin-right: 80px;
+      @include tabletPortrait{
+        margin-right: 0;
+        margin-bottom: 40px;
+      }
+      @include tabletPortrait{
+        margin-bottom: 10px;
+      }
     }
   }
   .slide-section__decor-box-wall{
@@ -414,9 +525,12 @@ $step1: calc(-100vh - 30%);
     height: 61.4%;
     overflow: hidden;
     transition: $speed ease-in-out, opacity $speed2 ;
-    transform: translate(-128.6%, 17.9%);
+    transform: translate3d(-128.6%, 17.9%, 0);
     opacity: 0;
     z-index: 2;
+    @include tabletPortrait{
+      transform: translate3d(37.4%, -171%, 0);
+    }
     .picture{
       position: absolute;
       width: 100%;
@@ -443,6 +557,9 @@ $step1: calc(-100vh - 30%);
       transform: translate3d(-474%, -.5%, 0);
       opacity: 0;
       transition: $speed ease-in-out, opacity $speed2 ;
+      @include tabletPortrait{
+        transform: translate3d(-7%, -156%, 0);
+      }
       .picture{
         &:last-child{
           width: 100%;
@@ -468,6 +585,9 @@ $step1: calc(-100vh - 30%);
     transition: $speed ease-in-out, opacity 1.6s ease-in-out ;
     height: 10%;
     z-index: 3;
+    @include tabletPortrait{
+      transform: translate3d(-26%, -1171%,0);
+    }
   }
   .slide-section__decor-box-variants-item{
     width: 13%;
@@ -510,6 +630,19 @@ $step1: calc(-100vh - 30%);
   }
   .slide-section__text-wrapper{
     padding-top: clamp(110px, 5vw, 5vh);
+    @include tabletPortrait{
+      padding-top: clamp(110px, 20vw, 30vh); 
+    }
+    @include laptops{
+      padding-top: clamp(120px, 12vh, 200px);
+    }
+    @include laptops{
+      padding-top: clamp(100px, 12vh, 200px);
+    }
+    @include phoneLandscape{
+      padding-top: clamp(60px, 10vh, 80px);
+
+    }
   }
   .slide-section__text-inside{
     top: 0;
@@ -517,7 +650,6 @@ $step1: calc(-100vh - 30%);
     left: 50%;
     transform: translate3d(-50%, 0, 0);
     width: 100%;
-    white-space: nowrap;
   }
   .slide-section__text{
     &_2{
@@ -558,5 +690,8 @@ $step1: calc(-100vh - 30%);
   }
   .scrollable-section{
     margin-top: 5vh;
+    @include tabletPortrait{
+      margin-top: 0;
+    }
   }
 }
