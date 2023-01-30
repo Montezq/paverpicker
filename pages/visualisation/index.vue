@@ -13,6 +13,11 @@
             <div class="slide-section__hero-img">
               <Img :img="'visualisation_hero'" :resp="false" :alt="'Home hero visualisation'"/>
             </div>
+            <div class="hero__link position_absolute">
+              <NuxtLink class="text_uppercase btn btn_primary" to="/scenes/" >
+                View our scenes
+              </NuxtLink>
+            </div>
             <div @click="nextPage" class="scrl-down position_absolute fs_32 text_center cursor_pointer">
               <p>What makes our visualisations so realistic?</p>
               <p class="ff_icon fs_48"></p>
@@ -60,6 +65,13 @@
                         <br> scale to ensure the visualisation looks
                         <br> natural.
                       </p>
+                    </div>
+                    <div class="slider-section__text-cta">
+                      <NuxtLink to="/scenes/" >
+                        <span class="fs_32 fw_regular">
+                          View our selection of scenes
+                        </span>
+                      </NuxtLink>
                     </div>
                     <div class="slider-section__text-cta">
                       <NuxtLink to="/software/" >
