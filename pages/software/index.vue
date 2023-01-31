@@ -66,7 +66,7 @@
                         </p>
                       </div>
                       <div class="slider-section__text-cta text_center">
-                        <NuxtLink to="visualisation/" >
+                        <NuxtLink to="/visualisation/" >
                           <p class="fs_32 fw_regular">
                             Learn more about visualisation
                           </p>
