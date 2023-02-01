@@ -89,7 +89,7 @@ $speed: 3s;
         }
         @include tabletsPortrait{
           transform: translate3d(-45%, -150%, 0) rotate(-180deg);
-          filter: blur(15px);
+          // filter: blur(15px);
         }
         @include minphone{
           transform: translate3d(-45%, -60%, 0) rotate(-180deg);
