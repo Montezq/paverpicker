@@ -72,7 +72,7 @@ $speed: 3s;
           filter: blur(14px);
         }
         @include tabletsPortrait{
-          transform: translate3d(-45%, -150%, 0) rotate(-180deg);
+          transform: translate3d(-50%, -150%, 0) rotate(-180deg);
         }
         @include minphone{
           transform: translate3d(-45%, -60%, 0) rotate(-180deg);
@@ -86,13 +86,6 @@ $speed: 3s;
         @include special{
           transform: translate3d(-44%, -20vw, 0) rotate(-180deg);
         }
-        // @include tabletPortrait{
-        //   transform: 
-        //     translateX(-50%)
-        //     translateY(-630%)
-        //     rotate(-180deg);
-        //   filter: blur(14px);
-        // }
       }
       .photography{
         .photography__blitz{
@@ -789,9 +782,6 @@ $speed: 3s;
       @include tabletPortrait{
         padding-top: 25vh;
       }
-    }
-    .slide-section__text{
-      transform: translate3d(0, -10%, 0) 
     }
     .slide-section{
       @include tabletPortrait{
