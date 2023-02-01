@@ -94,6 +94,9 @@ $speed: 3s;
         @include minphone{
           transform: translate3d(-45%, -60%, 0) rotate(-180deg);
         }
+        @include minphone2{
+          transform: translate3d(-45%, -180%, 0) rotate(-180deg);
+        }
         @include px3xl{
           transform: translate3d(-45%, -320%, 0) rotate(-180deg);
         }
