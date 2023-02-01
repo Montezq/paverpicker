@@ -72,16 +72,20 @@ $speed: 3s;
           filter: blur(14px);
         }
         @include tabletsPortrait{
-          transform: translate3d(-50%, -150%, 0) rotate(-180deg);
+          top: 0;
+          transform: translate3d(-45%, -430%, 0) rotate(-180deg);
         }
         @include minphone{
-          transform: translate3d(-45%, -60%, 0) rotate(-180deg);
+          transform: translate3d(-45%, -330%, 0) rotate(-180deg);
         }
         @include minphone2{
-          transform: translate3d(-45%, -180%, 0) rotate(-180deg);
+          transform: translate3d(-45%, -530%, 0) rotate(-180deg);
+        }
+        @include minphone3{
+          transform: translate3d(-45%, -350%, 0) rotate(-180deg);
         }
         @include px3xl{
-          transform: translate3d(-45%, -320%, 0) rotate(-180deg);
+          transform: translate3d(-45%, -600%, 0) rotate(-180deg);
         }
         @include special{
           transform: translate3d(-44%, -20vw, 0) rotate(-180deg);
@@ -157,54 +161,34 @@ $speed: 3s;
         }
       }
       .box_brick{
-        transform: 
-          translateX(-50%) 
-          translateY(-48vw) 
-          rotate(-180deg);
+        top: -50%;
+        transform: translate3d(-46%, -50%, 0) rotate(-180deg);
         filter: blur(8px);
-        @include desktoplg{
-          transform: 
-            translateX(-50%)
-            translateY(-650%)
-            rotate(-180deg);
-          filter: blur(8px);
-        }
-        @include desktopxminlg{
-          transform: 
-            translateX(-50%)
-            translateY(-700%)
-            rotate(-180deg);
-          filter: blur(8px);
-        }
-        @include tlxl{
-          transform: 
-            translateX(-50%)
-            translateY(-840%)
-            rotate(-180deg);
-          filter: blur(8px);
-        }
         @include tabletPortrait{
-          transform: 
-            translateX(-50%)
-            translateY(-630%)
-            rotate(-180deg);
+          transform: translate3d(-50%, -8vw, 0) rotate(-180deg);
           filter: blur(14px);
         }
-        @include tabletLandscape{
-          transform: 
-            translateX(-50%)
-            translateY(-620%)
-            rotate(-180deg);
-          filter: blur(14px);
+        @include tabletsPortrait{
+          top: 0;
+          transform: translate3d(-45%, -430%, 0) rotate(-180deg);
         }
-        @include phone{
-          transform: 
-            translateX(-50%)
-            translateY(-700%)
-            rotate(-180deg);
-          filter: blur(14px);
+        @include minphone{
+          transform: translate3d(-45%, -330%, 0) rotate(-180deg);
+        }
+        @include minphone2{
+          transform: translate3d(-45%, -530%, 0) rotate(-180deg);
+        }
+        @include minphone3{
+          transform: translate3d(-45%, -350%, 0) rotate(-180deg);
+        }
+        @include px3xl{
+          transform: translate3d(-45%, -600%, 0) rotate(-180deg);
+        }
+        @include special{
+          transform: translate3d(-44%, -20vw, 0) rotate(-180deg);
         }
       }
+     
       .home__visualisation{
         .slide-section__text{
           transform: translate3d(0, 0, 0) 

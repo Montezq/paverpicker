@@ -135,6 +135,11 @@
       @content;
   }
 }
+@mixin minphone3{
+  @media screen and (max-width: 350px){
+      @content;
+  }
+}
 @mixin phoneLandscape{
   @media screen and (max-width: 900px) and (orientation: landscape){
     @content;
