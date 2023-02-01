@@ -738,15 +738,24 @@ $speed: 3s;
         height:initial;
       }
       .slide-section__text-head{
-        max-width: 25vw;
+        max-width: clamp(300px, 25vw, 25vw);
         @include tabletPortrait{
           max-width: 320px;
         }
+        @include phoneLandscape{
+          max-width: 25vw;
+        }
       }
       .slide-section__text-desc{
-        max-width: 23vw;
+        max-width: clamp(350px, 23vw, 23vw);
         @include tabletPortrait{
-          max-width: 330px;
+          max-width: 340px;
+        }
+        @include tabletsPortrait{
+          max-width: 310px;
+        }
+        @include phoneLandscape{
+          max-width: 23vw;
         }
       }
     }
@@ -851,18 +860,24 @@ $speed: 3s;
       }
     }
     .slide-section__text-head{
-      max-width: 25vw;
+      max-width: clamp(350px ,25vw, 25vw);
       @include tabletPortrait{
         max-width: 360px;
       }
+      @include phoneLandscape{
+        max-width: 25vw;
+      }
     }
     .slide-section__text-desc{
-      max-width: 23vw;
+      max-width: clamp(360px, 23vw, 25vw);
       @include tabletPortrait{
         max-width: 385px;
       }
       @include tabletsPortrait{
         max-width: 300px;
+      }
+      @include phoneLandscape{
+        max-width: 26vw;
       }
     }
   }
@@ -1034,18 +1049,28 @@ $speed: 3s;
       }
     }
     .slide-section__text-head{
-      max-width: 25vw;
+      max-width: clamp(350px, 25vw, 25vw);
       @include tabletPortrait{
         max-width: 360px;
       }
+      @include phoneLandscape{
+        max-width: 25vw;
+      }
     }
     .slide-section__text-desc{
-      max-width: 23vw;
+      // max-width: 23vw;
+      max-width: clamp(350px, 23vw, 25vw);
+      @include desktopxminlg{
+        max-width: clamp(310px, 23vw, 25vw);
+      }
       @include tabletPortrait{
-        max-width: 350px;
+        max-width: 380px;
       }
       @include tabletsPortrait{
         max-width: 300px;
+      }
+      @include phoneLandscape{
+        max-width: 26vw;
       }
     }
   }
@@ -1117,18 +1142,27 @@ $speed: 3s;
       }
     }
     .slide-section__text-head{
-      max-width: 25vw;
+      max-width: clamp(280px, 25vw, 25vw);
       @include tabletPortrait{
-        max-width: 360px;
+        max-width: 330px;
+      }
+      @include phoneLandscape{
+        max-width: 23vw;
       }
     }
     .slide-section__text-desc{
-      max-width: 25vw;
+      max-width: clamp(320px, 25vw, 25vw);
+      @include laptop{
+        max-width: clamp(300px, 25vw, 25vw);
+      }
       @include tabletPortrait{
         max-width: 385px;
       }
       @include tabletsPortrait{
         max-width: 300px;
+      }
+      @include phoneLandscape{
+        max-width: 25vw;
       }
     }
   }

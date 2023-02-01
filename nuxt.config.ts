@@ -20,6 +20,9 @@ export default defineNuxtConfig({
   modules: [
     '@pinia/nuxt',
   ],
+  plugins: [
+    '~/plugins/transition.js'
+  ],
   vite: {
     plugins: [
       svgLoader()
