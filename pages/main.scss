@@ -41,17 +41,6 @@ $speed: 3s;
           transform: rotate(180deg) translate3d(50%, -80%, 0);
         }
       }
-      .home__send .slide-section__text{
-        transform: translate3d(0, 18%, 0) ;
-        @include tabletPortrait{
-          transform: translate3d(0, -30%, 0) ;
-        }
-      }
-      .home__photograph{
-        .slide-section__text{
-          transform: translate3d(0, 0, 0) ;
-        }
-      }
       .software{
         .photography__camera{
           transform: translate3d(0, 0, 0) ;
@@ -60,12 +49,6 @@ $speed: 3s;
     }
     &_3{
       transform: translate3d(0,-200vh,0);
-      .home__send .slide-section__text{
-        transform: translate3d(0, 18%, 0) ;
-        @include tabletPortrait{
-          transform: translate3d(0, -30%, 0) ;
-        }
-      }
       .home__photograph{
         .slide-section__text{
           transform: translate3d(0, 0, 0) ;
@@ -86,10 +69,10 @@ $speed: 3s;
         filter: blur(8px);
         @include tabletPortrait{
           transform: translate3d(-50%, -8vw, 0) rotate(-180deg);
+          filter: blur(14px);
         }
         @include tabletsPortrait{
           transform: translate3d(-45%, -150%, 0) rotate(-180deg);
-          // filter: blur(15px);
         }
         @include minphone{
           transform: translate3d(-45%, -60%, 0) rotate(-180deg);
@@ -119,22 +102,8 @@ $speed: 3s;
           transform: translate3d(0, -36%, 0) ;
           filter: blur(8px);
           @include tabletPortrait{
-            filter: blur(15px);
+            filter: blur(14px);
           }
-        }
-        .photography__camera{
-          transform: translate3d(0, 0, 0) ;
-          &:after{
-            opacity: 1;
-          }
-        }
-        .photography__camera-ins{
-          &:after{
-            opacity: 1;
-          }
-        }
-        .photography_brick{
-          transform: translate3d(0, 0, 0) ;
         }
       }
       .software{
@@ -789,7 +758,7 @@ $speed: 3s;
     top: 0;
     transform: translate3d(-50%, -160vh, 0) rotate(-90deg);
     z-index: 2;
-    transition: $speed ease-in-out, filter .2s ease-in-out 2s ;
+    transition: $speed ease-in-out;
     @include tabletPortrait{
       width: 30vh;
     }
@@ -870,7 +839,7 @@ $speed: 3s;
       top: 50%;
       left: -11%;
       transform: translate3d(8%, -45%, 0) ; 
-      transition: $speed ease-in-out, filter .2s ease-in-out 2s ;
+      transition: $speed ease-in-out ;
       @include tabletPortrait{
         left: 0;
       }
