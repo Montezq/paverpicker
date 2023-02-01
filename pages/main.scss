@@ -14,7 +14,7 @@ $speed: 3s;
         @include tabletPortrait{
           transform: translate3d(-50%, 30vh, 0) rotate(-180deg);
         }
-        @include tabletPortrait{
+        @include phone{
           transform: translate3d(-50%, 350%, 0) rotate(-180deg);
         }
       }
@@ -39,9 +39,6 @@ $speed: 3s;
         transform: rotate(180deg) translate3d(0, 0, 0) ;
         @include tabletPortrait{
           transform: rotate(180deg) translate3d(50%, -80%, 0);
-        }
-        @include tabletsPortrait{
-          transform: rotate(180deg) translate3d(50%, -110%, 0) ;
         }
       }
       .home__send .slide-section__text{
@@ -82,9 +79,6 @@ $speed: 3s;
         @include tabletPortrait{
           transform: rotate(180deg) translate3d(50%, -80%, 0) ;
         }
-        @include tabletsPortrait{
-          transform: rotate(180deg) translate3d(50%, -110%, 0) ;
-        }
       }
       .box_brick{
         top: -50%;
@@ -94,7 +88,14 @@ $speed: 3s;
           transform: translate3d(-50%, -8vw, 0) rotate(-180deg);
         }
         @include tabletsPortrait{
-          transform: translate3d(-44%, -10vw, 0) rotate(-180deg);
+          transform: translate3d(-45%, -150%, 0) rotate(-180deg);
+          filter: blur(15px);
+        }
+        @include minphone{
+          transform: translate3d(-45%, -60%, 0) rotate(-180deg);
+        }
+        @include px3xl{
+          transform: translate3d(-45%, -320%, 0) rotate(-180deg);
         }
         @include special{
           transform: translate3d(-44%, -20vw, 0) rotate(-180deg);
@@ -115,7 +116,6 @@ $speed: 3s;
           transform: translate3d(0, -36%, 0) ;
           filter: blur(8px);
           @include tabletPortrait{
-            transform: translate3d(0%, -24vw, 0) ;
             filter: blur(15px);
           }
         }
