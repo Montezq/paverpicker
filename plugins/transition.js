@@ -10,6 +10,19 @@ const handleOrientationChange = () => {
   }, 500);
 };
 
+const handleResize = () => {
+  document.querySelectorAll('*').forEach(el => {
+    el.style.transition = 'all 0s ease';
+  });
+
+  setTimeout(() => {
+    document.querySelectorAll('*').forEach(el => {
+      el.style.transition = '';
+    });
+  }, 1000);
+};
+
 export default defineNuxtPlugin(() => {
+  window.addEventListener('resize', handleResize);
   window.addEventListener('orientationchange', handleOrientationChange);
 });
