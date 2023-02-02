@@ -30,7 +30,7 @@
                       <div class="slide-section__text-desc text_center">
                         <p class="fs_32">
                           Integrate key features of the Paver Picker software directly 
-                          <br> into your website with full control over the layout. 
+                           into your website with full control over the layout. 
                         </p>
                       </div>
                     </div>
@@ -41,7 +41,7 @@
                       <div class="slide-section__text-desc text_center">
                         <p class="fs_32">
                           You have full control over every element which means your
-                          <br> fonts, your colours, your style.
+                           fonts, your colours, your style.
                         </p>
                       </div>
                     </div>
@@ -52,7 +52,7 @@
                       <div class="slide-section__text-desc text_center">
                         <p class="fs_32">
                           Since the software is embedded into your website, you can 
-                          <br> easily track your analytics.
+                           easily track your analytics.
                         </p>
                       </div>
                     </div>

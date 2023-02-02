@@ -649,18 +649,65 @@ $step1: calc(-100vh - 30%);
     transition: $speed ease-in-out;
     left: 50%;
     transform: translate3d(-50%, 0, 0);
-    width: 100%;
+    width: 100vw;
   }
   .slide-section__text{
+    .slide-section__text-desc{
+      margin: 0 auto;
+    }
+    &_1{
+      .slide-section__text-desc{
+        max-width: clamp(665px, 44vw, 44vw);
+        @include phoneLandscape{
+          max-width: clamp(400px, 44vw, 44vw);
+        }
+        @include tabletPortrait{
+          max-width: 650px;
+        }
+        @include tabletsPortrait{
+          max-width: 350px;
+        }
+      }
+    }
     &_2{
       top: 0;
       opacity: 0;
       transform: translate3d(-50%, 28vh, 0);
+      .slide-section__text-desc{
+        max-width: clamp(780px, 45vw, 45vw);
+        @include desktoplg{
+          max-width: clamp(730px, 45vw, 45vw);
+        }
+        @include phoneLandscape{
+          max-width: clamp(400px, 44vw, 44vw);
+        }
+        @include tabletPortrait{
+          max-width: 650px;
+        }
+        @include tabletsPortrait{
+          max-width: clamp(100px, 86vw, 364px);
+        }
+      }
     }
     &_3{
       top: 0;
       opacity: 0;
       transform: translate3d(-50%, 28vh, 0);
+      .slide-section__text-desc{
+        max-width: clamp(780px, 45vw, 45vw);
+        @include desktoplg{
+          max-width: clamp(730px, 45vw, 45vw);
+        }
+        @include phoneLandscape{
+          max-width: clamp(400px, 44vw, 44vw);
+        }
+        @include tabletPortrait{
+          max-width: 650px;
+        }
+        @include tabletsPortrait{
+          max-width: clamp(100px, 86vw, 364px);
+        }
+      }
     }
   }
   .slide-section__decor-box-analitics{
