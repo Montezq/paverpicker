@@ -13,14 +13,16 @@
             <div class="slide-section__hero-img">
               <Img :img="'visualisation_hero'" :resp="false" :alt="'Home hero visualisation'"/>
             </div>
-            <div class="hero__link position_absolute">
-              <NuxtLink class="text_uppercase btn btn_primary" to="/scenes/" >
-                View our scenes
-              </NuxtLink>
-            </div>
-            <div @click="nextPage" class="scrl-down position_absolute fs_32 text_center cursor_pointer">
-              <p>What makes our visualisations so realistic?</p>
-              <p class="ff_icon fs_48"></p>
+            <div  class="scrl-down position_absolute fs_32 text_center cursor_pointer">
+              <div class="hero__link">
+                <NuxtLink class="text_uppercase btn btn_primary" to="/scenes/" >
+                  View our scenes
+                </NuxtLink>
+              </div>
+              <div @click="nextPage">
+                <p>What makes our visualisations so realistic?</p>
+                <p class="ff_icon fs_48"></p>
+              </div>
             </div>
           </div>
         </section>
@@ -36,9 +38,9 @@
                     <div class="slide-section__text-desc">
                       <p class="fs_32">
                         We take no shortcuts when it comes to
-                        <br> preparing the areas to be visualised. We
-                        <br> ensure each and every blade of grass is
-                        <br> properly preserved. 
+                        preparing the areas to be visualised. We
+                        ensure each and every blade of grass is
+                        properly preserved. 
                       </p>
                     </div>
                   </div>
@@ -49,8 +51,8 @@
                     <div class="slide-section__text-desc">
                       <p class="fs_32">
                         To add to the realism, we redraw every
-                        <br> detail of shadows and highlights back
-                        <br> into the image.
+                        detail of shadows and highlights back
+                        into the image.
                       </p>
                     </div>
                   </div>
@@ -61,9 +63,9 @@
                     <div class="slide-section__text-desc">
                       <p class="fs_32">
                         Finally, our software displays your
-                        <br> products with perfect perspective and
-                        <br> scale to ensure the visualisation looks
-                        <br> natural.
+                        products with perfect perspective and
+                        scale to ensure the visualisation looks
+                        natural.
                       </p>
                     </div>
                     <div class="slider-section__text-cta">

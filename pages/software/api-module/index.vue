@@ -7,7 +7,7 @@
           <div class="slide-section position_relative d_flex align-items_center flex_column">
             <SoftwareNav />
             <div class="slide-section__text">
-              <div class="slide-section__text-head">
+              <div class="slide-section__text-head text_center">
                 <h1>API Website Integration</h1>
               </div>
             </div>
@@ -69,8 +69,9 @@
                     </div>
                     <div class="slide-section__decor-box-aside position_absolute">
                       <Img :resp="false" :img="'engels_fogo'" :alt="'Brick'"/>
-                      <div class="slide-section__decor-box-aside-controls">
+                      <div class="slide-section__decor-box-aside-controls position_relative">
                         <Img :resp="false" :img="'controls_style-1'" :alt="'Brick'"/>
+                        <Img class="position_absolute" :resp="false" :img="'controls_style-2'" :alt="'Brick'"/>
                       </div>
                     </div>
                     <div class="slide-section__decor-box-variants position_absolute d_flex">
@@ -107,19 +108,30 @@
   }
   function slide(speed=2000, y=null, direction=null) {
     const scrl = document.querySelector('.api-page__steps');
-    const lngth = 4;
+    const lngth = 6;
     if((y>0 || direction==='up') && currentSlide.value < lngth){
       currentSlide.value+=1
+      if(currentSlide.value === 2 || currentSlide.value === 4){
+        setTimeout(() => {
+          currentSlide.value+=1
+        }, 2000);
+      }
       pastSlide.value = currentSlide.value-1
-    }else if((y<0 || direction==='down') && currentSlide.value > 0){
+    }else if((y<0 || direction==='down') && currentSlide.value > 1){
       currentSlide.value-=1
       pastSlide.value = currentSlide.value+1
+      if(currentSlide.value === 2 || currentSlide.value === 4){
+        setTimeout(() => {
+          currentSlide.value-=1
+          pastSlide.value = currentSlide.value+1
+        }, 2000);
+      }
     }
     ticking.value = true;
-    if(currentSlide.value!==4)
+    if(currentSlide.value!==6)
       scrl.classList.remove('oh')
     setTimeout(() => {
-      if(currentSlide.value===4)
+      if(currentSlide.value===6)
         scrl.classList.add('oh')
       ticking.value = false;
     }, speed);

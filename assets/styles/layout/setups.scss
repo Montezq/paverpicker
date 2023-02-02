@@ -370,6 +370,7 @@ img{
   @include centered(x);
   bottom: 1vw;
   opacity: .6;
+  transition: .3s ease-in-out;
   @include tablet{
     bottom: 16px;
     @supports (-webkit-touch-callout: none) {
@@ -386,6 +387,9 @@ img{
     &:first-child{
       @include segoe(semibold)
     }
+  }
+  &:hover{
+    opacity: 1;
   }
 }
 .slide-section__step{
