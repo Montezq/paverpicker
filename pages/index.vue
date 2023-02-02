@@ -64,10 +64,13 @@
               </div>
             </div>
             <div class="slide-section__decor box position_relative d_flex align-items_center">
-              <Img :img="'box_back'" :alt="'Box'" class="box__back"/>
-              <Img :img="'box_front'" :alt="'Box'" class="box__front"/>
-              <Img :img="'brick'" :alt="'Box'" class="box_brick"/>
+              <Img :img="'box_back'" :alt="'Box'" class="box__back box__back-desktop"/>
+              <Img :img="'box_front'" :alt="'Box'" class="box__front box__front-desktop"/>
+              <Img :img="'brick'" :alt="'Box'" class="box_brick box_brick-desktop"/>
             </div>
+            <Img :img="'box_back'" :alt="'Box'" class="box__back box__back-mobile"/>
+            <Img :img="'box_front'" :alt="'Box'" class="box__front box__front-mobile"/>
+            <Img :img="'brick'" :alt="'Box'" class="box_brick box_brick-mobile"/>
           </div>
         </section>
         <section class="home__photograph">

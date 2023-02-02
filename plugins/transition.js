@@ -11,15 +11,17 @@ const handleOrientationChange = () => {
 };
 
 const handleResize = () => {
-  document.querySelectorAll('*').forEach(el => {
-    el.style.transition = 'all 0s ease';
-  });
-
-  setTimeout(() => {
+  if (window.innerWidth > 560) {
     document.querySelectorAll('*').forEach(el => {
-      el.style.transition = '';
+      el.style.transition = 'all 0s ease';
     });
-  }, 1000);
+
+    setTimeout(() => {
+      document.querySelectorAll('*').forEach(el => {
+        el.style.transition = '';
+      });
+    }, 1000);
+  }
 };
 
 export default defineNuxtPlugin(() => {

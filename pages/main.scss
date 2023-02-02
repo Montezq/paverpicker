@@ -14,14 +14,27 @@ $speed: 3s;
         @include tabletPortrait{
           transform: translate3d(-50%, 30vh, 0) rotate(-180deg);
         }
-        @include phone{
-          transform: translate3d(-50%, 350%, 0) rotate(-180deg);
+      }
+    }
+    &_0.animation-lstep_1{
+      .box_brick{
+        &-mobile{
+          @include tabletsPortrait{
+            opacity: 1;
+            transition: $speed ease-in-out, opacity 0s ease;
+          }
         }
       }
-      .slide-section__decor.box{
-        transition-property: transform;
-        transition-duration: $speed;
-        transition-timing-function: ease-in-out;
+    }
+    &_1.animation-lstep_2{
+      .box_brick{
+        &-mobile{
+          @include tabletsPortrait{
+            opacity: 0;
+            transition: 0s ease;
+            transform: translate3d(-50%, 30vh, 0) rotate(-180deg);
+          }
+        }
       }
     }
     &_2{
@@ -33,12 +46,29 @@ $speed: 3s;
         }
       }
       .slide-section__decor.box{
-        transition-property: transform;
-        transition-duration: $speed;
-        transition-timing-function: ease-in-out;
         transform: rotate(180deg) translate3d(0, 0, 0) ;
         @include tabletPortrait{
           transform: rotate(180deg) translate3d(50%, -80%, 0);
+        }
+      }
+      .box__front,
+      .box__back{
+        &-mobile{
+          @include tabletsPortrait{
+            transform: rotate(180deg) translate3d(50%, -24%, 0);
+          }
+        }
+      }
+      .box_brick{
+        &-mobile{
+          @include tabletsPortrait{
+            opacity: 0;
+            transition: 0s ease;
+            transform: rotate(0deg) translate3d(-50%, 750%, 0);
+          }
+          @include special{
+            transform: rotate(0deg) translate3d(-50%, 650%, 0);
+          }
         }
       }
       .software{
@@ -47,20 +77,34 @@ $speed: 3s;
         }
       }
     }
-    &_3{
-      transform: translate3d(0,-200vh,0);
-      .home__photograph{
-        .slide-section__text{
-          transform: translate3d(0, 0, 0) ;
+    &_2.animation-lstep_3{
+      .box_brick{
+        &-mobile{
+          @include tabletsPortrait{
+            opacity: 1;
+            transition: $speed ease-in-out;
+            transform: rotate(0deg) translate3d(-50%, 750%, 0);
+          }
+          @include special{
+            transform: rotate(0deg) translate3d(-50%, 650%, 0);
+          }
         }
       }
+    }
+    &_3{
+      transform: translate3d(0,-200vh,0);
       .slide-section__decor.box{
-        transition-property: transform;
-        transition-duration: $speed;
-        transition-timing-function: ease-in-out;
         transform: rotate(180deg) translate3d(0, 0, 0) ;
         @include tabletPortrait{
           transform: rotate(180deg) translate3d(50%, -80%, 0) ;
+        }
+      }
+      .box__front,
+      .box__back{
+        &-mobile{
+          @include tabletsPortrait{
+            transform: rotate(180deg) translate3d(50%, -24%, 0);
+          }
         }
       }
       .box_brick{
@@ -71,24 +115,16 @@ $speed: 3s;
           transform: translate3d(-50%, -4vw, 0) rotate(-180deg);
           filter: blur(14px);
         }
-        @include tabletsPortrait{
+        &-mobile{
           top: 0;
-          transform: translate3d(-45%, -430%, 0) rotate(-180deg);
-        }
-        @include minphone{
-          transform: translate3d(-45%, -330%, 0) rotate(-180deg);
-        }
-        @include minphone2{
-          transform: translate3d(-45%, -530%, 0) rotate(-180deg);
-        }
-        @include minphone3{
-          transform: translate3d(-45%, -350%, 0) rotate(-180deg);
-        }
-        @include px3xl{
-          transform: translate3d(-45%, -600%, 0) rotate(-180deg);
-        }
-        @include special{
-          transform: translate3d(-44%, -20vw, 0) rotate(-180deg);
+          @include tabletsPortrait{
+            opacity: 1;
+            transition: $speed ease-in-out, opacity 0s ease;
+            transform: rotate(0deg) translate3d(-57%, calc(100vh + 34vw), 0);
+          }
+          @include special{
+            transform: rotate(0deg) translate3d(-58%, calc(100vh + 40vw), 0);
+          }
         }
       }
       .photography{
@@ -100,6 +136,9 @@ $speed: 3s;
           filter: blur(8px);
           @include tabletPortrait{
             filter: blur(14px);
+          }
+          @include tabletsPortrait{
+            transform: translate3d(0, 16vw, 0) ;
           }
         }
       }
@@ -155,9 +194,12 @@ $speed: 3s;
           transform: rotate(180deg) translate3d(50%, -80%, 0) ;
         }
       }
-      .home__photograph{
-        .slide-section__text{
-          transform: translate3d(0, 0, 0) ;
+      .box__front,
+      .box__back{
+        &-mobile{
+          @include tabletsPortrait{
+            transform: rotate(180deg) translate3d(50%, -24%, 0);
+          }
         }
       }
       .box_brick{
@@ -168,30 +210,16 @@ $speed: 3s;
           transform: translate3d(-50%, -4vw, 0) rotate(-180deg);
           filter: blur(14px);
         }
-        @include tabletsPortrait{
+        &-mobile{
           top: 0;
-          transform: translate3d(-45%, -430%, 0) rotate(-180deg);
-        }
-        @include minphone{
-          transform: translate3d(-45%, -330%, 0) rotate(-180deg);
-        }
-        @include minphone2{
-          transform: translate3d(-45%, -530%, 0) rotate(-180deg);
-        }
-        @include minphone3{
-          transform: translate3d(-45%, -350%, 0) rotate(-180deg);
-        }
-        @include px3xl{
-          transform: translate3d(-45%, -600%, 0) rotate(-180deg);
-        }
-        @include special{
-          transform: translate3d(-44%, -20vw, 0) rotate(-180deg);
-        }
-      }
-     
-      .home__visualisation{
-        .slide-section__text{
-          transform: translate3d(0, 0, 0) 
+          @include tabletsPortrait{
+            opacity: 1;
+            transition: $speed ease-in-out, opacity 0s ease;
+            transform: rotate(0deg) translate3d(-57%, calc(100vh + 34vw), 0);
+          }
+          @include special{
+            transform: rotate(0deg) translate3d(-58%, calc(100vh + 40vw), 0);
+          }
         }
       }
       .visualisation{
@@ -495,7 +523,7 @@ $speed: 3s;
   .slide-section__text{
     transition: $speed ease-in-out;
     position: relative;
-    z-index: 3;
+    z-index: 4;
     @include tabletPortrait{
       margin-left: 14vw;
     }
@@ -645,6 +673,10 @@ $speed: 3s;
     }
   }
   .home__send{
+    @include tabletsPortrait{
+      position: relative;
+      z-index: 0;
+    }
     .slide-section__content{
       margin-top: 30vh;
       height:calc(100vh - 30vh);
@@ -693,6 +725,7 @@ $speed: 3s;
   .slide-section__decor.box{
     width: 47vw;
     margin-left: 4vw;
+    transition: $speed ease-in-out;
     @include tabletPortrait{
       order: -1;
       width: 52vh;
@@ -701,14 +734,12 @@ $speed: 3s;
       margin-top: 5%;
       transform: translate3d(-50%, 0, 0) ;
     }
-    @include phone{
-      width: 90%;
-      left: 55%;
+    @include tabletsPortrait{
+      padding-bottom: 90vw;
       margin-top: 14vw;
     }
     @include special{
-      width: 67%;
-      margin-top: 5vw;
+      height: 60vw;
     }
   }
   .box__back,
@@ -722,10 +753,54 @@ $speed: 3s;
     position: relative;
     top: 0;
     left: 0;
-     transform: translate(0,0);
+    transform: translate3d(0,0,0);
+    &-desktop{
+      @include tabletsPortrait{
+        display: none;
+      }
+    }
+    &-mobile{
+      display: none;
+      @include tabletsPortrait{
+        position: absolute;
+        display: block;
+        width: 88%;
+        left: 55%;
+        top: 56vw;
+        transition: $speed ease-in-out;
+        transform: translate(-50%, -50%);
+        img{
+          width: 100%;
+        }
+      }
+      @include special{
+        width: 67%;
+      }
+    }
   }
   .box__front{
     z-index: 3;
+    &-desktop{
+      @include tabletsPortrait{
+        display: none;
+      }
+    }
+    &-mobile{
+      display: none;
+      @include tabletsPortrait{
+        display: block;
+        width: 88%;
+        left: 55%;
+        top: 56vw;
+        transition: $speed ease-in-out;
+        img{
+          width: 100%;
+        }
+      }
+      @include special{
+        width: 67%;
+      }
+    }
   }
   .box_brick{
     width: 26vw;
@@ -743,6 +818,21 @@ $speed: 3s;
     }
     @include special{
       width: 40vw;
+    }
+    &-desktop{
+      @include tabletsPortrait{
+        display: none;
+      }
+    }
+    &-mobile{
+      display: none;
+      @include tabletsPortrait{
+        display: block;
+        left: 55%;
+      }
+    }
+    img{
+      width: 100%;
     }
   }
 
@@ -816,6 +906,10 @@ $speed: 3s;
       @include tabletPortrait{
         left: 0;
       }
+      @include tabletsPortrait{
+        top: 0;
+        transform: translate3d(8%, 10%, 0); 
+      }
     }
     .photography__blitz{
       width: 100vw;
@@ -848,15 +942,14 @@ $speed: 3s;
       }
     }
     .slide-section__text{
-      transform: translate3d(0, 10%, 0) ;
       @include tabletPortrait{
         padding-top: 52vh;
       }
       @include tabletsPortrait{
-        padding-top: 46vh;
+        padding-top: 50vh;
       }
       @include minphone{
-        padding-top: 52vh;
+        padding-top: 55vh;
       }
       @include special{
         padding-top: 51vh;
@@ -899,26 +992,6 @@ $speed: 3s;
     @include tablet{
       margin-left: 77px;
     }
-    // .visualisation__photoshop{
-    //   display: none;
-    //   @include tabletPortrait{
-    //     display: block;
-    //     margin-top: 12vh;
-    //     margin-bottom: 20px;
-    //     width: calc(100% + 26vh);
-    //     transform: translate3d(60%, 0, 0) ;
-    //     transition: $speed ease-in-out;
-    //     opacity: .4;
-    //   }
-    //   @include minphone{
-    //     width: calc(100% + 16vh);
-    //   }
-    //   img{
-    //     @include tabletsPortrait{
-    //       max-width: initial;
-    //     }
-    //   }
-    // }
   }
   .home__software{
     height: 100vh;
