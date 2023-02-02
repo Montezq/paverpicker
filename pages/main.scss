@@ -202,11 +202,10 @@ $speed: 3s;
       }
       .photography{
         .photography__rig{
-          transform: translate3d(0, 0, 0) ;
+          transform: translate3d(0, -36%, 0) ;
           filter: blur(8px);
           @include tabletPortrait{
-            transform: translate3d(-50%, 0, 0) ;
-            filter: blur(15px);
+            filter: blur(14px);
           }
         }
         .photography__camera{
