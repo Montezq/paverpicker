@@ -230,7 +230,7 @@
     heroImg.value >= 3 ? heroImg.value = 1 : heroImg.value++;
   }
   function slide(speed=3000, y=null, direction=null) {
-    const scrl = document.querySelector('.home__clients');
+    let scrl = document.querySelector('.home__clients');
     const lngth = document.querySelectorAll('.animation-steps>section').length
     if((y>0 || direction==='up') && currentSlide.value < lngth){
       currentSlide.value+=1
@@ -243,13 +243,15 @@
     }
    
     ticking.value = true;
-    if(currentSlide.value!==6)
-      scrl.classList.remove('oh')
-    setTimeout(() => {
-      if(currentSlide.value===6)
-        scrl.classList.add('oh')
-      ticking.value = false;
-    }, speed);
+    if(scrl){
+      if(currentSlide.value!==6)
+        scrl.classList.remove('oh')
+      setTimeout(() => {
+        if(currentSlide.value===6)
+          scrl.classList.add('oh')
+        ticking.value = false;
+      }, speed);
+    }
   }
   function touch(){
     document.addEventListener('touchstart', handleTouchStart, false);        
@@ -328,7 +330,7 @@
           else
             slide(3000, e.deltaY)
         }
-      });
+      },{passive: true});
       setInterval(change, 3000);
       touch();
     }, 610);

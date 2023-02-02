@@ -249,13 +249,15 @@
       pastSlide.value = currentSlide.value+1
     }
     ticking.value = true;
-    if(currentSlide.value!==4)
-      scrl.classList.remove('oh')
-    setTimeout(() => {
-      if(currentSlide.value===4)
-        scrl.classList.add('oh')
-      ticking.value = false;
-    }, speed);
+    if(scrl){
+      if(currentSlide.value!==4)
+        scrl.classList.remove('oh')
+      setTimeout(() => {
+        if(currentSlide.value===4)
+          scrl.classList.add('oh')
+        ticking.value = false;
+      }, speed);
+    }
   }
   function touch(){
     document.addEventListener('touchstart', handleTouchStart, false);        
@@ -310,7 +312,7 @@
           else
             vid.pause()
         }
-      });
+      },{passive: true});
       touch();
     }, 610);
   })

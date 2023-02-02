@@ -152,13 +152,15 @@
       pastSlide.value = currentSlide.value+1
     }
     ticking.value = true;
-    if(currentSlide.value!==4)
-      scrl.classList.remove('oh')
-    setTimeout(() => {
-      if(currentSlide.value===4)
-        scrl.classList.add('oh')
-      ticking.value = false;
-    }, speed);
+    if(scrl){
+      if(currentSlide.value!==4)
+        scrl.classList.remove('oh')
+      setTimeout(() => {
+        if(currentSlide.value===4)
+          scrl.classList.add('oh')
+        ticking.value = false;
+      }, speed);
+    }
   }
   function touch(){
     document.addEventListener('touchstart', handleTouchStart, false);        
@@ -205,7 +207,7 @@
         if (ticking.value === false && scrlTicking.value) {
           slide(3000, e.deltaY)
         }
-      });
+      },{passive: true});
       touch();
     }, 610);
   })
