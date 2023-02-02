@@ -466,9 +466,6 @@ $step1: calc(-100vh - 30%);
     }
     .scrl-down{
       width: 100%;
-      @include tabletPortrait{
-        max-width: 280px;
-      }
     }
   }
   .slide-section__decor{

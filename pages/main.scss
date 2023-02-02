@@ -68,7 +68,7 @@ $speed: 3s;
         transform: translate3d(-46%, -50%, 0) rotate(-180deg);
         filter: blur(8px);
         @include tabletPortrait{
-          transform: translate3d(-50%, -8vw, 0) rotate(-180deg);
+          transform: translate3d(-50%, -4vw, 0) rotate(-180deg);
           filter: blur(14px);
         }
         @include tabletsPortrait{
@@ -152,7 +152,7 @@ $speed: 3s;
       .slide-section__decor.box{
         transform: rotate(180deg) translate3d(0, 0, 0) ;
         @include tabletPortrait{
-          transform: rotate(180deg) translate3d(50%, -95%, 0) ;
+          transform: rotate(180deg) translate3d(50%, -80%, 0) ;
         }
       }
       .home__photograph{
@@ -165,7 +165,7 @@ $speed: 3s;
         transform: translate3d(-46%, -50%, 0) rotate(-180deg);
         filter: blur(8px);
         @include tabletPortrait{
-          transform: translate3d(-50%, -8vw, 0) rotate(-180deg);
+          transform: translate3d(-50%, -4vw, 0) rotate(-180deg);
           filter: blur(14px);
         }
         @include tabletsPortrait{
