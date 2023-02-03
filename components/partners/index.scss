@@ -12,8 +12,25 @@
 }
 .partners__head{
   margin-bottom: 90px;
+  max-width: clamp(865px, 76vw, 76vw);
+  margin: 0 auto 90px;
+  @include tabletPortrait{
+    max-width: clamp(940px, 76vw, 76vw);
+  }
+  @include laptops{
+    max-width: clamp(408px, 53vw, 420px);
+  }
   @include tablet{
     margin-bottom: 50px;
+  }
+  @include phone{
+    max-width: clamp(290px, 88vw, 88vw);
+  }
+  @include phoneLandscape{
+    max-width: clamp(528px, 65vw, 65vw);
+  }
+  @include special{
+    max-width: 336px;
   }
   br.dt_block{
     display: none;

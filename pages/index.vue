@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home" id="app">
     <Rotate />
     <Transition  >
       <div class="modal d_flex align-items_center justify-content_center" v-if="videoPopup">

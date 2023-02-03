@@ -36,7 +36,6 @@
 html, body{
   height: 100%;
   margin: 0;
-  transform: translate3d(0);
 }
 body{
   @include segoe;
@@ -334,15 +333,21 @@ img{
     }
   }
   &_68{
-    font-size: 3.54vw;
+    font-size: clamp(42px, 3.54vw, 3.54vw);
     @include tabletPortrait{
-      font-size: 4.2vw
+      font-size: clamp(42px, 8vw, 46px);
     }
-    @include tabletsPortrait{
-      font-size: 9vw
+    @include tablet{
+      font-size: clamp(32px, 10vw, 44px);
+    }
+    @include tabletLandscape{
+      font-size: clamp(42px, 3.4vw, 3.4vw);
+    }
+    @include phoneLandscape{
+      font-size: 3vw;
     }
     @include special{
-      font-size: 7vw
+      font-size: 7vw;
     }
   }
 }

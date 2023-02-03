@@ -514,7 +514,7 @@ $speed: 3s;
           overflow-y: auto;
           overflow-x: hidden;
           @supports (-webkit-touch-callout: none) {
-            height: -webkit-fill-available;;
+            height: -webkit-fill-available;
           }
         }
       }
@@ -543,8 +543,8 @@ $speed: 3s;
       transform: translate3d(-50%, 0, 0) ;
       top: 0;
     }
-    @include tablet{
-      top: 6%;
+    @include tabletsPortrait{
+      top: 3%;
     }
     @include tabletLandscape{
       top: 48%;
@@ -611,7 +611,7 @@ $speed: 3s;
         height: 58vh;
       }
       @include tabletsPortrait{
-        height: 90vw;
+        height: clamp(100px,90vw,50vh);
       }
       @include tabletLandscape{
         max-height: 90vh;
@@ -622,53 +622,37 @@ $speed: 3s;
     }
   }
   .home__hero{
+    .slide-section{
+      @include tabletsPortrait{
+        align-items: flex-start;
+      }
+    }
     .slide-section__text{
       margin-top: -5vw;
       left: 55vw;
       transition: 0s ease-in-out;
-      max-width: 28vw;
+      max-width: clamp(310px,28vw,28vw);
       @include tabletPortrait{
         left: 0;
         text-align: center;
         width: 100%;
         margin: 32vh auto 0 auto;
-        max-width: 45vw;
+        max-width: clamp(350px,38vw,38vw);
       }
       @include tabletsPortrait{
-        margin-top: 40vw;
-        max-width: 55vw;
+        margin: clamp(100px,90vw,45vh) auto 0;
+      }
+      @include tabletsPortrait{
+        max-width: clamp(340px,38vw,38vw);
       }
       @include phone{
-        max-width: 65vw;
+        max-width: clamp(310px,38vw,38vw);
       }
-      @include minphone2{
-        max-width: 75vw;
-      }
-      @include sphoneLandscape{
-        max-width: 34vw;
+      @include phoneLandscape{
+        max-width: clamp(180px,20vw,20vw);
       }
       @include special{
-        margin-top: 30vw;
-
-      }
-      &-head{
-        h1{
-          @include tablet{
-            font-size: clamp(32px, 10vw, 42px);
-          }
-          @include tabletPortrait{
-            font-size: clamp(42px, 8vw, 44px);
-          }
-          @include tabletsPortrait{
-            font-size: clamp(32px, 8vw, 44px);
-          }
-          @include tabletLandscape{
-            font-size: clamp(32px, 3.4vw, 3.4vw);
-          }
-          @include special{
-            font-size: 7vw;
-          }
-        }
+        margin: clamp(100px,90vw,47vh) auto 0;
       }
     }
   }
