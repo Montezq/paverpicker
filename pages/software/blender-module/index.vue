@@ -16,18 +16,18 @@
             </div>
             <div class="blender__bricks d_flex flex_wrap position_absolute">
               <div class="blender__brick-item position_relative" v-for="(item, idx) in bricks" v-bind:key="idx">
+                <div :class="`picture position_absolute opacity opacity_${item.opacity}`">
+                  <picture>
+                    <source type="image/png" :srcset="'/images/decor/'+item.href+'.png , /images/decor/'+item.href+'@x2.png 2x'"/>
+                    <source type="image/webp" :srcset="'/images/decor/'+item.href+'.webp , /images/decor/'+item.href+'@x2.webp 2x'"/>
+                    <img :src="'/images/decor/'+item.href+'@x2.png'" alt="Bricks" width="500" height="500"/>
+                  </picture>
+                </div>
                 <div class="picture">
                   <picture>
                     <source type="image/png" :srcset="'/images/decor/'+item.bw+'.png , /images/decor/'+item.bw+'@x2.png 2x'"/>
                     <source type="image/webp" :srcset="'/images/decor/'+item.bw+'.webp , /images/decor/'+item.bw+'@x2.webp 2x'"/>
                     <img :src="'/images/decor/'+item.bw+'@x2.png'" alt="Bricks" width="500" height="500"/>
-                  </picture>
-                </div>
-                <div class="picture position_absolute">
-                  <picture>
-                    <source type="image/png" :srcset="'/images/decor/'+item.href+'.png , /images/decor/'+item.href+'@x2.png 2x'"/>
-                    <source type="image/webp" :srcset="'/images/decor/'+item.href+'.webp , /images/decor/'+item.href+'@x2.webp 2x'"/>
-                    <img :src="'/images/decor/'+item.href+'@x2.png'" alt="Bricks" width="500" height="500"/>
                   </picture>
                 </div>
                 <div class="picture position_absolute" v-if="item.nested">
@@ -158,106 +158,130 @@
         brickb = 'blender/bricks-brown/brick-';
   const bricks = [
     {
+      opacity: 1,
       bw: brickw+'0',
       href: brickb+'0'
     },
     {
+      opacity: 1,
       bw: brickw+'8',
       href: brickb+'1'
     },
     {
+      opacity: 0,
       bw: brickw+'1',
       href: brickb+'7',
       nested: brickr+'1'
     },
     {
+      opacity: 1,
       bw: brickw+'4',
       href: brickb+'2'
     },
     {
+      opacity: 0,
       bw: brickw+'3',
       href: brickb+'10'
     },
     {
+      opacity: 1,
       bw: brickw+'6',
       href: brickb+'3',
       nested: brickr+'3'
     },
     {
+      opacity: 0,
       bw: brickw+'4',
       href: brickb+'5'
     },
     {
+      opacity: 1,
       bw: brickw+'5',
       href: brickb+'4'
     },
     {
+      opacity: 1,
       bw: brickw+'6',
       href: brickb+'5'
     },
     {
+      opacity: 0,
       bw: brickw+'5',
       href: brickb+'11'
     },
     {
+      opacity: 1,
       bw: brickw+'7',
       href: brickb+'6'
     },
     {
+      opacity: 0,
       bw: brickw+'6',
       href: brickb+'8',
       nested: brickr+'6'
     },
     {
+      opacity: 0,
       bw: brickw+'7',
       href: brickb+'1',
       nested: brickr+'7'
     },
     {
+      opacity: 1,
       bw: brickw+'9',
       href: brickb+'8'
     },
     {
+      opacity: 0,
       bw: brickw+'8',
       href: brickb+'0',
       nested: brickr+'8'
     },
     {
+      opacity: 0,
       bw: brickw+'9',
       href: brickb+'3'
     },
     {
+      opacity: 0,
       bw: brickw+'10',
       href: brickb+'9'
     },
     {
+      opacity: 0,
       bw: brickw+'11',
       href: brickb+'2'
     },
     {
+      opacity: 1,
       bw: brickw+'1',
       href: brickb+'10'
     },
     {
+      opacity: 1,
       bw: brickw+'10',
       href: brickb+'11',
       nested: brickr+'11'
     },
     {
+      opacity: 0,
       bw: brickw+'13',
       href: brickb+'6',
       nested: brickr+'13'
     },
     {
+      opacity: 1,
       bw: brickw+'6',
       href: brickb+'13'
     },
     {
+      opacity: 1,
       bw: brickw+'2',
       href: brickb+'14',
       nested: brickr+'14'
     },
     {
+      opacity: 0,
       bw: brickw+'14',
       href: brickb+'14'
     },
@@ -346,12 +370,392 @@
   // ]
 
 
-  function updateRangeValues() {
+  function updateRangeValues(c,r) {
+    console.log(c,r)
     slidevalStart.value = `${100 - slideval.value}`;
     document.querySelector('.range__track').style.left = slideval.value+'%'
+    if(slideval.value == 0)
+      op()
+    else if(slideval.value <= 4){
+      op()
+      bricks[13].opacity = 1
+    }
+    else if(slideval.value <= 8){
+      op()
+      bricks[13].opacity = 1
+      bricks[19].opacity = 1
+    }
+    else if(slideval.value <= 12){
+      op()
+      bricks[13].opacity = 1
+      bricks[19].opacity = 1
+      bricks[1].opacity = 1
+    }
+    else if(slideval.value <= 16){
+      op()
+      bricks[13].opacity = 1
+      bricks[19].opacity = 1
+      bricks[1].opacity = 1
+      bricks[10].opacity = 1
+    }
+    else if(slideval.value <= 20){
+      op()
+      bricks[13].opacity = 1
+      bricks[19].opacity = 1
+      bricks[1].opacity = 1
+      bricks[10].opacity = 1
+      bricks[5].opacity = 1
+    }
+    else if(slideval.value <= 24){
+      op()
+      bricks[13].opacity = 1
+      bricks[19].opacity = 1
+      bricks[1].opacity = 1
+      bricks[10].opacity = 1
+      bricks[5].opacity = 1
+      bricks[7].opacity = 1
+    }
+    else if(slideval.value <= 28){
+      op()
+      bricks[13].opacity = 1
+      bricks[19].opacity = 1
+      bricks[1].opacity = 1
+      bricks[10].opacity = 1
+      bricks[5].opacity = 1
+      bricks[7].opacity = 1
+      bricks[21].opacity = 1
+    }
+    else if(slideval.value <= 32){
+      op()
+      bricks[13].opacity = 1
+      bricks[19].opacity = 1
+      bricks[1].opacity = 1
+      bricks[10].opacity = 1
+      bricks[5].opacity = 1
+      bricks[7].opacity = 1
+      bricks[21].opacity = 1
+      bricks[3].opacity = 1
+    }
+    else if(slideval.value <= 36){
+      op()
+      bricks[13].opacity = 1
+      bricks[19].opacity = 1
+      bricks[1].opacity = 1
+      bricks[10].opacity = 1
+      bricks[5].opacity = 1
+      bricks[7].opacity = 1
+      bricks[21].opacity = 1
+      bricks[3].opacity = 1
+      bricks[18].opacity = 1
+    }
+    else if(slideval.value <= 40){
+      op()
+      bricks[13].opacity = 1
+      bricks[19].opacity = 1
+      bricks[1].opacity = 1
+      bricks[10].opacity = 1
+      bricks[5].opacity = 1
+      bricks[7].opacity = 1
+      bricks[21].opacity = 1
+      bricks[3].opacity = 1
+      bricks[18].opacity = 1
+      bricks[8].opacity = 1
+    }
+    else if(slideval.value <= 44){
+      op()
+      bricks[13].opacity = 1
+      bricks[19].opacity = 1
+      bricks[1].opacity = 1
+      bricks[10].opacity = 1
+      bricks[5].opacity = 1
+      bricks[7].opacity = 1
+      bricks[21].opacity = 1
+      bricks[3].opacity = 1
+      bricks[18].opacity = 1
+      bricks[8].opacity = 1
+      bricks[22].opacity = 1
+    }
+    else if(slideval.value <= 52){
+      op()
+      bricks[13].opacity = 1
+      bricks[19].opacity = 1
+      bricks[1].opacity = 1
+      bricks[10].opacity = 1
+      bricks[5].opacity = 1
+      bricks[7].opacity = 1
+      bricks[21].opacity = 1
+      bricks[3].opacity = 1
+      bricks[18].opacity = 1
+      bricks[8].opacity = 1
+      bricks[22].opacity = 1
+      bricks[0].opacity = 1
+    }
+    else if(slideval.value <= 53){
+      op()
+      bricks[13].opacity = 1
+      bricks[19].opacity = 1
+      bricks[1].opacity = 1
+      bricks[10].opacity = 1
+      bricks[5].opacity = 1
+      bricks[7].opacity = 1
+      bricks[21].opacity = 1
+      bricks[3].opacity = 1
+      bricks[18].opacity = 1
+      bricks[8].opacity = 1
+      bricks[22].opacity = 1
+      bricks[0].opacity = 1
+      bricks[14].opacity = 1
+    }
+    else if(slideval.value <= 56){
+      op()
+      bricks[13].opacity = 1
+      bricks[19].opacity = 1
+      bricks[1].opacity = 1
+      bricks[10].opacity = 1
+      bricks[5].opacity = 1
+      bricks[7].opacity = 1
+      bricks[21].opacity = 1
+      bricks[3].opacity = 1
+      bricks[18].opacity = 1
+      bricks[8].opacity = 1
+      bricks[22].opacity = 1
+      bricks[0].opacity = 1
+      bricks[14].opacity = 1
+      bricks[12].opacity = 1
+    }
+    else if(slideval.value <= 60){
+      op()
+      bricks[13].opacity = 1
+      bricks[19].opacity = 1
+      bricks[1].opacity = 1
+      bricks[10].opacity = 1
+      bricks[5].opacity = 1
+      bricks[7].opacity = 1
+      bricks[21].opacity = 1
+      bricks[3].opacity = 1
+      bricks[18].opacity = 1
+      bricks[8].opacity = 1
+      bricks[22].opacity = 1
+      bricks[0].opacity = 1
+      bricks[14].opacity = 1
+      bricks[12].opacity = 1
+      bricks[17].opacity = 1
+    }
+    else if(slideval.value <= 64){
+      op()
+      bricks[13].opacity = 1
+      bricks[19].opacity = 1
+      bricks[1].opacity = 1
+      bricks[10].opacity = 1
+      bricks[5].opacity = 1
+      bricks[7].opacity = 1
+      bricks[21].opacity = 1
+      bricks[3].opacity = 1
+      bricks[18].opacity = 1
+      bricks[8].opacity = 1
+      bricks[22].opacity = 1
+      bricks[0].opacity = 1
+      bricks[14].opacity = 1
+      bricks[12].opacity = 1
+      bricks[17].opacity = 1
+      bricks[15].opacity = 1
+    }
+    else if(slideval.value <= 68){
+      op()
+      bricks[13].opacity = 1
+      bricks[19].opacity = 1
+      bricks[1].opacity = 1
+      bricks[10].opacity = 1
+      bricks[5].opacity = 1
+      bricks[7].opacity = 1
+      bricks[21].opacity = 1
+      bricks[3].opacity = 1
+      bricks[18].opacity = 1
+      bricks[8].opacity = 1
+      bricks[22].opacity = 1
+      bricks[0].opacity = 1
+      bricks[14].opacity = 1
+      bricks[12].opacity = 1
+      bricks[17].opacity = 1
+      bricks[15].opacity = 1
+      bricks[6].opacity = 1
+    }
+    else if(slideval.value <= 72){
+      op()
+      bricks[13].opacity = 1
+      bricks[19].opacity = 1
+      bricks[1].opacity = 1
+      bricks[10].opacity = 1
+      bricks[5].opacity = 1
+      bricks[7].opacity = 1
+      bricks[21].opacity = 1
+      bricks[3].opacity = 1
+      bricks[18].opacity = 1
+      bricks[8].opacity = 1
+      bricks[22].opacity = 1
+      bricks[0].opacity = 1
+      bricks[14].opacity = 1
+      bricks[12].opacity = 1
+      bricks[17].opacity = 1
+      bricks[15].opacity = 1
+      bricks[6].opacity = 1
+      bricks[20].opacity = 1
+    }
+    else if(slideval.value <= 76){
+      op()
+      bricks[13].opacity = 1
+      bricks[19].opacity = 1
+      bricks[1].opacity = 1
+      bricks[10].opacity = 1
+      bricks[5].opacity = 1
+      bricks[7].opacity = 1
+      bricks[21].opacity = 1
+      bricks[3].opacity = 1
+      bricks[18].opacity = 1
+      bricks[8].opacity = 1
+      bricks[22].opacity = 1
+      bricks[0].opacity = 1
+      bricks[14].opacity = 1
+      bricks[12].opacity = 1
+      bricks[17].opacity = 1
+      bricks[15].opacity = 1
+      bricks[6].opacity = 1
+      bricks[20].opacity = 1
+      bricks[2].opacity = 1
+    }
+    else if(slideval.value <= 80){
+      op()
+      bricks[13].opacity = 1
+      bricks[19].opacity = 1
+      bricks[1].opacity = 1
+      bricks[10].opacity = 1
+      bricks[5].opacity = 1
+      bricks[7].opacity = 1
+      bricks[21].opacity = 1
+      bricks[3].opacity = 1
+      bricks[18].opacity = 1
+      bricks[8].opacity = 1
+      bricks[22].opacity = 1
+      bricks[0].opacity = 1
+      bricks[14].opacity = 1
+      bricks[12].opacity = 1
+      bricks[17].opacity = 1
+      bricks[15].opacity = 1
+      bricks[6].opacity = 1
+      bricks[20].opacity = 1
+      bricks[2].opacity = 1
+      bricks[11].opacity = 1
+    }
+    else if(slideval.value <= 84){
+      op()
+      bricks[13].opacity = 1
+      bricks[19].opacity = 1
+      bricks[1].opacity = 1
+      bricks[10].opacity = 1
+      bricks[5].opacity = 1
+      bricks[7].opacity = 1
+      bricks[21].opacity = 1
+      bricks[3].opacity = 1
+      bricks[18].opacity = 1
+      bricks[8].opacity = 1
+      bricks[22].opacity = 1
+      bricks[0].opacity = 1
+      bricks[14].opacity = 1
+      bricks[12].opacity = 1
+      bricks[17].opacity = 1
+      bricks[15].opacity = 1
+      bricks[6].opacity = 1
+      bricks[20].opacity = 1
+      bricks[2].opacity = 1
+      bricks[11].opacity = 1
+      bricks[16].opacity = 1
+    }
+    else if(slideval.value <= 88){
+      op()
+      bricks[13].opacity = 1
+      bricks[19].opacity = 1
+      bricks[1].opacity = 1
+      bricks[10].opacity = 1
+      bricks[5].opacity = 1
+      bricks[7].opacity = 1
+      bricks[21].opacity = 1
+      bricks[3].opacity = 1
+      bricks[18].opacity = 1
+      bricks[8].opacity = 1
+      bricks[22].opacity = 1
+      bricks[0].opacity = 1
+      bricks[14].opacity = 1
+      bricks[12].opacity = 1
+      bricks[17].opacity = 1
+      bricks[15].opacity = 1
+      bricks[6].opacity = 1
+      bricks[20].opacity = 1
+      bricks[2].opacity = 1
+      bricks[11].opacity = 1
+      bricks[16].opacity = 1
+      bricks[4].opacity = 1
+    }
+    else if(slideval.value <= 92){
+      op()
+      bricks[13].opacity = 1
+      bricks[19].opacity = 1
+      bricks[1].opacity = 1
+      bricks[10].opacity = 1
+      bricks[5].opacity = 1
+      bricks[7].opacity = 1
+      bricks[21].opacity = 1
+      bricks[3].opacity = 1
+      bricks[18].opacity = 1
+      bricks[8].opacity = 1
+      bricks[22].opacity = 1
+      bricks[0].opacity = 1
+      bricks[14].opacity = 1
+      bricks[12].opacity = 1
+      bricks[17].opacity = 1
+      bricks[15].opacity = 1
+      bricks[6].opacity = 1
+      bricks[20].opacity = 1
+      bricks[2].opacity = 1
+      bricks[11].opacity = 1
+      bricks[16].opacity = 1
+      bricks[4].opacity = 1
+      bricks[23].opacity = 1
+    }
+    else if(slideval.value >= 96){
+      op()
+      bricks[13].opacity = 1
+      bricks[19].opacity = 1
+      bricks[1].opacity = 1
+      bricks[10].opacity = 1
+      bricks[5].opacity = 1
+      bricks[7].opacity = 1
+      bricks[21].opacity = 1
+      bricks[3].opacity = 1
+      bricks[18].opacity = 1
+      bricks[8].opacity = 1
+      bricks[22].opacity = 1
+      bricks[0].opacity = 1
+      bricks[14].opacity = 1
+      bricks[12].opacity = 1
+      bricks[17].opacity = 1
+      bricks[15].opacity = 1
+      bricks[6].opacity = 1
+      bricks[20].opacity = 1
+      bricks[2].opacity = 1
+      bricks[11].opacity = 1
+      bricks[16].opacity = 1
+      bricks[4].opacity = 1
+      bricks[23].opacity = 1
+      bricks[9].opacity = 1
+    }
   }
   function nextPage(){
     slide(2000, 100)
+  }
+  function op(){
+    bricks.forEach((e, idx) => {
+      e.opacity = 0
+    })
   }
   function slide(speed=2000, y=null, direction=null) {
     const scrl = document.querySelector('.blender-page__try');
