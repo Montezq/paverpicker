@@ -654,6 +654,9 @@ $speed: 3s;
       @include special{
         margin: clamp(100px,90vw,47vh) auto 0;
       }
+      @include special2{
+        max-width: 33.4vw;
+      }
     }
   }
   .home__send{
@@ -676,6 +679,9 @@ $speed: 3s;
         @include phoneLandscape{
           max-width: 25vw;
         }
+        @include special2{
+          max-width: 32vw;
+        }
       }
       .slide-section__text-desc{
         max-width: clamp(350px, 23vw, 23vw);
@@ -687,6 +693,9 @@ $speed: 3s;
         }
         @include phoneLandscape{
           max-width: 23vw;
+        }
+        @include special2{
+          max-width: 30vw;
         }
       }
     }
@@ -723,7 +732,7 @@ $speed: 3s;
       margin-top: 14vw;
     }
     @include special{
-      height: 60vw;
+      padding-bottom: 45vh;
     }
   }
   .box__back,
@@ -759,6 +768,7 @@ $speed: 3s;
       }
       @include special{
         width: 67%;
+        top: 30vh;
       }
     }
   }
@@ -783,6 +793,7 @@ $speed: 3s;
       }
       @include special{
         width: 67%;
+        top: 30vh;
       }
     }
   }
@@ -853,6 +864,9 @@ $speed: 3s;
       @include phoneLandscape{
         max-width: 25vw;
       }
+      @include special2{
+        max-width: 30vw;
+      }
     }
     .slide-section__text-desc{
       max-width: clamp(360px, 23vw, 25vw);
@@ -864,6 +878,9 @@ $speed: 3s;
       }
       @include phoneLandscape{
         max-width: 26vw;
+      }
+      @include special2{
+        max-width: 31vw;
       }
     }
   }
@@ -947,6 +964,9 @@ $speed: 3s;
       @include phoneLandscape{
         max-width: 25vw;
       }
+      @include special2{
+        max-width: 30vw;
+      }
     }
     .slide-section__text-desc{
       // max-width: 23vw;
@@ -961,6 +981,9 @@ $speed: 3s;
         max-width: 300px;
       }
       @include phoneLandscape{
+        max-width: 26vw;
+      }
+      @include special2{
         max-width: 26vw;
       }
     }
@@ -1020,6 +1043,9 @@ $speed: 3s;
       @include phoneLandscape{
         max-width: 23vw;
       }
+      @include special2{
+        max-width: 30vw;
+      }
     }
     .slide-section__text-desc{
       max-width: clamp(320px, 25vw, 25vw);
@@ -1034,6 +1060,9 @@ $speed: 3s;
       }
       @include phoneLandscape{
         max-width: 25vw;
+      }
+      @include special2{
+        max-width: 28vw;
       }
     }
   }

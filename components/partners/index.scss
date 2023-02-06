@@ -32,6 +32,9 @@
   @include special{
     max-width: 336px;
   }
+  @include special2{
+    max-width: 90vw;
+  }
   br.dt_block{
     display: none;
     @include tabletsPortrait{

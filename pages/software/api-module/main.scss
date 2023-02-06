@@ -457,6 +457,9 @@ $step1: calc(-100vh - 30%);
     z-index: 2;
     .slide-section__text{
       margin-top: 220px;
+      @include laptops{
+        margin-top: 140px;
+      }
       @include tabletsPortrait{
         margin-top: 130px;
       }

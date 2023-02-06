@@ -223,6 +223,9 @@ img{
     @include special{
       font-size: 7vw;
     }
+    @include special2{
+      font-size: clamp(26px, 5.4vw, 28px);
+    }
   }
 }
 .slide-section__text-cta{
@@ -301,6 +304,9 @@ img{
     @include phoneLandscape{
       font-size: clamp(15px, 1.7vw, 1.7vw) !important;
     }
+    @include special2{
+      font-size: 2.2vw !important;
+    }
   }
   &_42{
     font-size: 42px;
@@ -348,6 +354,9 @@ img{
     }
     @include special{
       font-size: 7vw;
+    }
+    @include special2{
+      font-size: clamp(26px, 5.4vw, 28px);
     }
   }
 }

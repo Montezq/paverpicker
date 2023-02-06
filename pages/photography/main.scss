@@ -503,13 +503,13 @@ $speed3: 1.4s;
         width: 800px;
       }
       @include desktop{
-        width: calc(100vw - 120px);
+        width: calc(100vw - 60px);
       }
       @include laptops{
         width: calc(100vw - 40px);
       }
       @include mh{
-        width: 760px;
+        width: clamp(0px,760px, calc(100vw - 40px) );
       }
       @include mhs2{
         width: 460px;
@@ -536,12 +536,12 @@ $speed3: 1.4s;
   }
   .slide-section__brick-text{
     p{
-      font-size: 2.1vw;
+      font-size: clamp(30px,2.1vw,2.1vw);
       @include desktop{
-        font-size: 3.2vw;
+        font-size: clamp(26px,3.2vw,30px);
       }
-      @include phone{
-        font-size: 3.6vw;
+      @include tablet{
+        font-size: clamp(12px,3.2vw,26px);
       }
       @include mhs2{
         font-size: 1.4vw;

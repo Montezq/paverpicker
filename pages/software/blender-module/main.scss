@@ -137,7 +137,7 @@ $speed2: 1.2s;
         .blender__brick-item{
           transform: translate3d(0,0,0) !important;
           .picture{
-            &:nth-child(2){
+            &:last-child{
               opacity: 1;
             }
           }
@@ -202,7 +202,7 @@ $speed2: 1.2s;
         .blender__brick-item{
           transform: translate3d(0,0,0) !important;
           .picture{
-            &:nth-child(2){
+            &:last-child{
               opacity: 1;
             }
           }
@@ -518,6 +518,10 @@ $speed2: 1.2s;
       .picture{
         width: 100%;
         &:nth-child(2){
+          top: 0;
+          left: 0;
+        }
+        &:last-child{
           transition: $speed ease;
           opacity: 0;
           top: 0;

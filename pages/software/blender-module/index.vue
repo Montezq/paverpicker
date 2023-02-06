@@ -18,6 +18,13 @@
               <div class="blender__brick-item position_relative" v-for="(item, idx) in bricks" v-bind:key="idx">
                 <div class="picture">
                   <picture>
+                    <source type="image/png" :srcset="'/images/decor/'+item.bw+'.png , /images/decor/'+item.bw+'@x2.png 2x'"/>
+                    <source type="image/webp" :srcset="'/images/decor/'+item.bw+'.webp , /images/decor/'+item.bw+'@x2.webp 2x'"/>
+                    <img :src="'/images/decor/'+item.bw+'@x2.png'" alt="Bricks" width="500" height="500"/>
+                  </picture>
+                </div>
+                <div class="picture position_absolute">
+                  <picture>
                     <source type="image/png" :srcset="'/images/decor/'+item.href+'.png , /images/decor/'+item.href+'@x2.png 2x'"/>
                     <source type="image/webp" :srcset="'/images/decor/'+item.href+'.webp , /images/decor/'+item.href+'@x2.webp 2x'"/>
                     <img :src="'/images/decor/'+item.href+'@x2.png'" alt="Bricks" width="500" height="500"/>
@@ -52,14 +59,14 @@
             <div class="slide-section__decor position_absolute">
               <div class="range d_flex align-items_center position_absolute">
                 <div class="range__text">
-                  <strong>50%</strong>
+                  <strong>{{slidevalStart}}%</strong>
                 </div>
                 <div class="range__input position_relative">
-                  <input type="range" v-model="slideval" max="100" min="0" @input="slideInput">
+                  <input type="range" v-model="slideval" max="100" min="0" @input="updateRangeValues">
                   <div class="range__track"></div>
                 </div>
                 <div class="range__text">
-                  <strong>50%</strong>
+                  <strong>{{slideval}}%</strong>
                 </div>
               </div>
             </div>
@@ -143,6 +150,7 @@
       pastSlide = ref(0),
       ticking = ref(false),
       slideval = ref(50),
+      slidevalStart = ref(50),
       scrlTicking = ref(true);
 
   const brickw = 'blender/bricks-white/brick-',
@@ -150,91 +158,198 @@
         brickb = 'blender/bricks-brown/brick-';
   const bricks = [
     {
+      bw: brickw+'0',
       href: brickb+'0'
     },
     {
+      bw: brickw+'8',
       href: brickb+'1'
     },
     {
-      href: brickw+'1',
+      bw: brickw+'1',
+      href: brickb+'7',
       nested: brickr+'1'
     },
     {
+      bw: brickw+'4',
       href: brickb+'2'
     },
     {
-      href: brickw+'3'
+      bw: brickw+'3',
+      href: brickb+'10'
     },
     {
+      bw: brickw+'6',
       href: brickb+'3',
       nested: brickr+'3'
     },
     {
-      href: brickw+'4'
-    },
-    {
-      href: brickb+'4'
-    },
-    {
+      bw: brickw+'4',
       href: brickb+'5'
     },
     {
-      href: brickw+'5'
+      bw: brickw+'5',
+      href: brickb+'4'
     },
     {
+      bw: brickw+'6',
+      href: brickb+'5'
+    },
+    {
+      bw: brickw+'5',
+      href: brickb+'11'
+    },
+    {
+      bw: brickw+'7',
       href: brickb+'6'
     },
     {
-      href: brickw+'6',
+      bw: brickw+'6',
+      href: brickb+'8',
       nested: brickr+'6'
     },
     {
-      href: brickw+'7',
+      bw: brickw+'7',
+      href: brickb+'1',
       nested: brickr+'7'
     },
     {
+      bw: brickw+'9',
       href: brickb+'8'
     },
     {
-      href: brickw+'8',
+      bw: brickw+'8',
+      href: brickb+'0',
       nested: brickr+'8'
     },
     {
-      href: brickw+'9'
+      bw: brickw+'9',
+      href: brickb+'3'
     },
     {
-      href: brickw+'10'
+      bw: brickw+'10',
+      href: brickb+'9'
     },
     {
-      href: brickw+'11'
+      bw: brickw+'11',
+      href: brickb+'2'
     },
     {
+      bw: brickw+'1',
       href: brickb+'10'
     },
     {
+      bw: brickw+'10',
       href: brickb+'11',
       nested: brickr+'11'
     },
     {
-      href: brickw+'13',
+      bw: brickw+'13',
+      href: brickb+'6',
       nested: brickr+'13'
     },
     {
+      bw: brickw+'6',
       href: brickb+'13'
     },
     {
+      bw: brickw+'2',
       href: brickb+'14',
       nested: brickr+'14'
     },
     {
-      href: brickw+'14'
+      bw: brickw+'14',
+      href: brickb+'14'
     },
   ]
+  // const bricks = [
+  //   {
+  //     href: brickb+'0'
+  //   },
+  //   {
+  //     href: brickb+'1'
+  //   },
+  //   {
+  //     href: brickw+'1',
+  //     nested: brickr+'1'
+  //   },
+  //   {
+  //     href: brickb+'2'
+  //   },
+  //   {
+  //     href: brickw+'3'
+  //   },
+  //   {
+  //     href: brickb+'3',
+  //     nested: brickr+'3'
+  //   },
+  //   {
+  //     href: brickw+'4'
+  //   },
+  //   {
+  //     href: brickb+'4'
+  //   },
+  //   {
+  //     href: brickb+'5'
+  //   },
+  //   {
+  //     href: brickw+'5'
+  //   },
+  //   {
+  //     href: brickb+'6'
+  //   },
+  //   {
+  //     href: brickw+'6',
+  //     nested: brickr+'6'
+  //   },
+  //   {
+  //     href: brickw+'7',
+  //     nested: brickr+'7'
+  //   },
+  //   {
+  //     href: brickb+'8'
+  //   },
+  //   {
+  //     href: brickw+'8',
+  //     nested: brickr+'8'
+  //   },
+  //   {
+  //     href: brickw+'9'
+  //   },
+  //   {
+  //     href: brickw+'10'
+  //   },
+  //   {
+  //     href: brickw+'11'
+  //   },
+  //   {
+  //     href: brickb+'10'
+  //   },
+  //   {
+  //     href: brickb+'11',
+  //     nested: brickr+'11'
+  //   },
+  //   {
+  //     href: brickw+'13',
+  //     nested: brickr+'13'
+  //   },
+  //   {
+  //     href: brickb+'13'
+  //   },
+  //   {
+  //     href: brickb+'14',
+  //     nested: brickr+'14'
+  //   },
+  //   {
+  //     href: brickw+'14'
+  //   },
+  // ]
 
-  function slideInput(){
+
+  function updateRangeValues() {
+    slidevalStart.value = `${100 - slideval.value}`;
     document.querySelector('.range__track').style.left = slideval.value+'%'
   }
-
   function nextPage(){
     slide(2000, 100)
   }
