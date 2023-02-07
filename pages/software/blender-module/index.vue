@@ -51,8 +51,6 @@
                     <img :src="'/images/decor/'+item.nestedc+'@x2.png'" alt="Bricks" width="500" height="500"/>
                   </picture>
                 </div>
-                <!-- <Img :img="item.href" :resp="false" :alt="'Brick'"/> -->
-                <!-- <Img v-if="item.nestedr" :resp="false" :img="item.nestedr" :alt="'Brick'" class="position_absolute"/> -->
               </div>
               <Img class="blender__bricks-decor position_absolute" :img="'blender/bricks-white/brick-0'" :resp="false" :alt="'Brick'"/>
               <Img class="blender__bricks-decor position_absolute" :img="'blender/bricks-white/brick-2'" :resp="false" :alt="'Brick'"/>
@@ -72,15 +70,17 @@
           <div class="slide-section d_flex ">
             <div class="slide-section__decor position_absolute">
               <div class="range d_flex align-items_center position_absolute">
-                <div class="range__text">
-                  <strong>{{slidevalStart}}%</strong>
+                <div class="range__text position_relative">
+                  <strong class="opacity_0">100%</strong>
+                  <strong class="position_absolute">{{slidevalStart}}%</strong>
                 </div>
                 <div class="range__input position_relative">
                   <input type="range" v-model="slideval" max="100" min="0" @input="updateRangeValues">
                   <div class="range__track"></div>
                 </div>
-                <div class="range__text">
-                  <strong>{{slideval}}%</strong>
+                <div class="range__text position_relative">
+                  <strong class="opacity_0">100%</strong>
+                  <strong class="position_absolute text_right">{{slideval}}%</strong>
                 </div>
               </div>
             </div>

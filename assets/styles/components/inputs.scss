@@ -124,4 +124,18 @@ textarea{
   strong{
     font-size: clamp(15px, 3vw, 3vw);
   }
+  .position_absolute{
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+  .opacity_0{
+    opacity: 0;
+  }
+  &:last-child{
+    .position_absolute{
+      right: 0;
+      left: auto;
+    }
+  }
 }

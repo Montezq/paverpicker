@@ -16,7 +16,7 @@ $step1: calc(-100vh - 30%);
       }
       .slide-section__decor-box-aside{
         .slide-section__decor-box-aside-controls{
-          transform: translate3d(-7%, -.5%, 0);
+          transform: translate3d(-7%, 0, 0);
           opacity: 1;
         }
       }
@@ -302,6 +302,8 @@ $step1: calc(-100vh - 30%);
       .slide-section__decor-box-variants-item{
         position: absolute;
         transition: $speed2 $time;
+        border-radius: 10px;
+
         &:nth-child(1){
           transform: translate3d(-385%, -40%, 0);
         }
@@ -526,7 +528,6 @@ $step1: calc(-100vh - 30%);
     overflow: hidden;
     transition: $speed ease-in-out, opacity $speed2 ;
     transform: translate3d(-128.6%, 17.9%, 0);
-    opacity: 0;
     z-index: 2;
     @include tabletPortrait{
       transform: translate3d(37.4%, -171%, 0);
@@ -555,7 +556,6 @@ $step1: calc(-100vh - 30%);
     .slide-section__decor-box-aside-controls{
       width: calc(100% + 30%);
       transform: translate3d(-474%, -.5%, 0);
-      opacity: 0;
       transition: $speed ease-in-out, opacity $speed2 ;
       @include tabletPortrait{
         transform: translate3d(-7%, -156%, 0);
@@ -580,7 +580,6 @@ $step1: calc(-100vh - 30%);
     width: 60%;
     bottom: 0;
     left: 50%;
-    opacity: 0;
     transform: translate3d(-205%, -30%,0);
     transition: $speed ease-in-out, opacity 1.6s ease-in-out ;
     height: 10%;
