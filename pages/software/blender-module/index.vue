@@ -14,7 +14,7 @@
                 <h1>Introducing Paver Picker Blender</h1>
               </div>
             </div>
-            <div class="blender__bricks d_flex flex_wrap position_absolute">
+            <div :class="`blender__bricks d_flex flex_wrap position_absolute option-${optionBrick}`">
               <div class="blender__brick-item position_relative" v-for="(item, idx) in bricks" v-bind:key="idx">
                 <div :class="`picture position_absolute opacity opacity_${item.opacity}`">
                   <picture>
@@ -30,15 +30,29 @@
                     <img :src="'/images/decor/'+item.bw+'@x2.png'" alt="Bricks" width="500" height="500"/>
                   </picture>
                 </div>
-                <div class="picture position_absolute" v-if="item.nested">
+                <div class="picture position_absolute" v-if="item.nestedr">
                   <picture>
-                    <source type="image/png" :srcset="'/images/decor/'+item.nested+'.png , /images/decor/'+item.nested+'@x2.png 2x'"/>
-                    <source type="image/webp" :srcset="'/images/decor/'+item.nested+'.webp , /images/decor/'+item.nested+'@x2.webp 2x'"/>
-                    <img :src="'/images/decor/'+item.nested+'@x2.png'" alt="Bricks" width="500" height="500"/>
+                    <source type="image/png" :srcset="'/images/decor/'+item.nestedr+'.png , /images/decor/'+item.nestedr+'@x2.png 2x'"/>
+                    <source type="image/webp" :srcset="'/images/decor/'+item.nestedr+'.webp , /images/decor/'+item.nestedr+'@x2.webp 2x'"/>
+                    <img :src="'/images/decor/'+item.nestedr+'@x2.png'" alt="Bricks" width="500" height="500"/>
+                  </picture>
+                </div>
+                <div class="picture position_absolute" v-if="item.nestedb">
+                  <picture>
+                    <source type="image/png" :srcset="'/images/decor/'+item.nestedb+'.png , /images/decor/'+item.nestedb+'@x2.png 2x'"/>
+                    <source type="image/webp" :srcset="'/images/decor/'+item.nestedb+'.webp , /images/decor/'+item.nestedb+'@x2.webp 2x'"/>
+                    <img :src="'/images/decor/'+item.nestedb+'@x2.png'" alt="Bricks" width="500" height="500"/>
+                  </picture>
+                </div>
+                <div class="picture position_absolute" v-if="item.nestedc">
+                  <picture>
+                    <source type="image/png" :srcset="'/images/decor/'+item.nestedc+'.png , /images/decor/'+item.nestedc+'@x2.png 2x'"/>
+                    <source type="image/webp" :srcset="'/images/decor/'+item.nestedc+'.webp , /images/decor/'+item.nestedc+'@x2.webp 2x'"/>
+                    <img :src="'/images/decor/'+item.nestedc+'@x2.png'" alt="Bricks" width="500" height="500"/>
                   </picture>
                 </div>
                 <!-- <Img :img="item.href" :resp="false" :alt="'Brick'"/> -->
-                <!-- <Img v-if="item.nested" :resp="false" :img="item.nested" :alt="'Brick'" class="position_absolute"/> -->
+                <!-- <Img v-if="item.nestedr" :resp="false" :img="item.nestedr" :alt="'Brick'" class="position_absolute"/> -->
               </div>
               <Img class="blender__bricks-decor position_absolute" :img="'blender/bricks-white/brick-0'" :resp="false" :alt="'Brick'"/>
               <Img class="blender__bricks-decor position_absolute" :img="'blender/bricks-white/brick-2'" :resp="false" :alt="'Brick'"/>
@@ -85,7 +99,7 @@
         <section class="blender-page__unlimited position_relative">
           <div class="slide-section">
             <div class="slide-section__decor d_flex justify-content_center position_absolute">
-              <div class="slider-section__decor-brick position_relative" v-for="i in 3" v-bind:key="i">
+              <div class="slider-section__decor-brick position_relative cursor_pointer" @click="option(i)" v-for="i in 3" v-bind:key="i">
                 <div class="slider-section__decor-brick-icon"></div>
                 <picture>
                   <source type="image/png" :srcset="`/images/decor/blender/brick-option-${i}.png`"/>
@@ -148,6 +162,7 @@
 <script setup>
   let currentSlide = ref(0),
       pastSlide = ref(0),
+      optionBrick = ref(1),
       ticking = ref(false),
       slideval = ref(50),
       slidevalStart = ref(50),
@@ -155,6 +170,8 @@
 
   const brickw = 'blender/bricks-white/brick-',
         brickr = 'blender/bricks-red/brick-',
+        brickbl = 'blender/bricks-bl/',
+        brickc = 'blender/bricks-cl/',
         brickb = 'blender/bricks-brown/brick-';
   const bricks = [
     {
@@ -171,7 +188,9 @@
       opacity: 0,
       bw: brickw+'1',
       href: brickb+'7',
-      nested: brickr+'1'
+      nestedr: brickr+'1',
+      nestedb: brickbl+'1',
+      nestedc: brickc+'1'
     },
     {
       opacity: 1,
@@ -187,7 +206,9 @@
       opacity: 1,
       bw: brickw+'6',
       href: brickb+'3',
-      nested: brickr+'3'
+      nestedr: brickr+'3',
+      nestedb: brickbl+'3',
+      nestedc: brickc+'3'
     },
     {
       opacity: 0,
@@ -218,13 +239,18 @@
       opacity: 0,
       bw: brickw+'6',
       href: brickb+'8',
-      nested: brickr+'6'
+      nestedr: brickr+'6',
+      nestedb: brickbl+'6',
+      nestedc: brickc+'6'
+      
     },
     {
       opacity: 0,
       bw: brickw+'7',
       href: brickb+'1',
-      nested: brickr+'7'
+      nestedr: brickr+'7',
+      nestedb: brickbl+'7',
+      nestedc: brickc+'7'
     },
     {
       opacity: 1,
@@ -235,7 +261,9 @@
       opacity: 0,
       bw: brickw+'8',
       href: brickb+'0',
-      nested: brickr+'8'
+      nestedr: brickr+'8',
+      nestedb: brickbl+'8',
+      nestedc: brickc+'8'
     },
     {
       opacity: 0,
@@ -261,13 +289,17 @@
       opacity: 1,
       bw: brickw+'10',
       href: brickb+'11',
-      nested: brickr+'11'
+      nestedr: brickr+'11',
+      nestedb: brickbl+'11',
+      nestedc: brickc+'11'
     },
     {
       opacity: 0,
       bw: brickw+'13',
       href: brickb+'6',
-      nested: brickr+'13'
+      nestedr: brickr+'13',
+      nestedb: brickbl+'13',
+      nestedc: brickc+'13'
     },
     {
       opacity: 1,
@@ -278,7 +310,9 @@
       opacity: 1,
       bw: brickw+'2',
       href: brickb+'14',
-      nested: brickr+'14'
+      nestedr: brickr+'14',
+      nestedb: brickbl+'14',
+      nestedc: brickc+'14'
     },
     {
       opacity: 0,
@@ -286,92 +320,7 @@
       href: brickb+'14'
     },
   ]
-  // const bricks = [
-  //   {
-  //     href: brickb+'0'
-  //   },
-  //   {
-  //     href: brickb+'1'
-  //   },
-  //   {
-  //     href: brickw+'1',
-  //     nested: brickr+'1'
-  //   },
-  //   {
-  //     href: brickb+'2'
-  //   },
-  //   {
-  //     href: brickw+'3'
-  //   },
-  //   {
-  //     href: brickb+'3',
-  //     nested: brickr+'3'
-  //   },
-  //   {
-  //     href: brickw+'4'
-  //   },
-  //   {
-  //     href: brickb+'4'
-  //   },
-  //   {
-  //     href: brickb+'5'
-  //   },
-  //   {
-  //     href: brickw+'5'
-  //   },
-  //   {
-  //     href: brickb+'6'
-  //   },
-  //   {
-  //     href: brickw+'6',
-  //     nested: brickr+'6'
-  //   },
-  //   {
-  //     href: brickw+'7',
-  //     nested: brickr+'7'
-  //   },
-  //   {
-  //     href: brickb+'8'
-  //   },
-  //   {
-  //     href: brickw+'8',
-  //     nested: brickr+'8'
-  //   },
-  //   {
-  //     href: brickw+'9'
-  //   },
-  //   {
-  //     href: brickw+'10'
-  //   },
-  //   {
-  //     href: brickw+'11'
-  //   },
-  //   {
-  //     href: brickb+'10'
-  //   },
-  //   {
-  //     href: brickb+'11',
-  //     nested: brickr+'11'
-  //   },
-  //   {
-  //     href: brickw+'13',
-  //     nested: brickr+'13'
-  //   },
-  //   {
-  //     href: brickb+'13'
-  //   },
-  //   {
-  //     href: brickb+'14',
-  //     nested: brickr+'14'
-  //   },
-  //   {
-  //     href: brickw+'14'
-  //   },
-  // ]
-
-
-  function updateRangeValues(c,r) {
-    console.log(c,r)
+  function updateRangeValues() {
     slidevalStart.value = `${100 - slideval.value}`;
     document.querySelector('.range__track').style.left = slideval.value+'%'
     if(slideval.value == 0)
@@ -753,9 +702,11 @@
     slide(2000, 100)
   }
   function op(){
-    bricks.forEach((e, idx) => {
-      e.opacity = 0
-    })
+    bricks.forEach(e => {e.opacity = 0})
+  }
+  function option(o){
+    optionBrick.value = o
+    slide(2000, 100)
   }
   function slide(speed=2000, y=null, direction=null) {
     const scrl = document.querySelector('.blender-page__try');
