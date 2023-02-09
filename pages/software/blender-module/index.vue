@@ -161,11 +161,7 @@
   html{
     background-image: 
       url('/images/decor/blender/black-md@x2.png'),
-      url('/images/decor/blender/black.png'),
-      url('/images/decor/blender/black@x2.png'),
-      url('/images/decor/blender/black-md@x2.webp'),
-      url('/images/decor/blender/black.webp'),
-      url('/images/decor/blender/black@x2.webp');
+      url('/images/decor/blender/black-md@x2.webp');
     background-size: 0;
   }
 </style>

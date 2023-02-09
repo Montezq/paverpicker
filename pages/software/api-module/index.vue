@@ -107,22 +107,20 @@
 <style lang="scss">
   html{
     background-image: 
-      url('/images/decor/api-hero.png'),
       url('/images/decor/api-hero-md.png'),
-      url('/images/decor/api-hero.webp'),
       url('/images/decor/api-hero-md.webp');
     background-size: 0;
   }
 </style>
 <script setup>
-  useHead({
-    link: [
-      { rel: 'preload', as:'image', href:'/images/decor/api-hero.png'},
-      { rel: 'preload', as:'image', href:'/images/decor/api-hero-md.png'},
-      { rel: 'preload', as:'image', href:'/images/decor/api-hero.webp'},
-      { rel: 'preload', as:'image', href:'/images/decor/api-hero-md.webp'},
-    ]
-  })
+  // useHead({
+  //   link: [
+  //     { rel: 'preload', as:'image', href:'/images/decor/api-hero.png'},
+  //     { rel: 'preload', as:'image', href:'/images/decor/api-hero-md.png'},
+  //     { rel: 'preload', as:'image', href:'/images/decor/api-hero.webp'},
+  //     { rel: 'preload', as:'image', href:'/images/decor/api-hero-md.webp'},
+  //   ]
+  // })
 
   let currentSlide = ref(0),
       pastSlide = ref(0),
