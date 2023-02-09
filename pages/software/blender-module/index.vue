@@ -139,10 +139,8 @@
               </div>
               <div class="slide-section__decor d_flex justify-content_center">
                 <div class="slide-section__decor-video position_relative">
-                  <video class="section__video position_absolute" 
-                    muted="muted" loop  playsinline="playsinline" autoplay
-                    :src="`/video/api-vid-1.mp4`" id="apiVideo">
-                  </video>
+                  <Img :img="'blender-wall'" :resp="false" :alt="'Wall'"/>
+                  <Img class="position_absolute" :img="'blender-wall-filled'" :resp="false" :alt="'Wall filled'"/>
                 </div>
               </div>
             </div>
@@ -774,13 +772,6 @@
       wrapper.addEventListener('wheel', (e) => {
         if (ticking.value === false && scrlTicking.value) {
           slide(2000, e.deltaY)
-          if(currentSlide.value===4){
-            setTimeout(() => {
-              vid.play()
-            }, 2001);
-          }
-          else
-            vid.pause()
         }
       },{passive: true});
       touch();
