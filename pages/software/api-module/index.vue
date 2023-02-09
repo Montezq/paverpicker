@@ -113,15 +113,6 @@
   }
 </style>
 <script setup>
-  // useHead({
-  //   link: [
-  //     { rel: 'preload', as:'image', href:'/images/decor/api-hero.png'},
-  //     { rel: 'preload', as:'image', href:'/images/decor/api-hero-md.png'},
-  //     { rel: 'preload', as:'image', href:'/images/decor/api-hero.webp'},
-  //     { rel: 'preload', as:'image', href:'/images/decor/api-hero-md.webp'},
-  //   ]
-  // })
-
   let currentSlide = ref(0),
       pastSlide = ref(0),
       ticking = ref(false),

@@ -166,16 +166,6 @@
   }
 </style>
 <script setup>
-  // useHead({
-  //   link: [
-  //     { rel: 'preload', as:'image', href:'/images/decor/blender/black-md@x2.png'},
-  //     { rel: 'preload', as:'image', href:'/images/decor/blender/black.png'},
-  //     { rel: 'preload', as:'image', href:'/images/decor/blender/black@x2.png'},
-  //     { rel: 'preload', as:'image', href:'/images/decor/blender/black-md@x2.webp'},
-  //     { rel: 'preload', as:'image', href:'/images/decor/blender/black.webp'},
-  //     { rel: 'preload', as:'image', href:'/images/decor/blender/black@x2.webp'},
-  //   ]
-  // })
   let currentSlide = ref(0),
       pastSlide = ref(0),
       optionBrick = ref(1),
