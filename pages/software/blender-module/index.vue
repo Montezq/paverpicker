@@ -157,17 +157,29 @@
 <style lang="scss" >
   @import 'main.scss';
 </style>
+<style lang="scss">
+  html{
+    background-image: 
+      url('/images/decor/blender/black-md@x2.png'),
+      url('/images/decor/blender/black.png'),
+      url('/images/decor/blender/black@x2.png'),
+      url('/images/decor/blender/black-md@x2.webp'),
+      url('/images/decor/blender/black.webp'),
+      url('/images/decor/blender/black@x2.webp');
+    background-size: 0;
+  }
+</style>
 <script setup>
-  useHead({
-    link: [
-      { rel: 'preload', as:'image', href:'/images/decor/blender/black-md@x2.png'},
-      { rel: 'preload', as:'image', href:'/images/decor/blender/black.png'},
-      { rel: 'preload', as:'image', href:'/images/decor/blender/black@x2.png'},
-      { rel: 'preload', as:'image', href:'/images/decor/blender/black-md@x2.webp'},
-      { rel: 'preload', as:'image', href:'/images/decor/blender/black.webp'},
-      { rel: 'preload', as:'image', href:'/images/decor/blender/black@x2.webp'},
-    ]
-  })
+  // useHead({
+  //   link: [
+  //     { rel: 'preload', as:'image', href:'/images/decor/blender/black-md@x2.png'},
+  //     { rel: 'preload', as:'image', href:'/images/decor/blender/black.png'},
+  //     { rel: 'preload', as:'image', href:'/images/decor/blender/black@x2.png'},
+  //     { rel: 'preload', as:'image', href:'/images/decor/blender/black-md@x2.webp'},
+  //     { rel: 'preload', as:'image', href:'/images/decor/blender/black.webp'},
+  //     { rel: 'preload', as:'image', href:'/images/decor/blender/black@x2.webp'},
+  //   ]
+  // })
   let currentSlide = ref(0),
       pastSlide = ref(0),
       optionBrick = ref(1),

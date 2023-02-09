@@ -104,6 +104,16 @@
 <style lang="scss" >
   @import 'main.scss';
 </style>
+<style lang="scss">
+  html{
+    background-image: 
+      url('/images/decor/api-hero.png'),
+      url('/images/decor/api-hero-md.png'),
+      url('/images/decor/api-hero.webp'),
+      url('/images/decor/api-hero-md.webp');
+    background-size: 0;
+  }
+</style>
 <script setup>
   useHead({
     link: [
