@@ -61,7 +61,7 @@
             </div>
             <div class="blender-page__shadow position_abosolute"></div>
             <div @click="nextPage" class="scrl-down position_absolute fs_32 text_center cursor_pointer">
-              <p>How does Paver Picker create inspiring blends?</p>
+              <p>How does our blender work?</p>
               <p class="ff_icon fs_48"></p>
             </div>
           </div>
@@ -158,6 +158,16 @@
   @import 'main.scss';
 </style>
 <script setup>
+  useHead({
+    link: [
+      { rel: 'preload', as:'image', href:'/images/decor/blender/black-md@x2.png'},
+      { rel: 'preload', as:'image', href:'/images/decor/blender/black.png'},
+      { rel: 'preload', as:'image', href:'/images/decor/blender/black@x2.png'},
+      { rel: 'preload', as:'image', href:'/images/decor/blender/black-md@x2.webp'},
+      { rel: 'preload', as:'image', href:'/images/decor/blender/black.webp'},
+      { rel: 'preload', as:'image', href:'/images/decor/blender/black@x2.webp'},
+    ]
+  })
   let currentSlide = ref(0),
       pastSlide = ref(0),
       optionBrick = ref(1),

@@ -12,7 +12,7 @@
               </div>
             </div>
             <div @click="nextPage" class="scrl-down position_absolute fs_32 text_center cursor_pointer">
-              <p>What can the Paver Picker API do for your website?</p>
+              <p>What can our API do for your website?</p>
               <p class="ff_icon fs_48"></p>
             </div>
           </div>
@@ -105,6 +105,14 @@
   @import 'main.scss';
 </style>
 <script setup>
+  useHead({
+    link: [
+      { rel: 'preload', as:'image', href:'/images/decor/api-hero.png'},
+      { rel: 'preload', as:'image', href:'/images/decor/api-hero-md.png'},
+      { rel: 'preload', as:'image', href:'/images/decor/api-hero.webp'},
+      { rel: 'preload', as:'image', href:'/images/decor/api-hero-md.webp'},
+    ]
+  })
 
   let currentSlide = ref(0),
       pastSlide = ref(0),

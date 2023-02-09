@@ -5,7 +5,7 @@
   </div>
 </template>
 <script setup>
-  import { toggleMenu } from '@/store/menu'
+  import { toggleMenu } from '@/store/menu';
   const menu = toggleMenu();
   function menuToggle(){
     menu.toggle()
