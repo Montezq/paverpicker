@@ -29,6 +29,9 @@
             <li class="footer__item">
               <NuxtLink to="/software/blender-module/">Blender Module</NuxtLink>
             </li>
+            <li class="footer__item">
+              <NuxtLink to="/software/seamless-textures-module/">Seamless Texture Module</NuxtLink>
+            </li>
           </ul>
         </div>
         <div class="col">
