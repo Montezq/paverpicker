@@ -2,7 +2,7 @@
   <div class="seamless-page">
     <Rotate />
     <div class="animation-steps__wrapper">
-      <div :class="'animation-steps animation-steps_'+currentSlide+' animation-lstep_'+pastSlide">
+      <div :class="`animation-steps animation-steps_`+currentSlide+` animation-lstep_`+pastSlide+` ${(ios)?'ios-true':''}`">
         <section class="seamless-page__hero position_relative">
           <div class="slide-section position_relative d_flex align-items_center flex_column">
             <div class="slide-section__text position_absolute">
@@ -11,7 +11,7 @@
               </div>
             </div>
             <div class="slide-section__decor">
-              <Img v-for="i in 15" :key="i" class="position_absolute" :img="'seamless/seamless_wall-animated'" :alt="'Wall'"/>
+              <Img :resp="false" v-for="i in 15" :key="i" class="position_absolute" :img="'seamless/seamless_wall-animated'" :alt="'Wall'"/>
             </div>
             <div @click="nextPage" class="scrl-down position_absolute fs_32 text_center cursor_pointer">
               <p>What makes our textures unique?</p>
@@ -27,12 +27,12 @@
               </div>
               <div class="slide-section__text-desc">
                 <p class="fs_32">
-                  Our textures give you the freedom to select any layout - they are ALL seamless!
+                  Our textures give you the freedom to select any layout - they are <br> ALL seamless!
                 </p>
               </div>
             </div>
             <div class="slide-section__decor slide-section__decor_same position_absolute d_flex align-items_center">
-              <Img v-for="i in 4" :key="i" class="slide-section__decor-item position_absolute" :img="'seamless/seamless_wall-layout-'+i"  :alt="'Wall'"/>
+              <Img :resp="false" v-for="i in 4" :key="i" class="slide-section__decor-item position_absolute" :img="'seamless/seamless_wall-layout-'+i"  :alt="'Wall'"/>
             </div>
           </div>
         </section>
@@ -44,12 +44,12 @@
               </div>
               <div class="slide-section__text-desc">
                 <p class="fs_32">
-                  Mortar colour completely changes the products appearance - you choose.
+                  Mortar colour completely changes the products appearance -  <br>  you choose.
                 </p>
               </div>
             </div>
             <div class="slide-section__decor slide-section__decor_same position_absolute d_flex align-items_center">
-              <Img v-for="i in 4" :key="i" class="slide-section__decor-item position_absolute" :img="'seamless/seamless_wall-mortar-'+i"  :alt="'Wall'"/>
+              <Img :resp="false" v-for="i in 4" :key="i" class="slide-section__decor-item position_absolute" :img="'seamless/seamless_wall-mortar-'+i"  :alt="'Wall'"/>
             </div>
           </div>
         </section>
@@ -69,17 +69,17 @@
               </div>
             </div>
             <div class="slide-section__decor-scale">
+              <div class="slide-section__decor_alternative slide-section__decor_alternative-left position_absolute">
+                <Img   class="slide-section__decor-item position_absolute" :img="'seamless/seamless_wall-big'" :alt="'Wall'"/>
+              </div>
               <div class="slide-section__decor position_absolute">
-                <Img class="slide-section__decor-item position_absolute" :img="'seamless/seamless_bricks-black'"  :alt="'Wall'"/>
-                <Img class="slide-section__decor-item position_absolute" :img="'seamless/seamless_wall-animated'"  :alt="'Wall'"/>
-                <Img class="slide-section__decor-item position_absolute" :img="'seamless/seamless_bricks-white'" :alt="'Wall'"/>
-                <Img class="slide-section__decor-item position_absolute" :img="'seamless/seamless_wall-big'" :alt="'Wall'"/>
+                <Img :resp="false" :scenes="false" class="slide-section__decor-item position_absolute" :img="'seamless/seamless_bricks-black'"  :alt="'Wall'"/>
+                <Img :resp="false" :scenes="false" class="slide-section__decor-item position_absolute" :img="'seamless/seamless_wall-animated'"  :alt="'Wall'"/>
+                <Img :resp="false" :scenes="false" class="slide-section__decor-item position_absolute" :img="'seamless/seamless_bricks-white'" :alt="'Wall'"/>
+                <Img :resp="false" :scenes="false" class="slide-section__decor-item position_absolute" :img="'seamless/seamless_wall-big'" :alt="'Wall'"/>
               </div>
               <div class="slide-section__decor_alternative position_absolute">
-                <div class="slide-section__decor-item position_absolute">
-                  <img src="/images/decor/seamless/seamless_wall-big@x2.png" alt="Waall">
-                </div>
-                <!-- <Img class="slide-section__decor-item position_absolute" :img="'seamless/seamless_wall-big'" :scenes="false" :resp="false" :alt="'Wall'"/> -->
+                <Img   class="slide-section__decor-item position_absolute" :img="'seamless/seamless_wall-big'" :alt="'Wall'"/>
               </div>
             </div>
           </div>
@@ -92,7 +92,7 @@
               </div>
               <div class="slide-section__text-desc">
                 <p class="fs_32">
-                  Achieve seamless joins with both brick and mortar in <br> incredible detail.
+                  Achieve seamless joins with both brick and mortar in incredible detail.
                 </p>
               </div>
             </div>
@@ -157,6 +157,7 @@
   let currentSlide = ref(0),
       pastSlide = ref(0),
       ticking = ref(false),
+      ios = ref(false),
       scrlTicking = ref(true);
 
   function nextPage(){
@@ -222,6 +223,8 @@
     }
   }
   onMounted(() => {
+    if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream)
+      ios.value=true
     setTimeout(() => {
       const wrapper = document.querySelector('.animation-steps');
       const scrl = document.querySelector('.seamless-page__packaged');
