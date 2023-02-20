@@ -24,7 +24,7 @@
           <div class="slide-section d_flex align-items_center">
             <div class="slide-section__decor">
               <div class="slide-section__decor-video">
-                <video autoplay playsinline loop muted id="softwareVideo" src="/video/software.mp4"></video>
+                <video autoplay playsinline muted id="softwareVideo" src="/video/software.mp4"></video>
               </div>
             </div>
             <div class="slide-section__text position_relative">
@@ -107,9 +107,11 @@
   }
   function playVideo(currentSlide) {
     var videoElement = document.getElementById('softwareVideo');
+    var remainingTime;
 
     clearTimeout(currentTimeout);
-    if (currentSlide === 1 && videoElement.currentTime < 4) {
+    if (currentSlide === 1) {
+      videoElement.currentTime = 0
       currentTimeout = setTimeout(() => {
         if (currentSlide >= 1) {
           videoElement.play();
@@ -119,9 +121,12 @@
             }
           }, 4000);
         }
-      }, 3000);
+      }, (pastSlide.value === 2)? 0 : 3000);
     }
-    else if (currentSlide === 2 && videoElement.currentTime < 18) {
+    else if (currentSlide === 2) {
+      if(pastSlide.value === 3)
+        videoElement.currentTime = 4
+      remainingTime = 18 - videoElement.currentTime;
       currentTimeout = setTimeout(() => {
         if (currentSlide >= 2) {
           videoElement.play();
@@ -129,11 +134,13 @@
             if (currentSlide === 2) {
               videoElement.pause();
             }
-          }, 14000);
+          }, remainingTime * 1000);
         }
       }, 0);
     }
     else if (currentSlide === 3) {
+      if(pastSlide.value === 4)
+        videoElement.currentTime = 18
       videoElement.play();
     }
     else{
