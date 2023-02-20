@@ -17,8 +17,11 @@
   @include laptops{
     margin: 0 15px;
   }
+  @include phone{
+    margin: 0 8px;
+  }
   @include minphone2{
-    margin: 0 10px;
+    margin: 0 6px;
   }
   &:first-child{
     .software-nav__item-link-icon{
@@ -91,6 +94,7 @@
 }
 .software-nav__item-link-text{
   p{
+    text-align: center;
     font-size: 16px;
     @include laptops{
       font-size: 12px;

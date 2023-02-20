@@ -24,13 +24,13 @@
           <div class="slide-section d_flex align-items_center">
             <div class="slide-section__decor">
               <div class="slide-section__decor-video">
-                <video playsinline loop muted id="softwareVideo" src="/video/software.mp4"></video>
+                <video autoplay playsinline loop muted id="softwareVideo" src="/video/software.mp4"></video>
               </div>
             </div>
             <div class="slide-section__text position_relative">
               <div class="slide-section__text-inside position_absolute slide-section__text_1">
                 <div class="slide-section__text-head">
-                  <h2> Your Online Showroom</h2>
+                  <h2> Your Online <br> Showroom</h2>
                 </div>
                 <div class="slide-section__text-desc">
                   <p class="fs_32"> Present your products in one place, the use of filters make browsing easy.</p>
@@ -38,7 +38,7 @@
               </div>
               <div class="slide-section__text-inside position_relative slide-section__text_2">
                 <div class="slide-section__text-head">
-                  <h2>Limitless Possibilities</h2>
+                  <h2>Limitless <br> Possibilities</h2>
                 </div>
                 <div class="slide-section__text-desc">
                   <p class="fs_32">Change laying patterns, joint colours and angles. <br> Take it a step further with the blender module.</p>
@@ -49,7 +49,7 @@
               </div>
               <div class="slide-section__text-inside position_absolute slide-section__text_3">
                 <div class="slide-section__text-head">
-                  <h2>Inspiring Visualisation</h2>
+                  <h2>Inspiring <br> Visualisation</h2>
                 </div>
                 <div class="slide-section__text-desc">
                   <p class="fs_32">Check to see how products look by viewing them in a scene.</p>
@@ -63,7 +63,24 @@
         </section>
         <section class="software-page__device">
           <div>
-            <div class="slide-section"></div>
+            <div class="slide-section">
+              <div class="slide-section__text position_relative">
+                <div class="slide-section__text-head text_center">
+                  <h2 class="text_center">Any Device</h2>
+                </div>
+                <div class="slide-section__text-desc text_center">
+                  <p class="fs_32">Fully Adaptable to screen sizes. If you want even more control we offer API for integrating straight into your website.</p>
+                </div>
+                <div class="slider-section__text-cta text_center">
+                  <NuxtLink to="/software/api-module/">Learn about the API module</NuxtLink>
+                </div>
+              </div>
+              <div class="slide-section__decor d_flex justify-content_center position_relative">
+                <Img :img="'paver-3'" class="paver paver_1 position_absolute" :alt="'Software'"/>
+                <Img :img="'paver-3'" class="paver paver_2 position_relative" :alt="'Software'"/>
+                <Img :img="'paver-3mobile'" class="paver paver_3 position_absolute" :alt="'Software'"/>
+              </div>
+            </div>
             <div class="scrollable-section">
               <Cta />
               <Footer />
@@ -89,9 +106,9 @@
     slide(3000, 100)
   }
   function playVideo(currentSlide) {
-    var videoElement = document.getElementById('softwareVideo')
-    clearTimeout(currentTimeout);
+    var videoElement = document.getElementById('softwareVideo');
 
+    clearTimeout(currentTimeout);
     if (currentSlide === 1 && videoElement.currentTime < 4) {
       currentTimeout = setTimeout(() => {
         if (currentSlide >= 1) {
@@ -118,6 +135,9 @@
     }
     else if (currentSlide === 3) {
       videoElement.play();
+    }
+    else{
+      videoElement.pause();
     }
   }
   function slide(speed=3000, y=null, direction=null) {
@@ -177,6 +197,8 @@
     setTimeout(() => {
       const wrapper = document.querySelector('.animation-steps');
       const scrl = document.querySelector('.software-page__device');
+      var videoElement = document.getElementById('softwareVideo')
+      videoElement.pause()
       scrl.addEventListener('scroll', (e) =>{
         if(scrl.scrollTop>1)
           scrlTicking.value=false
