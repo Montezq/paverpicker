@@ -9,6 +9,43 @@ export default defineNuxtConfig({
         lang: 'en'
       },
       title: 'Paver Picker | YOUR Online Showroom',
+      link: [
+        {
+          rel: 'preload',
+          href: '/fonts/SegoeUI.woff2',
+          as: 'font',
+          type: 'font/woff2',
+          crossorigin: 'anonymous'
+        },
+        {
+          rel: 'preload',
+          href: '/fonts/SegoeUI-SemiBold.woff2',
+          as: 'font',
+          type: 'font/woff2',
+          crossorigin: 'anonymous'
+        },
+        {
+          rel: 'preload',
+          href: '/fonts/SegoeUI-Bold.woff2',
+          as: 'font',
+          type: 'font/woff2',
+          crossorigin: 'anonymous'
+        },
+        {
+          rel: 'preload',
+          href: '/fonts/FabricExternalMDL2Assets.woff2',
+          as: 'font',
+          type: 'font/woff2',
+          crossorigin: 'anonymous'
+        },
+        {
+          rel: 'preload',
+          href: '/fonts/SegoeUI-Light.woff2',
+          as: 'font',
+          type: 'font/woff2',
+          crossorigin: 'anonymous'
+        }
+      ]
     }
   },
   css: [

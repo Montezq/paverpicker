@@ -90,6 +90,19 @@ $speed: 3s;
           }
         }
       }
+      .software{
+        .photography__camera-ins{
+          &:after{
+            transition: .2s ease-in-out;
+          }
+        }
+        .visualisation_brick-single{
+          transition: 2s ease-in-out, opacity 0s ease 2s;
+        }
+        .photography__camera{
+          transition: $speed ease-in-out, z-index 0s ease-in-out .2s;
+        }
+      }
     }
     &_3{
       transform: translate3d(0,-200vh,0);
@@ -182,7 +195,21 @@ $speed: 3s;
           }
         }
         .photography__camera{
+          z-index: 0;
+          transition: $speed ease-in-out, z-index 0s ease 2.4s;
           transform: translate3d(0, 0, 0) ;
+        }
+      }
+    }
+    &_3.animation-lstep_2{
+      .software{
+        .photography__camera-ins{
+          &:after{
+            transition: 1s ease-in-out 2.4s;
+          }
+        }
+        .visualisation_brick-single{
+          transition: 2s ease-in-out 1s, opacity 0s ease 1.2s;
         }
       }
     }
@@ -1182,7 +1209,8 @@ $speed: 3s;
       z-index: 3;
       top: -200vh;
       left: 48.5%;
-      transform: translate3d(-19%, 14.8vw, 0);
+      // transform: translate3d(-19%, 14.8vw, 0);
+      transform: translate3d(-19%, 10vw, 0);
       opacity: 1;
       z-index: 4;
       opacity: 0;
@@ -1190,12 +1218,12 @@ $speed: 3s;
       @include tabletPortrait{
         width: 13.7vw;
         left: 73.4%;
-        transform: translate3d(0, 20.8vw, 0);
+        transform: translate3d(0, 10.8vw, 0);
       }
       @include tabletsPortrait{
         left: 57.2%;
         width: 14.5vw;
-        transform: translate3d(0, 30vw, 0);
+        transform: translate3d(0, 20vw, 0);
       }
       @include special{
         left: 61.4%;
@@ -1269,6 +1297,7 @@ $speed: 3s;
       top: -200vh;
       transform: translate3d(100%, 0, 0) ;
       transition: $speed ease-in-out;
+      z-index: 4;
       @include tabletPortrait{
         width: 85vw;
         left: 40%;
