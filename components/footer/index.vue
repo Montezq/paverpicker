@@ -30,7 +30,7 @@
               <NuxtLink to="/software/blender-module/">Blender Module</NuxtLink>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/software/seamless-textures-module/">Seamless Texture Module</NuxtLink>
+              <NuxtLink to="/software/textures-module/">Texture Module</NuxtLink>
             </li>
           </ul>
         </div>

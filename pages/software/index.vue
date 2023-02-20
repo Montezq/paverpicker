@@ -12,112 +12,58 @@
               </div>
             </div>
             <div class="slide-section__hero-img">
-              <Img :img="'pc-2'" :alt="'Home hero visualisation'"/>
+              <Img :scenes="false" :resp="false" :img="'pc-2'" :alt="'Home hero visualisation'"/>
             </div>
             <div @click="nextPage" class="scrl-down position_absolute fs_32 text_center cursor_pointer">
-              <p>How can our software help you?</p>
+              <p>How can our software benefit you?</p>
               <p class="ff_icon fs_48"></p>
             </div>
           </div>
         </section>
         <section class="software-page__steps">
-          <div>
-            <div class="slide-section position_relative ">
-              <div class="d_flex flex_column align-items_center h_100 position_relative">
-                <div class="slide-section__text-wrapper">
-                  <div class="slide-section__text position_relative">
-                    <div class="slide-section__text-inside slide-section__text_1 position_absolute">
-                      <div class="slide-section__text-head text_center">
-                        <h2>Your Online Showroom</h2>
-                      </div>
-                      <div class="slide-section__text-desc text_center">
-                        <p class="fs_32">
-                          Present your products in one place, the
-                          <br> use of filters make browsing easy.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="slide-section__text-inside slide-section__text_2 position_absolute">
-                      <div class="slide-section__text-head text_center">
-                        <h2>Limitless Possibilities</h2>
-                      </div>
-                      <div class="slide-section__text-desc text_center">
-                        <p class="fs_32">
-                          Change laying patterns, joint colours and angles.
-                          <br> Take it a step further with the blender module.
-                        </p>
-                      </div>
-                      <div class="slider-section__text-cta text_center">
-                        <NuxtLink to="blender-module/" >
-                          <p class="fs_32 fw_regular">
-                            Learn about the blender module
-                          </p>
-                        </NuxtLink>
-                      </div>
-                    </div>
-                    <div class="slide-section__text-inside slide-section__text_3 position_absolute">
-                      <div class="slide-section__text-head text_center">
-                        <h2>Inspiring Visualisation</h2>
-                      </div>
-                      <div class="slide-section__text-desc text_center">
-                        <p class="fs_32">
-                          Check to see how products look by viewing them in a
-                          <br> scene.
-                        </p>
-                      </div>
-                      <div class="slider-section__text-cta text_center">
-                        <NuxtLink to="/visualisation/" >
-                          <p class="fs_32 fw_regular">
-                            Learn more about visualisation
-                          </p>
-                        </NuxtLink>
-                      </div>
-                    </div>
-                    <div class="slide-section__text-inside slide-section__text_4 position_relative">
-                      <div class="slide-section__text-head text_center">
-                        <h2>Any Device</h2>
-                      </div>
-                      <div class="slide-section__text-desc text_center">
-                        <p class="fs_32">
-                          Fully Adaptable to screen sizes. If you want even more control 
-                          <br> we offer API for integrating straight into your website.
-                        </p>
-                      </div>
-                      <div class="slider-section__text-cta text_center">
-                        <NuxtLink to="/" >
-                          <p class="fs_32 fw_regular">
-                            Learn about the API module
-                          </p>
-                        </NuxtLink>
-                      </div>
-                    </div>
-                  </div>
+          <div class="slide-section d_flex align-items_center">
+            <div class="slide-section__decor">
+              <div class="slide-section__decor-video">
+                <video playsinline loop muted id="softwareVideo" src="/video/software.mp4"></video>
+              </div>
+            </div>
+            <div class="slide-section__text position_relative">
+              <div class="slide-section__text-inside position_absolute slide-section__text_1">
+                <div class="slide-section__text-head">
+                  <h2> Your Online Showroom</h2>
                 </div>
-                <div class="slide-section__decor position_relative">
-                  <div class="slide-section__decor-box slide-section__decor-box_video postion_relative">
-                    <Img :img="'paver-3'" :alt="'Box'" class="software_paver"/>
-                    <video class="section__video position_absolute section__video_1" autoplay="autoplay" 
-                      muted="muted" loop playsinline="playsinline" 
-                      :src="`/video/api-vid-1.mp4`" id="apiVideo">
-                    </video>
-                    <video class="section__video position_absolute section__video_2" autoplay="autoplay" 
-                      muted="muted" loop playsinline="playsinline" 
-                      :src="`/video/api-vid-2.mp4`" id="apiVideo">
-                    </video>
-                    <video class="section__video position_absolute section__video_3" autoplay="autoplay" 
-                      muted="muted" loop playsinline="playsinline" 
-                      :src="`/video/api-vid-3.mp4`" id="apiVideo">
-                    </video>
-                  </div>
+                <div class="slide-section__text-desc">
+                  <p class="fs_32"> Present your products in one place, the use of filters make browsing easy.</p>
                 </div>
-                <div class="slide-section__decor-box slide-section__decor-box_tablet position_absolute">
-                  <Img :img="'paver-3'" :alt="'Box'" class="software_paver"/>
+              </div>
+              <div class="slide-section__text-inside position_relative slide-section__text_2">
+                <div class="slide-section__text-head">
+                  <h2>Limitless Possibilities</h2>
                 </div>
-                <div class="slide-section__decor-box slide-section__decor-box_mobile position_absolute">
-                  <Img :img="'paver-3mobile'" :alt="'Box'" class="software_paver"/>
+                <div class="slide-section__text-desc">
+                  <p class="fs_32">Change laying patterns, joint colours and angles. <br> Take it a step further with the blender module.</p>
+                </div>
+                <div class="slider-section__text-cta">
+                  <NuxtLink to="/software/blender-module/">Learn about the blender module</NuxtLink>
+                </div>
+              </div>
+              <div class="slide-section__text-inside position_absolute slide-section__text_3">
+                <div class="slide-section__text-head">
+                  <h2>Inspiring Visualisation</h2>
+                </div>
+                <div class="slide-section__text-desc">
+                  <p class="fs_32">Check to see how products look by viewing them in a scene.</p>
+                </div>
+                <div class="slider-section__text-cta">
+                  <NuxtLink to="/visualisation/">Learn more about visualisation</NuxtLink>
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+        <section class="software-page__device">
+          <div>
+            <div class="slide-section"></div>
             <div class="scrollable-section">
               <Cta />
               <Footer />
@@ -136,13 +82,46 @@
   let currentSlide = ref(0),
       pastSlide = ref(0),
       ticking = ref(false),
+      currentTimeout,
       scrlTicking = ref(true);
 
   function nextPage(){
     slide(3000, 100)
   }
+  function playVideo(currentSlide) {
+    var videoElement = document.getElementById('softwareVideo')
+    clearTimeout(currentTimeout);
+
+    if (currentSlide === 1 && videoElement.currentTime < 4) {
+      currentTimeout = setTimeout(() => {
+        if (currentSlide >= 1) {
+          videoElement.play();
+          currentTimeout = setTimeout(() => {
+            if (currentSlide === 1) {
+              videoElement.pause();
+            }
+          }, 4000);
+        }
+      }, 3000);
+    }
+    else if (currentSlide === 2 && videoElement.currentTime < 18) {
+      currentTimeout = setTimeout(() => {
+        if (currentSlide >= 2) {
+          videoElement.play();
+          currentTimeout = setTimeout(() => {
+            if (currentSlide === 2) {
+              videoElement.pause();
+            }
+          }, 14000);
+        }
+      }, 0);
+    }
+    else if (currentSlide === 3) {
+      videoElement.play();
+    }
+  }
   function slide(speed=3000, y=null, direction=null) {
-    const scrl = document.querySelector('.software-page__steps');
+    const scrl = document.querySelector('.software-page__device');
     const lngth = 4;
     if((y>0 || direction==='up') && currentSlide.value < lngth){
       currentSlide.value+=1
@@ -161,6 +140,7 @@
         ticking.value = false;
       }, speed);
     }
+    playVideo(currentSlide.value);
   }
   function touch(){
     document.addEventListener('touchstart', handleTouchStart, false);        
@@ -196,7 +176,7 @@
   onMounted(() => {
     setTimeout(() => {
       const wrapper = document.querySelector('.animation-steps');
-      const scrl = document.querySelector('.software-page__steps');
+      const scrl = document.querySelector('.software-page__device');
       scrl.addEventListener('scroll', (e) =>{
         if(scrl.scrollTop>1)
           scrlTicking.value=false

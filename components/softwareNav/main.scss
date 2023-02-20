@@ -64,30 +64,30 @@
       font-size: 24px;
     }
   }
-  &_custom{
-    width: 28px;
-    @include phone{
-      width: 22px;
-    }
-    div{
-      width: 14px;
-      height: 13px;
-      border: 2px solid #fff;
-      @include phone{
-        width: 11px;
-        height: 11px;
-      }
-      &:first-child{
-        border-width: 0;
-      }
-      &:nth-child(2){
-        border-bottom-width: 1px;
-      }
-      &:nth-child(3){
-        border-right-width: 1px;
-      }
-    }
-  }
+  // &_custom{
+  //   width: 28px;
+  //   @include phone{
+  //     width: 22px;
+  //   }
+  //   div{
+  //     width: 14px;
+  //     height: 13px;
+  //     border: 2px solid #fff;
+  //     @include phone{
+  //       width: 11px;
+  //       height: 11px;
+  //     }
+  //     &:first-child{
+  //       border-width: 0;
+  //     }
+  //     &:nth-child(2){
+  //       border-bottom-width: 1px;
+  //     }
+  //     &:nth-child(3){
+  //       border-right-width: 1px;
+  //     }
+  //   }
+  // }
 }
 .software-nav__item-link-text{
   p{
