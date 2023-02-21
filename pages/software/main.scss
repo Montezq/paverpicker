@@ -57,17 +57,42 @@ $speed2: 1.2s;
       }
     }
     &_4{
-      transform: translate3d(0,-200vh,0);
+      transform: translate3d(0,-100vh,0);
       .software-page__steps{
         .slide-section__text{
           &_1,
-          &_2{
+          &_2,
+          &_3{
             transform: translate3d(0, -100vh, 0);
             @include tabletPortrait{
               transform: translate3d(-50%,-100vh,0);
             }
           }
+          &_4{
+            transform: translate3d(0, 0, 0);
+            @include tabletPortrait{
+              transform: translate3d(-50%,0,0);
+            }
+            @include phoneLandscape{
+              transform: translate3d(0,-30%,0);
+            }
+          }
+        }
+      }
+    }
+    &_5{
+      transform: translate3d(0,-200vh,0);
+      .software-page__steps{
+        .slide-section__text{
+          &_1,
+          &_2,
           &_3{
+            transform: translate3d(0, -100vh, 0);
+            @include tabletPortrait{
+              transform: translate3d(-50%,-100vh,0);
+            }
+          }
+          &_4{
             transform: translate3d(0, 0, 0);
             @include tabletPortrait{
               transform: translate3d(-50%,0,0);
@@ -250,13 +275,14 @@ $speed2: 1.2s;
       }
       &_2{
         .slide-section__text-desc{
-          max-width: clamp(360px, 23vw, 23vw);
+          max-width: clamp(370px, 25vw, 25vw);
           @include tabletPortrait{
             max-width: 100%;
           }
         }
       }
-      &_3{
+      &_3,
+      &_4{
         .slide-section__text-desc{
           max-width: clamp(375px, 25vw, 25vw);
           @include tabletPortrait{
@@ -265,7 +291,8 @@ $speed2: 1.2s;
         }
       }
       &_2,
-      &_3{
+      &_3,
+      &_4{
         transform: translate3d(0, 100vh, 0);
         @include tabletPortrait{
           transform: translate3d(-50%, 100vh, 0);

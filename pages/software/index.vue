@@ -36,18 +36,26 @@
                   <p class="fs_32"> Present your products in one place, the use of filters make browsing easy.</p>
                 </div>
               </div>
-              <div class="slide-section__text-inside position_relative slide-section__text_2">
+              <div class="slide-section__text-inside position_absolute slide-section__text_2">
                 <div class="slide-section__text-head">
-                  <h2>Limitless <br> Possibilities</h2>
+                  <h2>Any Layout</h2>
                 </div>
                 <div class="slide-section__text-desc">
-                  <p class="fs_32">Change laying patterns, joint colours and angles. <br> Take it a step further with the blender module.</p>
+                  <p class="fs_32">Change laying patterns and angles. Do you have a laying pattern unique to your product? We can create that too!</p>
+                </div>
+              </div>
+              <div class="slide-section__text-inside position_relative slide-section__text_3">
+                <div class="slide-section__text-head">
+                  <h2>Any Joint</h2>
+                </div>
+                <div class="slide-section__text-desc">
+                  <p class="fs_32">Change joint colour and size. Create limitless designs with the blender module.</p>
                 </div>
                 <div class="slider-section__text-cta">
                   <NuxtLink to="/software/blender-module/">Learn about the blender module</NuxtLink>
                 </div>
               </div>
-              <div class="slide-section__text-inside position_absolute slide-section__text_3">
+              <div class="slide-section__text-inside position_absolute slide-section__text_4">
                 <div class="slide-section__text-head">
                   <h2>Inspiring <br> Visualisation</h2>
                 </div>
@@ -105,51 +113,182 @@
   function nextPage(){
     slide(3000, 100)
   }
-  function playVideo(currentSlide) {
-    var videoElement = document.getElementById('softwareVideo');
-    var remainingTime;
+  // function playVideo(currentSlide) {
+  //   var videoElement = document.getElementById('softwareVideo');
+  //   var remainingTime;
+  //   var isPlaying = videoElement.currentTime > 0 && !videoElement.paused && !videoElement.ended 
+  //    && videoElement.readyState > videoElement.HAVE_CURRENT_DATA;
 
-    clearTimeout(currentTimeout);
-    if (currentSlide === 1) {
-      videoElement.currentTime = 0
-      currentTimeout = setTimeout(() => {
-        if (currentSlide >= 1) {
-          videoElement.play();
-          currentTimeout = setTimeout(() => {
-            if (currentSlide === 1) {
-              videoElement.pause();
-            }
-          }, 4000);
-        }
-      }, (pastSlide.value === 2)? 0 : 3000);
-    }
-    else if (currentSlide === 2) {
-      if(pastSlide.value === 3)
-        videoElement.currentTime = 4
-      remainingTime = 18 - videoElement.currentTime;
-      currentTimeout = setTimeout(() => {
-        if (currentSlide >= 2) {
-          videoElement.play();
-          currentTimeout = setTimeout(() => {
-            if (currentSlide === 2) {
-              videoElement.pause();
-            }
-          }, remainingTime * 1000);
-        }
-      }, 0);
-    }
-    else if (currentSlide === 3) {
-      if(pastSlide.value === 4)
-        videoElement.currentTime = 18
-      videoElement.play();
-    }
-    else{
-      videoElement.pause();
-    }
+  //   clearTimeout(currentTimeout);
+  //   if (currentSlide === 1) {
+  //     videoElement.currentTime = 0
+  //     currentTimeout = setTimeout(() => {
+  //       if (currentSlide >= 1) {
+  //         videoElement.play();
+  //         currentTimeout = setTimeout(() => {
+  //           if (currentSlide === 1) {
+  //             videoElement.pause();
+  //           }
+  //         }, 4000);
+  //       }
+  //     }, (pastSlide.value === 2 || pastSlide.value === 3)? 200 : 3000);
+  //   }
+  //   // else if (currentSlide === 2) {
+  //   //   if(pastSlide.value === 3)
+  //   //     videoElement.currentTime = 4
+  //   //   if(pastSlide.value === 1)
+  //   //     remainingTime = 12 - videoElement.currentTime;
+  //   //   currentTimeout = setTimeout(() => {
+  //   //     if(!isPlaying)
+  //   //       videoElement.play();
+  //   //     else{
+  //   //       setTimeout(() => {
+  //   //         videoElement.play();
+  //   //       }, 200);
+  //   //     }
+  //   //     currentTimeout = setTimeout(() => {
+  //   //       videoElement.pause();
+  //   //     }, (pastSlide.value === 1)?remainingTime * 1000:8);
+  //   //   }, 0);
+  //   // }
+  //   else if (currentSlide === 2) {
+  //     if (pastSlide.value === 3) {
+  //       videoElement.currentTime = 4;
+  //     }
+  //     if (pastSlide.value === 1) {
+  //       remainingTime = 12 - videoElement.currentTime;
+  //     }
+  //     if (!(pastSlide.value === 3 && currentSlide === 2)) { // check for condition
+  //       currentTimeout = setTimeout(() => {
+  //         if (!isPlaying) {
+  //           videoElement.play();
+  //         } else {
+  //           setTimeout(() => {
+  //             videoElement.play();
+  //           }, 200);
+  //         }
+  //         currentTimeout = setTimeout(() => {
+  //           videoElement.pause();
+  //         }, (pastSlide.value === 1) ? remainingTime * 1000 : 8);
+  //       }, 0);
+  //     }
+  //   }
+  //   else if (currentSlide === 3) {
+  //     if(pastSlide.value === 4)
+  //       videoElement.currentTime = 12
+  //     if(pastSlide.value === 2)
+  //       remainingTime = 18 - videoElement.currentTime;
+  //     currentTimeout = setTimeout(() => {
+  //       if(!isPlaying)
+  //         videoElement.play();
+  //       else{
+  //         setTimeout(() => {
+  //           videoElement.play();
+  //         }, 200);
+  //       }
+  //       currentTimeout = setTimeout(() => {
+  //         videoElement.pause();
+  //       }, (pastSlide.value === 2)?remainingTime * 1000:14);
+  //     }, 0);
+  //   }
+  //   else if (currentSlide === 4) {
+  //     if(pastSlide.value === 5)
+  //       videoElement.currentTime = 18
+  //     videoElement.play();
+  //   }
+  //   else{
+  //     videoElement.pause();
+  //   }
+  // }
+  function playVideo(currentSlide) {
+  var videoElement = document.getElementById('softwareVideo');
+  var remainingTime;
+  var isPlaying = videoElement.currentTime > 0 && !videoElement.paused && !videoElement.ended 
+    && videoElement.readyState > videoElement.HAVE_CURRENT_DATA;
+
+  clearTimeout(currentTimeout);
+  if (currentSlide === 1) {
+    videoElement.currentTime = 0;
+    currentTimeout = setTimeout(() => {
+      if (currentSlide >= 1) {
+        videoElement.play();
+        currentTimeout = setTimeout(() => {
+          if (currentSlide === 1) {
+            videoElement.pause();
+          }
+        }, 4000);
+      }
+    }, (pastSlide.value === 2 || pastSlide.value === 3)? 200 : 3000);
   }
+  else if (currentSlide === 2) {
+    if(pastSlide.value === 3) {
+      videoElement.currentTime = 4;
+    }
+    if(pastSlide.value === 1) {
+      remainingTime = 12 - videoElement.currentTime;
+    }
+    currentTimeout = setTimeout(() => {
+      if(!isPlaying) {
+        videoElement.play();
+      }
+      else {
+        setTimeout(() => {
+          videoElement.play();
+        }, 200);
+      }
+      if(pastSlide.value === 1) {
+        currentTimeout = setTimeout(() => {
+          videoElement.pause();
+        }, remainingTime * 1000);
+      }
+      else {
+        currentTimeout = setTimeout(() => {
+          videoElement.pause();
+        }, 8100);
+      }
+    }, 0);
+  }
+  else if (currentSlide === 3) {
+    if(pastSlide.value === 4) {
+      videoElement.currentTime = 12;
+    }
+    if(pastSlide.value === 2) {
+      remainingTime = 18 - videoElement.currentTime;
+    }
+    currentTimeout = setTimeout(() => {
+      if(!isPlaying) {
+        videoElement.play();
+      }
+      else {
+        setTimeout(() => {
+          videoElement.play();
+        }, 200);
+      }
+      if(pastSlide.value === 2) {
+        currentTimeout = setTimeout(() => {
+          videoElement.pause();
+        }, remainingTime * 1000);
+      }
+      else {
+        currentTimeout = setTimeout(() => {
+          videoElement.pause();
+        }, 6000);
+      }
+    }, 0);
+  }
+  else if (currentSlide === 4) {
+    if(pastSlide.value === 5) {
+      videoElement.currentTime = 18;
+    }
+    videoElement.play();
+  }
+  else {
+    videoElement.pause();
+  }
+}
   function slide(speed=3000, y=null, direction=null) {
     const scrl = document.querySelector('.software-page__device');
-    const lngth = 4;
+    const lngth = 5;
     if((y>0 || direction==='up') && currentSlide.value < lngth){
       currentSlide.value+=1
       pastSlide.value = currentSlide.value-1
