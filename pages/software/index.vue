@@ -113,179 +113,92 @@
   function nextPage(){
     slide(3000, 100)
   }
-  // function playVideo(currentSlide) {
-  //   var videoElement = document.getElementById('softwareVideo');
-  //   var remainingTime;
-  //   var isPlaying = videoElement.currentTime > 0 && !videoElement.paused && !videoElement.ended 
-  //    && videoElement.readyState > videoElement.HAVE_CURRENT_DATA;
-
-  //   clearTimeout(currentTimeout);
-  //   if (currentSlide === 1) {
-  //     videoElement.currentTime = 0
-  //     currentTimeout = setTimeout(() => {
-  //       if (currentSlide >= 1) {
-  //         videoElement.play();
-  //         currentTimeout = setTimeout(() => {
-  //           if (currentSlide === 1) {
-  //             videoElement.pause();
-  //           }
-  //         }, 4000);
-  //       }
-  //     }, (pastSlide.value === 2 || pastSlide.value === 3)? 200 : 3000);
-  //   }
-  //   // else if (currentSlide === 2) {
-  //   //   if(pastSlide.value === 3)
-  //   //     videoElement.currentTime = 4
-  //   //   if(pastSlide.value === 1)
-  //   //     remainingTime = 12 - videoElement.currentTime;
-  //   //   currentTimeout = setTimeout(() => {
-  //   //     if(!isPlaying)
-  //   //       videoElement.play();
-  //   //     else{
-  //   //       setTimeout(() => {
-  //   //         videoElement.play();
-  //   //       }, 200);
-  //   //     }
-  //   //     currentTimeout = setTimeout(() => {
-  //   //       videoElement.pause();
-  //   //     }, (pastSlide.value === 1)?remainingTime * 1000:8);
-  //   //   }, 0);
-  //   // }
-  //   else if (currentSlide === 2) {
-  //     if (pastSlide.value === 3) {
-  //       videoElement.currentTime = 4;
-  //     }
-  //     if (pastSlide.value === 1) {
-  //       remainingTime = 12 - videoElement.currentTime;
-  //     }
-  //     if (!(pastSlide.value === 3 && currentSlide === 2)) { // check for condition
-  //       currentTimeout = setTimeout(() => {
-  //         if (!isPlaying) {
-  //           videoElement.play();
-  //         } else {
-  //           setTimeout(() => {
-  //             videoElement.play();
-  //           }, 200);
-  //         }
-  //         currentTimeout = setTimeout(() => {
-  //           videoElement.pause();
-  //         }, (pastSlide.value === 1) ? remainingTime * 1000 : 8);
-  //       }, 0);
-  //     }
-  //   }
-  //   else if (currentSlide === 3) {
-  //     if(pastSlide.value === 4)
-  //       videoElement.currentTime = 12
-  //     if(pastSlide.value === 2)
-  //       remainingTime = 18 - videoElement.currentTime;
-  //     currentTimeout = setTimeout(() => {
-  //       if(!isPlaying)
-  //         videoElement.play();
-  //       else{
-  //         setTimeout(() => {
-  //           videoElement.play();
-  //         }, 200);
-  //       }
-  //       currentTimeout = setTimeout(() => {
-  //         videoElement.pause();
-  //       }, (pastSlide.value === 2)?remainingTime * 1000:14);
-  //     }, 0);
-  //   }
-  //   else if (currentSlide === 4) {
-  //     if(pastSlide.value === 5)
-  //       videoElement.currentTime = 18
-  //     videoElement.play();
-  //   }
-  //   else{
-  //     videoElement.pause();
-  //   }
-  // }
   function playVideo(currentSlide) {
-  var videoElement = document.getElementById('softwareVideo');
-  var remainingTime;
-  var isPlaying = videoElement.currentTime > 0 && !videoElement.paused && !videoElement.ended 
-    && videoElement.readyState > videoElement.HAVE_CURRENT_DATA;
+    var videoElement = document.getElementById('softwareVideo');
+    var remainingTime;
+    var isPlaying = videoElement.currentTime > 0 && !videoElement.paused && !videoElement.ended 
+      && videoElement.readyState > videoElement.HAVE_CURRENT_DATA;
 
-  clearTimeout(currentTimeout);
-  if (currentSlide === 1) {
-    videoElement.currentTime = 0;
-    currentTimeout = setTimeout(() => {
-      if (currentSlide >= 1) {
-        videoElement.play();
-        currentTimeout = setTimeout(() => {
-          if (currentSlide === 1) {
-            videoElement.pause();
-          }
-        }, 4000);
-      }
-    }, (pastSlide.value === 2 || pastSlide.value === 3)? 200 : 3000);
-  }
-  else if (currentSlide === 2) {
-    if(pastSlide.value === 3) {
-      videoElement.currentTime = 4;
-    }
-    if(pastSlide.value === 1) {
-      remainingTime = 12 - videoElement.currentTime;
-    }
-    currentTimeout = setTimeout(() => {
-      if(!isPlaying) {
-        videoElement.play();
-      }
-      else {
-        setTimeout(() => {
+    clearTimeout(currentTimeout);
+    if (currentSlide === 1) {
+      videoElement.currentTime = 0;
+      currentTimeout = setTimeout(() => {
+        if (currentSlide >= 1) {
           videoElement.play();
-        }, 200);
+          currentTimeout = setTimeout(() => {
+            if (currentSlide === 1) {
+              videoElement.pause();
+            }
+          }, 4000);
+        }
+      }, (pastSlide.value === 2 || pastSlide.value === 3)? 200 : 3000);
+    }
+    else if (currentSlide === 2) {
+      if(pastSlide.value === 3) {
+        videoElement.currentTime = 4;
       }
       if(pastSlide.value === 1) {
-        currentTimeout = setTimeout(() => {
-          videoElement.pause();
-        }, remainingTime * 1000);
+        remainingTime = 12 - videoElement.currentTime;
       }
-      else {
-        currentTimeout = setTimeout(() => {
-          videoElement.pause();
-        }, 8100);
-      }
-    }, 0);
-  }
-  else if (currentSlide === 3) {
-    if(pastSlide.value === 4) {
-      videoElement.currentTime = 12;
-    }
-    if(pastSlide.value === 2) {
-      remainingTime = 18 - videoElement.currentTime;
-    }
-    currentTimeout = setTimeout(() => {
-      if(!isPlaying) {
-        videoElement.play();
-      }
-      else {
-        setTimeout(() => {
+      currentTimeout = setTimeout(() => {
+        if(!isPlaying) {
           videoElement.play();
-        }, 200);
+        }
+        else {
+          setTimeout(() => {
+            videoElement.play();
+          }, 200);
+        }
+        if(pastSlide.value === 1) {
+          currentTimeout = setTimeout(() => {
+            videoElement.pause();
+          }, remainingTime * 1000);
+        }
+        else {
+          currentTimeout = setTimeout(() => {
+            videoElement.pause();
+          }, 8100);
+        }
+      }, 0);
+    }
+    else if (currentSlide === 3) {
+      if(pastSlide.value === 4) {
+        videoElement.currentTime = 12;
       }
       if(pastSlide.value === 2) {
-        currentTimeout = setTimeout(() => {
-          videoElement.pause();
-        }, remainingTime * 1000);
+        remainingTime = 18 - videoElement.currentTime;
       }
-      else {
-        currentTimeout = setTimeout(() => {
-          videoElement.pause();
-        }, 6000);
-      }
-    }, 0);
-  }
-  else if (currentSlide === 4) {
-    if(pastSlide.value === 5) {
-      videoElement.currentTime = 18;
+      currentTimeout = setTimeout(() => {
+        if(!isPlaying) {
+          videoElement.play();
+        }
+        else {
+          setTimeout(() => {
+            videoElement.play();
+          }, 200);
+        }
+        if(pastSlide.value === 2) {
+          currentTimeout = setTimeout(() => {
+            videoElement.pause();
+          }, remainingTime * 1000);
+        }
+        else {
+          currentTimeout = setTimeout(() => {
+            videoElement.pause();
+          }, 6000);
+        }
+      }, 0);
     }
-    videoElement.play();
+    else if (currentSlide === 4) {
+      if(pastSlide.value === 5) {
+        videoElement.currentTime = 18;
+      }
+      videoElement.play();
+    }
+    else {
+      videoElement.pause();
+    }
   }
-  else {
-    videoElement.pause();
-  }
-}
   function slide(speed=3000, y=null, direction=null) {
     const scrl = document.querySelector('.software-page__device');
     const lngth = 5;
@@ -298,10 +211,10 @@
     }
     ticking.value = true;
     if(scrl){
-      if(currentSlide.value!==4)
+      if(currentSlide.value!==5)
         scrl.classList.remove('oh')
       setTimeout(() => {
-        if(currentSlide.value===4)
+        if(currentSlide.value===5)
           scrl.classList.add('oh')
         ticking.value = false;
       }, speed);
