@@ -131,71 +131,41 @@
             }
           }, 4000);
         }
-      }, (pastSlide.value === 2 || pastSlide.value === 3)? 200 : 3000);
-    }
-    else if (currentSlide === 2) {
-      if(pastSlide.value === 3) {
+      }, (pastSlide.value === 2 || pastSlide.value === 3) ? 200 : 3000);
+    } else if (currentSlide === 2) {
+      if (pastSlide.value === 3) {
         videoElement.currentTime = 4;
       }
-      if(pastSlide.value === 1) {
-        remainingTime = 12 - videoElement.currentTime;
-      }
+      remainingTime = 12 - videoElement.currentTime;
       currentTimeout = setTimeout(() => {
-        if(!isPlaying) {
-          videoElement.play();
-        }
-        else {
-          setTimeout(() => {
-            videoElement.play();
-          }, 200);
-        }
-        if(pastSlide.value === 1) {
-          currentTimeout = setTimeout(() => {
+        videoElement.play();
+        videoElement.addEventListener('timeupdate', function checkTime() {
+          if (videoElement.currentTime >= 12) {
             videoElement.pause();
-          }, remainingTime * 1000);
-        }
-        else {
-          currentTimeout = setTimeout(() => {
-            videoElement.pause();
-          }, 8100);
-        }
+            videoElement.removeEventListener('timeupdate', checkTime);
+          }
+        });
       }, 0);
-    }
-    else if (currentSlide === 3) {
-      if(pastSlide.value === 4) {
+    } else if (currentSlide === 3) {
+      if (pastSlide.value === 4) {
         videoElement.currentTime = 12;
       }
-      if(pastSlide.value === 2) {
-        remainingTime = 18 - videoElement.currentTime;
-      }
+      remainingTime = 18 - videoElement.currentTime;
       currentTimeout = setTimeout(() => {
-        if(!isPlaying) {
-          videoElement.play();
-        }
-        else {
-          setTimeout(() => {
-            videoElement.play();
-          }, 200);
-        }
-        if(pastSlide.value === 2) {
-          currentTimeout = setTimeout(() => {
+        videoElement.play();
+        videoElement.addEventListener('timeupdate', function checkTime() {
+          if (videoElement.currentTime >= 18) {
             videoElement.pause();
-          }, remainingTime * 1000);
-        }
-        else {
-          currentTimeout = setTimeout(() => {
-            videoElement.pause();
-          }, 6000);
-        }
+            videoElement.removeEventListener('timeupdate', checkTime);
+          }
+        });
       }, 0);
-    }
-    else if (currentSlide === 4) {
-      if(pastSlide.value === 5) {
+    } else if (currentSlide === 4) {
+      if (pastSlide.value === 5) {
         videoElement.currentTime = 18;
       }
       videoElement.play();
-    }
-    else {
+    } else {
       videoElement.pause();
     }
   }
