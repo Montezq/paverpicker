@@ -5,6 +5,7 @@
       <div :class="`animation-steps animation-steps_`+currentSlide+` animation-lstep_`+pastSlide+` ${(ios)?'ios-true':''}`">
         <section class="seamless-page__hero position_relative">
           <div class="slide-section position_relative d_flex align-items_center flex_column">
+            <SoftwareNav class="black" />
             <div class="slide-section__text position_absolute">
               <div class="slide-section__text-head text_center">
                 <h1>Seamless Textures</h1>

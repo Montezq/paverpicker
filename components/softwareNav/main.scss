@@ -11,6 +11,9 @@
   @include minphone2{
     padding: 8px 6px 0;
   }
+  &.black{
+    background-color: rgba(#313131, .8);
+  }
 }
 .software-nav__item{
   margin: 0 37px;
@@ -49,6 +52,11 @@
   &.router-link-active{
     &:after{
       background-color: $green;
+    }
+    .software-nav__item-link-text{
+      p{
+        @include segoe(bold);
+      }
     }
   }
 }
