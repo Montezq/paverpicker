@@ -18,7 +18,8 @@
     "@funken-studio/sitemap-nuxt-3": "^4.0.4",
     "@pinia/nuxt": "^0.4.6",
     "element-plus": "^2.2.28",
-    "pinia": "^2.0.28"
+    "pinia": "^2.0.28",
+    "vue3-lottie": "^2.4.0"
   },
   "browserslist": [
     ">0.3%",
