@@ -27,13 +27,18 @@
 <script setup>
   const loading = ref(false);
   onMounted(() => {
-    console.log(document.readyState)
-    if(document.readyState == 'complete'){
+    if (document.readyState === 'complete') {
       setTimeout(() => {
         loading.value = true;
       }, 1600);
+    } else {
+      document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+          loading.value = true;
+        }, 1600);
+      });
     }
-  })
+  });
   const checkLoading = () => {
     setTimeout(() => {
       if (!loading.value) 
