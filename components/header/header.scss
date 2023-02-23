@@ -79,6 +79,7 @@
     line-height: 42px;
     color: $lightGray2;
     transition: .22s ease-in-out;
+    &.active,
     &.router-link-exact-active{
       color: $white;
       @include segoe(bold);

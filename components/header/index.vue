@@ -19,7 +19,7 @@
               <NuxtLink to="/visualisation/" class="text_uppercase fw_semibold">Visualisation</NuxtLink>
             </li>
             <li class="header__menu-list-item">
-              <NuxtLink to="/software/" class="text_uppercase fw_semibold">Software</NuxtLink>
+              <NuxtLink to="/software/" :class="['text_uppercase fw_semibold',{'active':isSoftwarePage}]">Software</NuxtLink>
             </li>
           </ul>
         </nav>
@@ -37,7 +37,11 @@
   import logo  from '~/assets/svg/logo/logo.svg?raw';
   import { toggleMenu } from '@/store/menu'
   const menu = toggleMenu();
+  const route = useRoute();
   function menuToggle(){
     menu.toggle()
   }
+  const isSoftwarePage = computed(() => {
+    return route.path.includes('software');
+  });
 </script>
