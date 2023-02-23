@@ -3,6 +3,7 @@ import svgLoader from "vite-svg-loader";
 export default defineNuxtConfig({
   ssr: false,
   app: {
+    layoutTransition: { name: 'page', mode: 'out-in' },
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       htmlAttrs: {
