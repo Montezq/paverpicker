@@ -185,6 +185,7 @@ img{
   image-rendering: -o-crisp-edges;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
+  image-rendering: optimizeQuality;
   -ms-interpolation-mode: nearest-neighbor;
   transform: translate3d(0,0,0);
   display: block;
