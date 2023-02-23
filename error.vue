@@ -95,7 +95,7 @@
         padding: 18px 20px;
       }
       &:hover{
-        opacity: .1rem;
+        opacity: 1;
       }
     }
   }
