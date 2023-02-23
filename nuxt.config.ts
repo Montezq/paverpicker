@@ -3,7 +3,6 @@ import svgLoader from "vite-svg-loader";
 export default defineNuxtConfig({
   ssr: false,
   app: {
-    layoutTransition: { name: 'page', mode: 'out-in' },
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       htmlAttrs: {
@@ -61,7 +60,6 @@ export default defineNuxtConfig({
   ],
   plugins: [
     '~/plugins/transition.js',
-    // '~/plugins/Vue3Lottie.client.ts',
   ],
   vite: {
     plugins: [
