@@ -27,6 +27,7 @@
 <script setup>
   const loading = ref(false);
   onMounted(() => {
+    console.log(document.readyState)
     if(document.readyState == 'complete'){
       setTimeout(() => {
         loading.value = true;
