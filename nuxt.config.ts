@@ -57,7 +57,7 @@ export default defineNuxtConfig({
   ],
   modules: [
     '@pinia/nuxt',
-    ['@funken-studio/sitemap-nuxt-3', { hostname: process.env.BASE_URL || 'http://localhost:3000' }],
+    ['@funken-studio/sitemap-nuxt-3', { hostname: 'http://paverpicker.com/'}],
   ],
   plugins: [
     '~/plugins/transition.js'
