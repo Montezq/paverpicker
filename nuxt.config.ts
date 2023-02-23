@@ -46,7 +46,7 @@ export default defineNuxtConfig({
           type: 'font/woff2',
           crossorigin: 'anonymous'
         }
-      ]
+      ],
     }
   },
   css: [
@@ -60,7 +60,8 @@ export default defineNuxtConfig({
     ['@funken-studio/sitemap-nuxt-3', { hostname: 'http://paverpicker.com/'}],
   ],
   plugins: [
-    '~/plugins/transition.js'
+    '~/plugins/transition.js',
+    '~/plugins/Vue3Lottie.client.ts',
   ],
   vite: {
     plugins: [
