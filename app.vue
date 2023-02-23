@@ -1,6 +1,5 @@
 <template>
   <div class="wrapper">
-    <Preloader />
     <Header />
     <NuxtPage />
   </div>
