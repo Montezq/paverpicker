@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <Transition  >
     <div v-if="!loading" class="preloader d_flex align-items_center justify-content_center">
       <client-only>
@@ -31,4 +31,4 @@
         loading.value = true;
     }, 2000);
   }
-</script>
+</script> -->
