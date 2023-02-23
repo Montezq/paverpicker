@@ -57,6 +57,7 @@ export default defineNuxtConfig({
   ],
   modules: [
     '@pinia/nuxt',
+    ['@funken-studio/sitemap-nuxt-3', { hostname: process.env.BASE_URL || 'http://localhost:3000' }],
   ],
   plugins: [
     '~/plugins/transition.js'
