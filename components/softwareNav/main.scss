@@ -4,15 +4,13 @@
   z-index: 4;
   padding: 20px 20px 0;
   background-color: rgba(#FFFFFF, .15);
+  backdrop-filter: saturate(180%) blur(10px);
   @include laptops{
     top: 58px;
     padding: 8px 10px 0;
   }
   @include minphone2{
     padding: 8px 6px 0;
-  }
-  &.black{
-    background-color: rgba(#313131, .8);
   }
 }
 .software-nav__item{

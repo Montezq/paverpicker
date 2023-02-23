@@ -545,6 +545,10 @@ $speed3: 1.9s;
     position: relative;
     z-index: 6;
     margin: 0 auto;
+    @include tabletPortrait{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
     @include laptop{
       padding-top: clamp(80px, 10vh, 130px);
     }

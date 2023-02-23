@@ -23,8 +23,10 @@
         <section class="software-page__steps">
           <div class="slide-section d_flex align-items_center">
             <div class="slide-section__decor">
-              <div class="slide-section__decor-video">
-                <video autoplay playsinline muted id="softwareVideo" src="/video/software.mp4"></video>
+              <div class="slide-section__decor-video position_relative">
+                <div v-for="i in 4" :key="i" :class="`slide-section__decor-video-inside slide-section__decor-video-inside_${i}`">
+                  <video autoplay playsinline muted class="software_video" :src="`/video/software-page-animation_${i}.mp4`"></video>
+                </div>
               </div>
             </div>
             <div class="slide-section__text position_relative">
@@ -114,59 +116,30 @@
     slide(3000, 100)
   }
   function playVideo(currentSlide) {
-    var videoElement = document.getElementById('softwareVideo');
-    var remainingTime;
-    var isPlaying = videoElement.currentTime > 0 && !videoElement.paused && !videoElement.ended 
-      && videoElement.readyState > videoElement.HAVE_CURRENT_DATA;
-
-    clearTimeout(currentTimeout);
-    if (currentSlide === 1) {
-      videoElement.currentTime = 0;
-      currentTimeout = setTimeout(() => {
-        if (currentSlide >= 1) {
-          videoElement.play();
-          currentTimeout = setTimeout(() => {
-            if (currentSlide === 1) {
-              videoElement.pause();
-            }
-          }, 4000);
+    const videoPlayers = document.querySelectorAll('.software_video');
+    const videoStartDelayMs = 3000;
+    const playerIndex = currentSlide - 1;
+    const player = videoPlayers[playerIndex];
+    if (currentSlide === 0 || !player)
+      return;
+    player.currentTime = 0;
+    switch (currentSlide) {
+      case 1:
+        if (pastSlide.value === 0) {
+          setTimeout(() => {
+            player.play();
+          }, videoStartDelayMs);
+        } else {
+          player.play();
         }
-      }, (pastSlide.value === 2 || pastSlide.value === 3) ? 200 : 3000);
-    } else if (currentSlide === 2) {
-      if (pastSlide.value === 3) {
-        videoElement.currentTime = 4;
-      }
-      remainingTime = 12 - videoElement.currentTime;
-      currentTimeout = setTimeout(() => {
-        videoElement.play();
-        videoElement.addEventListener('timeupdate', function checkTime() {
-          if (videoElement.currentTime >= 12) {
-            videoElement.pause();
-            videoElement.removeEventListener('timeupdate', checkTime);
-          }
-        });
-      }, 0);
-    } else if (currentSlide === 3) {
-      if (pastSlide.value === 4) {
-        videoElement.currentTime = 12;
-      }
-      remainingTime = 18 - videoElement.currentTime;
-      currentTimeout = setTimeout(() => {
-        videoElement.play();
-        videoElement.addEventListener('timeupdate', function checkTime() {
-          if (videoElement.currentTime >= 18) {
-            videoElement.pause();
-            videoElement.removeEventListener('timeupdate', checkTime);
-          }
-        });
-      }, 0);
-    } else if (currentSlide === 4) {
-      if (pastSlide.value === 5) {
-        videoElement.currentTime = 18;
-      }
-      videoElement.play();
-    } else {
-      videoElement.pause();
+        break;
+      case 2:
+      case 3:
+      case 4:
+        player.play();
+        break;
+      default:
+        break;
     }
   }
   function slide(speed=3000, y=null, direction=null) {
@@ -226,8 +199,10 @@
     setTimeout(() => {
       const wrapper = document.querySelector('.animation-steps');
       const scrl = document.querySelector('.software-page__device');
-      var videoElement = document.getElementById('softwareVideo')
-      videoElement.pause()
+      let video = document.querySelectorAll('.software_video');
+      video.forEach(e=>{
+        e.pause()
+      })
       scrl.addEventListener('scroll', (e) =>{
         if(scrl.scrollTop>1)
           scrlTicking.value=false
