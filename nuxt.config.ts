@@ -61,7 +61,7 @@ export default defineNuxtConfig({
   ],
   plugins: [
     '~/plugins/transition.js',
-    '~/plugins/Vue3Lottie.client.ts',
+    // '~/plugins/Vue3Lottie.client.ts',
   ],
   vite: {
     plugins: [
