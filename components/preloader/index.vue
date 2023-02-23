@@ -26,23 +26,19 @@
 </style>
 <script setup>
   const loading = ref(false);
-  onMounted(() => {
-    if (document.readyState === 'complete') {
-      setTimeout(() => {
-        loading.value = true;
-      }, 1600);
-    } else {
-      document.addEventListener('DOMContentLoaded', () => {
-        setTimeout(() => {
-          loading.value = true;
-        }, 1600);
-      });
-    }
-  });
   const checkLoading = () => {
     setTimeout(() => {
-      if (!loading.value) 
-        loading.value = true;
-    }, 2000);
+      if (document.readyState === 'complete') {
+        setTimeout(() => {
+          loading.value = true;
+        }, 1200);
+      } else {
+        checkLoading();
+      }
+    }, 100);
   }
+
+  onMounted(() => {
+    checkLoading();
+  });
 </script>
