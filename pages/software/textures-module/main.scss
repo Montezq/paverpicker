@@ -587,7 +587,10 @@ $speed3: 1.9s;
       max-width: clamp(750px, 49vw, 49vw);
       margin: 0 auto;
       @include tabletPortrait{
-        max-width: clamp(300px, 86vw, 86vw);
+        max-width: clamp(300px, 92vw, 92vw);
+        br{
+          display: none;
+        }
       }
     }
   }
