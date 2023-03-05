@@ -1,11 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import svgLoader from "vite-svg-loader";
 export default defineNuxtConfig({
-  runtimeConfig: {
-    public: {
-      baseURL: process.env.BASE_URL || 'localhost:3000',
-    },
-  },
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
