@@ -107,10 +107,10 @@
 <script setup>
 
   const pageTitle = 'Paver Picker | YOUR Online Showroom',
-        baseUrl = 'https://paverpicker.pages.dev',
-        pageDescription = 'Paver Picker page description',
-        imageAlt = 'Alternative text for the image',
-        imageName = 'software';
+      baseUrl = 'https://paverpicker.pages.dev',
+      pageDescription = 'Paver Picker page description',
+      imageAlt = 'Alternative text for the image',
+      imageName = 'software';
   useHead({
     title: pageTitle,
     meta: [
@@ -119,29 +119,29 @@
       // Facebook meta tags
       { property: 'og:title', content: pageTitle },
       { property: 'og:description', content: pageDescription },
-      { property: 'og:image', content: baseUrl+`/images/meta/facebook/${imageName}.jpg` },
+      { property: 'og:image', content: baseUrl+`/images/meta/facebook/${imageName}.png` },
       { property: 'og:image:alt', content: imageAlt },
-      { property: 'og:url', content: process.client ? window.location.href : baseUrl },
+      { property: 'og:url', content: baseUrl+'/software/' },
       { property: 'og:type', content: 'website' },
 
       // Twitter meta tags
       { property: 'twitter:title', content: pageTitle },
       { property: 'twitter:description', content: pageDescription },
-      { property: 'twitter:image', content: baseUrl+`/images/meta/twitter/${imageName}.jpg` },
+      { property: 'twitter:image', content: baseUrl+`/images/meta/twitter/${imageName}.png` },
       { property: 'twitter:image:alt', content: imageAlt },
       { property: 'twitter:card', content: 'summary_large_image' },
 
       // LinkedIn meta tags
       { property: 'linkedin:title', content: pageTitle },
       { property: 'linkedin:description', content: pageDescription },
-      { property: 'linkedin:image', content: baseUrl+`/images/meta/linkedin/${imageName}.jpg` },
+      { property: 'linkedin:image', content: baseUrl+`/images/meta/linkedin/${imageName}.png` },
       { property: 'linkedin:image:alt', content: imageAlt },
-      { property: 'linkedin:url', content: process.client ? window.location.href : baseUrl },
+      { property: 'linkedin:url', content: baseUrl+'/software/' },
 
       // Instagram meta tags
       { property: 'instagram:title', content: pageTitle },
       { property: 'instagram:description', content: pageDescription },
-      { property: 'instagram:image', content: baseUrl+`/images/meta/instagram/${imageName}.jpg` },
+      { property: 'instagram:image', content: baseUrl+`/images/meta/instagram/${imageName}.png` },
       { property: 'instagram:image:alt', content: imageAlt },
     ]
   })

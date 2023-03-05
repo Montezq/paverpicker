@@ -128,7 +128,7 @@
       { property: 'og:description', content: pageDescription },
       { property: 'og:image', content: baseUrl+`/images/meta/facebook/${imageName}.jpg` },
       { property: 'og:image:alt', content: imageAlt },
-      { property: 'og:url', content: process.client ? window.location.href : baseUrl },
+      { property: 'og:url', content: baseUrl+'/software/api-module/' },
       { property: 'og:type', content: 'website' },
 
       // Twitter meta tags
@@ -143,7 +143,7 @@
       { property: 'linkedin:description', content: pageDescription },
       { property: 'linkedin:image', content: baseUrl+`/images/meta/linkedin/${imageName}.jpg` },
       { property: 'linkedin:image:alt', content: imageAlt },
-      { property: 'linkedin:url', content: process.client ? window.location.href : baseUrl },
+      { property: 'linkedin:url', content: baseUrl+'/software/api-module/' },
 
       // Instagram meta tags
       { property: 'instagram:title', content: pageTitle },
