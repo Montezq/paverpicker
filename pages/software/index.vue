@@ -1,11 +1,11 @@
 <template>
   <div class="software-page">
     <Rotate />
+    <SoftwareNav />
     <div class="animation-steps__wrapper">
       <div :class="'animation-steps animation-steps_'+currentSlide+' animation-lstep_'+pastSlide">
         <section class="software-page__hero position_relative">
           <div class="slide-section position_relative d_flex align-items_center flex_column">
-            <SoftwareNav />
             <div class="slide-section__text">
               <div class="slide-section__text-head">
                 <h1>Custom Built <br> Software</h1>
@@ -106,9 +106,9 @@
 </style>
 <script setup>
 
-  const pageTitle = 'Paver Picker | YOUR Online Showroom',
+  const pageTitle = 'Paver Picker | Base Software',
       baseUrl = 'https://paverpicker.pages.dev',
-      pageDescription = 'Paver Picker page description',
+      pageDescription = 'How can our software benefit you? ',
       imageAlt = 'Alternative text for the image',
       imageName = 'software';
   useHead({

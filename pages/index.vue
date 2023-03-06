@@ -223,7 +223,7 @@
   import closeIcon  from '~/assets/svg/icons/close.svg?raw';
   const pageTitle = 'Paver Picker | YOUR Online Showroom',
         baseUrl = 'https://paverpicker.pages.dev',
-        pageDescription = 'Paver Picker page description',
+        pageDescription = 'How does our software work?',
         imageAlt = 'Alternative text for the image',
         imageName = 'home';
   useHead({
@@ -260,6 +260,8 @@
       { property: 'instagram:image:alt', content: imageAlt },
     ]
   })
+
+
 
   let currentSlide = ref(0),
       pastSlide = ref(0),

@@ -46,7 +46,7 @@
 <script setup>
   const pageTitle = 'Paver Picker | YOUR Online Showroom',
         baseUrl = 'https://paverpicker.pages.dev',
-        pageDescription = 'Paver Picker page description',
+        pageDescription = 'View our extensive choice of scenes. ',
         imageAlt = 'Alternative text for the image',
         imageName = 'scenes';
   useHead({

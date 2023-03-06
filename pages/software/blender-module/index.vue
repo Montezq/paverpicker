@@ -166,9 +166,9 @@
   }
 </style>
 <script setup>
-  const pageTitle = 'Paver Picker | YOUR Online Showroom',
+  const pageTitle = 'Paver Picker | Blender Add-on',
         baseUrl = 'https://paverpicker.pages.dev',
-        pageDescription = 'Paver Picker page description',
+        pageDescription = 'How does our blender work? ',
         imageAlt = 'Alternative text for the image',
         imageName = 'blender';
   useHead({

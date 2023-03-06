@@ -121,9 +121,9 @@
 <script setup>
   import arrowSlide from '~/assets/svg/icons/arrow-slide.svg?raw'
 
-  const pageTitle = 'Paver Picker | YOUR Online Showroom',
+  const pageTitle = 'Paver Picker | Photography',
         baseUrl = 'https://paverpicker.pages.dev',
-        pageDescription = 'Paver Picker page description',
+        pageDescription = 'What makes our photography so true to life?',
         imageAlt = 'Alternative text for the image',
         imageName = 'photography';
   useHead({

@@ -1,5 +1,5 @@
 <template>
-  <nav class="software-nav position_absolute d_flex align-items_center justify-content_center">
+  <nav class="software-nav position_fixed d_flex align-items_center justify-content_center">
     <div class="software-nav__item">
       <NuxtLink to="/software/" class="software-nav__item-link position_relative d_flex flex_column align-items_center">
         <div class="software-nav__item-link-icon" v-html="logo"></div>

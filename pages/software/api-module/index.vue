@@ -113,9 +113,9 @@
   }
 </style>
 <script setup>
-  const pageTitle = 'Paver Picker | YOUR Online Showroom',
+  const pageTitle = 'Paver Picker | API Add-on',
         baseUrl = 'https://paverpicker.pages.dev',
-        pageDescription = 'Paver Picker page description',
+        pageDescription = 'What can our API do for your website?',
         imageAlt = 'Alternative text for the image',
         imageName = 'api';
   useHead({

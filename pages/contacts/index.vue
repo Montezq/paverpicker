@@ -91,9 +91,9 @@
   import phone  from '~/assets/svg/icons/phone.svg?raw';
   import email  from '~/assets/svg/icons/email.svg?raw';
   import pinker  from '~/assets/svg/icons/pin.svg?raw';
-  const pageTitle = 'Paver Picker | YOUR Online Showroom',
+  const pageTitle = 'Paver Picker | Contact Us',
         baseUrl = 'https://paverpicker.pages.dev',
-        pageDescription = 'Paver Picker page description',
+        pageDescription = 'Send us an email or give us a call. ',
         imageAlt = 'Alternative text for the image',
         imageName = 'contact';
   useHead({

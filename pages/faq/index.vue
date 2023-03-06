@@ -59,9 +59,9 @@
 <script setup>
   import arrow  from '~/assets/svg/icons/arrow.svg?raw';
   import { ElCollapse, ElCollapseItem } from 'element-plus';
-  const pageTitle = 'Paver Picker | YOUR Online Showroom',
+  const pageTitle = 'Paver Picker | FAQ',
         baseUrl = 'https://paverpicker.pages.dev',
-        pageDescription = 'Paver Picker page description',
+        pageDescription = 'Find the answers to the most common questions. ',
         imageAlt = 'Alternative text for the image',
         imageName = 'home';
   useHead({

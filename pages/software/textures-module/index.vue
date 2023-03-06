@@ -155,9 +155,9 @@
 <script setup>
   import folderBack  from '~/assets/svg/icons/folder_back.svg?raw';
   import folderFront  from '~/assets/svg/icons/folder_front.svg?raw';
-  const pageTitle = 'Paver Picker | YOUR Online Showroom',
+  const pageTitle = 'Paver Picker | Textures Add-on ',
         baseUrl = 'https://paverpicker.pages.dev',
-        pageDescription = 'Paver Picker page description',
+        pageDescription = 'What makes our textures unique? ',
         imageAlt = 'Alternative text for the image',
         imageName = 'seamless-textures';
   useHead({
