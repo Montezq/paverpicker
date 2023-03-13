@@ -4,11 +4,22 @@ $speed3: 1.9s;
 
 .seamless-page{
   height: 100%;
+  .to-footer{
+    transition: all .3s ease-in-out, transform $speed ease-in-out;
+  }
   .animation-steps{
     transition: $speed ease-in-out;
     transform: translate3d(0,0,0);
+    &_0{
+      .to-footer{
+        transform: translate3d(0, -100vh, 0);
+      }
+    }
     &_1{
       transform: translate3d(0,-100vh,0);
+      .to-footer{
+        transform: translate3d(0, 0, 0);
+      }
       .seamless-page__hero{
         &:before{
           opacity: 0;
@@ -41,6 +52,9 @@ $speed3: 1.9s;
     }
     &_2{
       transform: translate3d(0,-100vh,0);
+      .to-footer{
+        transform: translate3d(0, 0, 0);
+      }
       .seamless-page__layout{
         .slide-section__decor_same{
           .slide-section__decor-item{
@@ -80,6 +94,9 @@ $speed3: 1.9s;
     }
     &_3{
       transform: translate3d(0,-200vh,0);
+      .to-footer{
+        transform: translate3d(0, 100vh, 0);
+      }
       .seamless-page__layout{
         .slide-section__decor_same{
           .slide-section__decor-item{
@@ -128,6 +145,9 @@ $speed3: 1.9s;
     }
     &_4{
       transform: translate3d(0,-200vh,0);
+      .to-footer{
+        transform: translate3d(0, 100vh, 0);
+      }
       .seamless-page__mortar{
         .slide-section__decor_same{
           .slide-section__decor-item{
@@ -167,6 +187,9 @@ $speed3: 1.9s;
     }
     &_5{
       transform: translate3d(0,-300vh,0);
+      .to-footer{
+        transform: translate3d(0, 200vh, 0);
+      }
       .seamless-page__mortar{
         .slide-section__decor_same{
           .slide-section__decor-item{
@@ -194,7 +217,7 @@ $speed3: 1.9s;
       }
       .seamless-page__blend{
         .slide-section__decor{
-          transform: translate3d(-50%,-15%,0) scale(1);
+          transform: translate3d(-50%,-5%,0) scale(1);
           @include tabletPortrait{
             transform: translate3d(-50%,-18%,0) scale(1);
           }
@@ -203,6 +226,9 @@ $speed3: 1.9s;
     }
     &_6{
       transform: translate3d(0,-300vh,0);
+      .to-footer{
+        transform: translate3d(0, 200vh, 0);
+      }
       .seamless-page__blend{
         .slide-section__decor{
           transform: translate3d(-50%,-5%,0) scale(1);
@@ -231,6 +257,9 @@ $speed3: 1.9s;
     }
     &_7{
       transform: translate3d(0,-400vh,0);
+      .to-footer{
+        transform: translate3d(0, 300vh, 0);
+      }
       .seamless-page__blend{
         .slide-section__decor{
           transform:  translate3d(-263%, calc(100vh + 122%), 0) scale(3.65);
@@ -271,6 +300,9 @@ $speed3: 1.9s;
     }
     &_8{
       transform: translate3d(0,-400vh,0);
+      .to-footer{
+        transform: translate3d(0, 300vh, 0);
+      }
       .seamless-page__blend{
         .slide-section__decor{
           transform:  translate3d(-233.8%, calc(100vh + 122%), 0) scale(3.65);

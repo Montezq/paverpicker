@@ -161,17 +161,19 @@
       loading = ref(true);
   
   function changeSlide(){
-    let scrl = document.querySelector('.api-page__steps');
-    currentSlide.value=6
-    pastSlide.value=5
-    scrl.classList.add('oh')
-    loading.value = false
-    setTimeout(() => {
-      scrl.scrollTop = scrl.scrollHeight;
-    }, 600);
-    setTimeout(() => {
-      loading.value = true
-    }, 2200);
+    if(currentSlide.value < 6 ){
+      let scrl = document.querySelector('.api-page__steps');
+      currentSlide.value=6
+      pastSlide.value=5
+      scrl.classList.add('oh')
+      loading.value = false
+      setTimeout(() => {
+        scrl.scrollTop = scrl.scrollHeight;
+      }, 600);
+      setTimeout(() => {
+        loading.value = true
+      }, 2200);
+    }
   }
 
   function nextPage(){

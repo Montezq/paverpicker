@@ -218,20 +218,22 @@
       loading = ref(true);
   
   function changeSlide(){
-    let scrl = document.querySelector('.blender-page__try');
-    currentSlide.value=2
-    pastSlide.value=3
-    scrl.classList.add('oh')
-    setTimeout(() => {
-      loading.value = false
-    }, 100);
-    setTimeout(() => {
-      scrl.scrollTop = scrl.scrollHeight;
-      currentSlide.value=4
-    }, 600);
-    setTimeout(() => {
-      loading.value = true
-    }, 2200);
+    if(currentSlide.value < 4 ){
+      let scrl = document.querySelector('.blender-page__try');
+      currentSlide.value=2
+      pastSlide.value=3
+      scrl.classList.add('oh')
+      setTimeout(() => {
+        loading.value = false
+      }, 100);
+      setTimeout(() => {
+        scrl.scrollTop = scrl.scrollHeight;
+        currentSlide.value=4
+      }, 600);
+      setTimeout(() => {
+        loading.value = true
+      }, 2200);
+    }
   }
 
   const brickw = 'blender/bricks-white/brick-',

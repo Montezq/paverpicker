@@ -157,19 +157,21 @@
       loading = ref(true);
   
   function changeSlide(){
-    let scrl = document.querySelector('.software-page__device');
-    currentSlide.value=5
-    pastSlide.value=4
-    scrl.classList.add('oh')
-    setTimeout(() => {
-      loading.value = false
-    }, 100);
-    setTimeout(() => {
-      scrl.scrollTop = scrl.scrollHeight;
-    }, 600);
-    setTimeout(() => {
-      loading.value = true
-    }, 2200);
+    if(currentSlide.value < 5 ){
+      let scrl = document.querySelector('.software-page__device');
+      currentSlide.value=5
+      pastSlide.value=4
+      scrl.classList.add('oh')
+      setTimeout(() => {
+        loading.value = false
+      }, 100);
+      setTimeout(() => {
+        scrl.scrollTop = scrl.scrollHeight;
+      }, 600);
+      setTimeout(() => {
+        loading.value = true
+      }, 2200);
+    }
   }
 
   function nextPage(){

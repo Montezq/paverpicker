@@ -170,19 +170,21 @@
       loading = ref(true);
   
   function changeSlide(){
-    let scrl = document.querySelector('.visualisation-page__steps');
-    currentSlide.value=6
-    pastSlide.value=5
-    scrl.classList.add('oh')
-    setTimeout(() => {
-      loading.value = false
-    }, 100);
-    setTimeout(() => {
-      scrl.scrollTop = scrl.scrollHeight;
-    }, 600);
-    setTimeout(() => {
-      loading.value = true
-    }, 1600);
+    if(currentSlide.value < 6 ){
+      let scrl = document.querySelector('.visualisation-page__steps');
+      currentSlide.value=6
+      pastSlide.value=5
+      scrl.classList.add('oh')
+      setTimeout(() => {
+        loading.value = false
+      }, 100);
+      setTimeout(() => {
+        scrl.scrollTop = scrl.scrollHeight;
+      }, 600);
+      setTimeout(() => {
+        loading.value = true
+      }, 1600);
+    }
   }
   function nextPage(){
     slide(1800, 100)

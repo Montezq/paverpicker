@@ -19,11 +19,11 @@
               <p>What makes our textures unique?</p>
               <p class="ff_icon fs_48"></p>
             </div>
-            <GoBottom @goToSlide="changeSlide"/>
           </div>
         </section>
         <section class="seamless-page__layout">
           <div class="slide-section position_relative">
+            <GoBottom @goToSlide="changeSlide"/>
             <div class="slide-section__text slide-section__text_same text_center">
               <div class="slide-section__text-head">
                 <h2>Any Layout</h2>
@@ -206,20 +206,22 @@
       loading = ref(true);
   
   function changeSlide(){
-    let scrl = document.querySelector('.seamless-page__packaged');
-    currentSlide.value=2
-    pastSlide.value=9
-    scrl.classList.add('oh')
-    setTimeout(() => {
-      loading.value = false
-    }, 100);
-    setTimeout(() => {
-      scrl.scrollTop = scrl.scrollHeight;
-      currentSlide.value=10
-    }, 600);
-    setTimeout(() => {
-      loading.value = true
-    }, 2000);
+    if(currentSlide.value < 10 ){
+      let scrl = document.querySelector('.seamless-page__packaged');
+      currentSlide.value=currentSlide.value+1
+      pastSlide.value=9
+      scrl.classList.add('oh')
+      setTimeout(() => {
+        loading.value = false
+      }, 100);
+      setTimeout(() => {
+        scrl.scrollTop = scrl.scrollHeight;
+        currentSlide.value=10
+      }, 600);
+      setTimeout(() => {
+        loading.value = true
+      }, 2000);
+    }
   }
 
   function nextPage(){

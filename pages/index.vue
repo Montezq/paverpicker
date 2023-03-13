@@ -275,17 +275,19 @@
       loading = ref(true);
   
   function changeSlide(){
-    let scrl = document.querySelector('.home__clients');
-    currentSlide.value=6
-    pastSlide.value=5
-    scrl.classList.add('oh')
-    setTimeout(() => {
-      loading.value = false
-      scrl.scrollTop = scrl.scrollHeight;
-    }, 200);
-    setTimeout(() => {
-      loading.value = true
-    }, 2000);
+    if(currentSlide.value < 6 ){
+      let scrl = document.querySelector('.home__clients');
+      currentSlide.value=6
+      pastSlide.value=5
+      scrl.classList.add('oh')
+      setTimeout(() => {
+        loading.value = false
+        scrl.scrollTop = scrl.scrollHeight;
+      }, 200);
+      setTimeout(() => {
+        loading.value = true
+      }, 2000);
+    }
   }
   function change() {
     heroImg.value >= 3 ? heroImg.value = 1 : heroImg.value++;

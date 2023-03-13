@@ -172,19 +172,21 @@
       loading = ref(true);
   
   function changeSlide(){
-    let scrl = document.querySelector('.photography-page__brick');
-    currentSlide.value=3
-    pastSlide.value=2
-    scrl.classList.add('oh')
-    setTimeout(() => {
-      loading.value = false
-    }, 100);
-    setTimeout(() => {
-      scrl.scrollTop = scrl.scrollHeight;
-    }, 600);
-    setTimeout(() => {
-      loading.value = true
-    }, 1600);
+    if(currentSlide.value < 3 ){
+      let scrl = document.querySelector('.photography-page__brick');
+      currentSlide.value=3
+      pastSlide.value=2
+      scrl.classList.add('oh')
+      setTimeout(() => {
+        loading.value = false
+      }, 100);
+      setTimeout(() => {
+        scrl.scrollTop = scrl.scrollHeight;
+      }, 600);
+      setTimeout(() => {
+        loading.value = true
+      }, 1600);
+    }
   }
   function slideInput(){
     document.querySelector('.foreground-img').style.width = slideval.value+'%'
