@@ -1,5 +1,6 @@
 <template>
   <div class="api-page">
+    <Preloader :loading="loading" />
     <Rotate />
     <SoftwareNav />
     <div class="animation-steps__wrapper">
@@ -15,6 +16,7 @@
               <p>What can our API do for your website?</p>
               <p class="ff_icon fs_48"></p>
             </div>
+            <GoBottom @goToSlide="changeSlide"/>
           </div>
         </section>
         <section class="api-page__steps">
@@ -155,7 +157,22 @@
   let currentSlide = ref(0),
       pastSlide = ref(0),
       ticking = ref(false),
-      scrlTicking = ref(true);
+      scrlTicking = ref(true),
+      loading = ref(true);
+  
+  function changeSlide(){
+    let scrl = document.querySelector('.api-page__steps');
+    currentSlide.value=6
+    pastSlide.value=5
+    scrl.classList.add('oh')
+    loading.value = false
+    setTimeout(() => {
+      scrl.scrollTop = scrl.scrollHeight;
+    }, 600);
+    setTimeout(() => {
+      loading.value = true
+    }, 2200);
+  }
 
   function nextPage(){
     slide(2000, 100)

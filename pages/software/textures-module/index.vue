@@ -1,6 +1,7 @@
 <template>
   <div class="seamless-page">
     <Rotate />
+    <Preloader :loading="loading" />
     <SoftwareNav class="black" />
     <div class="animation-steps__wrapper">
       <div :class="`animation-steps animation-steps_`+currentSlide+` animation-lstep_`+pastSlide+` ${(ios)?'ios-true':''}`">
@@ -18,6 +19,7 @@
               <p>What makes our textures unique?</p>
               <p class="ff_icon fs_48"></p>
             </div>
+            <GoBottom @goToSlide="changeSlide"/>
           </div>
         </section>
         <section class="seamless-page__layout">
@@ -200,7 +202,25 @@
       pastSlide = ref(0),
       ticking = ref(false),
       ios = ref(false),
-      scrlTicking = ref(true);
+      scrlTicking = ref(true),
+      loading = ref(true);
+  
+  function changeSlide(){
+    let scrl = document.querySelector('.seamless-page__packaged');
+    currentSlide.value=2
+    pastSlide.value=9
+    scrl.classList.add('oh')
+    setTimeout(() => {
+      loading.value = false
+    }, 100);
+    setTimeout(() => {
+      scrl.scrollTop = scrl.scrollHeight;
+      currentSlide.value=10
+    }, 600);
+    setTimeout(() => {
+      loading.value = true
+    }, 2000);
+  }
 
   function nextPage(){
     slide(2000, 100)

@@ -1,5 +1,6 @@
 <template>
   <div class="photography-page">
+    <Preloader :loading="loading" />
     <Rotate />
     <div class="animation-steps__wrapper">
       <div :class="'animation-steps animation-steps_'+currentSlide+' animation-lstep_'+pastSlide">
@@ -17,6 +18,7 @@
               <p>What makes our photography so true to life?</p>
               <p class="ff_icon fs_48"></p>
             </div>
+            <GoBottom @goToSlide="changeSlide"/>
           </div>
         </section>
         <section class="photography-page__brick">
@@ -166,8 +168,24 @@
       videoCount = ref(1),
       slideval = ref(50),
       ticking = ref(false),
-      scrlTicking = ref(true);
-
+      scrlTicking = ref(true),
+      loading = ref(true);
+  
+  function changeSlide(){
+    let scrl = document.querySelector('.photography-page__brick');
+    currentSlide.value=3
+    pastSlide.value=2
+    scrl.classList.add('oh')
+    setTimeout(() => {
+      loading.value = false
+    }, 100);
+    setTimeout(() => {
+      scrl.scrollTop = scrl.scrollHeight;
+    }, 600);
+    setTimeout(() => {
+      loading.value = true
+    }, 1600);
+  }
   function slideInput(){
     document.querySelector('.foreground-img').style.width = slideval.value+'%'
     document.querySelector('.background-slider__icon').style.width = slideval.value+'%'

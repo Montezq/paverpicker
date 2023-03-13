@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <Preloader />
+    <Preloader :loading="loading" />
     <Header />
     <NuxtPage />
   </div>
@@ -16,4 +16,20 @@
     if(menu.menu)
       menuToggle()
   })
+  const loading = ref(false);
+  const checkLoading = () => {
+    setTimeout(() => {
+      if (document.readyState === 'complete') {
+        setTimeout(() => {
+          loading.value = true;
+        }, 1200);
+      } else {
+        checkLoading();
+      }
+    }, 100);
+  }
+
+  onMounted(() => {
+    checkLoading();
+  });
 </script>

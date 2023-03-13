@@ -1,5 +1,6 @@
 <template>
   <div class="home" id="app">
+    <Preloader :loading="loading" />
     <Rotate />
     <Transition  >
       <div class="modal d_flex align-items_center justify-content_center" v-if="videoPopup">
@@ -38,6 +39,7 @@
               <p>How does it work?</p>
               <p class="ff_icon fs_48"></p>
             </div>
+            <GoBottom @goToSlide="changeSlide"/>
           </div>
         </section>
         <section class="home__send">
@@ -269,8 +271,22 @@
       heroImg = ref(1),
       ticking = ref(false),
       videoPopup = ref(false),
-      scrlTicking = ref(true);
+      scrlTicking = ref(true),
+      loading = ref(true);
   
+  function changeSlide(){
+    let scrl = document.querySelector('.home__clients');
+    currentSlide.value=6
+    pastSlide.value=5
+    scrl.classList.add('oh')
+    setTimeout(() => {
+      loading.value = false
+      scrl.scrollTop = scrl.scrollHeight;
+    }, 200);
+    setTimeout(() => {
+      loading.value = true
+    }, 2000);
+  }
   function change() {
     heroImg.value >= 3 ? heroImg.value = 1 : heroImg.value++;
   }
