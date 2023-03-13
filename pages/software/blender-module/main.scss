@@ -1,9 +1,9 @@
 $hw: calc((12.45vw * 4) / 2);
 $hw2: calc((20.45vw * 4) / 2);
-$step1: calc(100vh - 60%);
-$step1md: calc(100vh - 15vw);
-$step1s: calc(100vh - 2vw);
-$step2: calc(200vh - 25%);
+$step1: calc(100vh - 46%);
+$step1md: calc(100vh - 10vw);
+$step1s: calc(100vh - -5vh);
+$step2: calc(200vh - 20%);
 $step2md: calc(200vh - 15%);
 $step2s: calc(200vh - 0vw);
 $step3: calc(300vh - 55%);
@@ -676,12 +676,12 @@ $speed2: 1.2s;
   }
   .blender-page__create{
     .slide-section{
-      padding: 80px 9vw 0;
+      padding: 180px 9vw 0;
       @include tabletPortrait{
         flex-direction: column;
       }
       @include laptops{
-        padding: 58px 8vw 0;
+        padding: 160px 8vw 0;
       }
     }
     .slide-section__decor{
@@ -715,18 +715,6 @@ $speed2: 1.2s;
         margin: 3vh auto 0;
         order: -1;
       }
-      @include tabletsPortrait{
-        margin-top: 6vh;
-      }
-      @include minphone2{
-        margin-top: 3vh;
-      }
-      @include special{
-        margin-top: 3vh;
-      }
-      @include phoneLandscape{
-        margin-top: 60px;
-      }
     }
     .slide-section__text-head{
       max-width: 13vw;
@@ -750,12 +738,9 @@ $speed2: 1.2s;
   }
   .blender-page__unlimited{
     .slide-section__text{
-      padding-top: clamp(120px, 7.5vw, 7.5vw);
-      @include tabletsPortrait{
-        padding-top: clamp(70px, 12vh, 12vh);
-      }
-      @include phoneLandscape{
-        padding-top: 75px;
+      padding-top: 200px;
+      @include laptop{
+        padding-top: 160px;
       }
     }
     .slide-section__decor{
@@ -851,12 +836,9 @@ $speed2: 1.2s;
       }
     }
     .slide-section__text{
-      padding-top: clamp(120px, 7vw, 7vw);
-      @include tabletsPortrait{
-        padding-top: clamp(70px, 12vh, 12vh);
-      }
-      @include phoneLandscape{
-        padding-top: 75px;
+      padding-top: 220px;
+      @include laptop{
+        padding-top: 160px;
       }
     }
     .slide-section__btns{
@@ -934,9 +916,9 @@ $speed2: 1.2s;
     }
   }
   .scrollable-section{
-    margin-top: 100px;
+    margin-top: 200px;
     @include tabletPortrait{
-      margin-top: 0;
+      margin-top: 60px;
     }
   }
   .scrl-down{

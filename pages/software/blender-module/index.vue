@@ -1,6 +1,7 @@
 <template>
   <div class="blender-page position_relative">
     <Rotate />
+    <SoftwareNav />
     <div class="animation-steps__wrapper position_relative">
       <div :class="'animation-steps animation-steps_'+currentSlide+' animation-lstep_'+pastSlide">
         <div class="blender-page__bg position_absolute">
@@ -8,7 +9,6 @@
         </div>
         <section class="blender-page__hero position_relative">
           <div class="slide-section position_relative d_flex align-items_center flex_column">
-            <SoftwareNav />
             <div class="slide-section__text position_relative">
               <div class="slide-section__text-head text_center">
                 <h1>Introducing Paver Picker Blender</h1>

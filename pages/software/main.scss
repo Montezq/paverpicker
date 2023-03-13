@@ -271,13 +271,13 @@ $speed2: 1.2s;
 
   .software-page__steps{
     .slide-section{
-      padding-top: 84px;
+      padding-top: 170px;
       @include tabletPortrait{
         flex-direction: column;
-        padding-top: 120px;
+        padding-top: 220px;
       }
       @include tabletsPortrait{
-        padding-top: 86px;
+        padding-top: 155px;
       }
     }
     .slide-section__decor{
@@ -410,18 +410,21 @@ $speed2: 1.2s;
       }
     }
     .scrollable-section{
-      margin-top: 140px;
+      margin-top: 160px;
       @include tabletPortrait{
-        margin-top: 0;
+        margin-top: 60px;
       }
     }
     .slide-section__text{
-      padding-top: clamp(90px, 12vh, 12vh);
+      padding-top: 200px;
       margin: 0 auto 30px;
       max-width: clamp(720px, 48vw, 48vw);
       z-index: 2;
       @include tabletPortrait{
-        padding-top: clamp(90px, 16vh, 16vh);
+        padding-top: 220px;
+      }
+      @include laptop{
+        padding-top: 160px;
       }
       @include phoneLandscape{
         max-width: clamp(420px, 48vw, 48vw);

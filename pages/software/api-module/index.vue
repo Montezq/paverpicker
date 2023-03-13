@@ -1,11 +1,11 @@
 <template>
   <div class="api-page">
     <Rotate />
+    <SoftwareNav />
     <div class="animation-steps__wrapper">
       <div :class="'animation-steps animation-steps_'+currentSlide+' animation-lstep_'+pastSlide">
         <section class="api-page__hero position_relative">
           <div class="slide-section position_relative d_flex align-items_center flex_column">
-            <SoftwareNav />
             <div class="slide-section__text">
               <div class="slide-section__text-head text_center">
                 <h1>API Website Integration</h1>
