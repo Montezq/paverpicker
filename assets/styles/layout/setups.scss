@@ -130,6 +130,9 @@ a{
   &_none{
     display: none;
   }
+  &_ib{
+    display: inline-block;
+  }
 }
 .flex{
   &_wrap{
@@ -273,6 +276,9 @@ img{
   }
 }
 .fs{
+  &_r12{
+    font-size: 12px;
+  }
   &_r24{
     font-size: 24px;
     @include laptop{
@@ -376,6 +382,11 @@ img{
     }
     @include special2{
       font-size: clamp(26px, 5.4vw, 28px);
+    }
+  }
+  &_md-10{
+    @include tablet{
+      font-size: 10px
     }
   }
 }
@@ -714,4 +725,9 @@ section.oh,
 section.oh *{
   touch-action: auto !important;
   overscroll-behavior-y: auto !important;
+}
+.letter-spacing{
+  &_1{
+    letter-spacing: 1px;
+  }
 }
