@@ -5,7 +5,7 @@
   padding: 20px 20px 0;
   background-color: rgba(#FFFFFF, .15);
   backdrop-filter: saturate(180%) blur(10px);
-  @include laptops{
+  @include laptop{
     top: 58px;
     padding: 8px 10px 0;
   }
@@ -15,7 +15,7 @@
 }
 .software-nav__item{
   margin: 0 37px;
-  @include laptops{
+  @include laptop{
     margin: 0 15px;
   }
   @include phone{
@@ -27,7 +27,7 @@
   &:first-child{
     .software-nav__item-link-icon{
       margin-bottom: 4px;
-      @include laptops{
+      @include laptop{
         margin-bottom: 0px;
       }
     }
@@ -35,7 +35,7 @@
 }
 .software-nav__item-link{
   padding: 0 6px 20px;
-  @include laptops{
+  @include laptop{
     padding: 0 4px 10px;
   }
   &:after{
@@ -62,14 +62,14 @@
   margin-bottom: 2px;
   svg{
     display: block;
-    @include laptops{
+    @include laptop{
       width: 24px;
     }
   }
   p{
     font-size: 32px;
     line-height: 1;
-    @include laptops{
+    @include laptop{
       font-size: 24px;
     }
   }
@@ -102,7 +102,7 @@
   p{
     text-align: center;
     font-size: 16px;
-    @include laptops{
+    @include laptop{
       font-size: 12px;
     }
   }
