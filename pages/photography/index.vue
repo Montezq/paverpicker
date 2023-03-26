@@ -121,7 +121,7 @@
 <script setup>
   import arrowSlide from '~/assets/svg/icons/arrow-slide.svg?raw'
 
-  const pageTitle = 'Paver Picker | Photography',
+  const pageTitle = 'Photography | Paver Picker',
         baseUrl = 'https://paverpicker.pages.dev',
         pageDescription = 'What makes our photography so true to life?',
         imageAlt = 'Alternative text for the image',

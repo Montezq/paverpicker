@@ -166,7 +166,7 @@
   }
 </style>
 <script setup>
-  const pageTitle = 'Paver Picker | Blender Add-on',
+  const pageTitle = 'Blender Add-on | Paver Picker',
         baseUrl = 'https://paverpicker.pages.dev',
         pageDescription = 'How does our blender work? ',
         imageAlt = 'Alternative text for the image',

@@ -44,7 +44,7 @@
   @import 'main.scss';
 </style>
 <script setup>
-  const pageTitle = 'Paver Picker | YOUR Online Showroom',
+  const pageTitle = 'Walling Commercial | Paver Picker',
         baseUrl = 'https://paverpicker.pages.dev',
         pageDescription = 'View our extensive choice of scenes. ',
         imageAlt = 'Alternative text for the image',
