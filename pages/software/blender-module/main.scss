@@ -12,18 +12,12 @@ $speed2: 1.2s;
 
 .blender-page{
   height: 100%;
-  .to-footer{
-    transition: all .3s ease-in-out, transform $speed ease-in-out;
-  }
   .animation-steps{
     transition-duration: $speed;
     transition-timing-function: ease-in-out;
     transform: translate3d(0,0,0);
     &_1{
       transform: translate3d(0,-100vh,0);
-      .to-footer{
-        transform: translate3d(0, 100vh, 0);
-      }
       .blender__bricks{
         transform: translate3d(8vw, $step1, 0);
         @include tabletPortrait{
@@ -79,9 +73,6 @@ $speed2: 1.2s;
     }
     &_2{
       transform: translate3d(0,-200vh,0);
-      .to-footer{
-        transform: translate3d(0, 200vh, 0);
-      }
       .blender__bricks{
         transform: translate3d(45%, $step2, 0);
         @include tabletPortrait{
@@ -135,9 +126,6 @@ $speed2: 1.2s;
     }
     &_3{
       transform: translate3d(0,-200vh,0);
-      .to-footer{
-        transform: translate3d(0, 200vh, 0);
-      }
       .blender__bricks{
         transform: translate3d(45%, $step2, 0);
         @include tabletPortrait{

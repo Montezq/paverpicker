@@ -3,9 +3,6 @@ $speed: 3s;
 
 .home{
   height:100%;
-  .to-footer{
-    transition: all .3s ease-in-out, transform $speed ease-in-out;
-  }
   .animation-steps{
     transition-duration: $speed;
     transition-timing-function: ease-in-out;
@@ -17,9 +14,6 @@ $speed: 3s;
         @include tabletPortrait{
           transform: translate3d(-50%, 30vh, 0) rotate(-180deg);
         }
-      }
-      .to-footer{
-        transform: translate3d(0, 100vh, 0);
       }
     }
     &_0.animation-lstep_1{
@@ -45,9 +39,6 @@ $speed: 3s;
     }
     &_2{
       transform: translate3d(0,-150vh,0);
-      .to-footer{
-        transform: translate3d(0, 150vh, 0);
-      }
       .box_brick{
         transform: translate3d(-50%, 45vh, 0) rotate(-180deg);
         @include tabletPortrait{
@@ -115,9 +106,6 @@ $speed: 3s;
     }
     &_3{
       transform: translate3d(0,-200vh,0);
-      .to-footer{
-        transform: translate3d(0, 200vh, 0);
-      }
       .slide-section__decor.box{
         transform: rotate(180deg) translate3d(0, 0, 0) ;
         @include tabletPortrait{
@@ -227,9 +215,6 @@ $speed: 3s;
     }
     &_4{
       transform: translate3d(0,-300vh,0);
-      .to-footer{
-        transform: translate3d(0, 300vh, 0);
-      }
       .slide-section__decor.box{
         transform: rotate(180deg) translate3d(0, 0, 0) ;
         @include tabletPortrait{
@@ -450,9 +435,6 @@ $speed: 3s;
     }
     &_5{
       transform: translate3d(0,-400vh,0);
-      .to-footer{
-        transform: translate3d(0, 400vh, 0);
-      }
       .visualisation{
         .visualisation__photoshop{
           transform: translate3d(0, 0, 0) ;
@@ -506,9 +488,6 @@ $speed: 3s;
     }
     &_6{
       transform: translate3d(0,-500vh,0);
-      .to-footer{
-        transform: translate3d(0, 400vh, 0);
-      }
       .software{
         .visualisation__wall{
           opacity: 0;

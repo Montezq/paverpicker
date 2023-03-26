@@ -1,7 +1,6 @@
 <template>
   <div class="seamless-page">
     <Rotate />
-    <Preloader :loading="loading" />
     <SoftwareNav class="black" />
     <div class="animation-steps__wrapper">
       <div :class="`animation-steps animation-steps_`+currentSlide+` animation-lstep_`+pastSlide+` ${(ios)?'ios-true':''}`">
@@ -23,7 +22,6 @@
         </section>
         <section class="seamless-page__layout">
           <div class="slide-section position_relative">
-            <GoBottom @goToSlide="changeSlide"/>
             <div class="slide-section__text slide-section__text_same text_center">
               <div class="slide-section__text-head">
                 <h2>Any Layout</h2>
@@ -202,27 +200,7 @@
       pastSlide = ref(0),
       ticking = ref(false),
       ios = ref(false),
-      scrlTicking = ref(true),
-      loading = ref(true);
-  
-  function changeSlide(){
-    if(currentSlide.value < 10 ){
-      let scrl = document.querySelector('.seamless-page__packaged');
-      currentSlide.value=currentSlide.value+1
-      pastSlide.value=9
-      scrl.classList.add('oh')
-      setTimeout(() => {
-        loading.value = false
-      }, 100);
-      setTimeout(() => {
-        scrl.scrollTop = scrl.scrollHeight;
-        currentSlide.value=10
-      }, 600);
-      setTimeout(() => {
-        loading.value = true
-      }, 2000);
-    }
-  }
+      scrlTicking = ref(true);
 
   function nextPage(){
     slide(2000, 100)

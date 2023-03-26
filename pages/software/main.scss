@@ -3,9 +3,6 @@ $speed2: 1.2s;
 
 .software-page{
   height: 100%;
-  .to-footer{
-    transition: all .3s ease-in-out, transform $speed ease-in-out;
-  }
   .animation-steps{
     transition-duration: $speed;
     transition-timing-function: ease-in-out;
@@ -24,9 +21,6 @@ $speed2: 1.2s;
     }
     &_1{
       transform: translate3d(0,-100vh,0);
-      .to-footer{
-        transform: translate3d(0, 100vh, 0);
-      }
       .software-page__steps{
         .slide-section__decor{
           .slide-section__decor-video-inside{
@@ -40,9 +34,6 @@ $speed2: 1.2s;
     }
     &_2{
       transform: translate3d(0,-100vh,0);
-      .to-footer{
-        transform: translate3d(0, 100vh, 0);
-      }
       .software-page__steps{
         .slide-section__text{
           &_1{
@@ -74,9 +65,6 @@ $speed2: 1.2s;
     }
     &_3{
       transform: translate3d(0,-100vh,0);
-      .to-footer{
-        transform: translate3d(0, 100vh, 0);
-      }
       .software-page__steps{
         .slide-section__text{
           &_1,
@@ -109,9 +97,6 @@ $speed2: 1.2s;
     }
     &_4{
       transform: translate3d(0,-100vh,0);
-      .to-footer{
-        transform: translate3d(0, 100vh, 0);
-      }
       .software-page__steps{
         .slide-section__text{
           &_1,

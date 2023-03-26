@@ -1,7 +1,6 @@
 <template>
   <div class="visualisation-page">
     <Rotate />
-    <Preloader :loading="loading" />
     <div class="animation-steps__wrapper">
       <div :class="'animation-steps animation-steps_'+currentSlide+' animation-lstep_'+pastSlide">
         <section class="visualisation-page__hero position_relative">
@@ -25,7 +24,6 @@
                 <p class="ff_icon fs_48"></p>
               </div>
             </div>
-            <GoBottom @goToSlide="changeSlide"/>
           </div>
         </section>
         <section class="visualisation-page__steps">
@@ -166,26 +164,8 @@
   let currentSlide = ref(0),
       pastSlide = ref(0),
       ticking = ref(false),
-      scrlTicking = ref(true),
-      loading = ref(true);
-  
-  function changeSlide(){
-    if(currentSlide.value < 6 ){
-      let scrl = document.querySelector('.visualisation-page__steps');
-      currentSlide.value=6
-      pastSlide.value=5
-      scrl.classList.add('oh')
-      setTimeout(() => {
-        loading.value = false
-      }, 100);
-      setTimeout(() => {
-        scrl.scrollTop = scrl.scrollHeight;
-      }, 600);
-      setTimeout(() => {
-        loading.value = true
-      }, 1600);
-    }
-  }
+      scrlTicking = ref(true);
+
   function nextPage(){
     slide(1800, 100)
   }

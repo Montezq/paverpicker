@@ -2,7 +2,6 @@
   <div class="software-page">
     <Rotate />
     <SoftwareNav />
-    <Preloader :loading="loading" />
     <div class="animation-steps__wrapper">
       <div :class="'animation-steps animation-steps_'+currentSlide+' animation-lstep_'+pastSlide">
         <section class="software-page__hero position_relative">
@@ -19,7 +18,6 @@
               <p>How can our software benefit you?</p>
               <p class="ff_icon fs_48"></p>
             </div>
-            <GoBottom @goToSlide="changeSlide"/>
           </div>
         </section>
         <section class="software-page__steps">
@@ -152,27 +150,8 @@
   let currentSlide = ref(0),
       pastSlide = ref(0),
       ticking = ref(false),
-      currentTimeout,
-      scrlTicking = ref(true),
-      loading = ref(true);
-  
-  function changeSlide(){
-    if(currentSlide.value < 5 ){
-      let scrl = document.querySelector('.software-page__device');
-      currentSlide.value=5
-      pastSlide.value=4
-      scrl.classList.add('oh')
-      setTimeout(() => {
-        loading.value = false
-      }, 100);
-      setTimeout(() => {
-        scrl.scrollTop = scrl.scrollHeight;
-      }, 600);
-      setTimeout(() => {
-        loading.value = true
-      }, 2200);
-    }
-  }
+      scrlTicking = ref(true);
+
 
   function nextPage(){
     slide(3000, 100)

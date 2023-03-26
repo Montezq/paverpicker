@@ -4,9 +4,6 @@ $time: ease;
 $step1: calc(-100vh - 30%);
 .api-page{
   height: 100%;
-  .to-footer{
-    transition: all .3s ease-in-out, transform $speed ease-in-out;
-  }
   .animation-steps{
     transition-duration: $speed;
     transition-timing-function: ease-in-out;
@@ -30,9 +27,6 @@ $step1: calc(-100vh - 30%);
     }
     &_2{
       transform: translate3d(0,-100vh,0);
-      .to-footer{
-        transform: translate3d(0, 100vh, 0);
-      }
       .slide-section__decor{
         transform: translate3d(0, -5%, 0);
       }
@@ -72,9 +66,6 @@ $step1: calc(-100vh - 30%);
     }
     &_3{
       transform: translate3d(0,-100vh,0);
-      .to-footer{
-        transform: translate3d(0, 100vh, 0);
-      }
       .slide-section__decor{
         transform: translate3d(0, -5%, 0);
       }
@@ -150,9 +141,6 @@ $step1: calc(-100vh - 30%);
     }
     &_4{
       transform: translate3d(0,-100vh,0);
-      .to-footer{
-        transform: translate3d(0, 100vh, 0);
-      }
       .slide-section__decor{
         transform: translate3d(0, -5%, 0);
       }
@@ -240,9 +228,6 @@ $step1: calc(-100vh - 30%);
     }
     &_5{
       transform: translate3d(0,-100vh,0);
-      .to-footer{
-        transform: translate3d(0, 100vh, 0);
-      }
       .slide-section__decor{
         transform: translate3d(0, -5%, 0);
       }
@@ -356,9 +341,6 @@ $step1: calc(-100vh - 30%);
     }
     &_6{
       transform: translate3d(0,-100vh,0);
-      .to-footer{
-        transform: translate3d(0, 0, 0);
-      }
       .slide-section__decor{
         transform: translate3d(0, -5%, 0);
       }
