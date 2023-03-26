@@ -121,7 +121,7 @@
   @import 'main.scss';
 </style>
 <script setup>
-  const pageTitle = 'Paver Picker | Visualisation',
+  const pageTitle = 'Visualisation | Paver Picker',
         baseUrl = 'https://paverpicker.pages.dev',
         pageDescription = 'What makes our visualisations so realistic?',
         imageAlt = 'Alternative text for the image',
