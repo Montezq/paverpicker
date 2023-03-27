@@ -21,16 +21,16 @@
         <div class="col">
           <ul class="footer__list">
             <li class="footer__item">
-              <p>Software Modules</p>
+              <p>Software Add-on's</p>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/software/api-module/">API Module</NuxtLink>
+              <NuxtLink to="/software/api-module/">Blender</NuxtLink>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/software/blender-module/">Blender Module</NuxtLink>
+              <NuxtLink to="/software/blender-module/">Texture</NuxtLink>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/software/textures-module/">Texture Module</NuxtLink>
+              <NuxtLink to="/software/textures-module/"> API</NuxtLink>
             </li>
           </ul>
         </div>
@@ -38,6 +38,9 @@
           <ul class="footer__list">
             <li class="footer__item">
               <p>Scenes</p>
+            </li>
+            <li class="footer__item">
+              <NuxtLink to="/scenes/">All scenes</NuxtLink>
             </li>
             <li class="footer__item">
               <NuxtLink to="/scenes/paving/">Paving</NuxtLink>
