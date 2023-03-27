@@ -390,6 +390,12 @@ $speed3: 1.4s;
           width: 50px;
           height: 50px;
         }
+        &:hover{
+          &+span div span,
+          &+span div span svg{
+            animation: none !important;
+          }
+        }
       }
     }
   }
@@ -443,6 +449,12 @@ $speed3: 1.4s;
       left: 40px;
     }
     span{
+      &:first-child{
+        svg{
+          transform: rotate(180deg);
+          animation: slideScaleRight 2s ease-in-out infinite;
+        }
+      }
       &:nth-child(2){
         animation: slide 2s ease-in-out infinite;
         display: inline-block;
@@ -457,6 +469,11 @@ $speed3: 1.4s;
         @include mhs2{
           width: 8px;
           margin: 0 6px;
+        }
+      }
+      &:last-child{
+        svg{
+          animation: slideScaleLeft 2s ease-in-out infinite;
         }
       }
       svg{
@@ -653,4 +670,33 @@ $speed3: 1.4s;
   0%{width: 100%;}
   50%{width: 0%;}
   100%{width: 100%;}
+}
+
+
+@keyframes slide{
+  0% { transform: translateX(0); }
+  10% { transform: translateX(0); }
+  25% { transform: translate3d(3px,0,0) }
+  33% { transform: translate3d(3px,0,0) }
+  40% { transform: translateX(0)}
+  60% { transform: translateX(0) }
+  75% { transform: translate3d(-3px,0,0) }
+  83% { transform: translate3d(-3px,0,0) }
+  90% { transform: translateX(0); }
+}
+@keyframes slideScaleLeft{
+  0% { transform: scale(1) translate3d(0,0,0) }
+  10% { transform: scale(1) translate3d(0,0,0) }
+  25% { transform: scale(1.15) translate3d(4px,0,0) }
+  33% { transform: scale(1.15) translate3d(4px,0,0)}
+  40% { transform: scale(1) translate3d(0,0,0)}
+  100% { transform: scale(1) translate3d(0,0,0)}
+}
+@keyframes slideScaleRight{
+  0% { transform: scale(1) translate3d(0,0,0) rotate(180deg)}
+  60% { transform: scale(1) translate3d(0,0,0) rotate(180deg) }
+  75% { transform: scale(1.15) translate3d(-4px,0,0) rotate(180deg) }
+  83% { transform: scale(1.15) translate3d(-4px,0,0) rotate(180deg)}
+  93% { transform: scale(1) translate3d(0,0,0) rotate(180deg)}
+  100% { transform: scale(1) translate3d(0,0,0) rotate(180deg)}
 }

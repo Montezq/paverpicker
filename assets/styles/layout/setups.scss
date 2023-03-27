@@ -152,6 +152,9 @@ a{
   &_center{
     text-align: center;
   }
+  &_nowrap{
+    white-space: nowrap;
+  }
 }
 .align-items{
   &_center{
@@ -534,6 +537,9 @@ img{
       &:after{
         width: 100%;
       }
+    }
+    &.position_absolute{
+      position: absolute;
     }
   }
 }

@@ -94,21 +94,14 @@
                      at the click of a button. 
                   </p>
                 </div>
-                <div class="slider-section__text-cta">
-                  <NuxtLink to="/photography/">Learn more </NuxtLink>
+                <div class="slider-section__text-cta text_nowrap position_relative">
+                  <NuxtLink to="/photography/" class="position_absolute">Learn more about photography</NuxtLink>
                 </div>
               </div>
             </div>
             <div class="slide-section__decor photography position_relative">
               <Img :img="'rig'" :alt="'Rig'" class="photography__rig"/>
               <div class="photography__blitz"></div>
-              <!-- <div class="photography__camera">
-                <Img :img="'camera'" :alt="'Camera'" class="photography__camera-inside"/>
-                <div class="photography__camera-ins">
-                  <Img :img="'rig'" :alt="'Rig inside'" class="photography__rig-inside"/>
-                  <Img :img="'brick'" :alt="'Brick'" class="photography_brick"/>
-                </div>
-              </div> -->
             </div>
           </div>
         </section>
@@ -133,7 +126,7 @@
                   </p>
                 </div>
                 <div class="slider-section__text-cta">
-                  <NuxtLink to="/visualisation/">Learn more </NuxtLink>
+                  <NuxtLink to="/visualisation/">Learn more about visualisations</NuxtLink>
                 </div>
               </div>
             </div>
@@ -169,12 +162,11 @@
                   </p>
                 </div>
                 <div class="slider-section__text-cta">
-                  <NuxtLink to="/">Learn more </NuxtLink>
+                  <NuxtLink to="/">Learn more about software</NuxtLink>
                 </div>
               </div>
             </div>
             <div class="slide-section__decor software">
-              <!-- <Img :img="'send'" :resp="false" :alt="'Send Laptop'" class="software__send"/> -->
               <div class="visualisation__brick-wrapper">
                 <Img :img="'photoshop-wind'" :resp="false" :alt="'Window'" class="visualisation__window"/>
                 <Img :img="'brick'" :alt="'Brick'" class="visualisation_brick-single"/>
