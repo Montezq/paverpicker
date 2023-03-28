@@ -115,7 +115,7 @@
                   </p>
                 </div>
                 <div class="slider-section__text-cta">
-                  <NuxtLink to="/software/blender-module/">Try it</NuxtLink>
+                  <a target="_blank" href="https://app.paverpicker.com/demo/Walling/Clay%20Bricks/viewer/blend?c=VA_LIV_HA&b=20&c=VA_QU_HA&b=20&c=VA_TR_HA&b=60&l=Stretcher&lv=Stretcher&jf=Med+Grey&js=10&scene=None&a=0">Try it</a>
                 </div>
               </div>
               <div class="slide-section__decor position_relative">
