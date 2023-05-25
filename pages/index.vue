@@ -6,11 +6,7 @@
         <div class="modal__backdrop position_absolute" @click="videoPopup=!videoPopup"></div>
         <div class="modal__content">
           <div class="modal__close position_absolute cursor_pointer" @click="videoPopup=!videoPopup" v-html="closeIcon"></div>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/NL-mA2AmtG8?autoplay=1" 
-            title="YouTube video player" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen>
-          </iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/BiQAct1T01M?&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
     </Transition>
@@ -162,7 +158,7 @@
                   </p>
                 </div>
                 <div class="slider-section__text-cta">
-                  <NuxtLink to="/">Learn more about software</NuxtLink>
+                  <NuxtLink to="https://app.bloc-tec.com/demo/?utm_medium=Website&utm_source=Try+Demo+Button&utm_campaign=Home+page " target="_blank">Learn more about software</NuxtLink>
                 </div>
               </div>
             </div>
@@ -359,7 +355,7 @@
             slide(3000, e.deltaY)
             setTimeout(() => {
               slide(3000, e.deltaY)
-            }, 2600);
+            }, 2300);
           }
           else if((currentSlide.value === 3 && pastSlide.value === 2) || (currentSlide.value === 3 && pastSlide.value === 4)){
             slide(6000, e.deltaY)

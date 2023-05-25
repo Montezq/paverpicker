@@ -16,13 +16,14 @@
 .modal__content{
   position: relative;
   z-index: 2;
+  video,
   iframe{
-    width: 70vw;
+    width: 70vw !important;
     aspect-ratio: 16/9;
-    height: auto;
+    height: auto !important;
     max-height: 92vh;
     @include phone{
-      width: calc(100vw - 20px);
+      width: calc(100vw - 20px) !important;
     }
   }
 }

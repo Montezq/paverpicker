@@ -24,13 +24,13 @@
               <p>Software Add-on's</p>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/software/api-module/">Blender</NuxtLink>
+              <NuxtLink to="/software/blender-module/">Blender</NuxtLink>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/software/blender-module/">Texture</NuxtLink>
+              <NuxtLink to="/software/textures-module/">Texture</NuxtLink>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/software/textures-module/"> API</NuxtLink>
+              <NuxtLink to="/software/api-module/"> API</NuxtLink>
             </li>
           </ul>
         </div>

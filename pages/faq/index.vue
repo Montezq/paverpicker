@@ -111,7 +111,7 @@
           answer: 'The images are created by photographing individual product samples. This allows us to show any pattern, joint colour and joint size. '
         },
         {
-          question: 'How many product samples do we need to send you?',
+          question: 'Is security built-in?',
           answer: 'This depends on the type of product such as colour blends and size. Taking multiple photographs ensures realistic blends are achieved and repetition is avoided. We will advise on the number of products to send. '
         },
         {

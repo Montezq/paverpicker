@@ -134,8 +134,8 @@
                 </div>
               </div>
               <div class="slide-section__btns position_relative d_flex justify-content_center">
-                <a target="_blank" href="https://app.paverpicker.com/demo/Paving/Paving%20Blocks/viewer/blend?c=BR_ALSI_GRTE&b=32&c=BR_JUGR_GRTE&b=34&c=BR_INBL_GRTE&b=34&l=Stretcher&lv=200x100&jf=Silver+Granite&js=4&scene=None&angle=0&a=0" class="text_uppercase btn btn_primary text_uppercase">Try Brick Blender</a>
-                <a target="_blank" href="https://app.paverpicker.com/demo/Walling/Clay+Bricks/viewer/blend?c=EN_KOREBL_HA&b=32&c=VA_TR_HA&b=34&c=VA_QU_HA&b=34&l=Stretcher&lv=Stretcher&jf=Med+Grey&js=10&scene=None&angle=0&a=0" class="text_uppercase btn btn_primary text_uppercase">Try Paving Blender</a>
+                <a target="_blank" href="https://app.bloc-tec.com/demo/Walling/Clay+Bricks/viewer/blend?c=EN_KOREBL_HA&b=32&c=VA_TR_HA&b=34&c=VA_QU_HA&b=34&l=Stretcher&lv=Stretcher&jf=Med+Grey&js=10&scene=None&angle=0&a=0&utm_medium=Website&utm_source=Blender+Page&utm_campaign=Brick+Demo " class="text_uppercase btn btn_primary text_uppercase">Try Brick Blender</a>
+                <a target="_blank" href="https://app.bloc-tec.com/demo/Paving/Paving%20Blocks/viewer/blend?c=BR_ALSI_GRTE&b=32&c=BR_JUGR_GRTE&b=34&c=BR_INBL_GRTE&b=34&l=Stretcher&lv=200x100&jf=Silver+Granite&js=4&scene=None&angle=0&a=0&utm_medium=Website&utm_source=Blender+Page&utm_campaign=Paving+Demo " class="text_uppercase btn btn_primary text_uppercase">Try Paving Blender</a>
               </div>
               <div class="slide-section__decor d_flex justify-content_center">
                 <div class="slide-section__decor-video position_relative">

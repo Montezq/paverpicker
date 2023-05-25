@@ -36,7 +36,7 @@
                     <NuxtLink to="/scenes/" class="text_uppercase fs_r12 letter-spacing_1">Scenes</NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink to="/software/api-module/" class="text_uppercase fs_r12 letter-spacing_1">API Doc</NuxtLink>
+                    <NuxtLink to="https://paverpicker-my.sharepoint.com/personal/ross_paverpicker_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fross%5Fpaverpicker%5Fcom%2FDocuments%2FMicrosoft%20Teams%20Chat%20Files%2FPaver%20Picker%20API%20guide%2Epdf&parent=%2Fpersonal%2Fross%5Fpaverpicker%5Fcom%2FDocuments%2FMicrosoft%20Teams%20Chat%20Files&ga=1"  target="_blank" class="text_uppercase fs_r12 letter-spacing_1">API Doc</NuxtLink>
                   </li>
                 </ul>
               </nav>
@@ -47,7 +47,7 @@
           </div>
         </nav>
         <div class="header__cta">
-          <NuxtLink to="https://app.paverpicker.com/demo" target="_blank" class="text_uppercase btn btn_primary">Try Demo</NuxtLink>
+          <NuxtLink to="https://app.bloc-tec.com/demo/?utm_medium=Website&utm_source=Try+Demo+Button&utm_campaign=Header" target="_blank" class="text_uppercase btn btn_primary">Try Demo</NuxtLink>
         </div>
       </div>
     </div>
