@@ -94,6 +94,11 @@
       img: route+'commercial2',
       title: 'Commercial Wall 2',
       url: '#'
+    },
+    {
+      img: route+'commercial3',
+      title: 'Commercial Wall 3',
+      url: '#'
     }
   ]
 </script>
