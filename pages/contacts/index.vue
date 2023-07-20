@@ -29,7 +29,7 @@
                 <div class="d_flex">
                   <div v-html="pinker" class="icon icon_pinker"></div>
                   <p class="fs_r32">
-                    BLOC-TEC LTD
+                    BLOC-TEC 
                     <br>
                     Ballinamona
                     <br>
