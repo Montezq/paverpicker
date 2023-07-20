@@ -29,7 +29,7 @@
                 <div class="d_flex">
                   <div v-html="pinker" class="icon icon_pinker"></div>
                   <p class="fs_r32">
-                    PAVER PICKER LTD
+                    BLOC-TEC LTD
                     <br>
                     Ballinamona
                     <br>
@@ -58,8 +58,8 @@
   import phone  from '~/assets/svg/icons/phone.svg?raw';
   import email  from '~/assets/svg/icons/email.svg?raw';
   import pinker  from '~/assets/svg/icons/pin.svg?raw';
-  const pageTitle = 'Contact Us | Paver Picker',
-        baseUrl = 'https://paverpicker.pages.dev',
+  const pageTitle = 'Contact Us | BLOC-TEC',
+        baseUrl = 'https://paverpicker.com/',
         pageDescription = 'Send us an email or give us a call. ',
         imageAlt = 'Alternative text for the image',
         imageName = 'contact';

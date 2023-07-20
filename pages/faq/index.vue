@@ -59,8 +59,8 @@
 <script setup>
   import arrow  from '~/assets/svg/icons/arrow.svg?raw';
   import { ElCollapse, ElCollapseItem } from 'element-plus';
-  const pageTitle = 'FAQ | Paver Picker',
-        baseUrl = 'https://paverpicker.pages.dev',
+  const pageTitle = 'FAQ | Bloc-Tec',
+        baseUrl = 'https://paverpicker.com/',
         pageDescription = 'Find the answers to the most common questions. ',
         imageAlt = 'Alternative text for the image',
         imageName = 'home';
@@ -129,11 +129,11 @@
         },
         {
           question: 'Which servers do you use?',
-          answer: 'Paver Picker software is hosted in an AWS Data Centre. AWS is one of the leading cloud platforms and is used by companies such as Netflix, Facebook and the BBC. AWS provides a very robust platform with high availability and the ability to add additional processing capacity as required.'
+          answer: 'Bloc-Tec software is hosted in an AWS Data Centre. AWS is one of the leading cloud platforms and is used by companies such as Netflix, Facebook and the BBC. AWS provides a very robust platform with high availability and the ability to add additional processing capacity as required.'
         },
         {
           question: 'How many product samples do we need to send you?',
-          answer: 'We have a hardware firewall limiting port access. The Database is only accessible to specific IP’s. Paver Picker uses an encrypted https connection between the client and the server. Comprehensive backup and recovery plans are in place; automated full instances backups are performed daily.'
+          answer: 'We have a hardware firewall limiting port access. The Database is only accessible to specific IP’s. Bloc-Tec uses an encrypted https connection between the client and the server. Comprehensive backup and recovery plans are in place; automated full instances backups are performed daily.'
         }
       ]
     },
@@ -142,7 +142,7 @@
       items:[
         {
           question: 'What platform does it run on?',
-          answer: 'The software is built with HTML and JavaScript version ES6. This version is fully supported by all modern browsers. This client-side platform is what gives Paver Picker its speed.'
+          answer: 'The software is built with HTML and JavaScript version ES6. This version is fully supported by all modern browsers. This client-side platform is what gives Bloc-Tec its speed.'
         },
         {
           question: 'Is your software available in responsive design for mobile display?',

@@ -36,7 +36,7 @@
                     <NuxtLink to="/scenes/" class="text_uppercase fs_r12 letter-spacing_1">Scenes</NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink to="https://paverpicker-my.sharepoint.com/personal/ross_paverpicker_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fross%5Fpaverpicker%5Fcom%2FDocuments%2FMicrosoft%20Teams%20Chat%20Files%2FPaver%20Picker%20API%20guide%2Epdf&parent=%2Fpersonal%2Fross%5Fpaverpicker%5Fcom%2FDocuments%2FMicrosoft%20Teams%20Chat%20Files&ga=1"  target="_blank" class="text_uppercase fs_r12 letter-spacing_1">API Doc</NuxtLink>
+                    <NuxtLink to="/PDFs/API_Guide.pdf"  target="_blank" class="text_uppercase fs_r12 letter-spacing_1">API Doc</NuxtLink>
                   </li>
                 </ul>
               </nav>

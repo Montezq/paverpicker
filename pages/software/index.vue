@@ -106,8 +106,8 @@
 </style>
 <script setup>
 
-  const pageTitle = 'Base Software | Paver Picker',
-      baseUrl = 'https://paverpicker.pages.dev',
+  const pageTitle = 'Base Software | BLOC-TEC',
+      baseUrl = 'https://paverpicker.com/',
       pageDescription = 'How can our software benefit you? ',
       imageAlt = 'Alternative text for the image',
       imageName = 'software';

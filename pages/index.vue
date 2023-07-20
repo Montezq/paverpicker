@@ -6,7 +6,7 @@
         <div class="modal__backdrop position_absolute" @click="videoPopup=!videoPopup"></div>
         <div class="modal__content">
           <div class="modal__close position_absolute cursor_pointer" @click="videoPopup=!videoPopup" v-html="closeIcon"></div>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/BiQAct1T01M?&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/6l6ty-bxAGk?&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
     </Transition>
@@ -158,7 +158,7 @@
                   </p>
                 </div>
                 <div class="slider-section__text-cta">
-                  <NuxtLink to="https://app.bloc-tec.com/demo/?utm_medium=Website&utm_source=Try+Demo+Button&utm_campaign=Home+page " target="_blank">Learn more about software</NuxtLink>
+                  <NuxtLink to="/software/" >Learn more about software</NuxtLink>
                 </div>
               </div>
             </div>
@@ -209,8 +209,8 @@
 </style>
 <script setup>
   import closeIcon  from '~/assets/svg/icons/close.svg?raw';
-  const pageTitle = 'Paver Picker | YOUR Online Showroom',
-        baseUrl = 'https://paverpicker.pages.dev',
+  const pageTitle = 'BLOC-TEC | YOUR Online Showroom',
+        baseUrl = 'https://paverpicker.com/',
         pageDescription = 'How does our software work?',
         imageAlt = 'Alternative text for the image',
         imageName = 'home';

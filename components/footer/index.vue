@@ -75,6 +75,7 @@
       </div>
       <div class="footer__bottom">
         <Socials />
+        <div class="footer__bottom-text"><p>BLOC-TEC is a trading name of Paver Picker Ltd.</p></div>
       </div>
     </div>
   </footer>

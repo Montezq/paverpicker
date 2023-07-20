@@ -29,7 +29,7 @@
                       </div>
                       <div class="slide-section__text-desc text_center">
                         <p class="fs_32">
-                          Integrate key features of the Paver Picker software directly 
+                          Integrate key features of the BLOC-TEC software directly 
                            into your website with full control over the layout. 
                         </p>
                       </div>
@@ -113,8 +113,8 @@
   }
 </style>
 <script setup>
-  const pageTitle = 'API Add-on | Paver Picker',
-        baseUrl = 'https://paverpicker.pages.dev',
+  const pageTitle = 'API Add-on | BLOC-TEC',
+        baseUrl = 'https://paverpicker.com/',
         pageDescription = 'What can our API do for your website?',
         imageAlt = 'Alternative text for the image',
         imageName = 'api';

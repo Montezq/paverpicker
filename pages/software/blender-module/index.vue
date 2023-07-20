@@ -11,7 +11,7 @@
           <div class="slide-section position_relative d_flex align-items_center flex_column">
             <div class="slide-section__text position_relative">
               <div class="slide-section__text-head text_center">
-                <h1>Introducing Paver Picker Blender</h1>
+                <h1>Introducing BLOC-TEC Blender</h1>
               </div>
             </div>
             <div :class="`blender__bricks d_flex flex_wrap position_absolute option-${optionBrick}`">
@@ -166,8 +166,8 @@
   }
 </style>
 <script setup>
-  const pageTitle = 'Blender Add-on | Paver Picker',
-        baseUrl = 'https://paverpicker.pages.dev',
+  const pageTitle = 'Blender Add-on | BLOC-TEC',
+        baseUrl = 'https://paverpicker.com/',
         pageDescription = 'How does our blender work? ',
         imageAlt = 'Alternative text for the image',
         imageName = 'blender';

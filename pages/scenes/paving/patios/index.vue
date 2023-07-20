@@ -44,8 +44,8 @@
   @import 'main.scss';
 </style>
 <script setup>
-  const pageTitle = 'Paving Patios | Paver Picker',
-        baseUrl = 'https://paverpicker.pages.dev',
+  const pageTitle = 'Paving Patios | BLOC-TEC',
+        baseUrl = 'https://paverpicker.com/',
         pageDescription = 'View our extensive choice of scenes. ',
         imageAlt = 'Alternative text for the image',
         imageName = 'scenes';

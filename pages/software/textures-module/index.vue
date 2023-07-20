@@ -155,8 +155,8 @@
 <script setup>
   import folderBack  from '~/assets/svg/icons/folder_back.svg?raw';
   import folderFront  from '~/assets/svg/icons/folder_front.svg?raw';
-  const pageTitle = 'Textures Add-on | Paver Picker',
-        baseUrl = 'https://paverpicker.pages.dev',
+  const pageTitle = 'Textures Add-on | BLOC-TEC',
+        baseUrl = 'https://paverpicker.com/',
         pageDescription = 'What makes our textures unique? ',
         imageAlt = 'Alternative text for the image',
         imageName = 'seamless-textures';

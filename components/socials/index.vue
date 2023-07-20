@@ -26,7 +26,7 @@
     },
     {
       icon: linkedin,
-      url: 'https://www.linkedin.com/company/paver-picker/',
+      url: 'https://www.linkedin.com/company/bloc-tec/',
       alt: 'linkedin'
     },
     {
