@@ -20,9 +20,9 @@
                 </a>
               </div>
               <div class="contacts__details-item">
-                <a href="mailto:info@paverpicker.com" class="d_flex ">
+                <a href="mailto:info@bloc-tec.com" class="d_flex ">
                   <div v-html="email" class="icon icon_email"></div>
-                  <p class="fs_r32">info@paverpicker.com</p>
+                  <p class="fs_r32">info@bloc-tec.com</p>
                 </a>
               </div>
               <div class="contacts__details-item">

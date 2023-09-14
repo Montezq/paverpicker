@@ -68,7 +68,7 @@
                 <div class="slide-section__brick">
                   <div class="slide-section__brick-box position_relative">
                     <label class="background-slider position_absolute">
-                      <input type="range" v-model="slideval" max="100" min="0" @input="slideInput"/>
+                      <input type="range" :class="{'animation_false' : slideInteract}" v-model="slideval" max="100" min="0" @input="slideInput"/>
                       <span class="background-slider__icon">
                         <span class="background-slider__icon-wrapper ">
                           <div class="background-slider__icon-wrapper-inside d_flex align-items_center">
@@ -165,10 +165,12 @@
       pastSlide = ref(0),
       videoCount = ref(1),
       slideval = ref(50),
+      slideInteract = ref(false),
       ticking = ref(false),
       scrlTicking = ref(true);
   
   function slideInput(){
+    slideInteract.value = true
     document.querySelector('.foreground-img').style.width = slideval.value+'%'
     document.querySelector('.background-slider__icon').style.width = slideval.value+'%'
   }
@@ -196,6 +198,10 @@
       if(currentSlide.value!==3)
         scrl.classList.remove('oh')
       setTimeout(() => {
+        slideval.value = 50
+        document.querySelector('.foreground-img').style.width = slideval.value+'%'
+        document.querySelector('.background-slider__icon').style.width = slideval.value+'%'
+        console.log(slideval.value)
         if(currentSlide.value===3)
           scrl.classList.add('oh')
         ticking.value = false;

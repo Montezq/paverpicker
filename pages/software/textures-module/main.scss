@@ -194,7 +194,7 @@ $speed3: 1.9s;
       }
       .seamless-page__blend{
         .slide-section__decor{
-          transform: translate3d(-50%,-5%,0) scale(1);
+          transform: translate3d(-50%,0%,0) scale(1);
           @include special3{
             transform: translate3d(-50%,4%,0) scale(1);
           }
@@ -208,7 +208,7 @@ $speed3: 1.9s;
       transform: translate3d(0,-300vh,0);
       .seamless-page__blend{
         .slide-section__decor{
-          transform: translate3d(-50%,-5%,0) scale(1);
+          transform: translate3d(-50%,0%,0) scale(1);
           @include special3{
             transform: translate3d(-50%,4%,0) scale(1);
           }  
@@ -239,7 +239,7 @@ $speed3: 1.9s;
       transform: translate3d(0,-400vh,0);
       .seamless-page__blend{
         .slide-section__decor{
-          transform:  translate3d(-263%, calc(100vh + 122%), 0) scale(3.65);
+          transform:  translate3d(-263%, calc(100vh + 130%), 0) scale(3.65);
           @include special3{
             transform:  translate3d(-263%, calc(100vh + 136%), 0) scale(3.65);
           }  
@@ -282,15 +282,15 @@ $speed3: 1.9s;
       transform: translate3d(0,-400vh,0);
       .seamless-page__blend{
         .slide-section__decor{
-          transform:  translate3d(-233.8%, calc(100vh + 122%), 0) scale(3.65);
+          transform:  translate3d(-233.8%, calc(100vh + 130%), 0) scale(3.65);
           @include special3{
-            transform:  translate3d(-233.8%, calc(100vh + 136%), 0) scale(3.65);
+            transform:  translate3d(-233.8%, calc(100vh + 130%), 0) scale(3.65);
           }  
           &_alternative{
-            transform:  translate3d(131%, calc(100vh + 136%), 0) scale(3.65);
+            transform:  translate3d(131%, calc(100vh + 130%), 0) scale(3.65);
             opacity: 1;
             @include special3{
-              transform:  translate3d(131%, calc(100vh + 136%), 0) scale(3.65);
+              transform:  translate3d(131%, calc(100vh + 130%), 0) scale(3.65);
             }  
           }
           .slide-section__decor-item{
@@ -681,7 +681,7 @@ $speed3: 1.9s;
         left: 50%;
         width: clamp(34vh, 23.438vw, 23.438vw);
         height: clamp(34vh, 23.438vw, 23.438vw);
-        transform: translate3d(161%, calc(100vh + 122%), 0) scale(3.65);
+        transform: translate3d(161%, calc(100vh + 130%), 0) scale(3.65);
         opacity: .5;
         transition: $speed ease-in-out, opacity .5s ease-in-out;
         @include special3{
