@@ -162,88 +162,111 @@
   })
 
   let currentSlide = ref(0),
-      pastSlide = ref(0),
-      ticking = ref(false),
-      scrlTicking = ref(true);
+  pastSlide = ref(0),
+  disableScroll = ref(false), // Flag to disable scrolling
+  scrlTicking = ref(true);
 
-  function nextPage(){
-    slide(1800, 100)
+  function nextPage() {
+    slide(1800, 100);
   }
-  function slide(speed=1800, y=null, direction=null) {
+
+  function slide(speed = 1800, y = null, direction = null) {
+    if (disableScroll.value) {
+      console.log('Scroll is disabled');
+      return;
+    }
+
+    disableScroll.value = true; // Disable scrolling
+    setTimeout(() => {
+      disableScroll.value = false; // Re-enable scrolling after 3.2 seconds
+    }, 3200);
+
     const scrl = document.querySelector('.visualisation-page__steps');
     const lngth = 6;
-    if((y>0 || direction==='up') && currentSlide.value < lngth){
-      currentSlide.value+=1
+
+    if ((y > 0 || direction === 'up') && currentSlide.value < lngth) {
+      currentSlide.value += 1;
       setTimeout(() => {
-        currentSlide.value+=1
+        currentSlide.value += 1;
       }, 1600);
-      pastSlide.value = currentSlide.value-1
-    }else if((y<0 || direction==='down') && currentSlide.value > 0){
-      currentSlide.value-=1
-      pastSlide.value = currentSlide.value+1
+      pastSlide.value = currentSlide.value - 1;
+    } else if ((y < 0 || direction === 'down') && currentSlide.value > 0) {
+      currentSlide.value -= 1;
+      pastSlide.value = currentSlide.value + 1;
       setTimeout(() => {
-        currentSlide.value-=1
-        pastSlide.value = currentSlide.value+1
+        currentSlide.value -= 1;
+        pastSlide.value = currentSlide.value + 1;
       }, 1600);
     }
-    ticking.value = true;
-    if(scrl){
-      if(currentSlide.value!==6)
-        scrl.classList.remove('oh')
+
+    if (scrl) {
+      if (currentSlide.value !== 6) scrl.classList.remove('oh');
       setTimeout(() => {
-        if(currentSlide.value===6)
-          scrl.classList.add('oh')
-        ticking.value = false;
+        if (currentSlide.value === 6) scrl.classList.add('oh');
       }, speed);
     }
   }
-  function touch(){
-    document.addEventListener('touchstart', handleTouchStart, false);        
+
+  function touch() {
+    document.addEventListener('touchstart', handleTouchStart, false);
     document.addEventListener('touchmove', handleTouchMove, false);
-    var xDown = null;                                                        
-    var yDown = null;                                                        
-    function handleTouchStart(evt) {                                         
-      xDown = evt.touches[0].clientX;                                      
-      yDown = evt.touches[0].clientY;                                      
-    };                                                
+    var xDown = null;
+    var yDown = null;
+
+    function handleTouchStart(evt) {
+      xDown = evt.touches[0].clientX;
+      yDown = evt.touches[0].clientY;
+    }
+
     function handleTouchMove(evt) {
-      if ( ! xDown || ! yDown ) {
+      if (!xDown || !yDown) {
         return;
       }
 
-      var xUp = evt.touches[0].clientX;                                    
+      var xUp = evt.touches[0].clientX;
       var yUp = evt.touches[0].clientY;
 
       var xDiff = xDown - xUp;
       var yDiff = yDown - yUp;
-      if(Math.abs( xDiff )+Math.abs( yDiff )>1){
-        if( Math.abs( yDiff  ) > Math.abs( xDiff ) ) {
-          if( yDiff > 0 && ticking.value === false && scrlTicking.value) 
-            slide(1800,null,'up')
-          if( yDiff < 0 && ticking.value === false && scrlTicking.value)  
-            slide(1800,null,'down')                                                              
-        } 
+      if (Math.abs(xDiff) + Math.abs(yDiff) > 1) {
+        if (Math.abs(yDiff) > Math.abs(xDiff)) {
+          if (
+            yDiff > 0 &&
+            !disableScroll.value &&
+            scrlTicking.value
+          ) {
+            slide(1800, null, 'up');
+          }
+          if (
+            yDiff < 0 &&
+            !disableScroll.value &&
+            scrlTicking.value
+          ) {
+            slide(1800, null, 'down');
+          }
+        }
         xDown = null;
         yDown = null;
       }
     }
   }
+
   onMounted(() => {
     setTimeout(() => {
       const wrapper = document.querySelector('.animation-steps');
       const scrl = document.querySelector('.visualisation-page__steps');
-      scrl.addEventListener('scroll', (e) =>{
-        if(scrl.scrollTop>1)
-          scrlTicking.value=false
-        else
-          scrlTicking.value=true
-      })
+      scrl.addEventListener('scroll', (e) => {
+        if (scrl.scrollTop > 1) scrlTicking.value = false;
+        else scrlTicking.value = true;
+      });
       wrapper.addEventListener('wheel', (e) => {
-        if (ticking.value === false && scrlTicking.value) {
-          slide(1800, e.deltaY)
+        if (!disableScroll.value && scrlTicking.value) {
+          slide(1800, e.deltaY);
         }
-      },{passive: true});
+      }, { passive: true });
       touch();
     }, 610);
-  })
+  });
+
+
 </script>
