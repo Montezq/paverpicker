@@ -115,7 +115,7 @@
                   </p>
                 </div>
                 <div class="slider-section__text-cta">
-                  <a target="_blank" href="https://app.bloc-tec.com/demo/Walling/Clay%20Bricks/viewer/blend?c=VA_LIV_HA&b=20&c=VA_QU_HA&b=20&c=VA_TR_HA&b=60&l=Stretcher&lv=Stretcher&jf=Med+Grey&js=10&scene=None&a=0&utm_medium=Website&utm_source=Seamless+Textures+Page&utm_campaign=Textures+Demo ">Try it</a>
+                  <a target="_blank" href="https://app.bloc-tec.com/demo/Walling/Clay%20Bricks/viewer/blend?c=VA_LIV_HA&b=20&c=VA_QU_HA&b=20&c=VA_TR_HA&b=60&l=Stretcher&lv=Stretcher&jf=Med+Grey&js=10&scene=None&a=0">Try it</a>
                 </div>
               </div>
               <div class="slide-section__decor position_relative">

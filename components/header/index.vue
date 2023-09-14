@@ -38,6 +38,15 @@
                   <li>
                     <NuxtLink to="/PDFs/API_Guide.pdf"  target="_blank" class="text_uppercase fs_r12 letter-spacing_1">API Doc</NuxtLink>
                   </li>
+                  <li>
+                    <NuxtLink to="/PDFs/Customisation_Guide.pdf"  target="_blank" class="text_uppercase fs_r12 letter-spacing_1">Customisation Guide</NuxtLink>
+                  </li>
+                  <li>
+                    <NuxtLink to="/PDFs/Delivery_of_Samples.pdf"  target="_blank" class="text_uppercase fs_r12 letter-spacing_1">Delivery of Samples</NuxtLink>
+                  </li>
+                  <li>
+                    <NuxtLink to="/PDFs/Preperation_of_Samples.pdf"  target="_blank" class="text_uppercase fs_r12 letter-spacing_1">Preparation of Samples</NuxtLink>
+                  </li>
                 </ul>
               </nav>
             </div>
@@ -47,7 +56,7 @@
           </div>
         </nav>
         <div class="header__cta">
-          <NuxtLink to="https://app.bloc-tec.com/demo/?utm_medium=Website&utm_source=Try+Demo+Button&utm_campaign=Header" target="_blank" class="text_uppercase btn btn_primary">Try Demo</NuxtLink>
+          <NuxtLink to="https://app.bloc-tec.com/demo" target="_blank" class="text_uppercase btn btn_primary">Try Demo</NuxtLink>
         </div>
       </div>
     </div>

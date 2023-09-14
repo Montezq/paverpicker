@@ -112,7 +112,7 @@
         },
         {
           question: 'Is security built-in?',
-          answer: 'This depends on the type of product such as colour blends and size. Taking multiple photographs ensures realistic blends are achieved and repetition is avoided. We will advise on the number of products to send. '
+          answer: 'We have a hardware firewall limiting port access. The Database is only accessible to specific IP’s. Bloc-Tec uses an encrypted https connection between the client and the server. Comprehensive backup and recovery plans are in place; automated full instances backups are performed daily.'
         },
         {
           question: 'Do I need to send all my product samples to you?',
@@ -133,7 +133,7 @@
         },
         {
           question: 'How many product samples do we need to send you?',
-          answer: 'We have a hardware firewall limiting port access. The Database is only accessible to specific IP’s. Bloc-Tec uses an encrypted https connection between the client and the server. Comprehensive backup and recovery plans are in place; automated full instances backups are performed daily.'
+          answer: 'This depends on the type of product such as colour blends and size. Taking multiple photographs ensures realistic blends are achieved and repetition is avoided. We will advise on the number of products to send. '
         }
       ]
     },

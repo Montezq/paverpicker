@@ -10,7 +10,7 @@
 </style>
 <script setup>
   import facebook from '~/assets/svg/icons/facebook.svg?raw';
-  import twitter from '~/assets/svg/icons/twitter.svg?raw';
+  import x from '~/assets/svg/icons/x.svg?raw';
   import linkedin from '~/assets/svg/icons/linkedin.svg?raw';
   import youtube from '~/assets/svg/icons/youtube.svg?raw';
   const socials = [
@@ -20,7 +20,7 @@
       alt: 'facebook'
     },
     {
-      icon: twitter,
+      icon: x,
       url: 'https://twitter.com/Paverpicker',
       alt: 'twitter'
     },
@@ -31,7 +31,7 @@
     },
     {
       icon: youtube,
-      url: 'https://www.youtube.com/@paverpicker',
+      url: 'https://www.youtube.com/watch?v=6l6ty-bxAGk&ab_channel=BLOC-TEC',
       alt: 'youtube'
     },
   ]

@@ -3,6 +3,7 @@
 .socials__item{
   margin: 0 20px;
   svg{
+    circle,
     path{
       transition: .26s cubic-bezier(0.215, 0.610, 0.355, 1);
     }
@@ -22,15 +23,27 @@
     }
   }
   &_twitter{
+    position: relative;
+    width: 35px;
+    height: 40px;
+    a{
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
     &:hover{
       svg{
-        path{
+        circle{
           fill: #1D9BF0;
         }
       }
     }
     svg{
-      width: 36px;
+      position: absolute;
+      width: 60px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
   &_linkedin{
