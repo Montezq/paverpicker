@@ -61,13 +61,7 @@
                 <div class="slide-section__decor position_absolute d_flex">
                   <div class="slide-section__decor-box">
                     <div class="picture api__bg">
-                      <picture>
-                        <source type="image/png" srcset="/images/decor/api-hero.png , /images/decor/api-hero.png 2x"/>
-                        <source type="image/webp" srcset="/images/decor/api-hero.webp , /images/decor/api-hero.webp 2x"/>
-                        <source type="image/webp" media="(max-width: 1139px)" srcset="/images/decor/api-hero-md.webp ,/images/decor/api-hero-md.webp 2x"/>
-                        <source type="image/wepngbp" media="(max-width: 1139px)" srcset="/images/decor/api-hero-md.png ,/images/decor/api-hero-md.png 2x"/>
-                        <img src="/images/decor/api-hero.png" alt="Bricks" width="2160" height="1215"/>
-                      </picture>
+                      <Img :resp="false" :img="'api-hero'" :alt="'Brick'"/>
                     </div>
                   </div>
                   <div class="slide-section__decor-box slide-section__decor-box-steps position_relative">
