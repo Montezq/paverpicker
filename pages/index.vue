@@ -293,7 +293,6 @@
         ticking.value = false;
       }, speed);
     }
-    console.log(currentSlide.value)
     slideStore.setSlideState(pageIdentifier, {
       current: currentSlide.value,
       next: nextSlide.value,
