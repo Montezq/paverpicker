@@ -8,13 +8,13 @@
               <p>What we do</p>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/photography/">Photography</NuxtLink>
+              <NuxtLink @click="() => handleMenuNavigation('/photography/')" to="/photography/">Photography</NuxtLink>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/visualisation/">Visualisation</NuxtLink>
+              <NuxtLink @click="() => handleMenuNavigation('/visualisation/')" to="/visualisation/">Visualisation</NuxtLink>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/software/">Software</NuxtLink>
+              <NuxtLink @click="() => handleMenuNavigation('/software/')" to="/software/">Software</NuxtLink>
             </li>
           </ul>
         </div>
@@ -24,13 +24,13 @@
               <p>Software Add-on's</p>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/software/blender-module/">Blender</NuxtLink>
+              <NuxtLink @click="() => handleMenuNavigation('/software/blender-module/')" to="/software/blender-module/">Blender</NuxtLink>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/software/textures-module/">Texture</NuxtLink>
+              <NuxtLink @click="() => handleMenuNavigation('/software/textures-module/')" to="/software/textures-module/">Texture</NuxtLink>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/software/api-module/"> API</NuxtLink>
+              <NuxtLink @click="() => handleMenuNavigation('/software/api-module/')" to="/software/api-module/"> API</NuxtLink>
             </li>
           </ul>
         </div>
@@ -43,16 +43,16 @@
               <NuxtLink to="/scenes/">All scenes</NuxtLink>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/scenes/paving/">Paving</NuxtLink>
+              <NuxtLink  to="/scenes/paving/">Paving</NuxtLink>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/scenes/walling/">Walling</NuxtLink>
+              <NuxtLink  to="/scenes/walling/">Walling</NuxtLink>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/scenes/internal/">Internal</NuxtLink>
+              <NuxtLink  to="/scenes/internal/">Internal</NuxtLink>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/scenes/roofing/">Roofing</NuxtLink>
+              <NuxtLink  to="/scenes/roofing/">Roofing</NuxtLink>
             </li>
           </ul>
         </div>
@@ -62,10 +62,10 @@
               <p>About Us</p>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/faq/">FAQ</NuxtLink>
+              <NuxtLink  to="/faq/">FAQ</NuxtLink>
             </li>
             <li class="footer__item">
-              <NuxtLink to="/">Our Clients</NuxtLink>
+              <NuxtLink @click="() => navigateToSpecialSlide('/')" to="/">Our Clients</NuxtLink>
             </li>
             <li class="footer__item">
               <NuxtLink to="/contacts/">Contact Us</NuxtLink>
@@ -83,3 +83,18 @@
 <style lang="scss">
   @import 'index';
 </style>
+<script setup>
+  import { useSlideStore } from '@/store/slideStore';
+  const route = useRoute();
+  let slideStore = useSlideStore();
+  function handleMenuNavigation(destinationPath) {
+    slideStore.resetSlideState(destinationPath);
+  }
+  function navigateToSpecialSlide(destinationPath) {
+    slideStore.setSlideState(destinationPath, {
+        current: 6,
+        next: 7,
+        past: 5
+    });
+}
+</script>

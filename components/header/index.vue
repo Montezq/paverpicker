@@ -6,20 +6,20 @@
         <div class="header__menu-btn ff_icon" @click="menuToggle()">
         </div>
         <div class="header__logo">
-          <NuxtLink to="/" aria-label="Header Logo">
+          <NuxtLink @click="() => handleMenuNavigation('/')" to="/" aria-label="Header Logo">
             <div v-html="logo"></div>
           </NuxtLink>
         </div>
         <nav :class="['header__menu', {'active':menu.menu}]">
           <ul class="header__menu-list d_flex">
             <li class="header__menu-list-item">
-              <NuxtLink to="/photography/" class="text_uppercase fw_semibold">Photography</NuxtLink>
+              <NuxtLink @click="() => handleMenuNavigation('/photography/')" to="/photography/" class="text_uppercase fw_semibold">Photography</NuxtLink>
             </li>
             <li class="header__menu-list-item">
-              <NuxtLink to="/visualisation/" class="text_uppercase fw_semibold">Visualisation</NuxtLink>
+              <NuxtLink @click="() => handleMenuNavigation('/visualisation/')" to="/visualisation/" class="text_uppercase fw_semibold">Visualisation</NuxtLink>
             </li>
             <li class="header__menu-list-item">
-              <NuxtLink to="/software/" :class="['text_uppercase fw_semibold',{'active':isSoftwarePage}]">Software</NuxtLink>
+              <NuxtLink @click="() => handleMenuNavigation('/software/')" to="/software/" :class="['text_uppercase fw_semibold',{'active':isSoftwarePage}]">Software</NuxtLink>
             </li>
           </ul>
           <div class="d_flex justify-content_center position_absolute header__menu-block">
@@ -30,10 +30,10 @@
               <nav class="header__menu-block-item-nav position_absolute text_center">
                 <ul>
                   <li>
-                    <NuxtLink to="/faq/" class="text_uppercase fs_r12 letter-spacing_1">FAQ</NuxtLink>
+                    <NuxtLink @click="() => handleMenuNavigation('/faq/')" to="/faq/" class="text_uppercase fs_r12 letter-spacing_1">FAQ</NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink to="/scenes/" class="text_uppercase fs_r12 letter-spacing_1">Scenes</NuxtLink>
+                    <NuxtLink @click="() => handleMenuNavigation('/scenes/')" to="/scenes/" class="text_uppercase fs_r12 letter-spacing_1">Scenes</NuxtLink>
                   </li>
                   <li>
                     <NuxtLink to="/PDFs/API_Guide.pdf"  target="_blank" class="text_uppercase fs_r12 letter-spacing_1">API Doc</NuxtLink>
@@ -51,7 +51,7 @@
               </nav>
             </div>
             <div class="header__menu-block-item">
-              <NuxtLink to="/contacts/" class="text_uppercase fs_md-10 fs_r12 letter-spacing_1">Contact</NuxtLink>
+              <NuxtLink @click="() => handleMenuNavigation('/contacts/')" to="/contacts/" class="text_uppercase fs_md-10 fs_r12 letter-spacing_1">Contact</NuxtLink>
             </div>
           </div>
         </nav>
@@ -67,11 +67,16 @@
 </style>
 <script setup>
   import logo  from '~/assets/svg/logo/logo.svg?raw';
-  import { toggleMenu } from '@/store/menu'
+  import { toggleMenu } from '@/store/menu';
+  import { useSlideStore } from '@/store/slideStore';
   const menu = toggleMenu();
   const route = useRoute();
   function menuToggle(){
     menu.toggle()
+  }
+  let slideStore = useSlideStore();
+  function handleMenuNavigation(destinationPath) {
+    slideStore.resetSlideState(destinationPath);
   }
   const isSoftwarePage = computed(() => {
     return route.path.includes('software');

@@ -69,14 +69,14 @@
                       </p>
                     </div>
                     <div class="slider-section__text-cta">
-                      <NuxtLink to="/scenes/" >
+                      <NuxtLink @click="() => handleMenuNavigation('/scenes/')" to="/scenes/" >
                         <span class="fs_32 fw_regular">
                           View our selection of scenes
                         </span>
                       </NuxtLink>
                     </div>
                     <div class="slider-section__text-cta">
-                      <NuxtLink to="/software/" >
+                      <NuxtLink @click="() => handleMenuNavigation('/software/')" to="/software/" >
                         <span class="fs_32 fw_regular">
                           Learn about our software
                         </span>
@@ -121,6 +121,7 @@
   @import 'main.scss';
 </style>
 <script setup>
+  import { useSlideStore  } from '@/store/slideStore'
   const pageTitle = 'Visualisation | BLOC-TEC',
         baseUrl = 'https://paverpicker.com/',
         pageDescription = 'What makes our visualisations so realistic?',
@@ -161,15 +162,23 @@
     ]
   })
 
-  let currentSlide = ref(0),
-  pastSlide = ref(0),
-  disableScroll = ref(false), // Flag to disable scrolling
-  scrlTicking = ref(true);
+  const route = useRoute();  // Get the current route
+  const pageIdentifier = route.path;
+  let slideStore = useSlideStore(),
+      slideState = slideStore.getSlideState(pageIdentifier),
+      currentSlide = ref(slideState.current),
+      nextSlide = ref(slideState.next),
+      pastSlide = ref(slideState.past),
+      isBackNavigation = ref(false),
+      disableScroll = ref(false), // Flag to disable scrolling
+      scrlTicking = ref(true);
 
   function nextPage() {
     slide(1800, 100);
   }
-
+  function handleMenuNavigation(destinationPath) {
+    slideStore.resetSlideState(destinationPath);
+  }
   function slide(speed = 1800, y = null, direction = null) {
     if (disableScroll.value) {
       console.log('Scroll is disabled');
@@ -205,6 +214,11 @@
         if (currentSlide.value === 6) scrl.classList.add('oh');
       }, speed);
     }
+    slideStore.setSlideState(pageIdentifier, {
+      current: currentSlide.value+1,
+      next: nextSlide.value+1,
+      past: pastSlide.value-1
+    });
   }
 
   function touch() {
@@ -252,6 +266,17 @@
   }
 
   onMounted(() => {
+    window.addEventListener('popstate', () => {
+      isBackNavigation.value = true;
+    });
+
+    // Check if the user navigated back
+    if (isBackNavigation.value) {
+      currentSlide.value = slideState.current;
+      nextSlide.value = slideState.next;
+      pastSlide.value = slideState.past;
+      isBackNavigation.value = false;  // reset the flag
+    }
     setTimeout(() => {
       const wrapper = document.querySelector('.animation-steps');
       const scrl = document.querySelector('.visualisation-page__steps');

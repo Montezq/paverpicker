@@ -91,7 +91,7 @@
                   </p>
                 </div>
                 <div class="slider-section__text-cta text_nowrap position_relative">
-                  <NuxtLink to="/photography/" class="position_absolute">Learn more about photography</NuxtLink>
+                  <NuxtLink @click="() => handleMenuNavigation('/photography/')" to="/photography/" class="position_absolute">Learn more about photography</NuxtLink>
                 </div>
               </div>
             </div>
@@ -122,7 +122,7 @@
                   </p>
                 </div>
                 <div class="slider-section__text-cta">
-                  <NuxtLink to="/visualisation/">Learn more about visualisations</NuxtLink>
+                  <NuxtLink @click="() => handleMenuNavigation('/visualisation/')" to="/visualisation/">Learn more about visualisations</NuxtLink>
                 </div>
               </div>
             </div>
@@ -158,7 +158,7 @@
                   </p>
                 </div>
                 <div class="slider-section__text-cta">
-                  <NuxtLink to="/software/" >Learn more about software</NuxtLink>
+                  <NuxtLink @click="() => handleMenuNavigation('/software/')" to="/software/" >Learn more about software</NuxtLink>
                 </div>
               </div>
             </div>
@@ -209,6 +209,8 @@
 </style>
 <script setup>
   import closeIcon  from '~/assets/svg/icons/close.svg?raw';
+  import { useSlideStore  } from '@/store/slideStore'
+  
   const pageTitle = 'BLOC-TEC | YOUR Online Showroom',
         baseUrl = 'https://paverpicker.com/',
         pageDescription = 'How does our software work?',
@@ -249,16 +251,22 @@
     ]
   })
 
-
-
-  let currentSlide = ref(0),
-      pastSlide = ref(0),
-      nextSlide = ref(1),
+  const route = useRoute();  // Get the current route
+  const pageIdentifier = route.path;
+  let slideStore = useSlideStore(),
+      slideState = slideStore.getSlideState(pageIdentifier),
+      currentSlide = ref(slideState.current),
+      nextSlide = ref(slideState.next),
+      pastSlide = ref(slideState.past),
+      isBackNavigation = ref(false),
       heroImg = ref(1),
       ticking = ref(false),
       videoPopup = ref(false),
       scrlTicking = ref(true);
   
+  function handleMenuNavigation(destinationPath) {
+    slideStore.resetSlideState(destinationPath);
+  }
   function change() {
     heroImg.value >= 3 ? heroImg.value = 1 : heroImg.value++;
   }
@@ -274,7 +282,7 @@
       nextSlide.value-=1
       pastSlide.value = currentSlide.value+1
     }
-   
+    
     ticking.value = true;
     if(scrl){
       if(currentSlide.value!==6)
@@ -285,6 +293,12 @@
         ticking.value = false;
       }, speed);
     }
+    console.log(currentSlide.value)
+    slideStore.setSlideState(pageIdentifier, {
+      current: currentSlide.value,
+      next: nextSlide.value,
+      past: pastSlide.value
+    });
   }
   function touch(){
     document.addEventListener('touchstart', handleTouchStart, false);        
@@ -337,9 +351,21 @@
     slide(3000, 100)
   }
   onMounted(() => {
+    window.addEventListener('popstate', () => {
+      isBackNavigation.value = true;
+    });
+    // Check if the user navigated back
+    if (isBackNavigation.value) {
+      currentSlide.value = slideState.current;
+      nextSlide.value = slideState.next;
+      pastSlide.value = slideState.past;
+      isBackNavigation.value = false;  // reset the flag
+    }
     setTimeout(() => {
       const wrapper = document.querySelector('.animation-steps');
       const scrl = document.querySelector('.home__clients');
+      if(currentSlide.value===6)
+        scrl.classList.add('oh')
       scrl.addEventListener('scroll', (e) =>{
         if(scrl.scrollTop>1)
           scrlTicking.value=false

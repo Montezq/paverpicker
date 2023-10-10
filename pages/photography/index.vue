@@ -120,7 +120,8 @@
 </style>
 <script setup>
   import arrowSlide from '~/assets/svg/icons/arrow-slide.svg?raw'
-
+  import { useSlideStore  } from '@/store/slideStore'
+  
   const pageTitle = 'Photography | BLOC-TEC',
         baseUrl = 'https://paverpicker.com/',
         pageDescription = 'What makes our photography so true to life?',
@@ -161,8 +162,14 @@
     ]
   })
 
-  let currentSlide = ref(0),
-      pastSlide = ref(0),
+  const route = useRoute();  // Get the current route
+  const pageIdentifier = route.path;
+  let slideStore = useSlideStore(),
+      slideState = slideStore.getSlideState(pageIdentifier),
+      currentSlide = ref(slideState.current),
+      nextSlide = ref(slideState.next),
+      pastSlide = ref(slideState.past),
+      isBackNavigation = ref(false),
       videoCount = ref(1),
       slideval = ref(50),
       slideInteract = ref(false),
@@ -207,6 +214,11 @@
         ticking.value = false;
       }, speed);
     }
+    slideStore.setSlideState(pageIdentifier, {
+      current: currentSlide.value,
+      next: nextSlide.value,
+      past: pastSlide.value
+    });
   }
   function touch(){
     document.addEventListener('touchstart', handleTouchStart, false);        
@@ -240,6 +252,17 @@
     }
   }
   onMounted(() => {
+    window.addEventListener('popstate', () => {
+      isBackNavigation.value = true;
+    });
+
+    // Check if the user navigated back
+    if (isBackNavigation.value) {
+      currentSlide.value = slideState.current;
+      nextSlide.value = slideState.next;
+      pastSlide.value = slideState.past;
+      isBackNavigation.value = false;  // reset the flag
+    }
     setTimeout(() => {
       const wrapper = document.querySelector('.animation-steps');
       const scrl = document.querySelector('.photography-page__brick');

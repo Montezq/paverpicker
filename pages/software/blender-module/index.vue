@@ -166,6 +166,7 @@
   }
 </style>
 <script setup>
+  import { useSlideStore  } from '@/store/slideStore'
   const pageTitle = 'Blender Add-on | BLOC-TEC',
         baseUrl = 'https://paverpicker.com/',
         pageDescription = 'How does our blender work? ',
@@ -206,8 +207,14 @@
     ]
   })
 
-  let currentSlide = ref(0),
-      pastSlide = ref(0),
+  const route = useRoute();  // Get the current route
+  const pageIdentifier = route.path;
+  let slideStore = useSlideStore(),
+      slideState = slideStore.getSlideState(pageIdentifier),
+      currentSlide = ref(slideState.current),
+      nextSlide = ref(slideState.next),
+      pastSlide = ref(slideState.past),
+      isBackNavigation = ref(false),
       optionBrick = ref(1),
       ticking = ref(false),
       slideval = ref(50),
@@ -774,6 +781,11 @@
         ticking.value = false;
       }, speed);
     }
+    slideStore.setSlideState(pageIdentifier, {
+      current: currentSlide.value,
+      next: nextSlide.value,
+      past: pastSlide.value
+    });
   }
   function touch(){
     document.addEventListener('touchstart', handleTouchStart, false);        
@@ -807,6 +819,17 @@
     }
   }
   onMounted(() => {
+    window.addEventListener('popstate', () => {
+      isBackNavigation.value = true;
+    });
+
+    // Check if the user navigated back
+    if (isBackNavigation.value) {
+      currentSlide.value = slideState.current;
+      nextSlide.value = slideState.next;
+      pastSlide.value = slideState.past;
+      isBackNavigation.value = false;  // reset the flag
+    }
     setTimeout(() => {
       const wrapper = document.querySelector('.animation-steps');
       const scrl = document.querySelector('.blender-page__try');

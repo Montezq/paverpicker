@@ -66,7 +66,7 @@
                 </p>
               </div>
               <div class="slider-section__text-cta">
-                <NuxtLink to="/software/blender-module/">Learn about blender module</NuxtLink>
+                <NuxtLink @click="() => handleMenuNavigation('/software/blender-module/')" to="/software/blender-module/">Learn about blender module</NuxtLink>
               </div>
             </div>
             <div class="slide-section__decor-scale">
@@ -155,6 +155,7 @@
 <script setup>
   import folderBack  from '~/assets/svg/icons/folder_back.svg?raw';
   import folderFront  from '~/assets/svg/icons/folder_front.svg?raw';
+  import { useSlideStore  } from '@/store/slideStore'
   const pageTitle = 'Textures Add-on | BLOC-TEC',
         baseUrl = 'https://paverpicker.com/',
         pageDescription = 'What makes our textures unique? ',
@@ -196,12 +197,21 @@
   })
 
 
-  let currentSlide = ref(0),
-      pastSlide = ref(0),
+  const route = useRoute();  // Get the current route
+  const pageIdentifier = route.path;
+  let slideStore = useSlideStore(),
+      slideState = slideStore.getSlideState(pageIdentifier),
+      currentSlide = ref(slideState.current),
+      nextSlide = ref(slideState.next),
+      pastSlide = ref(slideState.past),
+      isBackNavigation = ref(false),
       ticking = ref(false),
       ios = ref(false),
       scrlTicking = ref(true);
 
+  function handleMenuNavigation(destinationPath) {
+    slideStore.resetSlideState(destinationPath);
+  }
   function nextPage(){
     slide(2000, 100)
   }
@@ -232,6 +242,11 @@
         ticking.value = false;
       }, speed);
     }
+    slideStore.setSlideState(pageIdentifier, {
+      current: currentSlide.value+1,
+      next: nextSlide.value+1,
+      past: pastSlide.value-1
+    });
   }
   function touch(){
     document.addEventListener('touchstart', handleTouchStart, false);        
@@ -265,6 +280,17 @@
     }
   }
   onMounted(() => {
+    window.addEventListener('popstate', () => {
+      isBackNavigation.value = true;
+    });
+
+    // Check if the user navigated back
+    if (isBackNavigation.value) {
+      currentSlide.value = slideState.current;
+      nextSlide.value = slideState.next;
+      pastSlide.value = slideState.past;
+      isBackNavigation.value = false;  // reset the flag
+    }
     if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream)
       ios.value=true
     setTimeout(() => {

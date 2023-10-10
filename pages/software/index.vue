@@ -54,7 +54,7 @@
                   <p class="fs_32">Change joint colour and size. Create limitless designs with the blender module.</p>
                 </div>
                 <div class="slider-section__text-cta">
-                  <NuxtLink to="/software/blender-module/">Learn about the blender module</NuxtLink>
+                  <NuxtLink @click="() => handleMenuNavigation('/software/blender-module/')" to="/software/blender-module/">Learn about the blender module</NuxtLink>
                 </div>
               </div>
               <div class="slide-section__text-inside position_absolute slide-section__text_4">
@@ -65,7 +65,7 @@
                   <p class="fs_32">Check to see how products look by viewing them in a scene.</p>
                 </div>
                 <div class="slider-section__text-cta">
-                  <NuxtLink to="/visualisation/">Learn more about visualisation</NuxtLink>
+                  <NuxtLink @click="() => handleMenuNavigation('/visualisation/')" to="/visualisation/">Learn more about visualisation</NuxtLink>
                 </div>
               </div>
             </div>
@@ -82,7 +82,7 @@
                   <p class="fs_32">Fully Adaptable to screen sizes. If you want even more control we offer API for integrating straight into your website.</p>
                 </div>
                 <div class="slider-section__text-cta text_center">
-                  <NuxtLink to="/software/api-module/">Learn about the API module</NuxtLink>
+                  <NuxtLink @click="() => handleMenuNavigation('/software/api-module/')" to="/software/api-module/">Learn about the API module</NuxtLink>
                 </div>
               </div>
               <div class="slide-section__decor d_flex justify-content_center position_relative">
@@ -105,7 +105,7 @@
   @import 'main.scss';
 </style>
 <script setup>
-
+  import { useSlideStore } from '@/store/slideStore';
   const pageTitle = 'Base Software | BLOC-TEC',
       baseUrl = 'https://paverpicker.com/',
       pageDescription = 'How can our software benefit you? ',
@@ -147,12 +147,20 @@
   })
 
 
-  let currentSlide = ref(0),
-      pastSlide = ref(0),
+  const route = useRoute();  // Get the current route
+  const pageIdentifier = route.path;
+  let slideStore = useSlideStore(),
+      slideState = slideStore.getSlideState(pageIdentifier),
+      currentSlide = ref(slideState.current),
+      nextSlide = ref(slideState.next),
+      pastSlide = ref(slideState.past),
+      isBackNavigation = ref(false),
       ticking = ref(false),
       scrlTicking = ref(true);
 
-
+  function handleMenuNavigation(destinationPath) {
+    slideStore.resetSlideState(destinationPath);
+  }
   function nextPage(){
     slide(3000, 100)
   }
@@ -204,6 +212,11 @@
       }, speed);
     }
     playVideo(currentSlide.value);
+    slideStore.setSlideState(pageIdentifier, {
+      current: currentSlide.value,
+      next: nextSlide.value,
+      past: pastSlide.value
+    });
   }
   function touch(){
     document.addEventListener('touchstart', handleTouchStart, false);        
@@ -237,6 +250,17 @@
     }
   }
   onMounted(() => {
+    window.addEventListener('popstate', () => {
+      isBackNavigation.value = true;
+    });
+
+    // Check if the user navigated back
+    if (isBackNavigation.value) {
+      currentSlide.value = slideState.current;
+      nextSlide.value = slideState.next;
+      pastSlide.value = slideState.past;
+      isBackNavigation.value = false;  // reset the flag
+    }
     setTimeout(() => {
       const wrapper = document.querySelector('.animation-steps');
       const scrl = document.querySelector('.software-page__device');
