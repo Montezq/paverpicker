@@ -123,7 +123,7 @@
   import { useSlideStore  } from '@/store/slideStore'
   
   const pageTitle = 'Photography | BLOC-TEC',
-        baseUrl = 'https://paverpicker.com/',
+        baseUrl = 'https://bloc-tec.com',
         pageDescription = 'What makes our photography so true to life?',
         imageAlt = 'Alternative text for the image',
         imageName = 'photography';

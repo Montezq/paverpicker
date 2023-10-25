@@ -157,7 +157,7 @@
   import folderFront  from '~/assets/svg/icons/folder_front.svg?raw';
   import { useSlideStore  } from '@/store/slideStore'
   const pageTitle = 'Textures Add-on | BLOC-TEC',
-        baseUrl = 'https://paverpicker.com/',
+        baseUrl = 'https://bloc-tec.com',
         pageDescription = 'What makes our textures unique? ',
         imageAlt = 'Alternative text for the image',
         imageName = 'seamless-textures';

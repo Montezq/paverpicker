@@ -212,7 +212,7 @@
   import { useSlideStore  } from '@/store/slideStore'
   
   const pageTitle = 'BLOC-TEC | YOUR Online Showroom',
-        baseUrl = 'https://paverpicker.com/',
+        baseUrl = 'https://bloc-tec.com',
         pageDescription = 'How does our software work?',
         imageAlt = 'Alternative text for the image',
         imageName = 'home';

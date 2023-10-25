@@ -123,7 +123,7 @@
 <script setup>
   import { useSlideStore  } from '@/store/slideStore'
   const pageTitle = 'Visualisation | BLOC-TEC',
-        baseUrl = 'https://paverpicker.com/',
+        baseUrl = 'https://bloc-tec.com',
         pageDescription = 'What makes our visualisations so realistic?',
         imageAlt = 'Alternative text for the image',
         imageName = 'visualisation';

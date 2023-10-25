@@ -65,6 +65,7 @@ export default defineNuxtConfig({
       meta: [
         { name: 'msapplication-TileColor', content: '#0d0d0d' },
         { name: 'theme-color', content: '#0d0d0d' },
+        { name: 'google-site-verification', content:'LGJ31nKVc7F-HO-8GAXcohRBzA7oziVHIYK55kCGsYQ' }
       ],
     }
   },
@@ -76,7 +77,7 @@ export default defineNuxtConfig({
   ],
   modules: [
     '@pinia/nuxt',
-    ['@funken-studio/sitemap-nuxt-3', { hostname: 'http://paverpicker.com/'}],
+    ['@funken-studio/sitemap-nuxt-3', { hostname: 'https://bloc-tec.com'}],
   ],
   plugins: [
     '~/plugins/transition.js',
