@@ -77,7 +77,7 @@ export default defineNuxtConfig({
   ],
   modules: [
     '@pinia/nuxt',
-    ['@funken-studio/sitemap-nuxt-3', { hostname: 'https://bloc-tec.com'}],
+    ['@funken-studio/sitemap-nuxt-3', { hostname: 'https://bloc-tec.com/'}],
   ],
   plugins: [
     '~/plugins/transition.js',
