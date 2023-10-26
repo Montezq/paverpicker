@@ -23,8 +23,11 @@
             <div class="slide-section__text position_relative">
               <div class="slide-section__text-head mb_32">
                 <h1>
-                  Visualise Bricks  and Pavers in  Their Best Light
+                  Visualisation Software for Bricks and Pavers
                 </h1>
+                <p>
+                  Experts in Photography and Textures
+                </p>
               </div>
               <div class="slide-section__text-cta">
                 <p class="color_green fs_32 d_flex align-items_center cursor_pointer" @click="videoPopup=!videoPopup"><span class="ff_icon fs_64 mr_20"></span> Watch Video</p>
