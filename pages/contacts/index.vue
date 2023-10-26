@@ -59,7 +59,7 @@
   import email  from '~/assets/svg/icons/email.svg?raw';
   import pinker  from '~/assets/svg/icons/pin.svg?raw';
   const pageTitle = 'Contact Us | BLOC-TEC',
-        baseUrl = 'https://paverpicker.com/',
+        baseUrl = 'https://bloc-tec.com',
         pageDescription = 'Send us an email or give us a call. ',
         imageAlt = 'Alternative text for the image',
         imageName = 'contact';

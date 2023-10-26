@@ -109,7 +109,7 @@
 <script setup>
   import { useSlideStore  } from '@/store/slideStore'
   const pageTitle = 'API Add-on | BLOC-TEC',
-        baseUrl = 'https://paverpicker.com/',
+        baseUrl = 'https://bloc-tec.com',
         pageDescription = 'What can our API do for your website?',
         imageAlt = 'Alternative text for the image',
         imageName = 'api';

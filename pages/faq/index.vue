@@ -60,7 +60,7 @@
   import arrow  from '~/assets/svg/icons/arrow.svg?raw';
   import { ElCollapse, ElCollapseItem } from 'element-plus';
   const pageTitle = 'FAQ | Bloc-Tec',
-        baseUrl = 'https://paverpicker.com/',
+        baseUrl = 'https://bloc-tec.com',
         pageDescription = 'Find the answers to the most common questions. ',
         imageAlt = 'Alternative text for the image',
         imageName = 'home';

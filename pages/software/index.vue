@@ -107,7 +107,7 @@
 <script setup>
   import { useSlideStore } from '@/store/slideStore';
   const pageTitle = 'Base Software | BLOC-TEC',
-      baseUrl = 'https://paverpicker.com/',
+      baseUrl = 'https://bloc-tec.com',
       pageDescription = 'How can our software benefit you? ',
       imageAlt = 'Alternative text for the image',
       imageName = 'software';

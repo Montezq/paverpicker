@@ -39,7 +39,7 @@
 </style>
 <script setup>
   const pageTitle = 'Walling | BLOC-TEC',
-        baseUrl = 'https://paverpicker.com/',
+        baseUrl = 'https://bloc-tec.com',
         pageDescription = 'View our extensive choice of scenes. ',
         imageAlt = 'Alternative text for the image',
         imageName = 'scenes';

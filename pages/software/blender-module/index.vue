@@ -168,7 +168,7 @@
 <script setup>
   import { useSlideStore  } from '@/store/slideStore'
   const pageTitle = 'Blender Add-on | BLOC-TEC',
-        baseUrl = 'https://paverpicker.com/',
+        baseUrl = 'https://bloc-tec.com',
         pageDescription = 'How does our blender work? ',
         imageAlt = 'Alternative text for the image',
         imageName = 'blender';
