@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import svgLoader from "vite-svg-loader";
 export default defineNuxtConfig({
-  ssr: false,
+  ssr: true,
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
