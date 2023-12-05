@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+			
+<url>
+  <loc>https://bloc-tec.com/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://bloc-tec.com/photography/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://bloc-tec.com/visualisation/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://bloc-tec.com/software/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://bloc-tec.com/contacts/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bloc-tec.com/faq/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://bloc-tec.com/software/blender-module/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://bloc-tec.com/software/textures-module/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://bloc-tec.com/software/api-module/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://bloc-tec.com/scenes/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://bloc-tec.com/scenes/paving/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://bloc-tec.com/scenes/paving/driveways/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://bloc-tec.com/scenes/paving/patios/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://bloc-tec.com/scenes/paving/commercial/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://bloc-tec.com/scenes/walling/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://bloc-tec.com/scenes/walling/house/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://bloc-tec.com/scenes/walling/garden/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://bloc-tec.com/scenes/walling/commercial/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://bloc-tec.com/scenes/internal/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://bloc-tec.com/scenes/internal/walling/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://bloc-tec.com/scenes/internal/flooring/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://bloc-tec.com/scenes/roofing/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.60</priority>
+</url>
+</urlset>
