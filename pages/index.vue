@@ -216,13 +216,15 @@
   
   const pageTitle = 'BLOC-TEC | YOUR Online Showroom',
         baseUrl = 'https://bloc-tec.com',
-        pageDescription = 'How does our software work?',
+        pageDescription = 'Discover the power of Bloc-Tec - the ultimate web visualization software for manufacturing companies. Showcase your products in a visually stunning way, allowing potential customers to see them right in their own homes. Boost your lead generation efforts and drive more sales with bloc-tec today. Try it now!',
+        pageKeywords = 'bloc-tec,bricks,brick,paving,tiles,software,app,api,virtual,paver,design,designer,visualiser,visualizer,program,photography,online,texture,selector,drag,drop,programmer,website,3d,showcase,render,interactive,simulator,generator,slabs,construction,patio,wall,material,editor,configure,pattern,platform',
         imageAlt = 'Alternative text for the image',
         imageName = 'home';
   useHead({
     title: pageTitle,
     meta: [
       { name: 'description', content: pageDescription },
+      { name: 'keywords', content: pageKeywords },
 
       // Facebook meta tags
       { property: 'og:title', content: pageTitle },

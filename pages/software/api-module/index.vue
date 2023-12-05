@@ -110,13 +110,15 @@
   import { useSlideStore  } from '@/store/slideStore'
   const pageTitle = 'API Add-on | BLOC-TEC',
         baseUrl = 'https://bloc-tec.com',
-        pageDescription = 'What can our API do for your website?',
+        pageDescription = 'Bloc Tech\'s API allows you to easily integrate our visualisation software to your website. Your branding will be on it and you have full control over the layout, fonts, colors, and style. You can also easily track your analytics for the software. Give it a try today!',
+        pageKeywords = 'api,application programming interface,website integration,web,online,visualisation software,visualization software,embed,embedding,software,program,interactive,company brand,white label,control,analytics,track,Tobermore,Marshalls,Ibstock Brick,Kilsaran,Wienerberger,Banas Stones,Ethan Mason,AG,Global Stone,Forticrete,Roadstone,Outhaus',
         imageAlt = 'Alternative text for the image',
-        imageName = 'api';
+        imageName = 'software';
   useHead({
     title: pageTitle,
     meta: [
       { name: 'description', content: pageDescription },
+      { name: 'keywords', content: pageKeywords },
 
       // Facebook meta tags
       { property: 'og:title', content: pageTitle },

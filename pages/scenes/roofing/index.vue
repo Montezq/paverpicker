@@ -40,13 +40,15 @@
 <script setup>
   const pageTitle = 'Roofing | BLOC-TEC',
         baseUrl = 'https://bloc-tec.com',
-        pageDescription = 'View our extensive choice of scenes. ',
+        pageDescription = 'Try out Bloc-Tec’s Interactive Visualisation software and see how your roof building materials will look on homes. Make adjustments to the layout and color of the materials and see if they match well with homes of different colors and designs.',
+        pageKeywords = 'roof,roofing,house,roof tiles,building,home,shed,shingles,asphalt,composition,metal,concrete,metal,aluminum shake,wood,clay,vinyl membrane,flat roof,cover,material,rain',
         imageAlt = 'Alternative text for the image',
-        imageName = 'scenes';
+        imageName = 'software';
   useHead({
     title: pageTitle,
     meta: [
       { name: 'description', content: pageDescription },
+      { name: 'keywords', content: pageKeywords },
 
       // Facebook meta tags
       { property: 'og:title', content: pageTitle },

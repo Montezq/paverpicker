@@ -60,13 +60,15 @@
   import pinker  from '~/assets/svg/icons/pin.svg?raw';
   const pageTitle = 'Contact Us | BLOC-TEC',
         baseUrl = 'https://bloc-tec.com',
-        pageDescription = 'Send us an email or give us a call. ',
+        pageDescription = 'Bloc-Tec office is based in Ireland, County Cork. We work with international companies around the world. You can contact us through email at info@bloc-tec.com or call use on phone at +353 25 46682.',
+        pageKeywords = 'Bloc Tec,Paver Picker,contact,call,email,location,message,get in touch,form,Ireland,Cork,phone,appointment,where,office,about,send,ship,number,address,at,shipping',
         imageAlt = 'Alternative text for the image',
         imageName = 'contact';
   useHead({
     title: pageTitle,
     meta: [
       { name: 'description', content: pageDescription },
+      { name: 'keywords', content: pageKeywords },
 
       // Facebook meta tags
       { property: 'og:title', content: pageTitle },

@@ -46,13 +46,15 @@
 <script setup>
   const pageTitle = 'Walling Commercial | BLOC-TEC',
         baseUrl = 'https://bloc-tec.com',
-        pageDescription = 'View our extensive choice of scenes. ',
+        pageDescription = 'Try out Bloc-Tec’s Interactive Visualisation software and see how your building materials will look on the wall of different commercial buildings. Make adjustment to the layout and color of the materials and see if they match well with different buildings of different colors and designs.',
+        pageKeywords = 'walling,wall,offices,shop,factory,hospital,school,mall,commercial,scene,building,location,visualisation,visualization,software,program,online,website,view,try,demo,samples,options,selection,realistic',
         imageAlt = 'Alternative text for the image',
-        imageName = 'scenes';
+        imageName = 'software';
   useHead({
     title: pageTitle,
     meta: [
       { name: 'description', content: pageDescription },
+      { name: 'keywords', content: pageKeywords },
 
       // Facebook meta tags
       { property: 'og:title', content: pageTitle },

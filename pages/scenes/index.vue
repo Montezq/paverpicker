@@ -34,13 +34,15 @@
 <script setup>
   const pageTitle = 'Scenes | BLOC-TEC',
         baseUrl = 'https://bloc-tec.com',
-        pageDescription = 'View our extensive choice of scenes. ',
+        pageDescription = 'Bloc-Tec interactive visualisation software lets you see how different bricks, tiles, and other building materials will look in different areas of a home. Our immersive software lets you see first and then confidently choose the perfect products to enhance your space. See our selection of scenes for paving, walling, inside the home, and roof. Try our software today!',
+        pageKeywords = 'scene,view,location,home,house,visualize,visualise,paving,walling,wall,internal,inside home,roof,roofing,see,how look,building material,patio,room,tile,brick,paving,garden,living room,bedroom,kitchen,dining room,commercial,driveway,place,site',
         imageAlt = 'Alternative text for the image',
         imageName = 'scenes';
   useHead({
     title: pageTitle,
     meta: [
       { name: 'description', content: pageDescription },
+      { name: 'keywords', content: pageKeywords },
 
       // Facebook meta tags
       { property: 'og:title', content: pageTitle },

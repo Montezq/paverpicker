@@ -46,13 +46,15 @@
 <script setup>
   const pageTitle = 'Walling House | BLOC-TEC',
         baseUrl = 'https://bloc-tec.com',
-        pageDescription = 'View our extensive choice of scenes. ',
+        pageDescription = 'Try out Bloc-Tec’s Interactive Visualisation software and see how your building materials will look on the wall of a house. Make adjustment to the layout and color of the materials and see if they match well with different houses of different colors and designs.',
+        pageKeywords = 'wall,walling,rooms,house,scene,home,building,location,visualisation,visualization,software,program,online,website,view,try,demo,samples,options,selection,realistic,house',
         imageAlt = 'Alternative text for the image',
-        imageName = 'scenes';
+        imageName = 'software';
   useHead({
     title: pageTitle,
     meta: [
       { name: 'description', content: pageDescription },
+      { name: 'keywords', content: pageKeywords },
 
       // Facebook meta tags
       { property: 'og:title', content: pageTitle },

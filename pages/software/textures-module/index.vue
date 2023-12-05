@@ -158,13 +158,15 @@
   import { useSlideStore  } from '@/store/slideStore'
   const pageTitle = 'Textures Add-on | BLOC-TEC',
         baseUrl = 'https://bloc-tec.com',
-        pageDescription = 'What makes our textures unique? ',
+        pageDescription = 'Bloc-Tec Textures gives you the freedom to change the layout of the building materials and change the color of the mortar. All this accomplished with seamless pixel perfect textures. See what we mean and give our Visualisation software a try today!',
+        pageKeywords = 'texture,color,interactive,seamless,layout,change,software,macro,clear,professional photography,brick,tile,slab,mortar,building,visualize,look,home,house,wall,ground,paving,patio,roof,view',
         imageAlt = 'Alternative text for the image',
-        imageName = 'seamless-textures';
+        imageName = 'software';
   useHead({
     title: pageTitle,
     meta: [
       { name: 'description', content: pageDescription },
+      { name: 'keywords', content: pageKeywords },
 
       // Facebook meta tags
       { property: 'og:title', content: pageTitle },

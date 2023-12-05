@@ -124,13 +124,15 @@
   
   const pageTitle = 'Photography | BLOC-TEC',
         baseUrl = 'https://bloc-tec.com',
-        pageDescription = 'What makes our photography so true to life?',
+        pageDescription = 'Elevate your product imagery to new heights with Bloc Tec\'s photographic expertise. Our dedicated team specializes in capturing products with realistic lighting, incredible details, and accurate color representation. Showcase your products in the best possible light and leave a lasting impression on your customers. See the difference Bloc Tec can make for your brand today.">',
+        pageKeywords = 'photography,product,brick,house,patio,accurate color,texture,detail,lighting,realistic lighting,professional equipment,experts,experience,knowledgable,showcase,studio,techniques,gear,manufacturing,tiles,garden',
         imageAlt = 'Alternative text for the image',
         imageName = 'photography';
   useHead({
     title: pageTitle,
     meta: [
       { name: 'description', content: pageDescription },
+      { name: 'keywords', content: pageKeywords },
 
       // Facebook meta tags
       { property: 'og:title', content: pageTitle },

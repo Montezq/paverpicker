@@ -169,13 +169,15 @@
   import { useSlideStore  } from '@/store/slideStore'
   const pageTitle = 'Blender Add-on | BLOC-TEC',
         baseUrl = 'https://bloc-tec.com',
-        pageDescription = 'How does our blender work? ',
+        pageDescription = 'Bloc-Tech Blender lets you blend multiple building products together in different ways with options to change colours and patterns until you get the look you want. See how the patio or exterior wall will look with different blend of tiles, bricks, and mortar. Try our powerful visualisation software today and see what we mean!',
+        pageKeywords = 'blender,blend,brick,tile,mortar,Bloc Tec,create,merge,layout,change,interactive,color,colour,mortar,different,pattern,possibilities,look,see,visualiser,visualizer,demo,try,software,program,api,online,website',
         imageAlt = 'Alternative text for the image',
-        imageName = 'blender';
+        imageName = 'software';
   useHead({
     title: pageTitle,
     meta: [
       { name: 'description', content: pageDescription },
+      { name: 'keywords', content: pageKeywords },
 
       // Facebook meta tags
       { property: 'og:title', content: pageTitle },

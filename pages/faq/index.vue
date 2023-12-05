@@ -61,13 +61,15 @@
   import { ElCollapse, ElCollapseItem } from 'element-plus';
   const pageTitle = 'FAQ | Bloc-Tec',
         baseUrl = 'https://bloc-tec.com',
-        pageDescription = 'Find the answers to the most common questions. ',
+        pageDescription = 'Have questions about Bloc-Tec Visualisation Software? Visit our F&Q page where we answer questions about Images used, Hosting of our software, Performance of our software, and User Accounts. You can also contact us if you don\'t find the answers to your questions.">',
+        pageKeywords = 'question,answer,f&q,inquiry,query,learn,ask,know,find out,information,contact,hosting,performance,images,format,what,software,platform,responsive,which,about',
         imageAlt = 'Alternative text for the image',
         imageName = 'home';
   useHead({
     title: pageTitle,
     meta: [
       { name: 'description', content: pageDescription },
+      { name: 'keywords', content: pageKeywords },
 
       // Facebook meta tags
       { property: 'og:title', content: pageTitle },

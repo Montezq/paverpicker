@@ -46,13 +46,15 @@
 <script setup>
   const pageTitle = 'Paving Commercial | BLOC-TEC',
         baseUrl = 'https://bloc-tec.com',
-        pageDescription = 'View our extensive choice of scenes. ',
+        pageDescription = 'Try out Bloc-Tec’s Interactive Visualisation software and see how your paving materials will look for different types of commercial buildings. Make adjustment to the layout and color of the materials and see if they match well with different buildings of different colors and designs.!',
+        pageKeywords = 'paving,business,office,hospital,condo,meeting room,commercial,scene,home,building,location,visualisation,visualization,software,program,online,website,view,try,demo,samples,options,selection,realistic,house',
         imageAlt = 'Alternative text for the image',
-        imageName = 'scenes';
+        imageName = 'software';
   useHead({
     title: pageTitle,
     meta: [
       { name: 'description', content: pageDescription },
+      { name: 'keywords', content: pageKeywords },
 
       // Facebook meta tags
       { property: 'og:title', content: pageTitle },

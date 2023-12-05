@@ -46,13 +46,15 @@
 <script setup>
   const pageTitle = 'Internal Flooring | BLOC-TEC',
         baseUrl = 'https://bloc-tec.com',
-        pageDescription = 'View our extensive choice of scenes. ',
+        pageDescription = 'Try out Bloc-Tec’s Interactive Visualisation software and see how your building materials will look on the wall of different places of a home or building. Make adjustment to the layout and color of the materials and see if they match well with different buildings of different colors and designs.',
+        pageKeywords = 'internal,inside,rooms,room,living room,kitchen,dining room,bed room,washroom,toilet,office,flooring,floor,tile,walking,driveway,patio,commercial,scene,home,building,location,visualisation,visualization,software,program,online,website,view,try,demo,samples,options,selection,realistic,house',
         imageAlt = 'Alternative text for the image',
-        imageName = 'scenes';
+        imageName = 'software';
   useHead({
     title: pageTitle,
     meta: [
       { name: 'description', content: pageDescription },
+      { name: 'keywords', content: pageKeywords },
 
       // Facebook meta tags
       { property: 'og:title', content: pageTitle },

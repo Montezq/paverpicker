@@ -124,13 +124,15 @@
   import { useSlideStore  } from '@/store/slideStore'
   const pageTitle = 'Visualisation | BLOC-TEC',
         baseUrl = 'https://bloc-tec.com',
-        pageDescription = 'What makes our visualisations so realistic?',
+        pageDescription = 'Experience the power of Bloc-Tec visualization software. Create stunning, realistic visuals of your products in various scenes with impeccable perspective and scale. This cutting-edge tool brings your products to life, giving them a natural and captivating look. Elevate your visual marketing strategy with Bloc-Tec today!',
+        pageKeywords = 'product visualization,visualisation,realistic,product rendering,accurate,perspective,scale,model,natural look,3D,software,visualisation services,services,presentation,lifelike,photorealistic,render,scene,locations,areas,spots,display,looks real',
         imageAlt = 'Alternative text for the image',
         imageName = 'visualisation';
   useHead({
     title: pageTitle,
     meta: [
       { name: 'description', content: pageDescription },
+      { name: 'keywords', content: pageKeywords },
 
       // Facebook meta tags
       { property: 'og:title', content: pageTitle },

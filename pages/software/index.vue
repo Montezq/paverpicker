@@ -108,13 +108,15 @@
   import { useSlideStore } from '@/store/slideStore';
   const pageTitle = 'Base Software | BLOC-TEC',
       baseUrl = 'https://bloc-tec.com',
-      pageDescription = 'How can our software benefit you? ',
+      pageDescription = 'Transform your product presentation with Bloc-Tec\'s cutting-edge custom-built software. Showcase your products in an interactive online showroom, featuring different scenes that will captivate your audience. Our software is responsive and will seamlessly integrates into your website, providing a seamless user experience. Elevate your brand and engage customers like never before. Experience the power of immersive product showcasing today!',
+      pageKeywords = 'software,app,api,responsive,web,online,interactive,program,website,integrates,own brand,white label,drag,drop,showcasing,bricks,tiles,slabs,embed,tool,product,3D viewer,showcase,display,representation tool,demonstration software,visualistion solution',
       imageAlt = 'Alternative text for the image',
       imageName = 'software';
   useHead({
     title: pageTitle,
     meta: [
       { name: 'description', content: pageDescription },
+      { name: 'keywords', content: pageKeywords },
 
       // Facebook meta tags
       { property: 'og:title', content: pageTitle },
