@@ -86,9 +86,9 @@
       url: 'walling/'
     },
     {
-      img: route+'internal',
-      title: 'Internal',
-      url: 'internal/'
+      img: route+'flooring',
+      title: 'Flooring',
+      url: 'flooring/'
     },
     {
       img: route+'roofing',

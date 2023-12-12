@@ -92,6 +92,11 @@
       url: 'garden/'
     },
     {
+      img: route+'internal-walling',
+      title: 'Internal',
+      url: 'internal/'
+    },
+    {
       img: route+'walling-commercial',
       title: 'Commercial',
       url: 'commercial/'
