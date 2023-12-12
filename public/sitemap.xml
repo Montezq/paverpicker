@@ -86,6 +86,11 @@
   <priority>0.50</priority>
 </url>
 <url>
+  <loc>https://bloc-tec.com/scenes/walling/internal/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.50</priority>
+</url>
+<url>
   <loc>https://bloc-tec.com/scenes/walling/garden/</loc>
   <changefreq>yearly</changefreq>
   <priority>0.50</priority>
@@ -96,19 +101,9 @@
   <priority>0.50</priority>
 </url>
 <url>
-  <loc>https://bloc-tec.com/scenes/internal/</loc>
+  <loc>https://bloc-tec.com/scenes/flooring/</loc>
   <changefreq>yearly</changefreq>
   <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://bloc-tec.com/scenes/internal/walling/</loc>
-  <changefreq>yearly</changefreq>
-  <priority>0.50</priority>
-</url>
-<url>
-  <loc>https://bloc-tec.com/scenes/internal/flooring/</loc>
-  <changefreq>yearly</changefreq>
-  <priority>0.50</priority>
 </url>
 <url>
   <loc>https://bloc-tec.com/scenes/roofing/</loc>
