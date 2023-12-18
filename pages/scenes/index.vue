@@ -2,11 +2,12 @@
   <div class="scenes d_flex flex_column mh_100">
     <main class="main flex_1 d_flex flex_column">
       <nav class="breadcrumbs">
-        <ul class="d_flex align-items_center justify-content_center">
-          <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-            <span itemprop="title" class="fs_42 fw_semibold">Scenes</span>
+        <ol itemscope itemtype="http://schema.org/BreadcrumbList" class="d_flex align-items_center justify-content_center">
+          <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <span itemprop="name" class="fs_42 fw_semibold">Scenes</span>
+            <meta itemprop="position" content="1" />
           </li>
-        </ul>
+        </ol>
       </nav>
       <section class="scenes-general flex_1 d_flex align-items_center">
         <div class="container container_mw">

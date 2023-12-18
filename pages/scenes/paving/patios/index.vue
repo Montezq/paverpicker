@@ -2,23 +2,26 @@
   <div class="scenes scenes-inside d_flex flex_column mh_100">
     <main class="main flex_1 d_flex flex_column">
       <nav class="breadcrumbs">
-        <ul class="d_flex align-items_center justify-content_center">
-          <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-            <NuxtLink to="../../" itemprop="url">
-              <span itemprop="title" class="fs_42 fw_semibold">Scenes</span>
+        <ol itemscope itemtype="http://schema.org/BreadcrumbList" class="d_flex align-items_center justify-content_center">
+          <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <NuxtLink to="../../" itemprop="item">
+              <span itemprop="name" class="fs_42 fw_semibold">Scenes</span>
             </NuxtLink>
-            <span class="ff_icon fs_r32"> </span>
+            <meta itemprop="position" content="1" />
+            <span class="ff_icon fs_r32"></span>
           </li>
-          <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-            <NuxtLink to="../" itemprop="url">
-              <span itemprop="title" class="fs_42 fw_semibold">Paving</span>
+          <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <NuxtLink to="../" itemprop="item">
+              <span itemprop="name" class="fs_42 fw_semibold">Paving</span>
             </NuxtLink>
-            <span class="ff_icon fs_r32"> </span>
+            <meta itemprop="position" content="2" />
+            <span class="ff_icon fs_r32"></span>
           </li>
-          <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-            <span itemprop="title" class="fs_42 fw_semibold">Patios</span>
+          <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <span itemprop="name" class="fs_42 fw_semibold">Patios</span>
+            <meta itemprop="position" content="3" />
           </li>
-        </ul>
+        </ol>
       </nav>
       <section class="scenes-examples flex_1 d_flex align-items_center">
         <div class="container container_mw">
