@@ -36,16 +36,16 @@
                     <NuxtLink @click="() => handleMenuNavigation('/scenes/')" to="/scenes/" class="text_uppercase fs_r12 letter-spacing_1">Scenes</NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink to="/PDFs/API_Guide.pdf"  target="_blank" class="text_uppercase fs_r12 letter-spacing_1">API Doc</NuxtLink>
+                    <NuxtLink to="/PDFs/API-guide.pdf"  target="_blank" class="text_uppercase fs_r12 letter-spacing_1">API Doc</NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink to="/PDFs/Customisation_Guide.pdf"  target="_blank" class="text_uppercase fs_r12 letter-spacing_1">Customisation Guide</NuxtLink>
+                    <NuxtLink to="/PDFs/customisation-guide.pdf"  target="_blank" class="text_uppercase fs_r12 letter-spacing_1">Customisation Guide</NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink to="/PDFs/Delivery_of_Samples.pdf"  target="_blank" class="text_uppercase fs_r12 letter-spacing_1">Delivery of Samples</NuxtLink>
+                    <NuxtLink to="/PDFs/delivery-of-samples.pdf"  target="_blank" class="text_uppercase fs_r12 letter-spacing_1">Delivery of Samples</NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink to="/PDFs/Preperation_of_Samples.pdf"  target="_blank" class="text_uppercase fs_r12 letter-spacing_1">Preparation of Samples</NuxtLink>
+                    <NuxtLink to="/PDFs/preparation-of-samples.pdf"  target="_blank" class="text_uppercase fs_r12 letter-spacing_1">Preparation of Samples</NuxtLink>
                   </li>
                 </ul>
               </nav>
