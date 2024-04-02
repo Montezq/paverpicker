@@ -49,7 +49,7 @@
               <NuxtLink  to="/scenes/walling/">Walling</NuxtLink>
             </li>
             <li class="footer__item">
-              <NuxtLink  to="/scenes/internal/">Internal</NuxtLink>
+              <NuxtLink  to="/scenes/flooring/">Flooring</NuxtLink>
             </li>
             <li class="footer__item">
               <NuxtLink  to="/scenes/roofing/">Roofing</NuxtLink>
